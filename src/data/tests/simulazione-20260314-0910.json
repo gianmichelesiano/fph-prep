@@ -1,0 +1,488 @@
+{
+  "id": "simulazione-20260314-0910",
+  "title": "Simulazione Esame – 14/03/2026 09:10",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "obbligo di ricetta - prescrizioni estere",
+      "tipo": "multipla_scelta",
+      "domanda": "Una turista tedesca presenta una ricetta medica emessa a Monaco di Baviera per un farmaco antipertensivo non figurante nella Lista B+. Qual è la base legale corretta per la \ngestione di questo caso in Svizzera?",
+      "opzioni": {
+        "A": "Le prescrizioni estere sono formalmente valide in Svizzera secondo l'Art. 51 VAM [1].",
+        "B": "Il farmacista può dispensare il farmaco solo in casi eccezionali giustificati e documentati secondo l'Art. 24 HMG [1].",
+        "C": "Le ricette tedesche sono equiparate a quelle svizzere per tutti i farmaci della Lista B [1].",
+        "D": "È obbligatorio trattenere la ricetta e richiedere una convalida al medico cantonale [1]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le ricette estere non sono formalmente valide in Svizzera, poiché una prescrizione valida deve essere emessa da un professionista con licenza svizzera (Art. 51 VAM) [1]. \nTuttavia, il farmacista ha la facoltà di dispensare farmaci soggetti a prescrizione senza ricetta in casi eccezionali debitamente giustificati e documentati, assumendosene la responsabilità \nclinica (Art. 24 HMG) [1, 2].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Smarter Medicine - Medikationsabgleich",
+      "tipo": "kprim",
+      "domanda": "Secondo le raccomandazioni 'smarter medicine' riguardanti la farmacia alle interfacce, quali dei seguenti elementi sono necessari per un confronto sistematico della terapia \n(Medication Reconciliation)?",
+      "opzioni": {
+        "1": "È necessario consultare almeno due fonti di informazione indipendenti [3, 4].",
+        "2": "L'anamnesi deve includere anche i prodotti di automedicazione e gli integratori alimentari [3, 4].",
+        "3": "Il confronto della terapia deve essere effettuato solo al momento dell'entrata in ospedale e non alla dimissione [4].",
+        "4": "Il piano terapeutico aggiornato deve essere reso disponibile a tutte le figure professionali coinvolte nel processo di cura [4]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La riconciliazione richiede almeno due fonti indipendenti (es. piano terapeutico e colloquio con il paziente) [3, 4]. Deve essere completa, includendo anche la medicina \ncomplementare [3, 4]. Tale processo è fondamentale non solo all'ammissione, ma in ogni interfaccia di cura, inclusa la dimissione e il trasferimento [4].",
+      "numero": 2,
+      "id": "q2"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Broncospasmi",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente adulto chiede la dispensazione facilitata (Lista B+) di Symbicort® (Budesonide/Formoterolo) per un attacco asmatico. Quale restrizione specifica si applica a \nquesto preparato rispetto al Salbutamolo?",
+      "opzioni": {
+        "A": "Può essere dispensato solo a pazienti fumatori [5, 6].",
+        "B": "È permessa unicamente una dispensazione singola (una volta sola) [5, 6].",
+        "C": "Non è necessaria alcuna notifica al medico curante [5, 6].",
+        "D": "Può essere dispensato ai bambini a partire dai 6 anni [5]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La combinazione Budesonide/Formoterolo può essere dispensata in regime B+ solo una volta (dispensazione singola) e solo a adulti non fumatori [5-7]. Inoltre, a differenza \ndel Salbutamolo, la notifica al medico curante o allo pneumologo è obbligatoria [5, 6, 8].",
+      "numero": 3,
+      "id": "q3"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Vaginalmykose",
+      "tipo": "kprim",
+      "domanda": "In merito alla dispensazione facilitata di antimicotici vaginali (es. Gyno-Pevaryl®), quali delle seguenti condizioni devono essere soddisfatte?",
+      "opzioni": {
+        "1": "I sintomi devono essere già noti alla paziente per un episodio precedente [9, 10].",
+        "2": "La dispensazione non può essere ripetuta più di una volta nello stesso trimestre [9, 10].",
+        "3": "Il farmaco può essere dispensato anche a donne in gravidanza se i sintomi sono lievi [9, 11].",
+        "4": "Il farmacista deve documentare la decisione e la presenza della paziente [9]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La Lista B+ per le micosi vaginali richiede che il quadro clinico sia già noto alla paziente e limita la dispensazione a una volta per trimestre [9, 10]. La gravidanza e \nl'allattamento sono esclusioni assolute per la dispensazione B+ di questi farmaci [9]. La documentazione dell'atto e la presenza fisica della paziente sono requisiti generali [9, 12].",
+      "numero": 4,
+      "id": "q4"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Analgetici",
+      "tipo": "multipla_scelta",
+      "domanda": "Per il trattamento del dolore acuto con farmaci della Lista B+ (es. Mefenaminsäure 500 mg), qual è la durata massima della terapia permessa per singola dispensazione \nfacilitata?",
+      "opzioni": {
+        "A": "3 giorni [13].",
+        "B": "1 settimana (7 giorni) [13, 14].",
+        "C": "2 settimane [14].",
+        "D": "Fino all'esaurimento della confezione originale [14]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida per la Lista B+, la dispensazione di analgesici è limitata alla terapia di dolori acuti per una durata massima di una settimana [13-15]. I dolori \ncronici (> 3 mesi) sono esclusi da questo regime [14, 16].",
+      "numero": 5,
+      "id": "q5"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Acne vulgaris",
+      "tipo": "kprim",
+      "domanda": "Durante la consulenza per la dispensazione facilitata di retinoidi topici (es. Adapalen) per l'acne, quali obblighi di documentazione e consulenza ha il farmacista?",
+      "opzioni": {
+        "1": "Deve documentare la conferma dell'assenza di una gravidanza in corso [17, 18].",
+        "2": "Deve informare la paziente sui rischi teratogeni in caso di concepimento [17-19].",
+        "3": "L'uso è permesso anche durante l'allattamento se l'area trattata è limitata [18].",
+        "4": "Deve avvertire che la terapia può inizialmente causare un peggioramento dell'irritazione cutanea [19, 20]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Per i retinoidi B+, è mandatorio documentare l'assenza di gravidanza e istruire sui rischi associati [17, 18]. Gravidanza e allattamento sono controindicazioni assolute \nper la dispensazione B+ [18, 20]. È importante informare sul possibile peggioramento iniziale per favorire l'aderenza [19, 20].",
+      "numero": 6,
+      "id": "q6"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Alopecia androgenetica",
+      "tipo": "multipla_scelta",
+      "domanda": "Un uomo di 45 anni richiede Finasteride 1 mg in regime di Lista B+. Quale informazione clinica è fondamentale fornire riguardo ai test di screening oncologico?",
+      "opzioni": {
+        "A": "Il farmaco non interferisce con alcun test di laboratorio [21].",
+        "B": "Il valore del PSA (antigene prostatico specifico) può risultare falsamente dimezzato [21].",
+        "C": "Il farmaco può causare un aumento del PSA del 50% [21].",
+        "D": "È necessario interrompere il trattamento 24 ore prima del prelievo per il PSA [21]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La terapia con Finasteride riduce i livelli sierici di PSA di circa il 50% [21]. Il farmacista deve informare il paziente che questo valore va interpretato con cautela \ndurante lo screening del carcinoma prostatico [21].",
+      "numero": 7,
+      "id": "q7"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B- - Antitussivi",
+      "tipo": "kprim",
+      "domanda": "Molti antitussivi sono stati spostati dalla categoria C alla B (Lista B-). Quali delle seguenti affermazioni riguardanti la loro dispensazione sono corrette?",
+      "opzioni": {
+        "1": "La codeina è controindicata nei bambini sotto i 12 anni e nei metabolizzatori ultrarapidi del CYP2D6 [22-24].",
+        "2": "Il destrometorfano può essere dispensato senza ricetta solo per la tosse acuta (max. 3 settimane) [25, 26].",
+        "3": "L'associazione tra un antitussivo e un espettorante è raccomandata per accelerare la guarigione [25, 27].",
+        "4": "Il farmacista deve documentare la dispensazione dei prodotti della Lista B- [28]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La codeina ha restrizioni pediatriche e farmacogenetiche severe [23, 24]. La dispensazione facilitata è limitata alla tosse acuta (< 3 settimane) [25, 26]. La combinazione\ndi antitussivi ed espettoranti è considerata irrazionale per il rischio di ristagno delle secrezioni [25, 27].",
+      "numero": 8,
+      "id": "q8"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B- - Disturbi del sonno",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 72 anni chiede un antistaminico sedativo (es. Difenidramina) per l'insonnia. Perché smarter medicine e le linee guida svizzere sconsigliano l'uso di questi \nfarmaci negli anziani?",
+      "opzioni": {
+        "A": "A causa del rischio elevato di ipertensione maligna [29].",
+        "B": "A causa degli effetti anticolinergici che aumentano il rischio di confusione, cadute e deliri [29, 30].",
+        "C": "Perché negli anziani questi farmaci non hanno alcun effetto sedativo [29].",
+        "D": "A causa del rischio di interazione con i farmaci per il colesterolo [29]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Gli antistaminici di prima generazione hanno forti proprietà anticolinergiche [30, 31]. Negli over 65, questi effetti possono causare declino cognitivo, deliri e \nipotensione ortostatica, aumentando significativamente il rischio di cadute [29, 32].",
+      "numero": 9,
+      "id": "q9"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Smarter Medicine - Confezioni di farmaci",
+      "tipo": "kprim",
+      "domanda": "Quali principi guidano la scelta della dimensione della confezione all'inizio di una terapia a lungo termine secondo 'smarter medicine'?",
+      "opzioni": {
+        "1": "È preferibile dispensare confezioni grandi per garantire il risparmio economico fin dal primo giorno [33].",
+        "2": "All'inizio della terapia è incerto se il farmaco sarà ben tollerato dal paziente [33, 34].",
+        "3": "La scelta deve considerare il fabbisogno reale fino al prossimo controllo medico [33, 34].",
+        "4": "L'uso di confezioni piccole all'inizio serve a ridurre lo spreco di farmaci in caso di interruzione precoce [34]."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "Dispensare confezioni grandi all'inizio è sconsigliato (Punto 2 della lista Top-5) perché la tollerabilità è incerta [33, 34]. La decisione deve essere condivisa con il \npaziente, considerando il periodo fino alla visita successiva per minimizzare gli sprechi [33, 34].",
+      "numero": 10,
+      "id": "q10"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Rosacea",
+      "tipo": "multipla_scelta",
+      "domanda": "L'Ivermectina topica (Soolantra®) è disponibile per la dispensazione facilitata. Qual è la durata massima di trattamento prevista in farmacia prima di rivalutare il caso?",
+      "opzioni": {
+        "A": "2 settimane [35].",
+        "B": "1 mese [35].",
+        "C": "3 mesi [35, 36].",
+        "D": "6 mesi [35]."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "L'Ivermectina può essere dispensata in farmacia per una durata di 3 mesi [35, 36]. Se dopo 3 mesi non si osserva alcun miglioramento, il trattamento deve essere interrotto\ne il paziente indirizzato al medico [35].",
+      "numero": 11,
+      "id": "q11"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Scabbia",
+      "tipo": "kprim",
+      "domanda": "In caso di trattamento della scabbia con Permetrina 5% (Scabi-med®), quali istruzioni deve fornire il farmacista?",
+      "opzioni": {
+        "1": "Per un adulto è necessaria l'applicazione di una tuba intera (30 g) [37, 38].",
+        "2": "La crema deve essere applicata su tutto il corpo, dal collo in giù, e lasciata agire per 8-12 ore [37, 38].",
+        "3": "È sufficiente trattare solo i membri della famiglia che presentano prurito attivo [7].",
+        "4": "I contatti stretti devono essere trattati simultaneamente anche se asintomatici [7]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Un adulto richiede 30g di prodotto per un'applicazione completa [37, 38]. Il tempo di contatto deve essere di almeno 8 ore [38]. È fondamentale trattare tutti i contatti \nconviventi simultaneamente per evitare re-infestazioni, indipendentemente dai sintomi [7].",
+      "numero": 12,
+      "id": "q12"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Triptani",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale criterio è obbligatorio per poter dispensare un triptano (es. Sumatriptan 50 mg) in regime di Lista B+?",
+      "opzioni": {
+        "A": "Il paziente può effettuare l'autodiagnosi se il dolore è pulsante [39, 40].",
+        "B": "Deve essere presente una diagnosi medica confermata di emicrania [39, 40].",
+        "C": "Il farmacista può dispensare una confezione da 24 compresse [39].",
+        "D": "È possibile la dispensazione facilitata a partire dai 12 anni [39, 40]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La dispensazione facilitata di triptani è permessa solo se esiste una diagnosi medica pregressa di emicrania [39, 40]. Inoltre, è limitata agli adulti (> 18 anni) e per \nconfezioni destinate al trattamento di un attacco acuto [39, 40].",
+      "numero": 13,
+      "id": "q13"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Smarter Medicine - Dauerrezept",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla dispensazione ripetuta su ricetta permanente (Dauerrezept), quali sono le responsabilità del farmacista secondo le buone pratiche?",
+      "opzioni": {
+        "1": "Il farmacista si assume la responsabilità dell'uso razionale del farmaco fino alla visita medica successiva (solitamente 6-12 mesi) [41, 42].",
+        "2": "Ogni dispensazione deve essere preceduta da una breve valutazione dell'efficacia e della tollerabilità [41, 42].",
+        "3": "In caso di anomalie o mancata aderenza, il farmacista deve contattare il medico curante [41, 42].",
+        "4": "La ricetta permanente autorizza la consegna automatica dei farmaci senza colloquio con il paziente [42]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Il farmacista ha una responsabilità clinica nel monitoraggio della terapia cronica [41, 42]. La dispensazione ripetuta non deve essere un atto meccanico, ma un'opportunità\nper verificare la sicurezza del paziente e risolvere eventuali problemi di applicazione [41, 42].",
+      "numero": 14,
+      "id": "q14"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Nagelmykose",
+      "tipo": "multipla_scelta",
+      "domanda": "Per il trattamento dell'onicomicosi in farmacia (Lista B+), quale condizione clinica rappresenta una Red Flag che impone l'invio al medico?",
+      "opzioni": {
+        "A": "Infezione che coinvolge solo la parte distale dell'unghia [43].",
+        "B": "Coinvolgimento della matrice ungueale (lunula) o onicomicosi prossimale [43].",
+        "C": "Unghia di colore giallastro e ispessita [43].",
+        "D": "Paziente di età superiore ai 65 anni [44]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'onicomicosi prossimale (PSO) o il coinvolgimento della matrice (matrice coinvolta = unghia infetta alla base) richiedono solitamente una terapia sistemica e non sono \nadatti al solo trattamento topico B+ [43]. La Lista B+ è indicata per infezioni da lievi a moderate senza interessamento della matrice [45].",
+      "numero": 15,
+      "id": "q15"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Smarter Medicine - Modifiche della terapia",
+      "tipo": "kprim",
+      "domanda": "Secondo la raccomandazione n. 3 di 'smarter medicine', cosa deve garantire il farmacista in caso di modifica della terapia (es. sostituzione generica o dosaggio)?",
+      "opzioni": {
+        "1": "Il paziente deve essere informato e istruito sul cambiamento [46, 47].",
+        "2": "La modifica può essere effettuata senza informare il medico se il farmaco è un generico [46].",
+        "3": "L'informazione alle altre figure professionali legittimate deve essere assicurata per evitare doppie assunzioni [46, 47].",
+        "4": "È raccomandabile annotare il nome del farmaco originale sulle istruzioni del generico [48, 49]."
+      },
+      "risposta_corretta": "VFFV",
+      "motivazione": "Ogni modifica richiede l'educazione del paziente e la comunicazione interprofessionale [46, 47]. L'informazione al medico è necessaria per mantenere aggiornato il piano \nterapeutico [46]. L'annotazione del nome originale aiuta il paziente a orientarsi ed evitare errori [48, 49].",
+      "numero": 16,
+      "id": "q16"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Immunostimolanti urinari",
+      "tipo": "multipla_scelta",
+      "domanda": "Il lisato batterico di E. coli (Uro-Vaxom®) è stato inserito in Lista B+. Qual è la sua indicazione principale secondo i documenti forniti?",
+      "opzioni": {
+        "A": "Trattamento antibiotico acuto della cistite [10, 50].",
+        "B": "Prevenzione delle infezioni recidivanti delle vie urinarie [50-52].",
+        "C": "Trattamento del dolore vescicale post-operatorio [10].",
+        "D": "Sostituzione della terapia ormonale post-menopausale [10]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Uro-Vaxom® è classificato come un immunostimolante indicato per la profilassi/prevenzione delle infezioni urinarie ricorrenti, non per la fase acuta [50-52]. È un'opzione \nbasata sull'evidenza per ridurre le recidive [52].",
+      "numero": 17,
+      "id": "q17"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Magnesio",
+      "tipo": "kprim",
+      "domanda": "In merito alla dispensazione di sali di magnesio (Lista B+), quali aspetti sono rilevanti per la sicurezza e l'efficacia?",
+      "opzioni": {
+        "1": "La carenza di magnesio è una controindicazione alla terapia B+ [53].",
+        "2": "L'insufficienza renale grave è una controindicazione assoluta [54].",
+        "3": "È necessario un intervallo di 2-4 ore con l'assunzione di tetracicline o chinoloni [54].",
+        "4": "L'effetto collaterale più comune riportato è la stipsi [54]."
+      },
+      "risposta_corretta": "FVVF",
+      "motivazione": "L'insufficienza renale compromette l'escrezione di magnesio, rendendolo pericoloso [54]. Esistono interazioni da chelazione con vari antibiotici [54]. L'effetto \ncollaterale tipico è la diarrea, non la stipsi [54].",
+      "numero": 18,
+      "id": "q18"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Malattie degli occhi",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente presenta palpebre arrossate e croste mattutine sulle ciglia. Quale farmaco della Lista B+ può essere dispensato per questa specifica condizione (Blefarite)?",
+      "opzioni": {
+        "A": "Hexamidin (Desomedin®) [55].",
+        "B": "Bibrocathol (Posiformin®) [55, 56].",
+        "C": "Tobramicina (Tobrex®) [57].",
+        "D": "Acido ialuronico (Lacrycon®) [57]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il Bibrocathol (Posiformin®) è stato recentemente aggiunto alla Lista B+ specificamente per la blefarite cronica [55, 56]. L'Hexamidin è indicato per la congiuntivite \nbatterica (Lista B-) [55-57]. La Tobramicina richiede ricetta medica (Lista A) [57, 58].",
+      "numero": 19,
+      "id": "q19"
+    },
+    {
+      "ruolo": 1,
+      "tema": "obbligo di ricetta - autoscrizione medici",
+      "tipo": "kprim",
+      "domanda": "Un medico svizzero richiede un farmaco della Lista B per il proprio uso personale. Quali regole si applicano?",
+      "opzioni": {
+        "1": "L'autoscrizione è considerata legalmente valida ai fini del rimborso OKP [59, 60].",
+        "2": "Manca l'obiettività clinica necessaria per una prescrizione valida secondo l'Art. 26 HMG [59].",
+        "3": "La dispensazione deve essere trattata come una consegna senza ricetta in caso eccezionale [2, 61].",
+        "4": "Per gli stupefacenti richiesti da medici con licenza, la notifica alle autorità cantonali non è obbligatoria [61]."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "Il Tribunale Federale ha stabilito che l'autoscrizione non è rimborsabile dall'assicurazione obbligatoria [59, 60]. Legalmente, al medico mancano i requisiti di \nobiettività per prescrivere a se stesso [59]. Il farmacista decide la consegna come caso eccezionale documentato [2, 61]. Per gli stupefacenti richiesti da medici abilitati per uso proprio, \nla prassi non prevede la notifica cantonale [61].",
+      "numero": 20,
+      "id": "q20"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Intestino irritabile",
+      "tipo": "multipla_scelta",
+      "domanda": "La Mebeverina (Duspatalin®) è indicata per i dolori addominali nel Reizdarmsyndrom (RDS). Qual è una precauzione d'uso importante riportata nelle fonti?",
+      "opzioni": {
+        "A": "Può essere usata senza restrizioni in caso di insufficienza renale [62].",
+        "B": "Le capsule non possono essere aperte per alcun motivo [63].",
+        "C": "Deve essere usata con cautela in caso di compromissione della funzione epatica o renale [62].",
+        "D": "È la terapia di prima scelta per la stipsi cronica [63]."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Poiché la Mebeverina è ampiamente metabolizzata e i suoi metaboliti sono escreti per via renale, è necessaria cautela in pazienti con insufficienza epatica o renale [62]. \nPer la stipsi nel RDS-O, la prima scelta è il Macrogol, non la Mebeverina [63].",
+      "numero": 21,
+      "id": "q21"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Congiuntivite allergica",
+      "tipo": "kprim",
+      "domanda": "In merito agli antistaminici oculari della Lista B+ (Azelastina, Epinastina, Ketotifene, Olopatadina), quali affermazioni sulla loro dispensazione facilitata sono corrette?",
+      "opzioni": {
+        "1": "Possono essere dispensati per un'età inferiore ai 6 anni se il medico è d'accordo [64-66].",
+        "2": "L'Epinastina ha un limite di età superiore (minimo 12 anni) rispetto agli altri [65, 66].",
+        "3": "La durata massima della terapia senza ricetta è di 1 mese [64-66].",
+        "4": "Questi farmaci sono ammessi durante la gravidanza in regime di Lista B+ [64]."
+      },
+      "risposta_corretta": "FVVF",
+      "motivazione": "Il limite generale per la Lista B+ oculare è di 6 anni (12 per Epinastina) [64-66]. La durata è tassativamente di un mese [64]. Gravidanza e allattamento sono sempre \nesclusioni per la dispensazione B+ [64].",
+      "numero": 22,
+      "id": "q22"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Rinite allergica",
+      "tipo": "multipla_scelta",
+      "domanda": "Nella scelta di un corticosteroide nasale (INGK) in Lista B+, perché Mometasone e Fluticasone sono preferibili rispetto al Beclometasone?",
+      "opzioni": {
+        "A": "Perché hanno un costo inferiore [67].",
+        "B": "Perché hanno una biodisponibilità sistemica molto più bassa, minimizzando gli effetti collaterali [67].",
+        "C": "Perché il Beclometasone è stato ritirato dal mercato [68].",
+        "D": "Perché il Beclometasone richiede l'uso di un distanziatore nasale [67]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Mometasone e Fluticasone presentano una biodisponibilità sistemica minima (<1%) rispetto al Beclometasone (44%), il che li rende più sicuri per un uso prolungato [67, \n68].",
+      "numero": 23,
+      "id": "q23"
+    },
+    {
+      "ruolo": 1,
+      "tema": "obbligo di ricetta - importazione farmaci",
+      "tipo": "kprim",
+      "domanda": "In caso di penuria di un farmaco SL (Spezialitätenliste), quali condizioni devono essere soddisfatte per importare un sostituto dall'estero e fatturarlo alla cassa malati \n(OKP)?",
+      "opzioni": {
+        "1": "Non deve esistere in Svizzera alcun farmaco alternativo con lo stesso principio attivo o forma galenica [60, 69].",
+        "2": "L'importazione deve essere destinata a una persona specifica o per casi di emergenza [60, 69].",
+        "3": "Il farmaco deve essere approvato in un paese con un sistema di controllo dei medicamenti equivalente [60, 69].",
+        "4": "È possibile importare e fatturare anche farmaci contenenti sostanze controllate [69]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'importazione è ammessa solo se non ci sono alternative SL svizzere (Art. 49 AMBV) [60, 69]. Deve esserci un nesso con un paziente specifico e il paese d'origine deve \navere standard simili (es. UE) [60, 69]. L'importazione agevolata per penuria esclude i farmaci contenenti stupefacenti [69].",
+      "numero": 24,
+      "id": "q24"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Automedicazione nell'anziano - PIM",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo i criteri di Beers e la lista PRISCUS, quale classe di analgesici è considerata potenzialmente inappropriata (PIM) negli over 65 a causa del rischio di emorragie \ngastrointestinali?",
+      "opzioni": {
+        "A": "Paracetamolo a dosi standard [70].",
+        "B": "FANS sistemici non selettivi (es. Diclofenac, Ibuprofene) [70-72].",
+        "C": "Cerotti alla lidocaina [70].",
+        "D": "Integratori di glucosamina [70]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "I FANS sistemici aumentano drasticamente il rischio di emorragie e ulcere negli anziani, specialmente sopra i 75 anni o in combinazione con altri farmaci [70-72]. Il loro \nuso cronico dovrebbe essere evitato se non strettamente necessario [70].",
+      "numero": 25,
+      "id": "q25"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B- - Domperidone",
+      "tipo": "kprim",
+      "domanda": "Il Domperidone (Lista B-) è soggetto a restrizioni di sicurezza. Quali delle seguenti situazioni richiedono particolare cautela o esclusione dalla dispensazione B-?",
+      "opzioni": {
+        "1": "Pazienti di età superiore ai 60 anni [32, 73].",
+        "2": "Combinazione con potenti inibitori del CYP3A4 (es. claritromicina) [32, 74].",
+        "3": "Presenza di disturbi elettrolitici o pre-esistente prolungamento del tratto QT [32, 74].",
+        "4": "Dose giornaliera superiore a 30 mg [32, 73]."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Il Domperidone può causare aritmie ventricolari gravi [73]. Il rischio aumenta significativamente sopra i 60 anni, con dosi elevate o in presenza di interazioni \nfarmacologiche che ne aumentano i livelli plasmatici o influenzano il ritmo cardiaco [32, 73, 74].",
+      "numero": 26,
+      "id": "q26"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Emorroidi",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale vantaggio clinico offre la dispensazione di Doxiproct® Plus (Lista B+) rispetto ai preparati della Lista D?",
+      "opzioni": {
+        "A": "Contiene un anestetico locale più potente [75].",
+        "B": "Contiene un corticosteroide di classe 2 efficace contro il prurito intenso e l'infiammazione [75].",
+        "C": "È l'unico farmaco che può essere usato in gravidanza [76].",
+        "D": "Può essere usato per trattare emorroidi sanguinanti di grado IV [75, 76]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'inclusione in Lista B+ permette l'accesso a corticosteroidi più efficaci per gestire sintomi infiammatori acuti e prurito intenso [75]. La gravidanza è però \nun'esclusione per la dispensazione B+ [76]. Per le emorragie, il Policresulene (Faktu®) è più indicato [75].",
+      "numero": 27,
+      "id": "q27"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Dermocorticolidi",
+      "tipo": "kprim",
+      "domanda": "In merito alla dispensazione facilitata di corticosteroidi topici di classe II (es. Locoid®), quali limitazioni deve rispettare il farmacista?",
+      "opzioni": {
+        "1": "L'applicazione è permessa al massimo una volta al giorno [77, 78].",
+        "2": "La durata del trattamento non deve superare le 3 settimane [77, 79, 80].",
+        "3": "L'uso nelle zone ascellari o genitali è escluso per il rischio di atrofia cutanea [77, 79].",
+        "4": "È possibile dispensare la confezione più grande disponibile in commercio [79]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Le regole B+ per i dermocorticolidi sono rigide: frequenza ridotta, durata limitata e divieto d'uso in zone a cute sottile (viso, ascelle, genitali) [77, 79]. Deve inoltre\nessere dispensata solo la confezione più piccola esistente [79].",
+      "numero": 28,
+      "id": "q28"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Bambini e SABA",
+      "tipo": "multipla_scelta",
+      "domanda": "Un genitore chiede un inalatore di Salbutamolo (Ventolin®) per il figlio di 8 anni. Qual è il limite della durata della terapia per la dispensazione facilitata in questo \ncaso?",
+      "opzioni": {
+        "A": "3 giorni [6].",
+        "B": "1 settimana [6].",
+        "C": "Massimo 2 settimane [5-7].",
+        "D": "Fino alla fine della scuola [6]."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Per i SABA (Salbutamolo/Terbutalina) in regime B+, il limite di età è di 6 anni e la durata massima della terapia dispensabile è di 2 settimane [5-7]. La dispensazione \ndeve seguire le linee guida correnti per asma e COPD [5, 6].",
+      "numero": 29,
+      "id": "q29"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Lista B+ - Condizioni generali",
+      "tipo": "kprim",
+      "domanda": "Quali sono i requisiti generali per ogni dispensazione facilitata di medicamenti della Lista B+ secondo l'Art. 24 HMG?",
+      "opzioni": {
+        "1": "La dispensazione deve avvenire personalmente da parte del farmacista [12, 45].",
+        "2": "Il paziente deve essere fisicamente presente in farmacia [12, 45].",
+        "3": "L'atto deve essere documentato per garantirne la tracciabilità e la motivazione clinica [12, 45].",
+        "4": "Il farmacista può delegare l'intero processo a un assistente di farmacia se supervisionato [12]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "La legge richiede il coinvolgimento personale del farmacista e la presenza del paziente [12]. La documentazione (protocollo) è essenziale per la sicurezza e la \ngiustificazione della decisione terapeutica [12, 45]. La delega della consulenza clinica B+ non è prevista dalle condizioni generali [12].",
+      "numero": 30,
+      "id": "q30"
+    }
+  ]
+}

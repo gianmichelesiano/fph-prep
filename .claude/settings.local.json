@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:/Users/bandi/Desktop/fph-prep/src/lib\")",
+      "Bash(mkdir -p \"C:/Users/bandi/Desktop/fph-prep/src/contexts\")",
+      "Bash(mkdir -p \"C:/Users/bandi/Desktop/fph-prep/src/locales\")",
+      "Bash(mkdir -p \"C:/Users/bandi/Desktop/fph-prep/src/pages/admin\")",
+      "Bash(mkdir -p \"C:/Users/bandi/Desktop/fph-prep/src/components/admin\")",
+      "Bash(mv 'C:/Users/bandi/Desktop/fph-prep/fph-exam/src/lib/*' C:/Users/bandi/Desktop/fph-prep/src/lib/)",
+      "Bash(mv 'C:/Users/bandi/Desktop/fph-prep/fph-exam/src/contexts/*' C:/Users/bandi/Desktop/fph-prep/src/contexts/)",
+      "Bash(mv 'C:/Users/bandi/Desktop/fph-prep/fph-exam/src/locales/*' C:/Users/bandi/Desktop/fph-prep/src/locales/)",
+      "Bash(mv 'C:/Users/bandi/Desktop/fph-prep/fph-exam/supabase/migrations/*' C:/Users/bandi/Desktop/fph-prep/supabase/migrations/)",
+      "Bash(ls C:/Users/bandi/Desktop/fph-prep/*.json)",
+      "Bash(cmd /c \"cd /d C:\\\\Users\\\\bandi\\\\Desktop\\\\fph-prep && npm run build 2>&1\")",
+      "Bash(cmd:*)",
+      "Bash(powershell:*)"
+    ]
+  }
+}

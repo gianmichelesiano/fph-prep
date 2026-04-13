@@ -1,0 +1,168 @@
+{
+  "id": "simulazione-20260310-1359",
+  "title": "Simulazione Esame – 10/03/2026 13:59",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "Acne e Rosacea - acne vulgaris",
+      "tipo": "multipla_scelta",
+      "domanda": "Un giovane di 18 anni si presenta in farmacia lamentando la comparsa di 'brufoli' sul viso. Durante l'anamnesi per una possibile dispensa di un retinoide topico (Lista \nB+), quale elemento clinico è fondamentale per confermare la diagnosi di Acne vulgaris ed escludere una Rosacea?",
+      "opzioni": {
+        "A": "La presenza di eritema e teleangiektasien (capillari dilatati).",
+        "B": "La presenza di comedoni aperti (punti neri) o chiusi (punti bianchi).",
+        "C": "La localizzazione delle lesioni esclusivamente sulla zona zentrofacciale.",
+        "D": "Il brenne o pizzicore riferito dal paziente dopo l'esposizione al calore."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida e i criteri diagnostici dermatologici, la presenza di comedoni è il segno distintivo necessario per la diagnosi di acne vulgaris [1-3]. La \nrosacea, al contrario, si distingue proprio per l'assenza di comedoni, pur presentando papule e pustole simili a quelle dell'acne [1, 2, 4]. L'eritema e le teleangiektasien sono invece \ntipici della rosacea [2, 4].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Retinoidi topici e Benzoile perossido",
+      "tipo": "kprim",
+      "domanda": "State dispensando un prodotto combinato a base di Adapalene e Benzoile perossido (BPO) come farmaco della Lista B+. Quali delle seguenti istruzioni d'uso e avvertenze sono\ncorrette secondo le linee guida svizzere?",
+      "opzioni": {
+        "1": "Il farmaco deve essere applicato preferibilmente la sera su tutte le aree interessate, non solo sulle singole lesioni.",
+        "2": "Il Benzoile perossido può causare lo scolorimento (effetto candeggiante) di capelli, biancheria e indumenti.",
+        "3": "In caso di sensibilità cutanea, è consigliato iniziare con un'applicazione a sere alterne (ogni 2-3 notti) per le prime 2 settimane.",
+        "4": "L'effetto terapeutico completo è immediato, con una riduzione visibile delle lesioni entro i primi 3-5 giorni."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "I retinoidi topici come l'adapalene vanno applicati la sera su tutta la zona colpita per prevenire nuovi microcomedoni [5-7]. Il BPO ha un noto effetto candeggiante \nsui tessuti [8-10]. Per migliorare la tollerabilità iniziale (spesso caratterizzata da secchezza e arrossamento), si raccomanda una terapia 'einschleichende' (graduale) [5, 7, 11]. \nTuttavia, il miglioramento clinico richiede tempo: solitamente si osserva dopo 4-8 settimane, non dopo pochi giorni [7, 12, 13].",
+      "numero": 2,
+      "id": "q2"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Trattamento Rosacea - Lista B+",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente di 50 anni, con diagnosi medica di Rosacea papulo-pustulosa già accertata in passato, richiede un trattamento topico efficace per una ricaduta moderata. Quale \nfarmaco della Lista B+ può dispensare autonomamente il farmacista in Svizzera in questo scenario?",
+      "opzioni": {
+        "A": "Metronidazolo 1% crema (es. Rosalox®).",
+        "B": "Brimonidina 0.33% gel (es. Mirvaso®).",
+        "C": "Ivermectina 1% crema (es. Soolantra®).",
+        "D": "Idrocortisone 0.5% crema (es. Sanatuss®)."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "L'Ivermectina 1% crema è l'unico principio attivo attualmente inserito nella Lista B+ per il trattamento della rosacea in farmacia [14-16]. Metronidazolo e Brimonidina\nappartengono alla categoria di dispensazione B e richiedono una prescrizione medica [14, 17]. I corticosteroidi topici (opzione D) sono formalmente controindicati nella rosacea poiché \npossono causare un peggioramento o indurre una 'rosacea da steroidi' [18, 19].",
+      "numero": 3,
+      "id": "q3"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Isotretinoina orale - Misure di sicurezza",
+      "tipo": "kprim",
+      "domanda": "In merito alla dispensazione di Isotretinoina orale (categoria A) a una paziente in età fertile, quali obblighi e restrizioni devono essere rispettati secondo le direttive\nSwissmedic (HPC)?",
+      "opzioni": {
+        "1": "La prescrizione medica deve essere limitata a un fabbisogno massimo di 30 giorni.",
+        "2": "La dispensazione del medicamento deve avvenire entro un massimo di 7 giorni dalla data di emissione della ricetta.",
+        "3": "È obbligatorio verificare che la paziente utilizzi almeno un metodo contraccettivo efficace già da un mese prima dell'inizio.",
+        "4": "La paziente può donare il sangue durante il trattamento, purché i test di gravidanza siano negativi."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Per l'isotretinoina orale, Swissmedic impone regole rigorose: ricetta limitata a 30 giorni [20, 21] e validità della stessa di soli 7 giorni per garantire che il test \ndi gravidanza sia recente [20, 22]. La contraccezione deve iniziare un mese prima del trattamento [23]. La donazione di sangue è invece severamente vietata durante la terapia e fino a un \nmese dopo la fine del trattamento per evitare rischi teratogeni ai riceventi [24].",
+      "numero": 4,
+      "id": "q4"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Cura della pelle e prevenzione",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente con pelle sensibile a tendenza acneica chiede consigli per la cura quotidiana e la protezione solare. Quale raccomandazione è errata secondo le attuali \nconoscenze dermatologiche?",
+      "opzioni": {
+        "A": "Utilizzare syndet acidi o detergenti senza sapone per la pulizia del viso.",
+        "B": "Applicare peeling meccanici con granuli 3-4 volte a settimana per liberare i pori.",
+        "C": "Scegliere protezioni solari con galenica non comedogena (es. gel o emulsioni idrofile).",
+        "D": "Evitare cosmetici contenenti oli minerali o basi grasse occlusive."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'uso frequente di peeling meccanici è sconsigliato in presenza di acne o rosacea infiammatoria (papule/pustole), poiché può aumentare l'irritazione cutanea e \npeggiorare le lesioni [1, 3, 25]. Le raccomandazioni corrette includono l'uso di detergenti delicati (syndet) [25-27], l'uso di solari con formulazioni leggere e non occlusive (SPF 50) \n[1, 3, 25] e l'evitare prodotti troppo grassi che favoriscono il calore cutaneo o i comedoni [7, 28, 29].",
+      "numero": 5,
+      "id": "q5"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie trasmesse dalle zecche - Triage in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente si presenta in farmacia mostrando una macchia rossa circolare di circa 6 cm di diametro sul polpaccio, comparsa 10 giorni dopo un morso di zecca. Non presenta \nfebbre né altri sintomi sistemici. Qual è la condotta corretta secondo le linee guida riportate nelle fonti?",
+      "opzioni": {
+        "A": "Tranquillizzare il cliente spiegando che si tratta di una normale reazione allergica locale al morso.",
+        "B": "Inviare il paziente a una consultazione medica poiché il quadro clinico suggerisce un Erythema migrans.",
+        "C": "Consigliare l'applicazione di una crema a base di idrocortisone e rivalutare dopo 48 ore.",
+        "D": "Eseguire immediatamente un test sierologico in farmacia per confermare la diagnosi di Borreliosi."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo la tabella di triage, la presenza di un Erythema migrans (macchia rossa che si espande) richiede una consultazione medica [1]. L'Erythema migrans è il sintomo \npatognomonico del primo stadio della Borreliosi di Lyme e compare solitamente tra 7 e 14 giorni dopo il morso [2]. La sierologia non è raccomandata in questa fase iniziale poiché gli \nanticorpi compaiono solo dopo 4-6 settimane [1]. Una reazione allergica immediata è solitamente pruriginosa e scompare rapidamente, a differenza dell'eritema migrante [2].",
+      "numero": 6,
+      "id": "q6"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie trasmesse dalle zecche - Rimozione e prevenzione",
+      "tipo": "kprim",
+      "domanda": "Un genitore chiede consiglio su come rimuovere una zecca dal braccio del figlio. Quali delle seguenti istruzioni sono corrette secondo le fonti?",
+      "opzioni": {
+        "1": "Utilizzare olio o smalto per unghie per soffocare la zecca prima di rimuoverla.",
+        "2": "Afferrare la zecca con una pinzetta il più vicino possibile alla pelle e tirare con una progressione costante verso l'alto.",
+        "3": "Se la testa della zecca rimane nella pelle, non è necessario rimuoverla perché non aumenta il rischio di trasmissione di agenti patogeni.",
+        "4": "Disinfettare accuratamente la zona del morso dopo la rimozione e monitorarla per circa 2 settimane."
+      },
+      "risposta_corretta": "FVFV",
+      "motivazione": "1. FALSO: Non si devono usare sostanze come olio, alcol o smalto perché aumentano il rischio di rigurgito e quindi di infezione [1, 3]. 2. VERO: La zecca va afferrata \nvicino alla pelle e tirata senza strappi [1, 3]. 3. FALSO: Sebbene la permanenza di parti dell'apparato boccale non sia critica per la Borreliosi se il corpo è rimosso, le fonti indicano \nche se la testa rimane, andrebbe idealmente rimossa con cautela [3], anche se altre sezioni dicono che non è rilevante per la trasmissione di agenti patogeni [4], ma la tecnica corretta \nprevede la rimozione completa [3]. 4. VERO: La disinfezione e il monitoraggio per la comparsa di eritemi sono passaggi fondamentali [1, 3, 5].",
+      "numero": 7,
+      "id": "q7"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie trasmesse dalle zecche - Vaccinazione TBE",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente di 45 anni, in buona salute, desidera vaccinarsi contro l'encefalite da zecche (TBE/FSME) in farmacia prima di una vacanza in Svizzera tedesca. Quale \naffermazione è corretta riguardo alla profilassi vaccinale in Svizzera?",
+      "opzioni": {
+        "A": "La vaccinazione non è raccomandata poiché il rischio di TBE è limitato solo ad alcuni comuni del Canton Zurigo.",
+        "B": "In molti cantoni, i farmacisti possono vaccinare persone sane sopra i 16 anni senza prescrizione medica.",
+        "C": "Il ciclo vaccinale completo prevede un'unica dose che garantisce protezione per 10 anni.",
+        "D": "Il vaccino protegge efficacemente sia contro il virus della TBE che contro il batterio della Borreliosi."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In Svizzera, la vaccinazione TBE è possibile in farmacia senza ricetta per persone sopra i 16 anni in molti cantoni [6]. Tutta la Svizzera è considerata zona a \nrischio, eccetto i cantoni Ticino e Ginevra [4, 6]. Il ciclo completo richiede tre dosi per una protezione a lungo termine (>95%) e il richiamo è raccomandato ogni 10 anni dal BAG [1, \n6-8]. Non esiste un vaccino contro la Borreliosi [7, 9].",
+      "numero": 8,
+      "id": "q8"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie trasmesse dalle zecche - Trattamento e antibiotici",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla terapia antibiotica per la malattia di Lyme (Borreliosi), quali delle seguenti affermazioni sono supportate dalle fonti?",
+      "opzioni": {
+        "1": "La doxiciclina (100 mg ogni 12 ore per 10 giorni) è il trattamento di prima scelta per l'Erythema migrans.",
+        "2": "In caso di controindicazioni alla doxiciclina, l'amoxicillina rappresenta una valida alternativa di prima scelta.",
+        "3": "Una singola dose profilattica di antibiotico è fortemente raccomandata subito dopo ogni morso di zecca per prevenire l'infezione.",
+        "4": "I casi di neuroborreliosi o manifestazioni cardiache richiedono solitamente una terapia antibiotica per via endovenosa."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. VERO: La doxiciclina è indicata come prima scelta per 10 giorni [2]. 2. VERO: L'amoxicillina è l'altra opzione di prima scelta (500 mg ogni 8 ore per 14-21 giorni) \n[2]. 3. FALSO: La profilassi antibiotica dopo un morso senza sintomi clinici non è generalmente raccomandata [7, 9]. 4. VERO: Le manifestazioni neurologiche o cardiache richiedono un \ntrattamento endovenoso [10].",
+      "numero": 9,
+      "id": "q9"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie trasmesse dalle zecche - Epidemiologia e rischi",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante una consulenza sui repellenti, un cliente chiede informazioni sul rischio di trasmissione delle malattie. Quale delle seguenti informazioni è scientificamente \ncorretta?",
+      "opzioni": {
+        "A": "Il rischio di trasmissione della Borreliosi è minimo se la zecca viene rimossa entro le prime 24 ore dal morso.",
+        "B": "Il virus della TBE richiede almeno 48 ore di adesione della zecca per infettare l'ospite.",
+        "C": "Le zecche Ixodes ricinus si trovano comunemente sopra i 2500 metri di altitudine nelle Alpi svizzere.",
+        "D": "L'uso di oli essenziali come la citronella garantisce una protezione di 8 ore, superiore al DEET."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Il rischio di trasmissione della Borreliosi è minimo se la zecca viene rimossa entro 24 ore [3, 11], poiché i batteri migrano dall'intestino della zecca solo dopo un \ncerto tempo [2, 4]. Al contrario, il virus TBE può essere trasmesso entro pochi minuti dal morso [1, 4]. Le zecche si trovano solitamente fino a 1500-2000 metri [2, 12]. Gli oli \nessenziali hanno un'efficacia limitata e richiedono applicazioni frequenti, mentre il DEET e l'Icaridina sono più persistenti [11, 13, 14].",
+      "numero": 10,
+      "id": "q10"
+    }
+  ]
+}

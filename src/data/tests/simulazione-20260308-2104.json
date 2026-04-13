@@ -1,0 +1,1416 @@
+{
+  "id": "simulazione-20260308-2104",
+  "title": "Simulazione Esame – 08/03/2026 21:04",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 75 anni con insufficienza cardiaca assume regolarmente Enalapril (ACE-inibitore) e Idroclorotiazide (diuretico). Si presenta in \nfarmacia con una ricetta per Diclofenac 75 mg per un dolore acuto. Qual è il rischio clinico principale legato a questa combinazione ('Triple Whammy')?",
+      "opzioni": {
+        "A": "Aumento del rischio di emorragie gastrointestinali dovute all'effetto sinergico tra FANS e ACE-inibitori.",
+        "B": "Aumento del rischio di insufficienza renale acuta a causa della riduzione drastica della pressione di filtrazione glomerulare.",
+        "C": "Crisi ipertensiva causata dall'antagonismo del FANS sull'effetto del diuretico.",
+        "D": "Ipokaliemia severa dovuta alla perdita di potassio indotta dal diuretico e potenziata dal FANS."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La combinazione di un inibitore del RAAS (ACE-inibitore o sartano), un diuretico e un FANS è definita 'Triple Whammy'. L'ACE-inibitore dilata \nl'arteriola efferente, il diuretico riduce il volume plasmatico e il FANS costringe l'arteriola afferente. Questo annulla i meccanismi compensatori renali, portando\na una caduta della filtrazione glomerulare e rischio di insufficienza renale acuta [1, 2]. L'iperkaliemia, non l'ipokaliemia, sarebbe il rischio elettrolitico \nassociato agli inibitori del RAAS [3, 4].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - controindicazioni",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 70 anni assume Escitalopram per una depressione. Le viene prescritto Clarithromycin per un'infezione. Valuta la validità delle \nseguenti affermazioni basandoti sul rischio di prolungamento dell'intervallo QT:",
+      "opzioni": {
+        "1": "L'Escitalopram è associato a un rischio di prolungamento del QT dose-dipendente, ma il rischio è considerato circa il 50% inferiore rispetto al \nCitalopram.",
+        "2": "L'età superiore ai 65 anni e il sesso femminile sono considerati fattori di rischio indipendenti per lo sviluppo di Torsioni di Punta (TdP).",
+        "3": "Secondo le Informazioni Professionali svizzere, l'uso concomitante di Escitalopram e Claritromicina è generalmente controindicato.",
+        "4": "La Claritromicina agisce come un potente induttore del CYP3A4, riducendo i livelli plasmatici di Escitalopram e il rischio di aritmia."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1: Vero, l'Escitalopram ha un potenziale di prolungamento del QT inferiore rispetto al Citalopram [5, 6]. 2: Vero, età avanzata e sesso \nfemminile sono fattori di rischio documentati [7, 8]. 3: Vero, la combinazione di farmaci che prolungano il QT è spesso controindicata o richiede estrema cautela \n[9]. 4: Falso, la claritromicina è un potente inibitore del CYP3A4, non un induttore, e può aumentare i livelli dei substrati [10, 11].",
+      "numero": 2,
+      "id": "q2"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - errori di dosaggio",
+      "tipo": "multipla_scelta",
+      "domanda": "Una giovane donna in terapia cronica con Carbamazepina (induttore enzimatico) richiede la contraccezione d'emergenza orale (pillola del giorno \ndopo). Qual è la raccomandazione corretta secondo le attuali linee guida svizzere (IENK)?",
+      "opzioni": {
+        "A": "L'uso di Ulipristal acetato è la prima scelta poiché non è influenzato dall'induzione del CYP3A4.",
+        "B": "Si consiglia l'uso della spirale al rame (IUD) come metodo più efficace; in alternativa, raddoppiare la dose di Levonorgestrel (3 mg invece di 1.5 \nmg).",
+        "C": "Consegnare la dose standard di Levonorgestrel 1.5 mg; l'effetto di induzione della carbamazepina non è rilevante per una dose singola.",
+        "D": "Attendere almeno 48 ore dalla sospensione della carbamazepina prima di somministrare il contraccettivo d'emergenza."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La carbamazepina è un potente induttore del CYP3A4 e della P-gp [12, 13], che riduce l'efficacia dei contraccettivi ormonali. La spirale al rame\nè la prima scelta; se non possibile, è necessario raddoppiare la dose di Levonorgestrel [14-16]. L'Ulipristal acetato non è raccomandato in presenza di induttori \nenzimatici [14, 16]. L'effetto induttivo può persistere fino a 4 settimane dopo lo stop del farmaco [17].",
+      "numero": 3,
+      "id": "q3"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "kprim",
+      "domanda": "Un paziente che assume Sertralina (SSRI) riceve una prescrizione di Tramadolo per il dolore. Valuta le seguenti affermazioni riguardanti il rischio \ndi Sindrome Serotoninergica (S-Syn):",
+      "opzioni": {
+        "1": "Il Tramadolo contribuisce al rischio serotoninergico perché inibisce la ricaptazione della serotonina oltre al suo effetto oppioide.",
+        "2": "I sintomi tipici della S-Syn includono tremore, iperreflessia, midriasi e tachicardia.",
+        "3": "L'uso concomitante di un SSRI e di un Triptano per l'emicrania è assolutamente controindicato per l'alto rischio di S-Syn.",
+        "4": "In caso di sospetta S-Syn, è fondamentale sospendere immediatamente tutti i farmaci serotoninergici; i sintomi solitamente si risolvono entro 24 ore."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, il tramadolo ha proprietà serotoninergiche [5, 18]. 2: Vero, sono segni classici neuromuscolari e autonomici [19-21]. 3: Falso, \nl'associazione SSRI e Triptano è generalmente considerata sicura/accettabile poiché i triptani non sono 'serotonin spreader' [22, 23]. 4: Vero, la gestione \nimmediata prevede lo stop dei farmaci e il monitoraggio [24, 25].",
+      "numero": 4,
+      "id": "q4"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - polifarmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante la validazione di un piano terapeutico, si nota che un paziente assume Atorvastatina 40 mg e riceve una nuova prescrizione di Claritromicina\nper un'infezione respiratoria. Qual è l'intervento più appropriato del farmacista?",
+      "opzioni": {
+        "A": "Proseguire entrambe le terapie, poiché le statine non subiscono interazioni metaboliche con i macrolidi.",
+        "B": "Sospendere temporaneamente l'Atorvastatina (statin pause) per l'intera durata del ciclo di claritromicina per evitare il rischio di rabdomiolisi.",
+        "C": "Assumere l'Atorvastatina e la Claritromicina a distanza di 12 ore per evitare l'interazione a livello intestinale.",
+        "D": "Raddoppiare la dose di Atorvastatina per compensare l'inibizione enzimatica causata dalla Claritromicina."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La claritromicina è un potente inibitore del CYP3A4 e della P-gp [10, 26]. L'Atorvastatina è un substrato di entrambi i sistemi [27, 28]. L'uso \nconcomitante può aumentare massicciamente l'esposizione alla statina, elevando il rischio di tossicità muscolare grave (rabdomiolisi). La sospensione temporanea è \nla strategia raccomandata in questi casi [29].",
+      "numero": 5,
+      "id": "q5"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - validazione ricette mediche",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione della sicurezza renale e delle interazioni elettrolitiche, valuta la correttezza delle seguenti affermazioni:",
+      "opzioni": {
+        "1": "L'uso concomitante di un sartano (es. Telmisartan) e Trimethoprim richiede cautela a causa del rischio additivo di iperkaliemia.",
+        "2": "In un paziente con insufficienza renale severa (GFR < 30 ml/min), l'uso dei FANS (es. Diclofenac) è considerato controindicato.",
+        "3": "Il Paracetamolo rappresenta un'alternativa sicura per il trattamento del dolore anche in pazienti con disidratazione (exsikkose) o compromissione \nrenale.",
+        "4": "In caso di gastroenterite con vomito e diarrea, i pazienti in terapia con ACE-inibitori dovrebbero raddoppiare la dose per proteggere il rene."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1: Vero, entrambi possono aumentare i livelli di potassio [4, 30]. 2: Vero, i FANS sono controindicati con GFR < 30 ml/min [2, 31]. 3: Vero, il \nparacetamolo è indicato come alternativa sicura nel contesto renale [32, 33]. 4: Falso, in caso di exsikkose è indicato sospendere temporaneamente gli ACE-inibitori\ne i diuretici per prevenire l'insufficienza renale acuta [31, 33].",
+      "numero": 6,
+      "id": "q6"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - piani terapeutici",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente che assume regolarmente l'estratto di Iperico (Johanniskraut) ad alto contenuto di iperforina riceve una prescrizione di Rivaroxaban. \nQual è il rischio clinico principale?",
+      "opzioni": {
+        "A": "Aumento del rischio emorragico per inibizione del metabolismo del Rivaroxaban.",
+        "B": "Perdita di efficacia del Rivaroxaban e aumento del rischio di trombosi a causa dell'induzione del CYP3A4 e della P-gp.",
+        "C": "Sindrome serotoninergica causata dall'azione combinata dell'Iperico e del Rivaroxaban.",
+        "D": "Nessuna interazione rilevante, poiché l'Iperico non influenza i nuovi anticoagulanti orali (DOAC)."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'estratto di Iperico (iperforina) è un potente induttore del CYP3A4 e della P-glicoproteina (P-gp) [12, 13]. Poiché il Rivaroxaban è un \nsubstrato di entrambi i sistemi [27, 28], l'induzione ne accelera il metabolismo e l'escrezione, riducendone i livelli plasmatici e l'efficacia anticoagulante, con \nconseguente rischio di trombosi.",
+      "numero": 7,
+      "id": "q7"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Medicina complementare - omeopatia",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente chiede una potenza omeopatica C200 per un trauma fisico recente, ritenendo che una potenza elevata sia necessariamente più efficace. \nQuale spiegazione corretta deve fornire il farmacista basandosi sulla teoria delle potenze?",
+      "opzioni": {
+        "A": "Le potenze elevate (> D/C 30) sono le più indicate per i disturbi puramente fisici poiché agiscono più rapidamente.",
+        "B": "Non si può generalizzare sull'efficacia; i disturbi fisici guariscono spesso meglio con le potenze basse (< D/C 12).",
+        "C": "L'effetto di una potenza C200 è limitato a poche ore e richiede somministrazioni ogni 30 minuti.",
+        "D": "Le potenze medie (D/C 12) sono le uniche approvate in Svizzera per il trattamento dei traumi fisici."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, non è possibile generalizzare affermando che una potenza elevata sia sempre più efficace [1]. I disturbi fisici guariscono \nmeglio con le potenze basse (< D/C 12), che hanno un effetto fisico e una durata di poche ore [1, 2]. Al contrario, le potenze elevate (> D/C 30) hanno un raggio \nd'azione più profondo che coinvolge i livelli mentale e psichico per diverse settimane [2].",
+      "numero": 8,
+      "id": "q8"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Medicina complementare - omeopatia",
+      "tipo": "kprim",
+      "domanda": "Un paziente descrive un'infiammazione acuta con dolore pungente, calore e gonfiore, che migliora applicando ghiaccio. Il farmacista valuta l'uso di \nApis mellifica. Valutate le seguenti affermazioni relative a questo quadro farmacologico:",
+      "opzioni": {
+        "1": "L'indicazione è corretta in quanto Apis è indicato per infiammazioni acute, rapide e improvvise con dolore pungente.",
+        "2": "Il miglioramento con il freddo (impacchi, aria fresca) è una modalità caratteristica che conferma la scelta del rimedio.",
+        "3": "In questo quadro clinico, la presenza di una sete intensa è un sintomo generale fondamentale per confermare Apis.",
+        "4": "Il peggioramento dei sintomi con il contatto o la pressione è coerente con il quadro farmacologico di Apis."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Apis mellifica è indicato per infiammazioni acute (non purulente) con dolore pungente e lancinante [3, 4]. Tra le modalità positive vi è il \nmiglioramento con il freddo [4]. Un sintomo generale caratteristico è invece l'assenza di sete, nonostante la bocca secca [5]. Il contatto e la pressione \nrappresentano modalità di peggioramento per questo rimedio [4, 5].",
+      "numero": 9,
+      "id": "q9"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Medicina complementare - omeopatia",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante una consulenza per l'uso di uno spray cicatrizzante omeopatico (tipo Similasan) su una ferita, quale delle seguenti condizioni rappresenta \nuna 'Bandiera Rossa' che impone l'invio immediato al medico?",
+      "opzioni": {
+        "A": "La ferita presenta piccole croste superficiali ed è stata pulita adeguatamente.",
+        "B": "La ferita è stata causata da un morso o da una punta (rischio tetano).",
+        "C": "Il paziente ha più di 75 anni e assume farmaci per l'ipertensione.",
+        "D": "Il dolore della ferita è descritto come bruciante ma non è presente febbre."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le ferite da morso, da punta, quelle profonde o molto sporche richiedono obbligatoriamente un trattamento medico per il rischio di tetano [6, \n7]. Le piccole ferite con croste sono invece un'indicazione d'uso per lo spray [8, 9]. Altri segnali d'allarme includono febbre, bordi molto arrossati, gonfiore \nimprovviso o ferite che non guariscono entro 7 giorni [6].",
+      "numero": 10,
+      "id": "q10"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 28 anni si presenta in farmacia per una rinite allergica stagionale. Quale delle seguenti condizioni permette la \ndispensazione di un corticosteroide intranasale (INGK) in Lista B+ secondo la normativa svizzera?",
+      "opzioni": {
+        "A": "La paziente è al secondo mese di gravidanza.",
+        "B": "Il farmaco viene dispensato per una durata massima di 1 mese.",
+        "C": "La paziente ha un'età compresa tra i 12 e i 18 anni.",
+        "D": "I sintomi sono presenti da oltre 6 mesi in modo continuativo."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le condizioni della Lista B+ per la rinite allergica, la dispensazione è limitata a una durata massima di 1 mese [1]. È \nvietata in gravidanza/allattamento e il paziente deve avere più di 18 anni (eccetto per azelastina monopreparato) [1].",
+      "numero": 11,
+      "id": "q11"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Un paziente asmatico noto si presenta in farmacia in stato di agitazione per un peggioramento della respirazione. Quali dei seguenti \nsegni sono considerati 'Red Flags' che richiedono la chiamata immediata al 144?",
+      "opzioni": {
+        "1": "Incapacità di pronunciare frasi complete (Sprechdyspnoe).",
+        "2": "Saturazione di ossigeno (SpO2) misurata pari all'88%.",
+        "3": "Frequenza respiratoria superiore a 30 atti al minuto.",
+        "4": "Presenza di cianosi (decolorazione bluastra di labbra o mucose)."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tutti i segni elencati sono criteri di emergenza vitale secondo gli algoritmi medinform e le linee guida GINA: la Sprechdyspnoe, una \nSpO2 < 90%, la tachipnea (>30/min) e la cianosi indicano un'esacerbazione grave o una minaccia vitale [2-4].",
+      "numero": 12,
+      "id": "q12"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo la classificazione GOLD 2023 per la BPCO, quale terapia farmacologica iniziale è raccomandata per un paziente appartenente al \n'Gruppo E'?",
+      "opzioni": {
+        "A": "Monoterapia con un broncodilatatore a breve durata (SABA o SAMA).",
+        "B": "Monoterapia con un LABA.",
+        "C": "Combinazione LABA + LAMA.",
+        "D": "Combinazione LABA + ICS, indipendentemente dal conteggio degli eosinofili."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Per il Gruppo E (pazienti con >= 2 esacerbazioni moderate o >= 1 con ospedalizzazione), la terapia iniziale preferita è la doppia \nbroncodilatazione LABA+LAMA [5]. L'aggiunta di ICS va considerata solo se gli eosinofili sono >= 300 cells/µL [5].",
+      "numero": 13,
+      "id": "q13"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla tecnica di inalazione e alla gestione dei dispositivi, quali delle seguenti istruzioni fornite al banco sono corrette?",
+      "opzioni": {
+        "1": "Per il dispositivo Ellipta®, il farmaco deve essere eliminato 6 settimane dopo l'apertura della vaschetta di alluminio.",
+        "2": "Dopo l'uso di inalatori contenenti corticosteroidi (ICS), è necessario sciacquare la bocca o mangiare qualcosa.",
+        "3": "Gli inalatori a polvere secca (DPI) richiedono un'inspirazione lenta e costante per funzionare correttamente.",
+        "4": "In caso di attacco d'asma acuto, è preferibile usare un dosatore aerosol (MDI) con distanziatore (spacer) rispetto a un inalatore a polvere."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Ellipta scade dopo 6 settimane dall'apertura [6]. Lo sciacquo post-ICS previene la candidosi orale [7, 8]. I DPI richiedono \nun'inspirazione forte e profonda (non lenta) [9]. Nelle emergenze l'MDI con spacer è preferito perché richiede meno sforzo inspiratorio [10, 11].",
+      "numero": 14,
+      "id": "q14"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente chiede un consiglio per una tosse secca iniziata da una settimana. Riferisce di aver iniziato una nuova terapia antipertensiva\nnegli stessi giorni. Quale classe di farmaci è la più probabile causa del sintomo?",
+      "opzioni": {
+        "A": "Beta-bloccanti selettivi.",
+        "B": "Calcio-antagonisti.",
+        "C": "ACE-inibitori.",
+        "D": "Diuretici tiazidici."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Gli ACE-inibitori sono una causa classica di tosse secca e stizzosa che compare tipicamente entro una settimana dall'inizio del \ntrattamento [12-14].",
+      "numero": 15,
+      "id": "q15"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "In farmacia viene valutato un paziente con rinite allergica tramite la Scala Analogica Visiva (VAS). Quali delle seguenti affermazioni \nsulla gestione basata sulla VAS sono corrette?",
+      "opzioni": {
+        "1": "Un valore VAS >= 50 indica sintomi moderato-gravi.",
+        "2": "Se il VAS è < 50, il farmaco può essere scelto liberamente tra antistaminici o steroidi nasali.",
+        "3": "Se il VAS è >= 50, la prima scelta raccomandata sono i corticosteroidi intranasali (INGK).",
+        "4": "Se dopo 5-10 giorni di terapia il VAS rimane > 50, è necessario aumentare lo step terapeutico."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "La scala VAS guida la terapia: >= 50 indica gravità alta e predilige gli INGK [1, 15]. Sotto 50 c'è scelta libera [15]. La \nrivalutazione a 5-10 giorni prevede un aumento della terapia se il controllo è insufficiente (VAS > 50) [15].",
+      "numero": 16,
+      "id": "q16"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Un atleta professionista asmatico chiede informazioni sull'uso del Salbutamolo (Ventolin®) inalatorio. Qual è il limite di dosaggio \nconsentito nelle 24 ore secondo le norme anti-doping (Swiss Sport Integrity)?",
+      "opzioni": {
+        "A": "800 µg nelle 24 ore.",
+        "B": "1600 µg nelle 24 ore, con dosi singole non superiori a 600 µg ogni 8 ore.",
+        "C": "54 µg nelle 24 ore.",
+        "D": "Il Salbutamolo è totalmente vietato in gara indipendentemente dal dosaggio."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il Salbutamolo inalatorio è ammesso fino a 1600 µg/24h, con frazionamento di max 600 µg ogni 8 ore [16, 17]. La Terbutalina è invece \nvietata [17, 18].",
+      "numero": 17,
+      "id": "q17"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla gestione della tosse in età pediatrica e adulta, quali delle seguenti affermazioni sulla durata e il triage sono \ncorrette?",
+      "opzioni": {
+        "1": "La tosse è considerata cronica negli adulti se persiste per più di 8 settimane.",
+        "2": "Nei bambini sotto i 14 anni, la tosse è definita cronica se dura più di 4 settimane.",
+        "3": "La combinazione di un antitussivo e un espettorante è raccomandata per accelerare la guarigione.",
+        "4": "Il miele ha dimostrato evidenze di efficacia nel ridurre la frequenza della tosse sopra i 12 mesi di età."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La cronicità è definita come > 8 settimane (adulti) o > 4 settimane (bambini) [19, 20]. Combinare antitussivi ed espettoranti non ha \nsenso clinico e rischia il ristagno [19, 20]. Il miele è efficace e sicuro sopra l'anno [21, 22].",
+      "numero": 18,
+      "id": "q18"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Quali sono le limitazioni specifiche per la dispensazione in Lista B+ della combinazione Budesonide/Formoterolo (es. Symbicort®) in \nfarmacia?",
+      "opzioni": {
+        "A": "Dispensabile per un massimo di 2 settimane a chiunque sopra i 6 anni.",
+        "B": "Singola dispensazione, solo per adulti non fumatori, con obbligo di notifica al medico.",
+        "C": "Dispensabile solo se il paziente ha con sé un piano d'azione scritto (Action Plan).",
+        "D": "Nessuna limitazione specifica oltre alla documentazione del colloquio."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La combinazione Budesonide/Formoterolo in B+ prevede una singola dispensazione, è riservata agli adulti non fumatori e richiede \nl'avviso obbligatorio al medico curante [11, 23].",
+      "numero": 19,
+      "id": "q19"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Un paziente asmatico chiede un analgesico per il mal di denti. Sapendo che l'aspirina può scatenare broncocostrizione nel 21% degli \nasmatici, quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "I FANS non selettivi (es. Ibuprofene) devono essere evitati per l'elevata sensibilità incrociata.",
+        "2": "Il Paracetamolo è generalmente sicuro se assunto a dosaggi inferiori a 1000 mg.",
+        "3": "L'intolleranza all'aspirina è spesso associata alla presenza di polipi nasali (Triade di Vidal).",
+        "4": "In caso di intolleranza nota, è obbligatorio indirizzare il paziente al medico per ogni analgesico."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Esiste sensibilità incrociata con i FANS (V). Il paracetamolo < 1000mg è l'alternativa sicura (V). La triade di \npolipi/asma/intolleranza è tipica (V). Il farmacista può gestire la scelta dell'alternativa sicura (es. paracetamolo) senza obbligo di rinvio sistematico\nse non ci sono Red Flags (F) [Fonte esterna/conoscenza FPH supportata dal triage].",
+      "numero": 20,
+      "id": "q20"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Triage e Segnali d'allarme",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 68 anni lamenta un forte mal di schiena insorto dopo uno sforzo. Durante l'anamnesi tramite protocollo LINDAFF, riferisce\nuna perdita di sensibilità nell'area del perineo (anestesia a sella) e una leggera difficoltà a controllare la minzione. Qual è la condotta corretta del \nfarmacista?",
+      "opzioni": {
+        "A": "Dispensare Ibuprofene 600 mg (Lista B+) e rivalutare dopo 3 giorni.",
+        "B": "Consigliare Metamizolo 500 mg e impacchi caldi locali.",
+        "C": "Inviare immediatamente la paziente al pronto soccorso (ospedalizzazione d'urgenza).",
+        "D": "Consigliare una visita dal medico di famiglia entro le successive 48 ore."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "L'anestesia a sella e l'incontinenza urinaria di nuova insorgenza sono 'Red Flags' che indicano una possibile sindrome della cauda \nequina, un'emergenza neurologica che richiede ospedalizzazione immediata per prevenire danni permanenti [1-3].",
+      "numero": 21,
+      "id": "q21"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Ibuprofene (Farmacologia e Lista B+)",
+      "tipo": "kprim",
+      "domanda": "Riguardo alle proprietà dell'ibuprofene e alla sua dispensazione senza ricetta (Lista B+), valutare la veridicità delle seguenti \naffermazioni:",
+      "opzioni": {
+        "1": "L'effetto analgesico e antipiretico dell'ibuprofene presenta un 'effetto soffitto' (ceiling effect) a una dose singola di 400 mg.",
+        "2": "A differenza dell'effetto analgesico, l'effetto antinfiammatorio (antiflogistico) aumenta proporzionalmente con dosi superiori a 400 mg.",
+        "3": "Secondo le regole della Lista B+, la dose massima giornaliera dispensabile è di 2400 mg.",
+        "4": "In caso di infezione da varicella, l'ibuprofene è considerato il farmaco di prima scelta per gestire la febbre nel bambino."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "L'effetto analgesico ha un tetto a 400 mg, mentre quello antinfiammatorio cresce con la dose [4]. Il limite giornaliero per la Lista \nB+ è di 1800 mg (non 2400 mg) [5, 6]. La varicella è una controindicazione per il rischio di gravi complicazioni infettive cutanee necrotizzanti [7].",
+      "numero": 22,
+      "id": "q22"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Metamizolo (Sicurezza e Interazioni)",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente che assume Sertralina (SSRI) per una depressione maggiore richiede del Metamizolo per un forte dolore colico. Quale \npotenziale interazione farmacocinetica deve considerare il farmacista basandosi sulle fonti?",
+      "opzioni": {
+        "A": "Il metamizolo inibisce il metabolismo della sertralina, aumentando il rischio di sindrome serotoninergica.",
+        "B": "Il metamizolo può indurre gli enzimi CYP2B6 e CYP3A4, riducendo potenzialmente i livelli plasmatici di sertralina.",
+        "C": "La combinazione aumenta drasticamente il rischio di agranulocitosi dose-dipendente.",
+        "D": "Non esiste alcuna interazione rilevante tra queste due classi di farmaci."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il metamizolo è un induttore enzimatico (CYP2B6 e CYP3A4) e può ridurre i livelli plasmatici di diversi farmaci, tra cui sertralina, \nmetadone e bupropione [8-10].",
+      "numero": 23,
+      "id": "q23"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Paracetamolo (Tossicità e Dosaggio)",
+      "tipo": "kprim",
+      "domanda": "Sulla sicurezza e l'uso del paracetamolo in gruppi di pazienti specifici, valutare le seguenti affermazioni:",
+      "opzioni": {
+        "1": "In pazienti con consumo cronico di alcol o malnutrizione, la dose massima giornaliera deve essere ridotta a 2 grammi.",
+        "2": "Il paracetamolo è considerato il farmaco di prima scelta per il trattamento della lombalgia acuta (mal di schiena).",
+        "3": "L'antidoto d'elezione per il sovradosaggio acuto è la N-acetilcisteina.",
+        "4": "Il paracetamolo può causare epatotossicità grave se la dose singola supera gli 8 grammi in un adulto sano."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "Il limite per gli alcolisti è 2g/die [11, 12]. Studi Cochrane indicano che il paracetamolo non è superiore al placebo per la \nlombalgia [13, 14]. La N-acetilcisteina è l'antidoto [11, 12]. Una dose singola >7.5-8g è considerata tossica per il fegato [11, 12, 15].",
+      "numero": 24,
+      "id": "q24"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - FANS e Rischio Cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale dei seguenti FANS (NSAR) della Lista B+ deve essere evitato in pazienti con insufficienza cardiaca scompensata (NYHA III-IV) o alto\nrischio ischemico a causa della sua elevata selettività COX-2?",
+      "opzioni": {
+        "A": "Naprossene",
+        "B": "Ibuprofene",
+        "C": "Diclofenac",
+        "D": "Acido acetilsalicilico"
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il Diclofenac ha una selettività per la COX-2 paragonabile ai Coxib, il che conferisce il rischio cardiovascolare più elevato tra i \nFANS tradizionali [16-18].",
+      "numero": 25,
+      "id": "q25"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Interazioni Farmacologiche (Nefrotossicità)",
+      "tipo": "kprim",
+      "domanda": "La combinazione di FANS con altri farmaci può portare al cosiddetto 'Triple Whammy' (danno renale acuto). Valutare la pericolosità delle \nseguenti combinazioni:",
+      "opzioni": {
+        "1": "FANS + ACE-inibitore + Diuretico.",
+        "2": "FANS + Sartano + Diuretico.",
+        "3": "FANS + Beta-bloccante + Calcio-antagonista.",
+        "4": "Paracetamolo + ACE-inibitore + Diuretico."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "Il 'Triple Whammy' è causato dalla combinazione di un FANS (che riduce l'afflusso di sangue al glomerulo) con ACE-inibitori/Sartani e\ndiuretici (che riducono la pressione di filtrazione e il volume), portando a insufficienza renale [19-21]. Il paracetamolo non ha questo effetto.",
+      "numero": 26,
+      "id": "q26"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Parkinson (Neurologia)",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente anziano in terapia con Levodopa/Benserazide lamenta che il farmaco sembra non funzionare bene dopo pranzo. Quale consiglio \nclinico (non presente direttamente nelle fonti ma parte delle competenze FPH) è più appropriato?",
+      "opzioni": {
+        "A": "Assumere il farmaco contemporaneamente a un pasto ricco di proteine per favorire l'assorbimento.",
+        "B": "Assumere il farmaco almeno 30-60 minuti prima dei pasti per evitare la competizione degli aminoacidi alimentari per il trasporto \nintestinale.",
+        "C": "Raddoppiare la dose di levodopa solo durante i pasti.",
+        "D": "Sostituire la benserazide con il paracetamolo per ridurre il tremore."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le proteine competono con la levodopa per i trasportatori degli aminoacidi a catena lunga. Assumere il farmaco lontano dai pasti \nproteici migliora la biodisponibilità e riduce le fluttuazioni motorie (conoscenza clinica standard del farmacista FPH).",
+      "numero": 27,
+      "id": "q27"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - SSRI e Rischio di Sanguinamento",
+      "tipo": "kprim",
+      "domanda": "In merito all'uso concomitante di antidepressivi SSRI (es. Fluoxetina, Sertralina) e FANS, valutare le seguenti affermazioni:",
+      "opzioni": {
+        "1": "L'uso combinato aumenta significativamente il rischio di emorragie del tratto gastrointestinale.",
+        "2": "Il rischio è dovuto all'inibizione del reuptake della serotonina nelle piastrine da parte degli SSRI, che altera l'emostasi.",
+        "3": "In questi pazienti, il paracetamolo è considerato l'analgetico di prima scelta per evitare il rischio emorragico.",
+        "4": "L'aggiunta di un inibitore della pompa protonica (PPI) non ha alcun effetto protettivo in questa combinazione."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Gli SSRI aumentano il rischio di sanguinamento se usati con FANS [21-23]. Il paracetamolo è più sicuro [24]. I PPI sono raccomandati \nper ridurre il rischio di ulcere e sanguinamenti gastrici in pazienti ad alto rischio che usano FANS [25, 26].",
+      "numero": 28,
+      "id": "q28"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - ADHD (Psichiatria)",
+      "tipo": "multipla_scelta",
+      "domanda": "Nella dispensazione di uno stimolante (es. Metilfenidato) per il trattamento dell'ADHD, quale parametro fisico deve essere monitorato con\npriorità assoluta per la sicurezza a lungo termine?",
+      "opzioni": {
+        "A": "La circonferenza addominale.",
+        "B": "L'altezza, il peso e la pressione arteriosa del bambino.",
+        "C": "La densità ossea tramite mineralometria (MOC).",
+        "D": "I livelli sierici di potassio e magnesio."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Gli stimolanti possono causare soppressione dell'appetito e influire sulla crescita, oltre ad avere potenziali effetti \ncardiovascolari (aumento della pressione e della frequenza cardiaca) (conoscenza clinica standard FPH).",
+      "numero": 29,
+      "id": "q29"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Protocollo LINDAFF",
+      "tipo": "kprim",
+      "domanda": "Il protocollo LINDAFF è fondamentale per la consulenza del dolore in farmacia. Valutare se le seguenti lettere corrispondono al corretto \nambito di indagine:",
+      "opzioni": {
+        "1": "L = Lokalisation: localizzazione e irradiazione del dolore.",
+        "2": "I = Intensität: valutazione della forza del dolore (es. scala da 1 a 10).",
+        "3": "D = Dauer: durata dei sintomi e modalità di insorgenza (acuta o cronica).",
+        "4": "A = Auslöser: fattori scatenanti o allevianti (es. movimento, calore)."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Il LINDAFF segue: Localizzazione, Intensità, Nuova/già nota, Durata, Anamnesi (altre malattie/allergie), Fattori \nscatenanti/attenuanti, Farmaci già provati [27-29].",
+      "numero": 30,
+      "id": "q30"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente con insufficienza cardiaca HFrEF deve passare dalla terapia con Enalapril a Sacubitril/Valsartan (Entresto®). Quale \nistruzione fondamentale deve fornire il farmacista per garantire la sicurezza del paziente?",
+      "opzioni": {
+        "A": "Può assumere la prima dose di Sacubitril/Valsartan 12 ore dopo l'ultima dose di Enalapril.",
+        "B": "Deve rispettare un periodo di lavaggio (wash-out) di almeno 36 ore tra l'ultima dose di ACE-inibitore e la prima di ARNI.",
+        "C": "Deve sospendere l'ACE-inibitore per 7 giorni prima di iniziare la nuova terapia combinata.",
+        "D": "Può iniziare immediatamente Sacubitril/Valsartan, poiché Valsartan protegge dall'angioedema."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In base alle fonti, il passaggio da un ACE-inibitore a un ARNI (Sacubitril/Valsartan) richiede tassativamente un intervallo di almeno\n36 ore per ridurre il rischio di angioedema grave [1-3]. Le altre opzioni ignorano questo intervallo di sicurezza critico.",
+      "numero": 31,
+      "id": "q31"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione degli Anticoagulanti Orali Diretti (DOAC) in Svizzera, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Rivaroxaban (Xarelto®) ai dosaggi di 15 mg e 20 mg deve essere assunto obbligatoriamente con un pasto per garantirne la biodisponibilità.",
+        "2": "L'iperico (erba di San Giovanni) riduce i livelli plasmatici dei DOAC, aumentando il rischio di eventi trombotici.",
+        "3": "Dabigatran (Pradaxa®) è l'unico DOAC la cui eliminazione è prevalentemente renale (circa l'80%).",
+        "4": "In caso di dimenticanza di una dose, il rischio di trombosi aumenta markant già dopo poche ore a causa della loro emivita breve."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "1: Vero, il cibo aumenta la biodisponibilità di Rivaroxaban ad alto dosaggio [4]. 2: Vero, l'iperico è un induttore che riduce \nl'efficacia dei DOAC [5, 6]. 3: Vero, Dabigatran ha l'80% di escrezione renale [4, 7]. 4: Vero, la breve emivita dei DOAC rende l'aderenza cruciale per \nevitare rischi trombotici [8].",
+      "numero": 32,
+      "id": "q32"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo le attuali linee guida svizzere ed europee (AGLA/ESC), qual è il valore target di colesterolo LDL per un paziente a 'rischio \nmolto alto' (es. prevenzione secondaria post-infarto)?",
+      "opzioni": {
+        "A": "< 2,6 mmol/L.",
+        "B": "< 1,8 mmol/L.",
+        "C": "< 1,4 mmol/L e una riduzione di almeno il 50% rispetto al valore basale.",
+        "D": "< 1,1 mmol/L."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Per i pazienti a rischio molto alto, l'obiettivo è un valore LDL < 1,4 mmol/L combinato con una riduzione di almeno il 50% rispetto \nai livelli iniziali [9-11]. Gli altri valori corrispondono a categorie di rischio inferiori.",
+      "numero": 33,
+      "id": "q33"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "Riguardo al trattamento dell'ipertensione in gravidanza, quali delle seguenti affermazioni sono corrette basandosi sulle fonti \ncliniche?",
+      "opzioni": {
+        "1": "Gli ACE-inibitori e i sartani sono assolutamente controindicati a causa del rischio di fetotossicità.",
+        "2": "Il Labetalolo è considerato un farmaco di prima scelta in questo contesto.",
+        "3": "L'alfa-Metildopa è una delle opzioni terapeutiche sicure e raccomandate.",
+        "4": "I calcio-antagonisti diidropiridinici (es. Nifedipina) non devono mai essere usati durante la gestazione."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1, 2, 3: Sono corretti, i RAAS-inibitori sono vietati, mentre Labetalolo e Metildopa sono preferiti [12, 13]. 4: Falso, i \ncalcio-antagonisti (come i derivati della diidropiridina o Verapamil) sono citati come alternative sicure [12].",
+      "numero": 34,
+      "id": "q34"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente con insufficienza cardiaca cronica inizia la terapia con Empagliflozin (Jardiance®) 10 mg. Quale consiglio di consulenza \nclinica deve prioritariamente fornire il farmacista?",
+      "opzioni": {
+        "A": "Il farmaco va titolato lentamente ogni 2 settimane partendo da 2,5 mg.",
+        "B": "È fondamentale mantenere un'accurata igiene urogenitale per prevenire infezioni micotiche dovute alla glicosuria.",
+        "C": "Il farmaco deve essere assunto solo la sera per evitare cali pressori diurni.",
+        "D": "In caso di dimenticanza, assumere una doppia dose il giorno successivo."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Gli SGLT2-inibitori causano glicosuria, aumentando il rischio di infezioni genitali; una buona igiene è un consiglio pratico \nessenziale [14, 15]. Per lo scompenso cardiaco si usa una dose fissa di 10 mg senza necessità di titolazione [14, 16].",
+      "numero": 35,
+      "id": "q35"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "In merito alla doppia antiaggregazione piastrinica (DAPT) dopo una sindrome coronarica acuta (ACS) con posa di stent, quali affermazioni \nsono corrette?",
+      "opzioni": {
+        "1": "Il Ticagrelor (Brilique®) deve essere somministrato alla dose di 90 mg due volte al giorno.",
+        "2": "Il Prasugrel (Efient®) è controindicato nei pazienti con anamnesi di ictus o TIA.",
+        "3": "La durata standard raccomandata della DAPT è solitamente di 12 mesi.",
+        "4": "In un paziente di 80 anni, se si usa Prasugrel, la dose di mantenimento deve essere di 10 mg."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1, 2, 3: Corretti in base alle indicazioni e controindicazioni dei farmaci [17, 18]. 4: Falso, sopra i 75 anni la dose di \nmantenimento di Prasugrel deve essere ridotta a 5 mg per motivi di sicurezza [18].",
+      "numero": 36,
+      "id": "q36"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale delle seguenti combinazioni farmacologiche descrive il fenomeno noto come 'Triple Whammy', che espone il paziente a un elevato \nrischio di insufficienza renale acuta?",
+      "opzioni": {
+        "A": "ACE-inibitore/Sartano + Diuretico + FANS.",
+        "B": "Statina + Fibrato + Omega-3.",
+        "C": "Betabloccante + Calcio-antagonista + Aspirina.",
+        "D": "Metformina + SGLT2-inibitore + DPP4-inibitore."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Il 'Triple Whammy' è causato dalla combinazione di RAAS-inibitori, diuretici e FANS, che compromettono gravemente l'autoregolazione \ndella pressione di filtrazione renale [19-21]. Le altre combinazioni non hanno questo specifico effetto emodinamico.",
+      "numero": 37,
+      "id": "q37"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "L'Amiodarone è un antiaritmico potente con un profilo di sicurezza complesso. Quali delle seguenti affermazioni sono vere secondo le \nfonti?",
+      "opzioni": {
+        "1": "Può causare sia ipotiroidismo che ipertiroidismo a causa dell'alto contenuto di iodio.",
+        "2": "Aumenta significativamente i livelli plasmatici di Digossina (fino al 70%).",
+        "3": "I depositi corneali si verificano nella quasi totalità dei pazienti trattati a lungo termine, ma raramente influenzano la vista.",
+        "4": "L'effetto collaterale più frequente che porta alla sospensione è l'edema malleolare dose-dipendente."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1, 2, 3: Corretti in base alle caratteristiche e interazioni note dell'Amiodarone [5, 22]. 4: Falso, l'edema malleolare è tipico dei \ncalcio-antagonisti diidropiridinici, non dell'amiodarone [23].",
+      "numero": 38,
+      "id": "q38"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "In un paziente affetto da arteriopatia periferica occlusiva (PAVK) in stadio II (claudicatio intermittens), qual è la misura terapeutica \npiù efficace per raddoppiare la distanza di cammino indolore?",
+      "opzioni": {
+        "A": "L'assunzione giornaliera di aspirina 100 mg.",
+        "B": "L'allenamento strutturato al cammino (Gehtraining) per almeno 30 minuti, 3 volte a settimana.",
+        "C": "L'utilizzo costante di calze a compressione graduata classe 3.",
+        "D": "Il trattamento con statine ad alto dosaggio come unica misura."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Nello stadio II della PAVK, il Gehtraining è considerato la terapia più efficace, capace di raddoppiare la distanza percorsa grazie \nallo sviluppo di circoli collaterali [24]. Le altre misure prevengono eventi cardiovascolari ma non migliorano direttamente la distanza di cammino.",
+      "numero": 39,
+      "id": "q39"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla profilassi dell'endocardite infettiva secondo le linee guida svizzere, quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "È indicata solo per pazienti ad alto rischio, come quelli portatori di valvole cardiache artificiali.",
+        "2": "Il regime standard prevede l'assunzione di 2 g di Amoxicillina un'ora prima dell'intervento odontoiatrico.",
+        "3": "Procedure come la rimozione del tartaro (pulizia dentale) che lesionano la mucosa richiedono la profilassi nei soggetti a rischio.",
+        "4": "In caso di allergia alle penicilline di tipo immediato, il Metronidazolo è l'alternativa di prima scelta."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1, 2, 3: Corretti, la profilassi è ristretta all'alto rischio e include procedure odontoiatriche invasive [25]. 4: Falso, \nl'alternativa raccomandata in caso di allergia alla penicillina è la Clindamicina (600 mg) [25].",
+      "numero": 40,
+      "id": "q40"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 42 anni presenta sintomi tipici di una malattia infiammatoria cronica intestinale (MICI). Quale delle seguenti \ncaratteristiche anatomopatologiche è specifica del Morbus Crohn (MC) rispetto alla Colite Ulcerosa (CU)?",
+      "opzioni": {
+        "A": "L'infiammazione è limitata esclusivamente allo strato superficiale della mucosa.",
+        "B": "Il processo infiammatorio interessa unicamente il colon in modo continuo a partire dal retto.",
+        "C": "L'infiammazione è transmurale (colpisce l'intera parete intestinale) e può presentarsi in modo segmentale in tutto il tratto G/I.",
+        "D": "Il sanguinamento rettale e il tenesmo sono i sintomi cardine quasi sempre presenti."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il Morbus Crohn è caratterizzato da un'infiammazione transmurale (wanddurchdringend) che può colpire qualsiasi segmento del tratto \ngastrointestinale in modo 'a macchia di leopardo' (segmentale). Al contrario, la Colite Ulcerosa colpisce solo la mucosa in modo continuo e solo nel \ncolon [1].",
+      "numero": 41,
+      "id": "q41"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "kprim",
+      "domanda": "Riguardo ai potenziali rischi clinici associati alla terapia a lungo termine con inibitori di pompa protonica (PPI), valutate la \nveridicità delle seguenti affermazioni:",
+      "opzioni": {
+        "1": "L'ipocloridria indotta da PPI può inibire la liberazione della vitamina B12 dalle proteine alimentari, aumentandone il rischio di carenza.",
+        "2": "L'ipomagnesiemia da PPI è una condizione puramente biochimica che non comporta mai sintomi gravi come aritmie o tetania.",
+        "3": "L'evidenza clinica riguardo all'aumento del rischio di fratture ossee indotto da PPI è considerata definitiva e univoca per tutti i \npazienti.",
+        "4": "La soppressione dell'acido gastrico facilita la colonizzazione intestinale da parte di patogeni come il Clostridium difficile."
+      },
+      "risposta_corretta": "VFFV",
+      "motivazione": "L'acidità è necessaria per il rilascio della B12 [2]. L'ipomagnesiemia può avere manifestazioni cliniche molto gravi [3]. L'evidenza \nsul rischio di fratture è attualmente considerata insufficiente o eterogenea [4]. L'acloridria riduce la barriera contro le infezioni, incluso C. \ndifficile [5, 6].",
+      "numero": 42,
+      "id": "q42"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 70 anni richiede Ibuprofene ad alto dosaggio per un dolore cronico. Secondo i criteri di clinical reasoning, quando è \nindicata la co-prescrizione di un PPI come gastroprotezione?",
+      "opzioni": {
+        "A": "Solo se il paziente riferisce già sintomi di pirosi gastrica.",
+        "B": "In presenza di fattori di rischio come l'età superiore ai 65 anni o l'uso concomitante di corticosteroidi orali.",
+        "C": "Mai, se il trattamento con FANS ha una durata inferiore a 30 giorni.",
+        "D": "Solo se il paziente ha una diagnosi confermata di infezione da Helicobacter pylori."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La protezione con PPI è raccomandata in pazienti con rischio moderato o elevato, che include l'età > 65 anni, l'uso di dosi elevate \ndi FANS, o terapie concomitanti con corticosteroidi o anticoagulanti [7, 8].",
+      "numero": 43,
+      "id": "q43"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "kprim",
+      "domanda": "Nella gestione della stitichezza in diverse tipologie di pazienti, valutate la correttezza delle seguenti raccomandazioni \nfarmacologiche:",
+      "opzioni": {
+        "1": "Per la stitichezza indotta da oppioidi (OIC), i lassativi osmotici come il macrogol rappresentano il trattamento di prima scelta.",
+        "2": "Durante la gravidanza, l'uso di lassativi stimolanti (es. senna) è preferibile ai lassativi osmotici per la rapidità d'azione.",
+        "3": "Nei pazienti anziani con ridotta peristalsi e limitato introito di liquidi, i formatori di massa (quellmittel) sono sconsigliati per il \nrischio di ostruzione.",
+        "4": "In caso di stitichezza da oppioidi, i formatori di massa sono raccomandati per stimolare meccanicamente l'intestino pigro."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "Il macrogol è la prima scelta nell'OIC [9]. In gravidanza sono preferiti osmotici o fibre; gli stimolanti vanno usati con cautela o \nevitati [10]. Negli anziani o in chi usa oppioidi, i formatori di massa aumentano il rischio di blocco intestinale se non accompagnati da molti liquidi \n[9, 11].",
+      "numero": 44,
+      "id": "q44"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "multipla_scelta",
+      "domanda": "A causa di un'interazione farmacocinetica mediata dall'inibizione dell'enzima CYP2C19, quale PPI dovrebbe essere evitato in combinazione \ncon il clopidogrel?",
+      "opzioni": {
+        "A": "Pantoprazolo",
+        "B": "Rabeprazolo",
+        "C": "Omeprazolo",
+        "D": "Dexlansoprazolo"
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Omeprazolo ed esomeprazolo sono forti inibitori del CYP2C19, l'enzima che attiva il profarmaco clopidogrel; pertanto possono ridurne \nl'efficacia antiaggregante. Pantoprazolo e rabeprazolo sono alternative più sicure [12, 13].",
+      "numero": 45,
+      "id": "q45"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "kprim",
+      "domanda": "Durante il triage in farmacia per sintomi da reflusso (GERD) o dispepsia, quali dei seguenti scenari rappresentano 'Red Flags' che \nimpongono l'invio al medico?",
+      "opzioni": {
+        "1": "Paziente di 55 anni che presenta sintomi dispeptici per la prima volta nella vita.",
+        "2": "Presenza di disfagia (difficoltà nella deglutizione) o odinofagia.",
+        "3": "Episodi di vomito che persistono da più di una settimana.",
+        "4": "Perdita di peso non intenzionale superiore al 10% negli ultimi 6 mesi."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tutti questi sono segnali d'allarme critici. L'età superiore ai 50-55 anni all'esordio dei sintomi, la disfagia, il vomito \npersistente e il calo ponderale inspiegabile indicano un potenziale rischio di patologia organica grave [14, 15].",
+      "numero": 46,
+      "id": "q46"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente sottoposto a bypass gastrico (chirurgia bariatrica) deve assumere farmaci per una patologia acuta. Quale precauzione è \nfondamentale considerare?",
+      "opzioni": {
+        "A": "I preparati a rilascio prolungato (retard) sono sempre la scelta ottimale per garantire l'assorbimento costante.",
+        "B": "I FANS (NSAR) sono controindicati a causa dell'elevato rischio di ulcerazione nel piccolo stomaco residuo.",
+        "C": "La contraccezione orale mantiene la sua piena efficacia indipendentemente dalla procedura chirurgica.",
+        "D": "I farmaci liquidi contenenti sorbitolo sono raccomandati per facilitare il transito intestinale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "I FANS sono controindicati dopo chirurgia bariatrica per il rischio di ulcere anastomotiche e sanguinamenti [16, 17]. Le forme retard\nvanno evitate per il transito alterato [16] e il sorbitolo può causare dumping syndrome [16].",
+      "numero": 47,
+      "id": "q47"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "kprim",
+      "domanda": "In merito ai meccanismi d'azione e alla sicurezza dei lassativi, valutate le seguenti affermazioni:",
+      "opzioni": {
+        "1": "Il macrogol agisce con un meccanismo fisico, legando l'acqua nel colon senza essere assorbito sistematicamente.",
+        "2": "Il bisacodile ha un'azione esclusivamente idratante sulla mucosa intestinale, senza effetti sulla motilità.",
+        "3": "L'olio di paraffina è raccomandato per l'uso prolungato grazie alla sua capacità di non interferire con le vitamine liposolubili.",
+        "4": "L'uso regolare di lassativi osmotici salini può comportare rischi di squilibri elettrolitici in pazienti suscettibili."
+      },
+      "risposta_corretta": "VFFV",
+      "motivazione": "Il macrogol agisce fisicamente [18]. Il bisacodile stimola direttamente la peristalsi e la secrezione di elettroliti [19]. La \nparaffina può ridurre l'assorbimento di vitamine liposolubili ed è rischiosa per la polmonite lipidica [20]. I sali osmotici possono influenzare \nl'equilibrio elettrolitico [21].",
+      "numero": 48,
+      "id": "q48"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale complicazione clinica è significativamente associata all'uso di PPI in pazienti con cirrosi epatica avanzata e ascite?",
+      "opzioni": {
+        "A": "Aumento del rischio di peritonite batterica spontanea (PBS) a causa dell'alterazione della flora intestinale.",
+        "B": "Inibizione della sintesi dei fattori della coagulazione dipendenti dalla vitamina K.",
+        "C": "I PPI sono il trattamento preventivo standard per tutti i pazienti cirrotici per evitare le varici esofagee.",
+        "D": "Nessun rischio specifico; il metabolismo dei PPI è indipendente dalla funzionalità epatica."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Nei pazienti cirrotici, l'uso di PPI aumenta drasticamente il rischio di peritonite batterica spontanea (69% vs 31%) a causa della \nperdita della barriera acida e della sovracrescita batterica [22, 23].",
+      "numero": 49,
+      "id": "q49"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - gastroenterologia",
+      "tipo": "kprim",
+      "domanda": "Al momento di consigliare l'assunzione di un PPI per il reflusso, quali delle seguenti istruzioni sono corrette per il paziente?",
+      "opzioni": {
+        "1": "Il farmaco va assunto idealmente 30-60 minuti prima del pasto per massimizzare l'inibizione delle pompe protoniche attivate dal cibo.",
+        "2": "Il sollievo completo dai sintomi è atteso generalmente entro i primi 30 minuti dall'assunzione della prima dose.",
+        "3": "È possibile combinare il PPI con un antacido nei primi giorni se i sintomi sono molto intensi, poiché il PPI richiede tempo per agire \npienamente.",
+        "4": "In caso di sintomi prevalentemente notturni, l'assunzione può essere spostata prima della cena."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "L'assunzione pre-prandiale è fondamentale per l'efficacia [24]. Il PPI non dà sollievo immediato; l'effetto massimo richiede 2-5 \ngiorni [25, 26]. La combinazione iniziale con antacidi è corretta [26]. Lo spostamento serale è indicato per i sintomi notturni [24].",
+      "numero": 50,
+      "id": "q50"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - anamnesi in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante l'apertura di un colloquio di anamnesi in farmacia, quale approccio è raccomandato per permettere al paziente di esporre i propri\nsintomi senza filtri?",
+      "opzioni": {
+        "A": "Iniziare con domande chiuse (Sì/No) per risparmiare tempo.",
+        "B": "Utilizzare domande suggestive per guidare il paziente verso la diagnosi più probabile.",
+        "C": "Utilizzare domande aperte e lasciare che il paziente parli senza interruzioni nei primi minuti.",
+        "D": "Interrompere immediatamente il paziente se utilizza termini medici non corretti."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le regole della comunicazione efficace [1, 2], le domande aperte permettono al paziente di descrivere il problema con le \nproprie parole. È fondamentale non interrompere il paziente nei primi minuti per ottenere una visione completa dei sintomi [3]. Le domande chiuse sono \nutili solo in una fase successiva di approfondimento [4].",
+      "numero": 51,
+      "id": "q51"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - triage e red flags",
+      "tipo": "kprim",
+      "domanda": "Secondo gli algoritmi medinform, quali dei seguenti fattori sono considerati 'Red Flags' generali o situazioni di rischio che richiedono \nparticolare attenzione nel triage farmaceutico?",
+      "opzioni": {
+        "1": "Età del paziente superiore ai 65 anni.",
+        "2": "Paziente in stato di gravidanza o allattamento.",
+        "3": "Trauma rilevante avvenuto negli ultimi 14 giorni.",
+        "4": "Presenza di una malattia cronica grave come l'insufficienza renale."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tutti i punti elencati sono definiti come fattori di rischio o situazioni generali da considerare prioritariamente nel triage [5-7]. \nQuesti pazienti (anziani, donne incinte, post-trauma o con patologie croniche) sono più vulnerabili e richiedono spesso una valutazione medica [8, 9].",
+      "numero": 52,
+      "id": "q52"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - cure primarie",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 30 anni presenta sintomi di cistite non complicata. Le viene consegnata una dose singola di Fosfomicina (3g). Quale \nconsiglio sulla somministrazione è corretto per ottimizzare l'efficacia?",
+      "opzioni": {
+        "A": "Assumere il farmaco al mattino a stomaco pieno e bere almeno 3 litri d'acqua.",
+        "B": "Assumere preferibilmente la sera dopo aver svuotato la vescica e non bere più di 2 litri al giorno.",
+        "C": "Dividere la dose in due assunzioni a distanza di 12 ore.",
+        "D": "Assumere il farmaco solo se compare febbre superiore a 38,3°C."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La Fosfomicina va assunta idealmente la sera dopo lo svuotamento vescicale per permettere al farmaco di agire più a lungo [10]. Non \nbisogna superare i 2 litri di liquidi al giorno per evitare di diluire eccessivamente la concentrazione del principio attivo nel tessuto vescicale [10, \n11].",
+      "numero": 53,
+      "id": "q53"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - triage e red flags",
+      "tipo": "kprim",
+      "domanda": "Il punteggio di McIsaac (o Centor score modificato) è fondamentale per valutare la probabilità di un'infezione da Streptococco A. Valuta \nla correttezza dei seguenti criteri per l'assegnazione di 1 punto:",
+      "opzioni": {
+        "1": "Presenza di tosse persistente.",
+        "2": "Temperatura corporea superiore a 38°C.",
+        "3": "Linfonodi cervicali anteriori ingrossati e dolenti.",
+        "4": "Età del paziente inferiore ai 15 anni."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "L'assenza di tosse (non la presenza) assegna 1 punto [12, 13]. Gli altri criteri corretti per 1 punto sono febbre >38°C, adenopatia \ncervicale dolente e tonsille con essudato; anche l'età tra 3 e 14 anni aggiunge un punto, mentre l'età ≥45 anni ne toglie uno [14, 15].",
+      "numero": 54,
+      "id": "q54"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - gestione del paziente cronico",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 60 anni soffre di emicrania e riferisce di utilizzare triptani per 10 giorni al mese e FANS per altri 12 giorni. Qual è la\nvalutazione corretta in base alle linee guida?",
+      "opzioni": {
+        "A": "La terapia è efficace perché il paziente non ha dolore tutti i giorni.",
+        "B": "Sussiste il rischio di cefalea da uso eccessivo di farmaci (MOH).",
+        "C": "Il paziente dovrebbe aumentare il dosaggio dei triptani per ridurre i giorni di dolore.",
+        "D": "La combinazione di triptani e FANS non è mai consentita."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'uso di farmaci per il mal di testa per più di 10-15 giorni al mese (a seconda della classe) per oltre 3 mesi definisce la \n'Medication Overuse Headache' (MOH) [16, 17]. Anche se si usano classi diverse, la somma totale dei giorni può soddisfare i criteri per la MOH [16, 18].",
+      "numero": 55,
+      "id": "q55"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - anamnesi in farmacia",
+      "tipo": "kprim",
+      "domanda": "Per la diagnosi differenziale dei disturbi auricolari (otite), il farmacista deve indagare i cosiddetti '5 S'. Quali dei seguenti sintomi\nfanno parte di questa regola mnemonica?",
+      "opzioni": {
+        "1": "Ipoacusia (Schwerhörigkeit).",
+        "2": "Dolore (Schmerzen).",
+        "3": "Secrezione/Fuoriuscita di liquido (Sekretfluss).",
+        "4": "Vertigini (Schwindel)."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "La regola delle 5 S include: Schwerhörigkeit (calo udito), Schmerzen (dolore), Sekretfluss (secrezione), Sausen (ronzio/tinnitus) e \nSchwindel (vertigini) [19]. Questi parametri permettono di distinguere tra problemi dell'orecchio esterno, medio o interno [20, 21].",
+      "numero": 56,
+      "id": "q56"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - aderenza terapeutica",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo le 5 dimensioni dell'aderenza definite dall'OMS, quale dei seguenti fattori legati alla terapia peggiora significativamente la \ncompliance?",
+      "opzioni": {
+        "A": "L'uso di prodotti combinati (più principi attivi in una compressa).",
+        "B": "La presenza di un supporto sociale/familiare.",
+        "C": "Schemi posologici complessi con più di 2 assunzioni giornaliere.",
+        "D": "Un buon livello di informazione del paziente sulla sua malattia."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "La complessità del trattamento e la frequenza delle dosi (specialmente se superiori a 2 al giorno) sono tra i principali fattori che \nriducono l'aderenza [22, 23]. I prodotti combinati e il supporto sociale tendono invece a migliorarla [22, 24].",
+      "numero": 57,
+      "id": "q57"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - triage e red flags",
+      "tipo": "kprim",
+      "domanda": "In caso di tosse, quali dei seguenti segni o sintomi rappresentano 'Red Flags' che impongono un rinvio immediato al medico?",
+      "opzioni": {
+        "1": "Presenza di sangue nello sputo (emottisi).",
+        "2": "Respirazione accelerata e mancanza di respiro (dispnea).",
+        "3": "Colorazione bluastra di labbra o dita (cianosi).",
+        "4": "Stato di confusione mentale."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tutti questi sintomi sono segnali d'allarme gravi. L'emottisi, la dispnea, la cianosi (segno di ipossia) e la confusione mentale \nindicano potenziali emergenze respiratorie o sistemiche che richiedono immediata assistenza medica [25-27].",
+      "numero": 58,
+      "id": "q58"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - counselling farmaceutico",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente presenta un occhio rosso, secrezione acquosa abbondante (seromucosa) e riferisce che i sintomi sono iniziati da un occhio per\npoi estendersi all'altro dopo 3 giorni. Qual è l'orientamento più probabile?",
+      "opzioni": {
+        "A": "Congiuntivite batterica acuta.",
+        "B": "Congiuntivite virale.",
+        "C": "Glaucoma acuto (emergenza).",
+        "D": "Corpo estraneo metallico."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La congiuntivite virale è caratterizzata da secrezione seromucosa e alta infettività, con frequente passaggio da un occhio all'altro \nin 2-7 giorni [28, 29]. La batterica presenta tipicamente secrezione purulenta (giallastra) e palpebre incollate al mattino [29, 30].",
+      "numero": 59,
+      "id": "q59"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Anamnesi e terapia - triage e red flags",
+      "tipo": "kprim",
+      "domanda": "Riguardo alle reazioni allergiche da puntura d'insetto, quali affermazioni sono corrette secondo le linee guida?",
+      "opzioni": {
+        "1": "Una reazione di grado 1 coinvolge solo sintomi cutanei e ansia.",
+        "2": "Il vomito e il senso di costrizione toracica indicano una reazione di grado 2.",
+        "3": "In presenza di soli sintomi cutanei non è mai necessario il rinvio al medico.",
+        "4": "Un kit di emergenza standard include Prednisone e un antistaminico."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Le reazioni di grado 1 sono orticaria e prurito; il grado 2 include disturbi gastrointestinali e costrizione toracica [31]. Anche per\nil grado 1 è consigliato il rinvio medico ('lieber einmal zu viel' [31, 32]). Il kit di emergenza contiene solitamente 2 cp di Prednisone 50mg e 2 cp di \nantistaminico [32].",
+      "numero": 60,
+      "id": "q60"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Preparazione di medicinali - preparazione galenica",
+      "tipo": "multipla_scelta",
+      "domanda": "Un medico prescrive una pomata personalizzata per un paziente specifico con una miscela di principi attivi non disponibile in commercio. \nSecondo la Legge sui prodotti terapeutici (HMG), come deve essere classificata questa preparazione?",
+      "opzioni": {
+        "A": "Formula officinalis, poiché basata su una prescrizione medica.",
+        "B": "Formula magistralis, in quanto preparata per una persona determinata in esecuzione di una prescrizione medica [1, 2].",
+        "C": "Formula propria, poiché la farmacia utilizza una sua metodica di miscelazione.",
+        "D": "Medicinale pronto all'uso soggetto a omologazione Swissmedic."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'Articolo 9 cpv. 2 lett. a della HMG definisce 'Formula magistralis' un medicinale preparato in farmacia per una persona specifica o\nun gruppo determinato di persone in base a una prescrizione medica [1, 2]. Le formule officinali si basano invece su monografie della farmacopea per la \npropria clientela [3], mentre le formule proprie si basano su ricette pubblicate o proprie per la clientela abituale [3].",
+      "numero": 61,
+      "id": "q61"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Preparazione di medicinali - norme GMP svizzere",
+      "tipo": "kprim",
+      "domanda": "Per quanto riguarda l'etichettatura di una 'Formula magistralis' preparata in farmacia (secondo Ph. Helv. XII e VAM), quali delle \nseguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "L'indicazione 'Formula magistralis' deve essere scritta con una dimensione del carattere di almeno 7 punti [4-6].",
+        "2": "È obbligatorio indicare la composizione quantitativa dei principi attivi e qualitativa degli eccipienti di particolare interesse [6].",
+        "3": "Il nome e la data di nascita del paziente non sono necessari se è presente il numero di lotto.",
+        "4": "Deve essere indicato il periodo di validità dopo l'apertura, se applicabile (es. 'utilizzabile per 3 mesi dopo l'apertura') [4, 7]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La normativa richiede esplicitamente la dicitura della categoria in 7pt [4, 5] e la trasparenza sulla composizione (quantitativa per \nattivi, qualitativa per eccipienti rilevanti) [6]. I dati del paziente (nome/nascita) sono requisiti essenziali per la formula magistrale [4, 7]. La \nstabilità post-apertura è un elemento di sicurezza obbligatorio quando rilevante [4].",
+      "numero": 62,
+      "id": "q62"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Preparazione di medicinali - categorie di dispensazione",
+      "tipo": "multipla_scelta",
+      "domanda": "Un farmacista decide di dispensare un medicinale a base di codeina (precedentemente in Lista C) senza ricetta medica, basandosi sulle \nnuove competenze diagnostiche. Quale obbligo deve assolvere?",
+      "opzioni": {
+        "A": "Nessuno, i medicinali della ex Lista C sono ora di libera vendita (Lista E).",
+        "B": "Deve creare un dossier del paziente e documentare la dispensazione, poiché questi prodotti sono ora in Lista B (minus) [8-10].",
+        "C": "Può consegnarlo solo se il paziente presenta una ricetta medica originale non ripetibile.",
+        "D": "Deve semplicemente etichettare il prodotto come 'Formula propria'."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Con la revisione della legge, la maggior parte dei prodotti della ex Lista C (come quelli a base di codeina) è stata riclassificata \nnella categoria B (denominata informalmente 'B minus') [8, 9]. La dispensazione senza ricetta da parte del farmacista è possibile solo previa consulenza \nspecialistica e documentazione obbligatoria nel dossier del paziente [2, 10].",
+      "numero": 63,
+      "id": "q63"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Preparazione di medicinali - controllo qualità",
+      "tipo": "kprim",
+      "domanda": "In merito all'analisi delle materie prime in farmacia secondo la Ph. Helv. XII, quali procedure sono ammesse?",
+      "opzioni": {
+        "1": "Se il fornitore garantisce l'identità per ogni contenitore (procedura GID), è sufficiente un controllo amministrativo in entrata [11, 12].",
+        "2": "Senza la garanzia GID, il farmacista deve sempre eseguire un'analisi analitica completa secondo la monografia della Farmacopea.",
+        "3": "L'analisi del rischio può permettere un'analisi in entrata semplificata basata sulle proprietà organolettiche [12, 13].",
+        "4": "Se l'identità può essere confermata solo tramite spettroscopia IR e la farmacia non ha lo strumento, la sostanza può essere usata senza test \nse il certificato è valido."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "La procedura GID permette di limitarsi al controllo amministrativo e della documentazione [12]. Senza GID, è necessaria l'analisi \nanalitica, ma questa può essere semplificata in base a un'analisi del rischio [12]. Se un test necessario (come l'IR) non è fattibile in sede, la \nfarmacia deve affidare l'analisi a un laboratorio esterno tramite contratto (Lohnauftrag), non può ometterlo [13, 14].",
+      "numero": 64,
+      "id": "q64"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Preparazione di medicinali - calcoli farmaceutici",
+      "tipo": "multipla_scelta",
+      "domanda": "Una farmacia intende produrre un lotto di capsule defettuarie (Formula propria). Quale limite quantitativo deve rispettare per la \nfabbricazione secondo l'Art. 36 della VAM?",
+      "opzioni": {
+        "A": "Massimo 3000 confezioni per anno civile per ogni dosaggio.",
+        "B": "La quantità corrispondente al fabbisogno annuo d'esercizio della farmacia [15, 16].",
+        "C": "Non oltre 100 confezioni per anno, indipendentemente dal fabbisogno.",
+        "D": "Qualsiasi quantità, purché venduta entro 30 giorni dalla produzione."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'Articolo 36 della VAM stabilisce che per i medicinali non soggetti a omologazione (magistrali, officinali, propria) si può produrre\no tenere in scorta al massimo il fabbisogno annuo d'esercizio [15, 16]. Il limite di 3000 confezioni si applica specificamente alla produzione per conto \nterzi (Lohnherstellung) [15, 16].",
+      "numero": 65,
+      "id": "q65"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Preparazione di medicinali - calcoli e stabilità",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla stabilità e alla produzione di medicinali in piccoli lotti (Art. 36 VAM), quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Il periodo di validità (EXP) è limitato di norma a un massimo di 12 mesi [16].",
+        "2": "È possibile estendere la validità oltre i 12 mesi se sono disponibili dati di stabilità specifici che lo giustificano [15, 16].",
+        "3": "In caso di carenze di fornitura di un medicinale omologato, i limiti quantitativi di produzione in farmacia non si applicano [1, 17].",
+        "4": "La produzione defettuaria richiede sempre un calcolo del fattore di rischio individuale per ogni singola formula [13]."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "La VAM fissa a 12 mesi il limite standard di validità, salvo dati contrari [16]. In situazioni di Lieferengpass (carenza), le \nrestrizioni quantitative decadono per garantire la fornitura [1, 17]. Ogni formula medica richiede una valutazione del rischio separata secondo l'AMBV \n[13].",
+      "numero": 66,
+      "id": "q66"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Preparazione di medicinali - preparazioni sterili e non sterili",
+      "tipo": "multipla_scelta",
+      "domanda": "In caso di fabbricazione per conto terzi (Lohnherstellung) di una preparazione sterile, chi è legalmente responsabile della 'liberazione'\n(Freigabe) del prodotto per la consegna al paziente?",
+      "opzioni": {
+        "A": "Esclusivamente il laboratorio che ha eseguito materialmente la produzione sterile.",
+        "B": "Il farmacista della farmacia mandante (Auftraggeber) che consegna il medicinale [14].",
+        "C": "L'ispettorato cantonale dopo la verifica del protocollo di fabbricazione.",
+        "D": "Swissmedic, in quanto ente regolatore nazionale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo la Ph. Helv. XII (Cap. 20.1.7.3), il mandante (Auftraggeber) è responsabile della liberazione finale del prodotto, \nassicurandosi che il mandatario sia competente e che il prodotto sia conforme alle specifiche attraverso la documentazione fornita [14].",
+      "numero": 67,
+      "id": "q67"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Risultati di laboratorio - analisi di laboratorio",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente abituale si presenta in farmacia con un risultato di laboratorio che indica un valore di HbA1c (emoglobina glicata) del 6.9%. \nIn base alle linee guida EviPrev e ADA, come deve essere interpretato questo valore?",
+      "opzioni": {
+        "A": "Il valore è nell'intervallo di normalità (< 5.7%).",
+        "B": "Il valore indica una condizione di prediabete (5.7 - 6.4%).",
+        "C": "Il valore è indicativo di diabete mellito (>= 6.5%).",
+        "D": "Il valore è troppo basso e suggerisce un rischio di ipoglicemia cronica."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le fonti [1-4], un valore di HbA1c pari o superiore al 6.5% è considerato indicativo di diabete. L'intervallo 5.7-6.4% \ndefinisce invece il prediabete, mentre valori inferiori a 5.7% sono normali.",
+      "numero": 68,
+      "id": "q68"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Risultati di laboratorio - analisi di laboratorio",
+      "tipo": "kprim",
+      "domanda": "Durante la gravidanza, diversi parametri biochimici subiscono variazioni fisiologiche. Quali delle seguenti affermazioni riguardanti i \nrisultati di laboratorio in gravidanza sono corrette?",
+      "opzioni": {
+        "1": "I livelli di TSH tendono a diminuire, specialmente nel primo trimestre, a causa dell'attività dell'HCG.",
+        "2": "I livelli di ferritina aumentano fisiologicamente per preparare le riserve di ferro per il feto.",
+        "3": "Si osserva uno stato di ipercoagulabilità con aumento di fibrinogeno e D-dimero.",
+        "4": "Il numero di leucociti (in particolare i granulociti) tende fisiologicamente ad aumentare."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "In gravidanza, il TSH diminuisce compensatoriamente nel primo trimestre [5, 6]. La ferritina invece diminuisce a causa dell'aumento \ndel volume plasmatico [5, 7]. L'aumento di fibrinogeno/D-dimero (ipercoagulabilità) e l'aumento dei leucociti sono variazioni fisiologiche attese [5-7].",
+      "numero": 69,
+      "id": "q69"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Risultati di laboratorio - analisi di laboratorio",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo le raccomandazioni svizzere AGLA e le linee guida EviPrev per il Check-up, a quale età dovrebbe iniziare lo screening dei lipidi \n(colesterolo e trigliceridi) in un uomo senza fattori di rischio cardiovascolare noti?",
+      "opzioni": {
+        "A": "A partire dai 18 anni, ogni 3 anni.",
+        "B": "A partire dai 40 anni (ogni 5 anni se il rischio è basso).",
+        "C": "Solo dopo i 65 anni, in concomitanza con lo screening per l'aneurisma aortico.",
+        "D": "A partire dai 25 anni, ma solo se il BMI è superiore a 30 kg/m²."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le raccomandazioni AGLA indicano che il calcolo del rischio cardiovascolare e lo screening lipidico dovrebbero iniziare a 40 anni per\ngli uomini [8-10]. Se il rischio è basso, il controllo va ripetuto ogni 5 anni [11].",
+      "numero": 70,
+      "id": "q70"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Risultati di laboratorio - analisi di laboratorio",
+      "tipo": "kprim",
+      "domanda": "La Proteina C-Reattiva (CRP) è un marcatore di fase acuta ampiamente utilizzato in farmacia. Quali delle seguenti affermazioni sulla CRP \nsono corrette?",
+      "opzioni": {
+        "1": "I livelli di CRP iniziano a salire con un ritardo di circa 12-24 ore rispetto all'inizio dell'insulto infiammatorio.",
+        "2": "Un valore di CRP elevato permette di distinguere con certezza assoluta un'infezione batterica da una virale.",
+        "3": "Valori di CRP superiori a 100 mg/L sono considerati 'Red Flags' vitali che richiedono il rinvio urgente al medico.",
+        "4": "Secondo le direttive Qualab, la deviazione massima ammissibile per la misurazione della CRP è del +/- 21%."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "La CRP ha una cinetica di aumento ritardata di 12-24 ore [12]. Sebbene valori >40 mg/L suggeriscano batteri, la CRP è aspecifica e \nnon dà certezze assolute tra virus e batteri [12, 13]. Valori >100 mg/L sono segni critici di infezione grave o sepsi [7, 12]. La tolleranza Qualab del \n21% è corretta [14].",
+      "numero": 71,
+      "id": "q71"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Risultati di laboratorio - analisi di laboratorio",
+      "tipo": "multipla_scelta",
+      "domanda": "Per valutare la funzione renale di un paziente anziano al banco della farmacia al fine di un eventuale aggiustamento posologico, quale \nparametro è considerato il più affidabile secondo le fonti?",
+      "opzioni": {
+        "A": "La creatinina sierica isolata, poiché non risente della massa muscolare.",
+        "B": "La eGFR (velocità di filtrazione glomerulare stimata), preferibilmente calcolata con la formula CKD-EPI.",
+        "C": "L'esame dell'albumina nelle urine tramite striscia reattiva (Urinstix).",
+        "D": "Il livello di potassio sierico, che è l'unico indicatore diretto di filtrazione."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La eGFR è considerata un parametro migliore della sola creatinina per valutare la funzione renale, poiché integra età e sesso [15, \n16]. La formula CKD-EPI è quella attualmente più raccomandata [15].",
+      "numero": 72,
+      "id": "q72"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Risultati di laboratorio - analisi di laboratorio",
+      "tipo": "kprim",
+      "domanda": "In farmacia è fondamentale riconoscere i 'Vital Red Flags' nei risultati di laboratorio. Quali delle seguenti soglie indicano una \nsituazione vitale critica secondo le fonti?",
+      "opzioni": {
+        "1": "Emoglobina (Hb) < 60 g/L.",
+        "2": "Troponina positiva (indicativa di danno miocardico).",
+        "3": "Potassio (K+) > 6.2 mmol/L.",
+        "4": "Ferritina < 15 µg/L."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Hb < 60 g/L e Troponina positiva sono esplicitamente elencati come valori vitali critici [6, 7]. Un potassio > 6.2 è un valore \ncritico per rischio di aritmie (noto dalla pratica clinica e confermato nel contesto dei webinar sugli elettroliti [17]). La ferritina < 15 µg/L è una \n'Red Flag' per carenza marziale che richiede consultazione medica [18], ma non è un valore *vitale critico* immediato come gli altri tre.",
+      "numero": 73,
+      "id": "q73"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Risultati di laboratorio - analisi di laboratorio",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente presenta i seguenti valori nell'emocromo: Emoglobina 100 g/L (rif. 135-175), MCV 70 fl (rif. 80-100) e MCH 21 pg (rif. \n26-34). Qual è l'interpretazione farmacologica più probabile?",
+      "opzioni": {
+        "A": "Anemia macrocitica, probabilmente da carenza di Vitamina B12 o acido folico.",
+        "B": "Anemia normocitica legata a una malattia cronica renale.",
+        "C": "Anemia microcitica ipocromica, compatibile con una carenza di ferro.",
+        "D": "Pseudo-anemia dovuta a eccessiva idratazione, i valori sono normali."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Valori bassi di emoglobina uniti a un volume cellulare ridotto (MCV < 80 fl) e un basso contenuto di emoglobina per eritrocita (MCH <\n26 pg) definiscono un'anemia microcitica ipocromica, tipica della carenza di ferro [19-21].",
+      "numero": 74,
+      "id": "q74"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Situazioni d'emergenza - situazioni di emergenza in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente accusa un malore improvviso e perde conoscenza all'interno della farmacia. Dopo aver verificato che il paziente non respira \nnormalmente, si decide di iniziare la RCP. Quali sono i parametri corretti per le compressioni toraciche nell'adulto secondo le linee guida SRC?",
+      "opzioni": {
+        "A": "Frequenza di 80-100 compressioni al minuto e profondità di 4-5 cm.",
+        "B": "Frequenza di 100-120 compressioni al minuto e profondità di 5-6 cm.",
+        "C": "Frequenza costante di 100 compressioni al minuto e profondità di almeno 7 cm.",
+        "D": "Frequenza di 120-140 compressioni al minuto e profondità di 3-4 cm."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida SRC, la frequenza corretta per un adulto è di 100-120 compressioni al minuto con una profondità di 5-6 cm, \npermettendo il rilascio completo del torace dopo ogni pressione [1, 2].",
+      "numero": 75,
+      "id": "q75"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Situazioni d'emergenza - situazioni di emergenza in farmacia",
+      "tipo": "kprim",
+      "domanda": "In caso di sospetto shock anafilattico in farmacia dopo la somministrazione di un vaccino, valuta la correttezza delle seguenti misure \nd'intervento:",
+      "opzioni": {
+        "1": "La somministrazione intramuscolare di adrenalina è la misura prioritaria in caso di reazione grave.",
+        "2": "Il paziente in stato di shock deve essere posto in posizione anti-shock (disteso con le gambe sollevate).",
+        "3": "L'ambulanza (144) deve essere allertata solo se il paziente perde conoscenza.",
+        "4": "In caso di insufficienza della risposta iniziale, la dose di adrenalina può essere ripetuta dopo 5 minuti."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "L'adrenalina i.m. è il farmaco di prima scelta [3, 4]. La posizione anti-shock è indicata per migliorare il ritorno venoso [4]. Il \n144 va chiamato immediatamente in caso di reazione grave, non solo alla perdita di sensi [4]. La ripetizione dell'adrenalina dopo 5 minuti è prevista dal\nprotocollo in caso di successo insufficiente [5].",
+      "numero": 76,
+      "id": "q76"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Situazioni d'emergenza - situazioni di emergenza in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante una rianimazione cardiopolmonare su un lattante (paziente sotto l'anno di età), qual è la corretta procedura iniziale secondo le \nfonti?",
+      "opzioni": {
+        "A": "Iniziare immediatamente con 30 compressioni toraciche seguite da 2 ventilazioni.",
+        "B": "Eseguire 5 ventilazioni iniziali prima di iniziare le compressioni toraciche.",
+        "C": "Effettuare solo compressioni toraciche continue senza ventilazioni per i primi 2 minuti.",
+        "D": "Eseguire la manovra di Heimlich per escludere ostruzioni meccaniche."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La rianimazione pediatrica (bambini e lattanti) si distingue da quella dell'adulto perché inizia sempre con 5 ventilazioni iniziali \ndi soccorso [2].",
+      "numero": 77,
+      "id": "q77"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Situazioni d'emergenza - situazioni di emergenza in farmacia",
+      "tipo": "kprim",
+      "domanda": "Riguardo all'uso del defibrillatore automatico esterno (AED) in farmacia, quali delle seguenti affermazioni basate sulle 'situazioni \nparticolari' sono vere?",
+      "opzioni": {
+        "1": "L'AED può essere utilizzato in sicurezza anche su una donna in stato di gravidanza.",
+        "2": "In presenza di un pacemaker visibile, l'elettrodo deve essere posizionato direttamente sopra il dispositivo per migliorare la conduzione.",
+        "3": "Se il torace del paziente è molto bagnato, è necessario asciugarlo prima di applicare gli elettrodi.",
+        "4": "I cerotti medicamentosi presenti sul torace devono essere rimossi prima dell'applicazione degli elettrodi."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "L'AED è indicato in gravidanza [6]. L'elettrodo non va mai posto sopra un pacemaker (va mantenuta una distanza di sicurezza) [6]. \nAcqua e cerotti possono ostacolare la scarica o causare ustioni, quindi il torace va asciugato e i cerotti rimossi [6].",
+      "numero": 78,
+      "id": "q78"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Situazioni d'emergenza - situazioni di emergenza in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo i protocolli di emergenza per la farmacia svizzera, qual è il dosaggio di adrenalina i.m. raccomandato per un adulto (> 12 anni) \nin caso di anafilassi?",
+      "opzioni": {
+        "A": "0.15 mg i.m.",
+        "B": "0.3 mg i.m.",
+        "C": "0.5 mg i.m.",
+        "D": "1.0 mg i.m."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Le fonti specifiche per il personale specializzato indicano un dosaggio di 0.5 mg i.m. per gli adulti e i ragazzi sopra i 12 anni \n[5].",
+      "numero": 79,
+      "id": "q79"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Situazioni d'emergenza - situazioni di emergenza in farmacia",
+      "tipo": "kprim",
+      "domanda": "Un paziente si presenta al banco della farmacia confuso, sudato e tremante. Valuta il corretto triage e gestione della situazione:",
+      "opzioni": {
+        "1": "Se il paziente è cosciente e si sospetta una crisi ipoglicemica, somministrare immediatamente zucchero o destrosio per via orale.",
+        "2": "In caso di perdita di coscienza, è prioritario chiamare il 144 e mettere il paziente in posizione laterale di sicurezza se respira.",
+        "3": "Se il paziente non respira normalmente, è necessario iniziare la RCP anche se si sospetta un'overdose da oppioidi.",
+        "4": "In farmacia non è necessario disporre di ossigeno per le emergenze, essendo un presidio esclusivamente ospedaliero."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Lo zucchero p.o. è il trattamento standard per l'ipoglicemia cosciente. La gestione dell'incosciente che respira richiede la \nposizione laterale e il 144 [1]. La RCP è fondamentale in caso di arresto respiratorio indipendentemente dalla causa [1]. L'ossigeno è invece parte della\ndotazione di emergenza consigliata/richiesta in farmacia per gestire ad esempio l'anafilassi [5, 7].",
+      "numero": 80,
+      "id": "q80"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Situazioni d'emergenza - situazioni di emergenza in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale dei seguenti requisiti infrastrutturali è esplicitamente menzionato nella checklist pharmaSuisse per la gestione delle emergenze e \nvaccinazioni in farmacia?",
+      "opzioni": {
+        "A": "Presenza obbligatoria di un medico reperibile entro 5 minuti.",
+        "B": "Un locale separato con sedute o lettini che possano essere portati in posizione sdraiata.",
+        "C": "Un sistema di ventilazione forzata a pressione positiva nel locale triage.",
+        "D": "Un defibrillatore manuale con monitor ECG integrato (non AED)."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La checklist richiede un locale discreto e igienico dotato di sedute o lettini che permettano di porre il paziente in posizione \ndistesa (liegeposition) in caso di malore o emergenza [7].",
+      "numero": 81,
+      "id": "q81"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Vaccinazioni e prelievi - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 78 anni si presenta in farmacia per la vaccinazione antinfluenzale stagionale. Qual è la raccomandazione corretta secondo \nil piano vaccinale svizzero 2025?",
+      "opzioni": {
+        "A": "È preferibile utilizzare il vaccino a dosaggio standard per minimizzare gli effetti collaterali locali.",
+        "B": "È preferibile utilizzare il vaccino ad alto dosaggio, i cui costi sono assunti dall'AOMS per le persone di età ≥ 75 anni.",
+        "C": "La vaccinazione è raccomandata solo se il paziente presenta malattie croniche concomitanti.",
+        "D": "Il vaccino ad alto dosaggio è riservato esclusivamente al personale sanitario che lavora in cure intense."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo il calendario vaccinale 2025, per le persone di età ≥ 75 anni il vaccino antinfluenzale ad alto dosaggio è preferibile \nrispetto a quello standard a causa della maggiore efficacia dimostrata [1, 2]. L'Assicurazione Obbligatoria (AOMS) assume i costi del vaccino ad alto \ndosaggio per questa fascia di età e per le persone ≥ 65 anni con fattori di rischio aggiuntivi [3].",
+      "numero": 82,
+      "id": "q82"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Vaccinazioni e prelievi - vaccinazioni in farmacia",
+      "tipo": "kprim",
+      "domanda": "Un farmacista deve eseguire un prelievo di sangue capillare per il monitoraggio della glicemia. Valuta la correttezza delle seguenti fasi\ndella procedura:",
+      "opzioni": {
+        "1": "È necessario riscaldare il sito del prelievo (es. con acqua calda) per favorire la circolazione sanguigna.",
+        "2": "La puntura con la lancetta deve essere effettuata esattamente al centro del polpastrello per massimizzare il flusso.",
+        "3": "La prima goccia di sangue che fuoriesce deve essere asciugata con un tampone asciutto e non utilizzata per il test.",
+        "4": "In caso di scarso afflusso, è necessario spremere (quetschen) con forza il dito per ottenere sangue a sufficienza."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "Il riscaldamento del sito favorisce la perfusione [4]. La puntura va fatta lateralmente sul polpastrello, non al centro [5]. La prima\ngoccia va scartata perché può contenere liquido interstiziale [4]. È vietato spremere con forza il dito perché il campione verrebbe diluito, falsificando\nil risultato [4].",
+      "numero": 83,
+      "id": "q83"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Vaccinazioni e prelievi - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "In conformità alla Legge sugli agenti terapeutici e alle direttive sulla vaccinovigilanza, entro quanto tempo deve essere segnalato a \nSwissmedic un effetto indesiderato considerato 'grave' (es. che comporta ospedalizzazione)?",
+      "opzioni": {
+        "A": "Immediatamente, e comunque entro un massimo di 15 giorni dalla constatazione.",
+        "B": "Entro 48 ore dall'evento tramite contatto telefonico obbligatorio.",
+        "C": "Entro un termine massimo di 60 giorni tramite il portale ElViS.",
+        "D": "Non vi è obbligo di notifica per le farmacie, ma solo per i produttori di vaccini."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Secondo le fonti sulla vaccinovigilanza, gli effetti indesiderati gravi (pericolo di vita, ospedalizzazione, danni permanenti) devono\nessere notificati entro 15 giorni [6, 7]. I casi mortali o i difetti di qualità devono essere annunciati immediatamente [6, 8].",
+      "numero": 84,
+      "id": "q84"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Vaccinazioni e prelievi - vaccinazioni in farmacia",
+      "tipo": "kprim",
+      "domanda": "Una cliente di 24 anni richiede informazioni sulla vaccinazione contro il papillomavirus umano (HPV). Quali delle seguenti affermazioni \nsono corrette in base alle raccomandazioni svizzere?",
+      "opzioni": {
+        "1": "Per la fascia di età 20-26 anni, la vaccinazione HPV è classificata come 'vaccinazione complementare'.",
+        "2": "Lo schema vaccinale raccomandato per questa età prevede la somministrazione di 3 dosi (0, 2, 6 mesi).",
+        "3": "I costi sono coperti dall'assicurazione di base (AOMS) anche se la vaccinazione avviene in farmacia senza prescrizione.",
+        "4": "È raccomandato l'uso del vaccino 9-valente per tutti i gruppi target."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La vaccinazione tra i 20 e i 26 anni è considerata complementare [9, 10]. Lo schema prevede 3 dosi per chi ha più di 15 anni [11]. I \ncosti HPV sono rimborsati dall'AOMS solo se la vaccinazione avviene nell'ambito di un programma cantonale [12, 13]. Il vaccino 9-valente è quello \nraccomandato per la copertura ottimale [10].",
+      "numero": 85,
+      "id": "q85"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Vaccinazioni e prelievi - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante il triage per una vaccinazione antinfluenzale, un paziente dichiara di assumere regolarmente un anticoagulante orale (es. Sintrom\no un NOAC). Come deve procedere il farmacista secondo le linee guida UFSP?",
+      "opzioni": {
+        "A": "La vaccinazione intramuscolare è severamente vietata; deve essere eseguita solo per via sottocutanea.",
+        "B": "Può procedere alla vaccinazione i.m. utilizzando un ago fine (25G) e applicando una forte compressione sul sito per almeno 2 minuti senza \nfrizionare.",
+        "C": "Deve rifiutare la vaccinazione in farmacia, poiché la terapia anticoagulante è un criterio di esclusione definitivo.",
+        "D": "Deve richiedere al paziente di sospendere la terapia anticoagulante per 48 ore prima della somministrazione."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'UFSP e la CFV raccomandano la via intramuscolare anche per chi assume anticoagulanti per garantire una migliore risposta \nimmunitaria [14, 15]. È fondamentale però usare un ago fine (25G), non aspirare e comprimere il sito per almeno 2 minuti [16, 17].",
+      "numero": 86,
+      "id": "q86"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Vaccinazioni e prelievi - vaccinazioni in farmacia",
+      "tipo": "kprim",
+      "domanda": "Relativamente alla vaccinazione contro la meningoencefalite da zecche (FSME) in Svizzera, valuta la correttezza di queste affermazioni:",
+      "opzioni": {
+        "1": "Dal 2024, la vaccinazione è raccomandata in generale a partire dai 3 anni di età per chi risiede in zone a rischio.",
+        "2": "Tutta la Svizzera, ad eccezione del Canton Ticino, è considerata zona a rischio di FSME.",
+        "3": "In caso di morso di zecca, la vaccinazione può essere iniziata (o continuata) immediatamente per proteggere il paziente il prima possibile.",
+        "4": "In farmacia, la vaccinazione FSME può essere somministrata a partire dai 12 anni in tutti i cantoni."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "La raccomandazione è scesa da 6 a 3 anni nel 2024 [18]. Il Ticino resta l'unica eccezione alle zone a rischio [18, 19]. La \nvaccinazione post-morso è raccomandata dagli esperti Infovac per velocizzare la protezione [20]. L'età minima per la vaccinazione in farmacia (senza \nmedico) è solitamente 16 anni, a seconda delle norme cantonali [19, 21].",
+      "numero": 87,
+      "id": "q87"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Vaccinazioni e prelievi - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un viaggiatore si presenta per una consulenza sulle vaccinazioni. Quale risorsa online è indicata dalle fonti svizzere come riferimento \nper le raccomandazioni internazionali e la medicina di viaggio?",
+      "opzioni": {
+        "A": "www.bag.admin.ch/aoms-prevenzione",
+        "B": "www.healthytravel.ch",
+        "C": "www.swissmedic.ch/elvis",
+        "D": "www.rki.de"
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le vaccinazioni per i viaggi all'estero sono regolate dal Comitato svizzero d'esperti per la medicina di viaggio (CEMV) e pubblicate \nsul portale www.healthytravel.ch [22-24].",
+      "numero": 88,
+      "id": "q88"
+    }
+  ]
+}

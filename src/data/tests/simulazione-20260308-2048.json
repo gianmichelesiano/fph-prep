@@ -1,0 +1,856 @@
+{
+  "id": "simulazione-20260308-2048",
+  "title": "Simulazione Esame – 08/03/2026 20:48",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 78 anni in terapia con un ACE-inibitore per l'ipertensione sviluppa una severa gastroenterite con vomito e diarrea (exsikkose). In farmacia richiede\nun consiglio per dolori articolari. Qual è la gestione più corretta secondo le linee guida sulla sicurezza renale?",
+      "opzioni": {
+        "A": "Consegnare Ibuprofene 400 mg per l'infiammazione, raccomandando di bere molta acqua.",
+        "B": "Sospendere temporaneamente l'ACE-inibitore e l'eventuale diuretico e suggerire Paracetamolo o Metamizolo per il dolore.",
+        "C": "Suggerire Diclofenac poiché ha un'emivita più breve rispetto ad altri FANS.",
+        "D": "Raddoppiare la dose dell'ACE-inibitore per proteggere il rene dal carico infiammatorio."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In caso di deplezione di volume ed essiccosi (causata da vomito/diarrea), le fonti raccomandano la sospensione temporanea di ACE-inibitori, diuretici e altri \nantiipertensivi per prevenire l'insufficienza renale acuta [1, 2]. Il Paracetamolo e il Metamizolo sono indicati come alternative sicure in questo contesto renale, mentre i FANS \n(COX-inibitori) sono da evitare poiché 'portano il vaso a traboccare' annullando la vasodilatazione renale compensatoria [1, 3, 4].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - controindicazioni",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 68 anni assume Escitalopram 20 mg/die. Le viene prescritto Clarithromycin 500 mg (2x/die) per una bronchite. Valuta la validità delle seguenti \naffermazioni basandoti sui rischi di prolungamento dell'intervallo QT:",
+      "opzioni": {
+        "1": "L'uso concomitante di Escitalopram e Claritromicina è considerato controindicato nelle Informazioni Professionali svizzere.",
+        "2": "L'effetto di prolungamento del QT è additivo perché entrambi i farmaci agiscono potenzialmente sui canali del potassio (hERG).",
+        "3": "L'Escitalopram presenta un rischio di prolungamento del QT significativamente superiore (circa il doppio) rispetto al Citalopram.",
+        "4": "La Claritromicina, essendo un potente inibitore del CYP3A4, può aumentare i liIvelli plasmatici di Escitalopram, potenziandone la tossicità cardiaca."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, la combinazione tra farmaci che prolungano il QT è spesso classificata come controindicata [5, 6]. 2: Vero, il meccanismo principale è l'inibizione \ndei canali cardiaci del potassio [7, 8]. 3: Falso, l'Escitalopram prolunga il QT circa il 50% in MENO rispetto al Citalopram [9]. 4: Vero, l'inibizione del metabolismo via CYP3A4 \nda parte dei macrolidi aumenta l'esposizione agli SSRI, incrementando il rischio dose-dipendente di aritmie [10, 11].",
+      "numero": 2,
+      "id": "q2"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - polifarmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante la validazione di un piano terapeutico per un paziente ad alto rischio cardiovascolare in terapia con Atorvastatina 40 mg, noti la prescrizione di \nClaritromicina per un'eradicazione di H. pylori. Qual è l'intervento più appropriato?",
+      "opzioni": {
+        "A": "Sospendere l'Atorvastatina per 7 giorni (statin pause) senza consultare il medico.",
+        "B": "Contattare il medico per valutare la riduzione della dose di Atorvastatina (es. 10 mg) o l'uso di un antibiotico alternativo come l'Azitromicina.",
+        "C": "Somministrare entrambi i farmaci, poiché l'interazione tra statine e macrolidi non è clinicamente rilevante.",
+        "D": "Consigliare l'assunzione di succo di pompelmo per bilanciare l'assorbimento della Claritromicina."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La Claritromicina aumenta l'AUC dell'Atorvastatina di circa 4.5 volte, elevando il rischio di rabdomiolisi [12]. Sebbene la 'statin pause' sia una strategia \ncomune, nei pazienti ad alto rischio cardiovascolare essa va valutata attentamente col medico; ridurre la dose della statina o cambiare antibiotico (l'Azitromicina non inibisce il\nCYP3A4) sono opzioni valide [12, 13]. L'opzione D è pericolosa poiché il pompelmo peggiorerebbe l'interazione [12].",
+      "numero": 3,
+      "id": "q3"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - errori di dosaggio",
+      "tipo": "kprim",
+      "domanda": "Una giovane donna in terapia cronica con Carbamazepina (induttore enzimatico) richiede la contraccezione d'emergenza orale (pillola del giorno dopo). Valuta la \ncorrettezza delle seguenti raccomandazioni:",
+      "opzioni": {
+        "1": "L'Ulipristal acetato (UPA) è il farmaco di prima scelta poiché non risente dell'induzione del CYP3A4.",
+        "2": "È raccomandato raddoppiare la dose di Levonorgestrel (3 mg invece di 1.5 mg) se la paziente non può inserire una spirale al rame.",
+        "3": "L'induzione enzimatica causata dalla Carbamazepina svanisce entro 48 ore dalla sospensione del farmaco.",
+        "4": "La spirale al rame rappresenta il metodo più efficace per questa paziente in quanto non subisce interazioni metaboliche."
+      },
+      "risposta_corretta": "FVFV",
+      "motivazione": "1: Falso, l'efficacia di UPA è ridotta dagli induttori e non è raccomandata [14, 15]. 2: Vero, il raddoppio della dose di LNG è la strategia standard in caso \ndi assunzione di induttori del CYP3A4 [15, 16]. 3: Falso, l'effetto induttivo può persistere fino a 4 settimane dopo la sospensione [15, 17]. 4: Vero, lo IUD al rame è la prima \nscelta poiché evita l'interazione farmacocinetica [14, 18].",
+      "numero": 4,
+      "id": "q4"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente che assume regolarmente l'estratto di Iperico (Johanniskraut) ad alto contenuto di iperforina riceve una prescrizione di Rivaroxaban (Xarelto®). Qual \nè il rischio clinico principale?",
+      "opzioni": {
+        "A": "Rischio di emorragia cerebrale dovuto all'inibizione del metabolismo del Rivaroxaban.",
+        "B": "Aumento dell'effetto antidepressivo dell'Iperico causato dal Rivaroxaban.",
+        "C": "Rischio di fallimento terapeutico e trombosi a causa dell'induzione del CYP3A4 e della P-gp.",
+        "D": "Nessuna interazione, poiché l'Iperico interagisce solo con gli antagonisti della vitamina K (Warfarin)."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "L'Iperico è un potente induttore del CYP3A4 e della P-glicoproteina (P-gp). Poiché il Rivaroxaban è un substrato di entrambi, l'induzione ne riduce \ndrasticamente i livelli plasmatici, compromettendo l'efficacia anticoagulante e aumentando il rischio di eventi trombotici [13, 19].",
+      "numero": 5,
+      "id": "q5"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "kprim",
+      "domanda": "In merito alla Sindrome Serotoninergica (S-Syn), valuta la validità delle seguenti affermazioni basandoti sulla pratica di farmacia:",
+      "opzioni": {
+        "1": "I sintomi tipici includono tremore, iperreflessia, tachicardia e midriasi.",
+        "2": "Farmaci oppioidi come la Morfina e i suoi derivati sono tra i principali responsabili della S-Syn.",
+        "3": "L'uso concomitante di SSRI e Triptani per l'emicrania è considerato generalmente sicuro e non richiede interventi restrittivi.",
+        "4": "Il Tramadolo e il Destrometorfano (anche in prodotti OTC) possono contribuire al rischio serotoninergico."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1: Vero, questi sono segni neuromuscolari e autonomici classici [20, 21]. 2: Falso, i derivati della morfina non causano sindrome serotoninergica [22]. 3: \nVero, i triptani non sono 'serotonin spreader' e la combinazione con SSRI è considerata sicura [22, 23]. 4: Vero, entrambi inibiscono la ricaptazione della serotonina aumentando \nil rischio [24, 25].",
+      "numero": 6,
+      "id": "q6"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - validazione ricette mediche",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente in terapia cronica con un inibitore del sistema RAAS (es. un Sartano) riceve una prescrizione di Trimethoprim per un'infezione urinaria. Quale \nparametro biochimico deve essere monitorato con priorità?",
+      "opzioni": {
+        "A": "Il tempo di protrombina (INR).",
+        "B": "I livelli sierici di potassio per il rischio di iperkaliemia.",
+        "C": "La conta totale dei globuli rossi.",
+        "D": "I livelli di glucosio a digiuno."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Sia gli inibitori del RAAS (ACE-inibitori/Sartani) che il Trimethoprim possono causare iperkaliemia. La loro combinazione aumenta significativamente il rischio\ndi livelli elevati di potassio, richiedendo un monitoraggio attento per prevenire aritmie [26-28].",
+      "numero": 7,
+      "id": "q7"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Fitoterapia - fitoterapia",
+      "tipo": "multipla_scelta",
+      "domanda": "Una madre si presenta in farmacia chiedendo una tisana al finocchio per il proprio figlio di 6 mesi che soffre di coliche neonatali. Qual è la corretta \nraccomandazione basata sulle direttive Swissmedic di marzo 2024?",
+      "opzioni": {
+        "A": "La somministrazione è sicura fino a un massimo di 3,0 g di frutti di finocchio al giorno.",
+        "B": "L'uso non è raccomandato sotto i 4 anni a causa della presenza di estragolo; si possono consigliare alternative come fiori di camomilla o foglie di melissa.",
+        "C": "È preferibile utilizzare frutti di finocchio amaro perché, secondo la Farmacopea Europea, contengono meno estragolo rispetto al finocchio dolce.",
+        "D": "Si raccomanda di schiacciare accuratamente i frutti prima dell'infusione per ridurre la quantità di estragolo rilasciata nell'acqua."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le raccomandazioni Swissmedic del 6 marzo 2024 (basate sulle direttive EMA/HMPC), l'uso del finocchio sotto i 4 anni non è raccomandato poiché \nl'estragolo ha mostrato un potenziale genotossico e cancerogeno in studi in vitro e su animali [1-3]. La dose di 3,0 g è il limite massimo per bambini tra 4 e 12 anni [2]. \nSchiacciare i frutti aumenta il rilascio di estragolo di circa tre volte rispetto ai frutti interi [4]. Melissa e camomilla sono suggerite come alternative sicure [5].",
+      "numero": 8,
+      "id": "q8"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Fitoterapia - interazioni",
+      "tipo": "kprim",
+      "domanda": "In merito all'impiego dell'Iperico (Hypericum perforatum) e alle sue interazioni farmacologiche nel contesto del mercato svizzero, quali delle seguenti \naffermazioni sono corrette?",
+      "opzioni": {
+        "1": "L'iperforina è il componente responsabile dell'induzione del citocromo CYP3A4 e della P-glicoproteina tramite l'attivazione del recettore PXR.",
+        "2": "Per i preparati Remotiv® e Rebalance®, l'avvertenza sulle interazioni con CYP3A4 e P-gp è stata rimossa dalle informazioni professionali poiché contengono < 1 mg di \niperforina per dose giornaliera.",
+        "3": "Nuove evidenze indicano che l'iperforina interagisce con il trasportatore intestinale OATP2B1, potendo influenzare la farmacocinetica di statine o antistaminici.",
+        "4": "In Svizzera, tutti i prodotti a base di iperico registrati in categoria di consegna D sono considerati 'iperforin-low' e quindi privi di interazioni rilevanti."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'iperforina attiva il recettore PXR inducendo enzimi e trasportatori (CYP3A4, P-gp) [6, 7]. I prodotti con iperforina < 1 mg/die (Remotiv, Rebalance) hanno \neffettivamente rimosso le avvertenze specifiche dalle informazioni professionali nel 2020 [8, 9]. Studi recenti confermano l'interazione con OATP2B1, un trasportatore importante \nper l'assorbimento di vari farmaci [10, 11]. L'affermazione 4 è falsa poiché prodotti come Jarsin® (cat. D) contengono dosi significative di iperforina (circa 6,3 mg/die) e \nmantengono un alto potenziale di interazione [12, 13].",
+      "numero": 9,
+      "id": "q9"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Fitoterapia - fitoterapia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente di 35 anni desidera acquistare Lasea® (estratto di lavanda Silexan) per stati d'ansia e irrequietezza. Quale istruzione è fondamentale fornire per \nminimizzare l'effetto collaterale più frequente?",
+      "opzioni": {
+        "A": "Assumere la capsula a stomaco vuoto, almeno un'ora prima della colazione, per massimizzare la velocità di assorbimento.",
+        "B": "Assumere il preparato solo al bisogno (preparato 'on demand'), poiché l'effetto ansiolitico è immediato.",
+        "C": "Assumere la capsula intera con un bicchiere d'acqua durante un pasto e in posizione eretta per evitare eruttazioni con odore di lavanda.",
+        "D": "Evitare l'assunzione contemporanea di succhi di frutta acidi, poiché neutralizzano i componenti attivi linalolo e linalil acetato."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "L'effetto collaterale più comune delle capsule di olio di lavanda è l'eruttazione (burps) con sapore di lavanda [14, 15]. Per ridurne l'incidenza, si \nraccomanda l'assunzione con un pasto, con acqua e mantenendo una posizione eretta [14]. L'assunzione a stomaco vuoto aumenterebbe il fastidio gastrointestinale [14]. L'effetto non\nè immediato ma lento, sviluppandosi pienamente nell'arco di alcune settimane [15, 16].",
+      "numero": 10,
+      "id": "q10"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Medicina complementare - omeopatia",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente si presenta in farmacia chiedendo una potenza C200 per un recente trauma contusivo alla gamba, sostenendo che una potenza così alta sia sicuramente più\nefficace. Quale informazione deve fornire il farmacista basandosi sulla teoria delle potenze omeopatiche?",
+      "opzioni": {
+        "A": "Le potenze elevate (> D/C 30) sono le più indicate per i disturbi puramente fisici di breve durata poiché agiscono più velocemente.",
+        "B": "Non è possibile generalizzare l'efficacia in base all'altezza della potenza; i disturbi fisici, infatti, guariscono spesso meglio con potenze basse (< D/C 12).",
+        "C": "Le potenze elevate come la C200 hanno un effetto limitato a poche ore e richiedono somministrazioni molto frequenti.",
+        "D": "La potenza C200 è l'unica indicata per i traumi fisici poiché agisce esclusivamente sul sistema circolatorio e sui vasi sanguigni."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, non è possibile generalizzare affermando che una potenza elevata sia sempre più efficace, poiché ciò dipende dal tipo di disturbo [1]. I \ndisturbi fisici guariscono meglio con le potenze basse (< D/C 12), che hanno un effetto fisico e una durata di poche ore [2]. Le potenze elevate (> D/C 30) hanno invece un raggio \nd'azione più profondo che coinvolge anche i livelli mentale e psichico per diverse settimane [2].",
+      "numero": 11,
+      "id": "q11"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Medicina complementare - omeopatia",
+      "tipo": "kprim",
+      "domanda": "Un farmacista sta istruendo un collaboratore sulla corretta posologia e somministrazione dei globuli omeopatici in Svizzera. Valutate la correttezza delle seguenti\naffermazioni basandovi sulle linee guida fornite:",
+      "opzioni": {
+        "1": "In teoria basterebbe un solo globulo per dose, ma per ragioni psicologiche se ne raccomandano solitamente 7 per ogni somministrazione sia ad adulti che a bambini.",
+        "2": "In caso di disturbi acuti (es. raffreddore), la quantità di globuli assunti è più importante della frequenza della somministrazione.",
+        "3": "Nei casi acuti, se non si riscontra un netto miglioramento entro poche ore o al massimo mezza giornata, il rimedio va considerato errato e il caso rivalutato.",
+        "4": "Il consumo di caffè durante un trattamento omeopatico è severamente vietato poiché annulla sistematicamente l'effetto di qualsiasi rimedio ben scelto."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "La 1 è corretta poiché si raccomandano 7 globuli per dose per ragioni psicologiche, sebbene teoricamente ne basterebbe uno [3]. La 2 è falsa perché la \nfrequenza è più importante della quantità, specialmente nei casi acuti [4]. La 3 è corretta poiché un rimedio giusto in fase acuta deve agire entro mezza giornata [4]. La 4 è \nfalsa poiché un rimedio scelto correttamente è efficace nonostante il consumo di caffè, che non influisce sull'efficacia in linea di principio [5].",
+      "numero": 12,
+      "id": "q12"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Medicina complementare - omeopatia",
+      "tipo": "multipla_scelta",
+      "domanda": "Una madre chiede consiglio per una piccola ferita da taglio superficiale sul braccio del figlio di 4 anni. Il farmacista valuta l'uso di uno spray cicatrizzante \nomeopatico (tipo Similasan). In quale delle seguenti situazioni è imperativo indirizzare immediatamente il paziente a un medico (Bandiere Rosse)?",
+      "opzioni": {
+        "A": "La ferita presenta piccole croste ed è localizzata su una zona esposta.",
+        "B": "La ferita è superficiale ma è stata causata da un morso di animale.",
+        "C": "Il bambino ha un'età superiore ai 2 anni e la ferita è di lieve entità.",
+        "D": "La ferita è accompagnata da un leggero bruciore locale al momento del trauma."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le ferite da morso (così come quelle da punta, profonde o molto sporche) richiedono sempre un trattamento medico obbligatorio per il rischio di infezioni gravi\no tetano [6]. Le piccole croste sono un'indicazione d'uso per lo spray [7], mentre la consulenza medica per i bambini è indicata sotto i 2 anni solo per ferite più gravi [8]. \nAltri segnali di allarme includono febbre, bordi molto rossi o gonfiore improvviso [6].",
+      "numero": 13,
+      "id": "q13"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 28 anni, al sesto mese di gravidanza, si presenta in farmacia con sintomi evidenti di rinite allergica stagionale (naso che cola, starnuti \nfrequenti). Chiede un flacone di Mometasone spray nasale. Qual è il comportamento corretto del farmacista secondo la normativa svizzera sulla Lista B+?",
+      "opzioni": {
+        "A": "Dispensare il prodotto come prestazione Lista B+, documentando il colloquio e limitando la terapia a 1 mese.",
+        "B": "Negare la dispensazione in Lista B+ e indirizzare la paziente al medico, poiché la gravidanza è una controindicazione alla dispensazione agevolata.",
+        "C": "Dispensare il prodotto solo se la paziente dichiara di averlo già usato in precedenza con successo.",
+        "D": "Sostituire lo steroide nasale con un antistaminico orale, poiché questi sono sempre ammessi in Lista B+ anche in gravidanza."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida svizzere per la rinite allergica in Lista B+, la dispensazione è esplicitamente vietata durante la gravidanza e l'allattamento (Box 1). \nIn questi casi, il farmacista deve indirizzare la paziente al medico per una valutazione clinica appropriata.",
+      "numero": 14,
+      "id": "q14"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Un paziente di 35 anni con asma lieve (Stadio 1 GINA) utilizza solo Salbutamolo al bisogno. Secondo gli aggiornamenti GINA 2019/2021, quali delle seguenti \naffermazioni sulla gestione dell'asma lieve sono corrette?",
+      "opzioni": {
+        "1": "L'uso del solo SABA (senza ICS) è associato a un aumento del rischio di esacerbazioni gravi e morte correlata all'asma.",
+        "2": "La combinazione di un ICS a basso dosaggio e Formoterolo al bisogno è ora la terapia preferita anche per lo Stadio 1.",
+        "3": "L'aderenza alla terapia quotidiana con ICS nei pazienti con sintomi rari è solitamente molto alta.",
+        "4": "L'aggiunta di un ICS ad ogni somministrazione di SABA è una strategia alternativa raccomandata se non si usa Formoterolo."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La GINA sottolinea che il solo SABA aumenta i rischi (V). La terapia preferita è ICS-Formoterolo al bisogno (V). L'aderenza dei pazienti con pochi sintomi è \ntipicamente bassa, non alta (F). Se non si usa il percorso preferito, la GINA raccomanda di assumere ICS ogni volta che si usa il SABA (V).",
+      "numero": 15,
+      "id": "q15"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo la classificazione GOLD 2023 per la BPCO, quale terapia iniziale è raccomandata per un paziente appartenente al 'Gruppo E' (pazienti con >= 2 esacerbazioni\nmoderate o >= 1 ospedalizzazione nell'ultimo anno)?",
+      "opzioni": {
+        "A": "Monoterapia con un broncodilatatore a breve durata (SABA o SAMA).",
+        "B": "Monoterapia con un LAMA (antimuscarinico a lunga durata).",
+        "C": "Combinazione LABA + LAMA.",
+        "D": "Combinazione LABA + ICS, indipendentemente dal conteggio degli eosinofili."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Le linee guida GOLD 2023 (e precedenti revisioni ABE) raccomandano la doppia broncodilatazione LABA+LAMA per il Gruppo E. L'aggiunta di un ICS (tripla terapia)\nva considerata solo se gli eosinofili ematici sono >= 300 cells/µL.",
+      "numero": 16,
+      "id": "q16"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla tecnica di inalazione e alla manutenzione dei dispositivi, quali delle seguenti istruzioni fornite al banco sono corrette?",
+      "opzioni": {
+        "1": "Per il dispositivo Ellipta®, il farmaco deve essere eliminato 6 settimane dopo l'apertura della vaschetta di alluminio.",
+        "2": "Dopo l'uso di Symbicort® (ICS/LABA), è necessario sciacquare la bocca o mangiare qualcosa per prevenire la candidosi orale.",
+        "3": "Gli inalatori a polvere secca (DPI) richiedono un'inspirazione lenta e costante per funzionare correttamente.",
+        "4": "In caso di attacco d'asma acuto, è preferibile usare un dosatore aerosol (MDI) con distanziatore (spacer) rispetto a un inalatore a polvere."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Ellipta ha una stabilità di 6 settimane dall'apertura (V). L'igiene orale post-ICS è fondamentale per la profilassi del mughetto (V). I DPI richiedono \nun'inspirazione forte e profonda (F), mentre gli MDI richiedono coordinazione o l'uso di spacer, quest'ultimo preferito nelle emergenze per il minor sforzo richiesto (V).",
+      "numero": 17,
+      "id": "q17"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente chiede un consiglio per una tosse secca che dura da 10 giorni. Durante il triage, riferisce di aver iniziato una nuova terapia per l'ipertensione circa \nuna settimana fa. Quale classe di farmaci è la più probabile causa della tosse?",
+      "opzioni": {
+        "A": "Beta-bloccanti selettivi (es. Atenololo).",
+        "B": "Calcio-antagonisti (es. Amlodipina).",
+        "C": "ACE-inibitori (es. Enalapril).",
+        "D": "Diuretici tiazidici (es. Idroclorotiazide)."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Gli ACE-inibitori sono una causa nota di tosse secca e stizzosa (effetto collaterale bradicinina-correlato) che spesso compare entro una settimana dall'inizio \ndel trattamento. È una diagnosi differenziale fondamentale nel triage della tosse in farmacia.",
+      "numero": 18,
+      "id": "q18"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Un paziente asmatico noto si presenta in farmacia in stato di agitazione, riferendo un peggioramento acuto della respirazione. Quali dei seguenti segni sono \nconsiderati 'Red Flags' che richiedono la chiamata immediata al 144?",
+      "opzioni": {
+        "1": "Saturazione di ossigeno (SpO2) misurata in farmacia pari al 94%.",
+        "2": "Incapacità di pronunciare frasi complete (Sprechdyspnoe).",
+        "3": "Frequenza respiratoria superiore a 30 atti al minuto.",
+        "4": "Presenza di cianosi (labbra o unghie bluastre)."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "Una SpO2 < 90% è un segnale di allarme; il 94% è ancora nell'intervallo di sicurezza per l'asma (93-95%) (F). L'incapacità di parlare, la tachipnea (>30/min) e\nla cianosi sono segni critici di minaccia vitale (V).",
+      "numero": 19,
+      "id": "q19"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Un atleta professionista con diagnosi di asma da sforzo chiede informazioni sull'uso del Salbutamolo (Ventolin®) inalatorio. Qual è il limite di dosaggio \nconsentito per non incorrere in una violazione delle norme anti-doping?",
+      "opzioni": {
+        "A": "Il Salbutamolo è totalmente vietato in gara indipendentemente dal dosaggio.",
+        "B": "Massimo 1600 µg ogni 24 ore, con dosi singole non superiori a 600 µg ogni 8 ore.",
+        "C": "Massimo 800 µg ogni 24 ore, solo se assunto tramite nebulizzatore.",
+        "D": "Non ci sono limiti per la via inalatoria, i limiti valgono solo per la via orale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le direttive anti-doping (Swiss Sport Integrity), il Salbutamolo inalatorio è ammesso con limiti precisi: 1600 µg/24h e non più di 600 µg ogni 8 ore. \nSuperare questi limiti richiede una TUE (Esenzione per Uso Terapeutico).",
+      "numero": 20,
+      "id": "q20"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "In farmacia viene valutato un paziente con rinite allergica tramite la Scala Analogica Visiva (VAS). Quali delle seguenti affermazioni sulla gestione terapeutica \nbasata sulla VAS sono corrette?",
+      "opzioni": {
+        "1": "Un valore VAS >= 50 indica sintomi moderato-gravi.",
+        "2": "Se il VAS è < 50, il farmaco può essere scelto liberamente tra antistaminici o steroidi nasali.",
+        "3": "Se il VAS è >= 50, la prima scelta raccomandata sono i corticosteroidi intranasali (INGK).",
+        "4": "Dopo 5-10 giorni di terapia, se il VAS rimane > 50, è necessario aumentare lo step terapeutico."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "La scala VAS da 0 a 100 definisce la gravità: >= 50 è la soglia per i sintomi significativi (V). Sotto 50 c'è libera scelta (V), sopra 50 gli INGK sono \npreferiti (V). La rivalutazione dopo 5-10 giorni prevede un aumento della terapia se il controllo è insufficiente (VAS > 50) (V).",
+      "numero": 21,
+      "id": "q21"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente asmatico soffre di dolori muscolari e chiede un analgesico. È noto che circa il 21% degli asmatici presenta un'intolleranza all'Aspirina (FANS). Quale \nfarmaco rappresenta l'alternativa più sicura per questo paziente?",
+      "opzioni": {
+        "A": "Ibuprofene a basso dosaggio.",
+        "B": "Diclofenac gel per uso topico.",
+        "C": "Paracetamolo (preferibilmente < 1000 mg per dose).",
+        "D": "Acido acetilsalicilico effervescente."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "In pazienti con asma indotto da aspirina (AIA), i FANS non selettivi sono controindicati. Il paracetamolo è l'analgesico di prima scelta, essendo generalmente \nben tollerato a dosi inferiori a 1000 mg.",
+      "numero": 22,
+      "id": "q22"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla gestione della tosse acuta e cronica in farmacia, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "La tosse è considerata cronica negli adulti se persiste per più di 8 settimane.",
+        "2": "La combinazione di un antitussivo e un espettorante è raccomandata per accelerare la risoluzione dei sintomi.",
+        "3": "Il miele ha dimostrato evidenze di efficacia nel ridurre la frequenza della tosse nei bambini sopra l'anno di età.",
+        "4": "L'uso di codeina per la tosse è controindicato nei bambini di età inferiore ai 12 anni."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "La definizione di tosse cronica è > 8 settimane (V). Combinare antitussivi ed espettoranti non ha senso clinico e rischia il ristagno delle secrezioni (F). Il \nmiele è un rimedio supportato da prove di efficacia (V). Codeina e destrometorfano sono sconsigliati sotto i 12 anni per motivi di sicurezza (V).",
+      "numero": 23,
+      "id": "q23"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Triage e Dolore (Red Flags)",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 72 anni riferisce un forte mal di schiena (intensità 7/10) insorto improvvisamente. Quale dei seguenti sintomi rappresenta una 'Red Flag' assoluta \nche richiede l'invio immediato al pronto soccorso (Emergenza), anziché una semplice consultazione medica?",
+      "opzioni": {
+        "A": "Dolore che irradia verso il basso lungo una sola gamba.",
+        "B": "Disturbi della sensibilità nella zona del perineo e dell'interno coscia (anestesia a sella).",
+        "C": "Presenza di osteoporosi nota e terapia cronica con corticosteroidi.",
+        "D": "Dolore che non migliora con il riposo durante la notte."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'anestesia a sella (Reithosenanästhesie) è un segno neurologico di compromissione midollare/cauda equina e rappresenta un'emergenza da ospedalizzare \nimmediatamente [1, 2]. Le opzioni C e D sono segnali d'allarme (Red Flags) che richiedono una visita medica, ma non necessariamente un rinvio d'urgenza al pronto soccorso, mentre \nl'irradiazione unilaterale (A) è comune nelle sciatalgie non complicate [3-5].",
+      "numero": 24,
+      "id": "q24"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Metamizolo (Lista B+)",
+      "tipo": "kprim",
+      "domanda": "In merito alla dispensazione del Metamizolo (es. Novalgin) in farmacia secondo le regole della Lista B+ e alla sua sicurezza, valutare la veridicità delle seguenti\naffermazioni:",
+      "opzioni": {
+        "1": "Il farmacista può dispensare il metamizolo per una durata massima di 7 giorni con una dose giornaliera massima di 3000 mg.",
+        "2": "L'agranulocitosi è un effetto collaterale molto raro, ma è strettamente dose-dipendente e si manifesta solo dopo un uso prolungato.",
+        "3": "In caso di comparsa di mal di gola, febbre o lesioni alle mucose orali, la paziente deve sospendere il farmaco e consultare subito un medico.",
+        "4": "Il metamizolo può essere dispensato nella categoria B+ anche per il trattamento di dolori nei bambini e negli adolescenti."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "Il metamizolo ha i limiti di 3000 mg/die e 7 giorni in Lista B+ [6, 7]. L'agranulocitosi è dose-indipendente e può manifestarsi precocemente (mediana 7 giorni)\n[8, 9]. I sintomi orali/febbrili sono segni precoci di agranulocitosi [8]. L'uso in Lista B+ esclude esplicitamente bambini e adolescenti [10, 11].",
+      "numero": 25,
+      "id": "q25"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - FANS e Rischio Cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente con una storia di cardiopatia ischemica chiede un antinfiammatorio per un dolore articolare. Quale dei seguenti FANS (NSAR) è associato al più alto \nrischio cardiovascolare e dovrebbe essere evitato prioritariamente?",
+      "opzioni": {
+        "A": "Naprossene",
+        "B": "Ibuprofene (a dosaggio < 1200 mg/die)",
+        "C": "Diclofenac",
+        "D": "Paracetamolo"
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il Diclofenac mostra una selettività per la COX-2 simile ai Coxib, conferendo un rischio cardiovascolare superiore rispetto ad altri FANS tradizionali [12-15].\nIl naprossene e l'ibuprofene a basse dosi sono considerati opzioni con un profilo di sicurezza cardiovascolare migliore [16, 17].",
+      "numero": 26,
+      "id": "q26"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Paracetamolo e Sicurezza",
+      "tipo": "kprim",
+      "domanda": "Riguardo all'uso e alla tossicità del paracetamolo, valutare le seguenti affermazioni basate sulle linee guida svizzere:",
+      "opzioni": {
+        "1": "Il paracetamolo è considerato il trattamento di prima scelta per la lombalgia acuta aspecifica (mal di schiena).",
+        "2": "Nei pazienti con consumo cronico di alcol o malnutrizione, la dose massima giornaliera deve essere ridotta a 2 grammi.",
+        "3": "L'antidoto d'elezione per il sovradosaggio acuto è la N-acetilcisteina.",
+        "4": "La combinazione di paracetamolo con un FANS è sconsigliata a causa del rischio elevato di insufficienza renale acuta."
+      },
+      "risposta_corretta": "FVVF",
+      "motivazione": "Il paracetamolo non è più raccomandato come prima scelta per la lombalgia poiché non si è dimostrato superiore al placebo [18-20]. In caso di alcolismo o \nfattori di rischio epatico, il limite è 2g/die [21-23]. La N-acetilcisteina è l'antidoto standard [21, 24]. La combinazione paracetamolo/FANS è possibile e spesso vantaggiosa per \nl'effetto sinergico [25].",
+      "numero": 27,
+      "id": "q27"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Interazioni Farmacologiche (Psichiatria)",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente in terapia con Sertralina (SSRI) richiede un consiglio per un'infiammazione acuta. Qual è il principale rischio clinico nel combinare un SSRI con un \nFANS (NSAR) come l'ibuprofene?",
+      "opzioni": {
+        "A": "Sindrome serotoninergica acuta.",
+        "B": "Aumento significativo del rischio di sanguinamento (specialmente gastrointestinale).",
+        "C": "Inibizione dell'effetto antidepressivo della Sertralina.",
+        "D": "Aumento della tossicità renale del SSRI."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Gli SSRI inibiscono il reuptake della serotonina nelle piastrine, che combinato con l'effetto antiaggregante dei FANS, aumenta notevolmente il rischio di \nemorragie, in particolare del tratto gastrointestinale [26-29].",
+      "numero": 28,
+      "id": "q28"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Ibuprofene (Farmacologia)",
+      "tipo": "kprim",
+      "domanda": "In merito al profilo farmacologico dell'ibuprofene, valutare la veridicità delle seguenti affermazioni:",
+      "opzioni": {
+        "1": "L'effetto analgesico e antipiretico presenta un 'effetto soffitto' (ceiling effect) a una dose singola di 400 mg.",
+        "2": "A differenza dell'effetto analgesico, l'effetto antinfiammatorio aumenta con dosi superiori a 400 mg.",
+        "3": "In caso di infezione da varicella nei bambini, l'ibuprofene è controindicato per il rischio di gravi complicazioni cutanee.",
+        "4": "Se assunto con Aspirina cardio (ASA), l'ibuprofene deve essere somministrato contemporaneamente per massimizzare l'effetto protettivo."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'effetto analgesico ha un tetto a 400 mg, mentre quello antinfiammatorio richiede dosi più alte [30]. La varicella è una controindicazione specifica per il \nrischio di infezioni necrotizzanti dei tessuti molli [31]. L'ibuprofene interferisce con il sito di legame dell'ASA piastrinica; vanno assunti a distanza di almeno 2 ore [14, \n29].",
+      "numero": 29,
+      "id": "q29"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Metamizolo e Interazioni (CYP)",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale delle seguenti affermazioni descrive correttamente un'interazione farmacocinetica del Metamizolo evidenziata nelle fonti?",
+      "opzioni": {
+        "A": "Inibisce il CYP3A4, aumentando i livelli di Bupropione.",
+        "B": "Induce gli enzimi CYP2B6 e CYP3A4, potendo ridurre i livelli plasmatici di farmaci come la Sertralina o il Metadone.",
+        "C": "Aumenta l'escrezione renale del Litio, riducendone l'efficacia.",
+        "D": "Inibisce la glucuronidazione del paracetamolo, aumentandone la tossicità."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il metamizolo è un induttore del CYP2B6 e CYP3A4, il che comporta interazioni clinicamente rilevanti con Sertralina, Metadone, Bupropione e ciclosporina [10, \n11, 32]. L'interazione con il litio è tipica dei FANS (ne riducono l'escrezione, non la aumentano) [33, 34].",
+      "numero": 30,
+      "id": "q30"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Neurologia (Epilessia e Analgesici)",
+      "tipo": "kprim",
+      "domanda": "In un paziente epilettico in terapia farmacologica, la gestione del dolore richiede cautela. Valutare le seguenti affermazioni basate sulle fonti:",
+      "opzioni": {
+        "1": "L'uso cronico di induttori enzimatici come la Carbamazepina aumenta il rischio di epatotossicità da paracetamolo.",
+        "2": "Il paracetamolo può causare una riduzione dei livelli plasmatici di Lamotrigina, richiedendo un monitoraggio clinico.",
+        "3": "Il metamizolo può ridurre i livelli plasmatici di Valproato a causa dell'induzione enzimatica.",
+        "4": "In pazienti con storia di convulsioni, i FANS sono assolutamente controindicati poiché abbassano sempre la soglia epilettogena."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Gli induttori come la carbamazepina aumentano i metaboliti tossici del paracetamolo [21, 29, 35]. Esiste una segnalazione di riduzione dei livelli di \nlamotrigina con paracetamolo [29]. Il metamizolo induce enzimi che possono influenzare il valproato [10, 11]. I FANS non hanno una controindicazione generale per l'epilessia (sono\ngli oppioidi o alcuni antidepressivi a destare più preoccupazione).",
+      "numero": 31,
+      "id": "q31"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Paziente Geriatrico e Multimorbilità",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 75 anni con insufficienza cardiaca (NYHA III) e grave insufficienza renale richiede un analgesico per un dolore acuto. Qual è la raccomandazione \ncorretta?",
+      "opzioni": {
+        "A": "Ibuprofene 400 mg, poiché è il FANS più sicuro a basse dosi.",
+        "B": "Diclofenac 25 mg, grazie alla sua rapidità d'azione.",
+        "C": "Metamizolo, poiché ha un impatto minore sulla funzione renale e cardiaca rispetto ai FANS.",
+        "D": "Aspirina 1000 mg, come alternativa non steroidea."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "In presenza di insufficienza cardiaca e renale grave, i FANS (inclusi ibuprofene e diclofenac) e l'aspirina ad alte dosi sono controindicati [16, 36-39]. Il \nmetamizolo rappresenta la migliore alternativa per la sua minore tossicità renale [6, 7, 40].",
+      "numero": 32,
+      "id": "q32"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Protocollo LINDAFF",
+      "tipo": "kprim",
+      "domanda": "Il protocollo LINDAFF è essenziale per il triage del dolore in farmacia. Valutare se le seguenti associazioni lettera-significato sono corrette secondo gli \nstandard svizzeri:",
+      "opzioni": {
+        "1": "L = Lokalisation (Localizzazione e irradiazione del dolore).",
+        "2": "I = Intensität (Intensità su scala da 1 a 10).",
+        "3": "D = Dauer (Durata e modalità di insorgenza).",
+        "4": "A = Anamnese (Altre malattie note e allergie)."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Il protocollo LINDAFF segue questa struttura: Localizzazione, Intensità, Nuova/già nota, Durata, Anamnesi (altre patologie/allergie), Fattori \nscatenanti/attenuanti, Farmaci già provati/misure già prese [41, 42].",
+      "numero": 33,
+      "id": "q33"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente affetto da insufficienza cardiaca cronica (HFrEF) si presenta in farmacia con una nuova prescrizione di Sacubitril/Valsartan (Entresto®) per sostituire\nl'attuale terapia con Enalapril. Quale istruzione fondamentale deve fornire il farmacista per prevenire il rischio di angioedema?",
+      "opzioni": {
+        "A": "Può iniziare il nuovo farmaco 12 ore dopo l'ultima dose di Enalapril.",
+        "B": "Deve attendere un periodo di lavaggio (wash-out) di almeno 36 ore dopo l'ultima dose di Enalapril prima di assumere Sacubitril/Valsartan.",
+        "C": "Deve assumere i due farmaci insieme per i primi tre giorni per evitare sbalzi pressori.",
+        "D": "Non è necessaria alcuna pausa se il passaggio avviene tra un ACE-inibitore e un ARNI."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida e le informazioni sui farmaci fornite, il passaggio da un ACE-inibitore a un ARNI richiede tassativamente un periodo di sospensione di \nalmeno 36 ore per ridurre al minimo il rischio di angioedema grave [1-3]. Le opzioni A, C e D sono errate poiché ignorano questo intervallo di sicurezza critico.",
+      "numero": 34,
+      "id": "q34"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione degli Anticoagulanti Orali Diretti (DOAC) in farmacia, quali delle seguenti affermazioni sono corrette secondo le fonti?",
+      "opzioni": {
+        "1": "Il Rivaroxaban (Xarelto®) ai dosaggi di 15 mg e 20 mg deve essere assunto obbligatoriamente con un pasto per garantirne la biodisponibilità.",
+        "2": "In caso di dimenticanza di una dose di DOAC, il rischio di trombosi aumenta significativamente già dopo poche ore a causa della loro emivita breve.",
+        "3": "La Rifampicina è un induttore potente che riduce drasticamente i livelli plasmatici di Dabigatran ed Edoxaban.",
+        "4": "Il Dabigatran (Pradaxa®) è l'unico DOAC la cui eliminazione è prevalentemente renale (circa l'80%)."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "1: Vero, il cibo aumenta la biodisponibilità del Rivaroxaban ad alto dosaggio [4]. 2: Vero, la loro breve emivita rende l'aderenza cruciale [5, 6]. 3: Vero, la\nRifampicina riduce i livelli di Dabigatran del 66% e di Edoxaban del 35% [7]. 4: Vero, il Dabigatran ha la più alta quota di eliminazione renale tra i DOAC citati [4].",
+      "numero": 35,
+      "id": "q35"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale delle seguenti combinazioni farmacologiche definisce il fenomeno del 'Triple Whammy', associato a un elevato rischio di insufficienza renale acuta?",
+      "opzioni": {
+        "A": "Statina + Fibrato + Omega-3.",
+        "B": "ACE-inibitore/Sartano + Diuretico + FANS.",
+        "C": "Beta-bloccante + Calcio-antagonista + Aspirina.",
+        "D": "SGLT2-inibitore + Metformina + Sulfonilurea."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il 'Triple Whammy' è causato dalla combinazione di farmaci che agiscono sul sistema renina-angiotensina (riducono la filtrazione dilatando l'arteriola \nefferente), diuretici (riducono il volume plasmatico) e FANS (riducono la filtrazione costringendo l'arteriola afferente) [8-11]. Le altre combinazioni non causano questa \nspecifica interazione emodinamica renale.",
+      "numero": 36,
+      "id": "q36"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "L'Amiodarone è un antiaritmico potente con un profilo di sicurezza complesso. Quali delle seguenti affermazioni sono corrette sulla base delle linee guida \nfornite?",
+      "opzioni": {
+        "1": "Può causare sia ipertiroidismo che ipotiroidismo a causa dell'alto contenuto di iodio.",
+        "2": "I depositi corneali si verificano in oltre il 90% dei pazienti in terapia cronica.",
+        "3": "L'Amiodarone inibisce il CYP3A4, potenziando l'effetto della Simvastatina e aumentando il rischio di miopatia.",
+        "4": "In caso di somministrazione concomitante con Digossina, è necessario ridurre la dose di quest'ultima di circa il 50-70%."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "1: Vero, la tiroide è un organo target critico [12]. 2: Vero, i depositi corneali sono quasi universali ma raramente compromettono la vista [12]. 3: Vero, \nl'interazione con le statine metabolizzate dal CYP3A4 è clinicamente rilevante [13]. 4: Vero, l'amiodarone aumenta notevolmente i livelli di digossina [13].",
+      "numero": 37,
+      "id": "q37"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente con arteriopatia periferica occlusiva (PAVK) in Stadio II (claudicatio intermittens) chiede quale sia il metodo più efficace per migliorare la sua \ncapacità di camminare. In base alle fonti, qual è la raccomandazione corretta?",
+      "opzioni": {
+        "A": "L'uso costante di calze a compressione graduata di classe 2.",
+        "B": "L'allenamento strutturato al cammino (almeno 30 minuti, 3 volte a settimana).",
+        "C": "L'assunzione di acido acetilsalicilico 100 mg al giorno come terapia principale.",
+        "D": "L'intervento chirurgico immediato di bypass."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'allenamento al cammino (Gehtraining) è considerato la terapia più efficace nello stadio II della PAVK, poiché favorisce la formazione di circoli collaterali \ne può raddoppiare la distanza percorsa senza dolore [14]. L'aspirina previene eventi cardiovascolari ma non migliora direttamente la distanza di cammino [14].",
+      "numero": 38,
+      "id": "q38"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla profilassi dell'endocardite infettiva in Svizzera, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "È indicata solo per pazienti ad alto rischio, come quelli portatori di valvole cardiache artificiali.",
+        "2": "Il regime standard prevede l'assunzione di 2 g di Amoxicillina un'ora prima dell'intervento odontoiatrico.",
+        "3": "Procedure come la rimozione del tartaro (pulizia dentale) che lesionano la mucosa richiedono la profilassi nei soggetti a rischio.",
+        "4": "In caso di allergia alla penicillina di tipo immediato, la Clindamicina (600 mg) è l'alternativa raccomandata."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Le fonti confermano che la profilassi è limitata ai pazienti ad alto rischio [15], lo schema posologico standard è 2g di Amoxicillina [15], l'igiene dentale \nprofessionale è inclusa nelle procedure a rischio [15] e la Clindamicina è la scelta per gli allergici alle penicilline [15].",
+      "numero": 39,
+      "id": "q39"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo le attuali linee guida per la gestione delle dislipidemie, qual è l'obiettivo (target) del colesterolo LDL per un paziente a 'rischio molto alto' (es. \nprevenzione secondaria)?",
+      "opzioni": {
+        "A": "< 2,6 mmol/L.",
+        "B": "< 1,8 mmol/L.",
+        "C": "< 1,4 mmol/L e una riduzione di almeno il 50% rispetto al valore basale.",
+        "D": "< 1,1 mmol/L."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Per i pazienti a rischio molto alto, l'obiettivo LDL è < 1,4 mmol/L (55 mg/dL) associato a una riduzione del 50% rispetto ai livelli iniziali [16-18]. Gli \naltri valori si riferiscono a categorie di rischio inferiori.",
+      "numero": 40,
+      "id": "q40"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla doppia antiaggregazione piastrinica (DAPT) dopo una sindrome coronarica acuta (ACS) con posa di stent, quali affermazioni sono vere?",
+      "opzioni": {
+        "1": "La durata standard raccomandata della DAPT è solitamente di 12 mesi.",
+        "2": "Il Ticagrelor (Brilique®) deve essere somministrato alla dose di 90 mg due volte al giorno.",
+        "3": "Il Prasugrel (Efient®) è assolutamente controindicato in pazienti con una storia di ictus o TIA.",
+        "4": "In pazienti con età > 75 anni o peso < 60 kg, la dose di mantenimento di Prasugrel deve essere ridotta a 5 mg."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "1: Vero, è la durata standard per prevenire la trombosi dello stent [19, 20]. 2: Vero, richiede somministrazione BID [19]. 3: Vero, aumenta eccessivamente il \nrischio di emorragia intracranica [20, 21]. 4: Vero, è necessario un aggiustamento posologico per motivi di sicurezza [20].",
+      "numero": 41,
+      "id": "q41"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente incinta al primo trimestre chiede consiglio per la sua ipertensione arteriosa. Quale delle seguenti affermazioni sulla sicurezza dei farmaci in \ngravidanza è corretta?",
+      "opzioni": {
+        "A": "I sartani sono sicuri durante il primo trimestre ma vanno sospesi nel terzo.",
+        "B": "Gli ACE-inibitori e i sartani sono controindicati in tutti i trimestri della gravidanza per rischio di fetotossicità.",
+        "C": "L'Enalapril è il farmaco di scelta per l'ipertensione gestazionale.",
+        "D": "I farmaci che bloccano il sistema RAAS possono essere usati solo se la pressione è > 180/110 mmHg."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Gli inibitori del sistema renina-angiotensina-aldosterone (RAASi), inclusi ACE-inibitori e sartani, sono assolutamente controindicati in gravidanza a causa del\nrischio di malformazioni e danni renali al feto [22, 23]. Alternative sicure includono Metildopa o Labetalolo.",
+      "numero": 42,
+      "id": "q42"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - cardiovascolare",
+      "tipo": "kprim",
+      "domanda": "Gli SGLT2-inibitori (Dapagliflozin, Empagliflozin) sono diventati pilastri della terapia dell'insufficienza cardiaca. Quali istruzioni cliniche deve dare il \nfarmacista?",
+      "opzioni": {
+        "1": "È fondamentale mantenere un'accurata igiene urogenitale per prevenire infezioni micotiche dovute alla glicosuria.",
+        "2": "I farmaci vanno titolati lentamente ogni 2 settimane partendo da dosaggi minimi.",
+        "3": "In caso di interventi chirurgici maggiori o digiuno prolungato, il farmaco deve essere temporaneamente sospeso per il rischio di chetoacidosi.",
+        "4": "Gli SGLT2-inibitori migliorano la prognosi dei pazienti HFrEF anche se non sono affetti da diabete."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1: Vero, l'eliminazione di glucosio nelle urine aumenta il rischio di infezioni [24-26]. 2: Falso, per l'insufficienza cardiaca si usa una dose fissa di 10 \nmg/die senza necessità di titolazione [24, 27]. 3: Vero, sono situazioni a rischio per chetoacidosi euglicemica [24, 25]. 4: Vero, sono una colonna portante della terapia HI \nindipendentemente dal diabete [28-30].",
+      "numero": 43,
+      "id": "q43"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - dermatologia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente si presenta in farmacia con un'orticaria acuta. Durante l'anamnesi riferisce gonfiore alle labbra e una leggera difficoltà a deglutire. Qual è il \ncomportamento corretto secondo i protocolli di triage?",
+      "opzioni": {
+        "A": "Somministrare un antistaminico H1 di seconda generazione come la Cetirizina 10 mg e monitorare il paziente per 30 minuti.",
+        "B": "Identificare la situazione come un'emergenza (angioedema), allertare i soccorsi e, se disponibile, utilizzare il set di emergenza.",
+        "C": "Consigliare l'applicazione di una lozione al polidocanolo per calmare il prurito e fissare un controllo dopo 24 ore.",
+        "D": "Eseguire un'analisi della medicazione per verificare se il paziente assume ACE-inibitori prima di decidere l'invio al medico."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La presenza di segni sistemici o coinvolgimento delle mucose (gonfiore labiale, dispnea, difficoltà a deglutire) qualifica il caso come un'emergenza medica che\nrichiede l'intervento immediato del medico o dei soccorsi [1-3]. Gli antistaminici sono indicati solo per lesioni isolate e senza sintomi sistemici [1, 2]. L'analisi dei farmaci \n(come gli ACE-inibitori) è utile ma non deve ritardare il soccorso in fase acuta [2, 4].",
+      "numero": 44,
+      "id": "q44"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - dermatomicosi",
+      "tipo": "kprim",
+      "domanda": "In merito alla consegna agevolata di farmaci per il trattamento delle dermatomicosi (Lista B+), valutate la correttezza delle seguenti condizioni operative:",
+      "opzioni": {
+        "1": "La consegna deve avvenire personalmente da parte del farmacista dopo una consulenza documentata.",
+        "2": "Il farmaco può essere consegnato anche a un familiare se il paziente non può recarsi fisicamente in farmacia.",
+        "3": "L'uso di Imacort® (clotrimazolo, hexamidina, prednisolone) è limitato a una durata massima di 2 settimane.",
+        "4": "La dispensazione in regime di Lista B+ è permessa anche alle donne in gravidanza, previo consenso scritto."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "Le linee guida specificano che la consegna deve essere personale e il paziente deve essere presente [5, 6]. Imacort® ha una limitazione specifica di massimo 2 \nsettimane a causa del corticosteroide contenuto [5, 7]. La consegna di antimicotici in Lista B+ è esplicitamente esclusa durante la gravidanza e l'allattamento [5, 6].",
+      "numero": 45,
+      "id": "q45"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - dermocorticoidi",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale principio guida deve seguire il farmacista nella scelta della galenica e della potenza di un dermocorticoide per un eczema cronico con pelle molto secca e \nlichenificata?",
+      "opzioni": {
+        "A": "Utilizzare un idrogel o una lozione acquosa per favorire l'evaporazione e il raffreddamento della zona.",
+        "B": "Scegliere una formulazione lipofila (unguento o pomata grassa) per sfruttare l'effetto occlusivo e migliorare la penetrazione.",
+        "C": "Applicare esclusivamente prodotti di Classe I (potenza debole) per minimizzare il rischio di atrofia cutanea su zone estese.",
+        "D": "Sospendere il trattamento steroideo e passare immediatamente a inibitori della calcineurina topici."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Per dermatosi croniche, secche o squamose, sono indicate basi lipofile (W/O) che garantiscono un effetto occlusivo, migliorando la barriera e la penetrazione \ndel farmaco [8, 9]. Le lozioni acquose (O/W) sono invece indicate per lesioni acute e secernenti [8, 9]. La potenza deve essere adeguata alla gravità e alla zona; la Classe I è \nspesso insufficiente per aree lichenificate [10, 11].",
+      "numero": 46,
+      "id": "q46"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - dermatologia pediatrica",
+      "tipo": "kprim",
+      "domanda": "La gestione della pelle dei bambini richiede precauzioni specifiche. Valutate le seguenti affermazioni relative alla terapia topica in età pediatrica:",
+      "opzioni": {
+        "1": "Il rischio di effetti tossici sistemici è maggiore nei bambini perché il rapporto superficie corporea/volume è circa 3 volte superiore rispetto agli adulti.",
+        "2": "L'urea è raccomandata come idratante di prima scelta fin dai primi mesi di vita per la sua alta tollerabilità.",
+        "3": "Le creme e le lozioni sono generalmente preferite agli unguenti nei bambini perché bruciano meno sulla pelle infiammata.",
+        "4": "In caso di dermatite da pannolino complicata da Candida, è opportuno controllare anche la mucosa orale del bambino (mughetto)."
+      },
+      "risposta_corretta": "VFFV",
+      "motivazione": "Il rapporto superficie/volume elevato aumenta l'assorbimento percutaneo e il rischio di tossicità [12-14]. L'urea non deve essere usata nei primi anni di vita \npoiché può causare irritazioni intense [14, 15]. Nei bambini sono preferibili gli unguenti e le pomate grasse, poiché creme e lozioni contengono più additivi e spesso causano \nbruciore [13]. La dermatite da pannolino da Candida è spesso associata a un'infezione orale che va trattata parallelamente [16, 17].",
+      "numero": 47,
+      "id": "q47"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - dermatite atopica",
+      "tipo": "multipla_scelta",
+      "domanda": "Riguardo all'uso degli inibitori topici della calcineurina (come tacrolimus e pimecrolimus) nella dermatite atopica, quale avvertenza è riportata nelle fonti?",
+      "opzioni": {
+        "A": "Sono considerati la terapia di prima scelta assoluta prima dei corticosteroidi in ogni fase della malattia.",
+        "B": "Non sono raccomandati per il trattamento a lungo termine a causa di un possibile aumento del rischio di tumori (malignità).",
+        "C": "Possono essere applicati senza restrizioni su ferite aperte e infezioni batteriche attive.",
+        "D": "Il loro utilizzo è controindicato nei pazienti sopra i 50 anni per il rischio di ipertensione sistemica."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Sebbene efficaci, gli immunosoppressori topici non sono raccomandati per l'uso continuo a lungo termine a causa delle preoccupazioni sulla potenziale malignità\n[18, 19]. Non devono essere applicati su pelle infetta [9] e i corticosteroidi rimangono spesso la base per il controllo delle riacutizzazioni [18, 20].",
+      "numero": 48,
+      "id": "q48"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - malattie infettive",
+      "tipo": "kprim",
+      "domanda": "L'Impetigo contagiosa è una patologia comune in farmacia. Valutate la correttezza delle seguenti indicazioni cliniche e terapeutiche:",
+      "opzioni": {
+        "1": "È una dermatosi batterica altamente infettiva, causata principalmente da Staphylococcus aureus e/o Streptococcus pyogenes.",
+        "2": "Si manifesta tipicamente con croste color giallo miele (mielicerali).",
+        "3": "Il trattamento di prima scelta per lesioni singole e localizzate è l'antibiotico topico (es. acido fusidico) per 5-7 giorni.",
+        "4": "I bambini affetti possono tornare a scuola immediatamente dopo la prima applicazione di crema antibiotica."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'eziologia batterica e l'aspetto delle croste sono elementi diagnostici chiave [21, 22]. Per forme localizzate, la terapia topica è efficace e riduce gli \neffetti collaterali sistemici [23, 24]. Tuttavia, per prevenire il contagio, i bambini devono restare a casa fino alla guarigione o almeno per 48 ore dall'inizio della terapia \nantibiotica [25].",
+      "numero": 49,
+      "id": "q49"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - pediatria",
+      "tipo": "multipla_scelta",
+      "domanda": "Un genitore chiede consiglio per il figlio con la malattia mani-piedi-bocca. Il bambino ha molte piaghe dolorose in bocca e non riesce a mangiare. Quale consiglio \nè supportato dalle linee guida?",
+      "opzioni": {
+        "A": "Somministrare sciroppi o gel a base di salicilati per ridurre l'infiammazione orale.",
+        "B": "Utilizzare anestetici locali topici (es. lidocaina 2% viscosa) applicandoli con cautela sulle lesioni prima dei pasti.",
+        "C": "Consigliare l'assunzione di cibi caldi e acidi (es. spremute d'arancia) per disinfettare naturalmente le mucose.",
+        "D": "Iniziare immediatamente un trattamento con Aciclovir orale per accelerare la guarigione virale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La lidocaina può alleviare il dolore delle lesioni orali facilitando l'idratazione e l'alimentazione [26, 27]. I salicilati devono essere evitati per il \nrischio di Sindrome di Reye in corso di infezioni virali [28, 29]. Cibi acidi e caldi peggiorano il dolore; sono preferibili cibi freddi e morbidi [30]. L'Aciclovir non è efficace\ncontro i Coxsackievirus che causano questa malattia [31].",
+      "numero": 50,
+      "id": "q50"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - ginecologia",
+      "tipo": "kprim",
+      "domanda": "In merito alle infezioni da HPV e alle verruche genitali (condilomi), quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Le verruche genitali richiedono sempre una diagnosi medica e non devono essere trattate con prodotti OTC per verruche comuni.",
+        "2": "La vaccinazione contro l'HPV (es. Gardasil 9®) è un'efficace misura preventiva contro i ceppi che causano i condilomi.",
+        "3": "L'acido monocloroacetico (Lista B+) è il trattamento di prima scelta raccomandato per le verruche genitali in farmacia.",
+        "4": "In presenza di condilomi, è fondamentale raccomandare il controllo medico anche del partner."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "I condilomi necessitano di diagnosi differenziale medica [32]. Il vaccino protegge dai principali ceppi oncogeni e dai tipi 6 e 11 responsabili dei condilomi \n[32]. L'acido monocloroacetico è molto corrosivo e non deve essere usato sui genitali per il rischio di gravi ustioni [33]. Essendo una MST, il trattamento del partner è \nessenziale [32, 34].",
+      "numero": 51,
+      "id": "q51"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - dermatomicosi",
+      "tipo": "multipla_scelta",
+      "domanda": "Qual è la durata tipica del trattamento per un'onicomicosi delle unghie dei piedi utilizzando lacche antimicotiche?",
+      "opzioni": {
+        "A": "7-10 giorni, interrompendo non appena l'unghia appare meno gialla.",
+        "B": "3-4 settimane, applicando la lacca quotidianamente.",
+        "C": "3-9 mesi (o fino a un anno), a causa del lento ritmo di crescita dell'unghia del piede.",
+        "D": "Il trattamento topico non è mai efficace per le unghie; è sempre necessaria la terapia orale."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Le onicomicosi richiedono tempi molto lunghi legati alla crescita completa della lamina ungueale, solitamente tra 3 e 9 mesi [35]. Trattamenti brevi portano \ninevitabilmente a recidive [36, 37]. Sebbene la terapia orale sia più potente, la lacca topica è una scelta valida se il letto ungueale non è interamente coinvolto [35, 38].",
+      "numero": 52,
+      "id": "q52"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - neonatologia",
+      "tipo": "kprim",
+      "domanda": "I neonati possono presentare diverse manifestazioni cutanee transitorie. Valutate la correttezza delle seguenti diagnosi e decorsi:",
+      "opzioni": {
+        "1": "L'Erythema toxicum neonatorum compare solitamente nelle prime 24-48 ore e guarisce spontaneamente entro la terza settimana.",
+        "2": "La 'crosta lattea' (dermatite seborroica del lattante) può essere trattata inizialmente con l'applicazione di oli per ammorbidire le squame.",
+        "3": "La pustolosi cefalica neonatale ('baby acne') è causata da una reazione a funghi del genere Malassezia e non richiede antibiotici sistemici.",
+        "4": "I grani di miglio (milia) sul viso del neonato richiedono l'applicazione immediata di retinoidi topici per prevenirne l'estensione."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'eritema tossico è innocuo e scompare da solo [39]. Per la crosta lattea, l'uso di oli o emulsioni cheratolitiche è la terapia standard [40, 41]. La pustolosi\ncefalica è spesso legata alla Malassezia e si risolve spontaneamente o con ketoconazole topico [40, 42]. I grani di miglio sono cisti cheratiniche che regrediscono spontaneamente \nin pochi mesi e non vanno trattati con farmaci aggressivi [43].",
+      "numero": 53,
+      "id": "q53"
+    }
+  ]
+}

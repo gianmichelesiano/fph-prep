@@ -1,0 +1,40 @@
+{
+  "id": "simulazione-20260319-1702",
+  "title": "Simulazione Esame – 19/03/2026 17:02",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "Interazioni farmacologiche - interazioni farmacologiche \nrilevanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 78 anni, in terapia cronica con Lisinopril \n20 mg e Idroclorotiazide 25 mg per l'ipertensione e lo scompenso cardiaco, \nsi presenta in farmacia per acquistare Ibuprofene 400 mg a causa di un \ndolore acuto al ginocchio. Qual è la gestione clinica più appropriata \nbasata sul rischio di 'Triple Whammy'?",
+      "opzioni": {
+        "A": "Consegnare l'Ibuprofene consigliando di assumerlo a stomaco \npieno per proteggere la mucosa gastrica.",
+        "B": "Sconsigliare l'uso di FANS e proporre il Paracetamolo come \nalternativa sicura, poiché la combinazione di ACE-inibitore, diuretico e \nFANS può causare insufficienza renale acuta.",
+        "C": "Suggerire di assumere Ibuprofene solo la sera, distanziandolo \ndi almeno 12 ore dall'ACE-inibitore per evitare l'interazione \nfarmacocinetica.",
+        "D": "Autorizzare la vendita dell'Ibuprofene purché il paziente \naumenti l'apporto di liquidi a oltre 3 litri al giorno per compensare \nl'effetto del diuretico."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La combinazione di un inibitore del sistema RAAS \n(Lisinopril), un diuretico (Idroclorotiazide) e un FANS (Ibuprofene) è nota\ncome 'Triple Whammy' [1, 2]. Questa associazione annulla i meccanismi di \ncompenso renale, riducendo drasticamente la pressione di filtrazione \nglomerulare e portando a un alto rischio di insufficienza renale acuta, \nspecialmente negli anziani [1, 3]. Il Paracetamolo o il Metamizolo sono le \nalternative analgesiche raccomandate in questo contesto [1, 3].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette - controindicazioni e QT",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 72 anni assume Escitalopram 20 mg/die per \nuna depressione maggiore. Le viene prescritta l'Azitromicina (500 mg/die \nper 3 giorni) per una bronchite. Valuta la validità delle seguenti \naffermazioni riguardanti la gestione del piano terapeutico:",
+      "opzioni": {
+        "1": "Secondo le Informazioni Professionali svizzere, l'uso \nconcomitante di Escitalopram e Azitromicina è considerato controindicato a \ncausa del rischio di Torsione di Punta (TdP).",
+        "2": "Il rischio di aritmia è minimo in questo scenario perché \nl'Azitromicina non agisce come inibitore del citocromo CYP3A4.",
+        "3": "L'età superiore ai 65 anni e il sesso femminile sono fattori di\nrischio indipendenti che aumentano la suscettibilità al prolungamento \ndell'intervallo QTc.",
+        "4": "In farmacia, è obbligatorio contattare il medico prescrittore \nper segnalare la controindicazione e discutere un'alternativa o un \nmonitoraggio elettrocardiografico."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1: Vero, la combinazione è esplicitamente segnalata \ncome controindicata per il rischio di aritmie ventricolari gravi [4]. 2: \nFalso, anche se l'Azitromicina non inibisce il CYP3A4 [5, 6], essa prolunga\nl'intervallo QT in modo additivo rispetto all'Escitalopram [4, 7]. 3: Vero,\netà avanzata e sesso femminile sono fattori demografici critici per il \nrischio di TdP [7, 8]. 4: Vero, la validazione richiede la comunicazione al\nmedico e al cliente per prevenire eventi avversi potenzialmente fatali [4, \n9].",
+      "numero": 2,
+      "id": "q2"
+    }
+  ]
+}

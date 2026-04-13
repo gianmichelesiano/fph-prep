@@ -1,0 +1,809 @@
+{
+  "id": "simulazione-20260310-1230",
+  "title": "Simulazione Esame – 10/03/2026 12:30",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "Vaccini - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 76 anni si presenta in farmacia per la vaccinazione antinfluenzale. Qual è la raccomandazione corretta per questo paziente secondo il calendario vaccinale \n2025?",
+      "opzioni": {
+        "A": "Deve ricevere il vaccino a dosaggio standard, poiché l'alto dosaggio è riservato ai pazienti istituzionalizzati.",
+        "B": "È preferibile somministrare un vaccino ad alto dosaggio, i cui costi sono assunti dall'AOMS per questa fascia di età.",
+        "C": "La vaccinazione antinfluenzale non è più rimborsata dall'AOMS sopra i 75 anni se effettuata in farmacia.",
+        "D": "Può ricevere il vaccino ad alto dosaggio solo se presenta almeno due malattie croniche concomitanti."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti (Calendario 2025), il vaccino antinfluenzale ad alto dosaggio è preferibile a quello standard per la maggiore efficacia dimostrata ed è rimborsato \ndall'AOMS per tutte le persone a partire dai 75 anni, indipendentemente dalla presenza di altre patologie [1-3].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Vaccini - vaccinazioni in farmacia",
+      "tipo": "kprim",
+      "domanda": "Una cliente di 22 anni richiede informazioni sulla vaccinazione contro il papillomavirus umano (HPV) in farmacia. Valuta la correttezza delle seguenti affermazioni basate \nsulle direttive svizzere:",
+      "opzioni": {
+        "1": "Per la sua fascia di età (20-26 anni), la vaccinazione HPV è classificata come 'vaccinazione complementare'.",
+        "2": "Lo schema vaccinale raccomandato per lei prevede la somministrazione di 3 dosi (ai tempi 0, 2, 6 mesi).",
+        "3": "I costi della vaccinazione sono coperti dall'AOMS anche se eseguita in farmacia al di fuori di un programma cantonale.",
+        "4": "Attualmente, le farmacie svizzere non possono ancora aderire ai programmi cantonali di vaccinazione HPV per motivi di rimborso.",
+        "risposta_corretta": "VVFV"
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La vaccinazione tra i 20 e i 26 anni è complementare [4]. Lo schema è di 3 dosi per chi inizia dopo i 15 anni [5, 6]. L'AOMS copre i costi solo se la vaccinazione \navviene nell'ambito di programmi cantonali [7, 8], a cui le farmacie attualmente non possono ancora aderire per mancanza di rimborso diretto delle prestazioni [9].",
+      "numero": 2,
+      "id": "q2"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Vaccini - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "In conformità alla Legge sugli agenti terapeutici, entro quale termine deve essere segnalato a Swissmedic (tramite ElViS) un effetto indesiderato considerato 'grave' (es. \nche comporta un ricovero ospedaliero) dopo una vaccinazione?",
+      "opzioni": {
+        "A": "Entro 48 ore dalla constatazione, trattandosi di un'urgenza medica.",
+        "B": "Entro un termine massimo di 15 giorni dalla constatazione.",
+        "C": "Entro 60 giorni, se l'effetto era già menzionato nel foglietto illustrativo.",
+        "D": "Non vi è un termine fisso, ma la segnalazione è facoltativa per i farmacisti."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le fonti specificano che gli effetti indesiderati gravi (pericolo di vita, ospedalizzazione, danni permanenti) devono essere notificati entro 15 giorni. Solo i decessi\no i difetti di qualità devono essere annunciati 'immediatamente', ma sempre entro il limite dei 15 giorni [10-12].",
+      "numero": 3,
+      "id": "q3"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Vaccini - vaccinazioni in farmacia",
+      "tipo": "kprim",
+      "domanda": "Durante il triage in farmacia per una vaccinazione, quali delle seguenti situazioni rappresentano un criterio di esclusione (definitivo o temporaneo) o richiedono un \nrinvio al medico?",
+      "opzioni": {
+        "1": "Il paziente presenta febbre superiore a 38°C nelle ultime 48 ore.",
+        "2": "Il paziente assume regolarmente Prednisone al dosaggio di 30 mg al giorno da più di due settimane.",
+        "3": "Il paziente assume unicamente Aspirina (acido acetilsalicilico) come antiaggregante.",
+        "4": "La paziente è nel secondo trimestre di gravidanza e richiede un vaccino vivo attenuato."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La febbre è un criterio di esclusione temporanea [13, 14]. L'uso di steroidi (≥ 20mg/die per > 14 giorni) richiede accertamento medico [15, 16]. L'aspirina NON è un \ncriterio di esclusione per la vaccinazione in farmacia [15-17]. I vaccini vivi attenuati sono controindicati in gravidanza [18, 19].",
+      "numero": 4,
+      "id": "q4"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Vaccini - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Qual è la procedura corretta raccomandata dall'UFSP per la somministrazione intramuscolare di un vaccino inattivato in un paziente sotto anticoagulazione terapeutica?",
+      "opzioni": {
+        "A": "Somministrare il vaccino per via sottocutanea per evitare il rischio di ematomi muscolari.",
+        "B": "Utilizzare un ago fine (25G), non aspirare e applicare una forte compressione sul sito per almeno 2 minuti.",
+        "C": "Sospendere la terapia anticoagulante per 24 ore prima della vaccinazione.",
+        "D": "Effettuare l'iniezione nella coscia (muscolo vasto laterale) invece che nel deltoide."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'UFSP raccomanda la via i.m. anche per chi assume anticoagulanti per garantire l'efficacia, purché si usi un ago fine (25G, arancione), non si aspiri e si applichi \nuna compressione manuale decisa per almeno 2 minuti [18, 20, 21].",
+      "numero": 5,
+      "id": "q5"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Vaccini - vaccinazioni in farmacia",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla vaccinazione contro la meningoencefalite da zecche (FSME) in Svizzera, valuta la correttezza delle seguenti affermazioni:",
+      "opzioni": {
+        "1": "Dal 2024, la vaccinazione è raccomandata in generale a partire dai 3 anni di età nelle zone a rischio.",
+        "2": "Il Canton Ticino è attualmente l'unica regione della Svizzera non considerata zona a rischio per la FSME.",
+        "3": "In caso di morso di zecca già avvenuto, la vaccinazione è controindicata e bisogna attendere la fine del periodo di incubazione.",
+        "4": "Per l'immunizzazione di base completa sono necessarie 3 dosi, seguite da richiami ogni 10 anni."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La raccomandazione è scesa a 3 anni nel 2024 [22, 23]. Il Ticino resta l'unica eccezione dopo l'inclusione di Ginevra [22]. La vaccinazione post-morso è invece \nraccomandata da Infovac per proteggere il paziente il prima possibile [14]. L'immunizzazione prevede 3 dosi e richiami ogni 10 anni [23, 24].",
+      "numero": 6,
+      "id": "q6"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Vaccini - vaccinazioni in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo le raccomandazioni aggiornate per il periodo autunno/inverno 2024/2025, per quale gruppo target è primariamente raccomandata la vaccinazione anti-COVID-19?",
+      "opzioni": {
+        "A": "Tutte le persone a partire dai 16 anni, indipendentemente dallo stato di salute.",
+        "B": "Esclusivamente il personale sanitario a contatto con pazienti vulnerabili.",
+        "C": "Persone di età ≥ 65 anni e persone dai 16 anni con fattori di rischio (malattie preesistenti o gravidanza).",
+        "D": "Bambini sani dai 5 agli 11 anni per ridurre la circolazione virale nelle scuole."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Le fonti indicano che la vaccinazione anti-COVID-19 è raccomandata come vaccinazione complementare annuale (in autunno/inverno) per le persone ≥ 65 anni e per le \npersone dai 16 anni ad alto rischio (patologie preesistenti, trisomia 21, donne in gravidanza) [25-27].",
+      "numero": 7,
+      "id": "q7"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie della pelle - dermatologia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente si presenta in farmacia con un'orticaria acuta diffusa. Riferisce gonfiore alle labbra e una sensazione di 'nodo in gola'. Qual è l'intervento di triage \ncorretto secondo le linee guida svizzere?",
+      "opzioni": {
+        "A": "Dispensare un antistaminico H1 di seconda generazione (es. Cetirizina 10 mg) e monitorare per 30 minuti.",
+        "B": "Applicare localmente un gel a base di polidocanolo per lenire il prurito e fissare un controllo dopo 24 ore.",
+        "C": "Identificare la situazione come un'emergenza (sospetto angio edematoso), allertare i soccorsi e, se necessario, somministrare il set di emergenza.",
+        "D": "Consigliare l'uso di un dermocorticoide di classe II per ridurre l'infiammazione cutanea immediata."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "La presenza di segni sistemici come gonfiore delle labbra (angioedema) o difficoltà respiratorie/deglutizione rappresenta un'emergenza medica che richiede l'allerta \ndei soccorsi e l'uso del set di emergenza (antistaminici e prednisone) [1, 2]. Gli antistaminici da soli sono indicati solo per lesioni isolate senza coinvolgimento delle mucose o dei \nsistemi [1, 3].",
+      "numero": 8,
+      "id": "q8"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Farmacia clinica - dermocorticoidi",
+      "tipo": "kprim",
+      "domanda": "In merito alla consegna agevolata di dermocorticoidi di Classe II (Lista B+) in farmacia, valutate la correttezza delle seguenti affermazioni sulla base delle restrizioni \nsvizzere:",
+      "opzioni": {
+        "1": "Il farmacista può dispensare il prodotto per un trattamento massimo di 3 settimane.",
+        "2": "È consentita la consegna del preparato combinato Imacort® (prednisolone, clotrimazolo) per una durata massima di 2 settimane.",
+        "3": "La dispensazione è permessa anche alle donne in gravidanza e durante l'allattamento in regime di Lista B+.",
+        "4": "L'applicazione è vietata nelle zone perioculari, ascellari e perigenitali a causa del rischio di atrofia cutanea."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Le linee guida per la Lista B+ limitano l'uso generale a 3 settimane, ma specificano un massimo di 2 settimane per Imacort® [4, 5]. La consegna a donne incinte o che \nallattano è esplicitamente esclusa dal regime di Lista B+ [4, 6]. L'uso su zone a pelle sottile (occhi, ascelle, genitali) è escluso per prevenire l'atrofia [5, 6].",
+      "numero": 9,
+      "id": "q9"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie della pelle - dermatomicosi",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente presenta una placca eritematosa rotonda (5 cm) sul collo, pruriginosa e con bordo desquamato più intenso. Quale elemento della diagnosi differenziale \nsuggerisce una micosi cutanea piuttosto che una psoriasi?",
+      "opzioni": {
+        "A": "La presenza di squame argentee facilmente asportabili.",
+        "B": "Il bordo della lesione chiaramente più accentuato e infiammato rispetto al centro.",
+        "C": "La localizzazione tipica sui gomiti o sulle ginocchia.",
+        "D": "La natura cronica e simmetrica della lesione."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le micosi cutanee (tinea) presentano tipicamente placche rotonde con un bordo più marcato (randbetont), mentre nella psoriasi la desquamazione è distribuita \nuniformemente su tutta la superficie e le squame sono argentee e stratificate [7-9].",
+      "numero": 10,
+      "id": "q10"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie della pelle - dermatite atopica",
+      "tipo": "kprim",
+      "domanda": "Il trattamento della dermatite atopica nel bambino richiede una gestione attenta. Valutate la correttezza delle seguenti indicazioni terapeutiche:",
+      "opzioni": {
+        "1": "La rückfettung (uso di emollienti) è la misura terapeutica di base più importante e va eseguita quotidianamente.",
+        "2": "L'uso di prodotti contenenti urea è raccomandato come prima scelta fin dalla nascita per la sua alta tollerabilità.",
+        "3": "Gli inibitori topici della calcineurina (tacrolimus) non sono raccomandati per trattamenti a lungo termine per il rischio di malignità.",
+        "4": "In fase acuta, sono preferibili basi grasse (W/O) su lesioni molto secernenti per favorire l'occlusione."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "L'emolliente è la base della terapia [10, 11]. L'urea non deve essere usata nei primi 3 anni di vita perché può causare irritazione intensa [12, 13]. Il tacrolimus ha \navvertenze sull'uso prolungato per il rischio di tumori [14]. Per lesioni secernenti (acute) si preferiscono basi acquose (O/W), non grasse [10, 13].",
+      "numero": 11,
+      "id": "q11"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie della pelle - dermatite periorale",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 30 anni presenta papule infiammatorie intorno alla bocca, risparmiando il bordo labiale. Riferisce di usare molte creme idratanti e uno steroide topico. \nQual è la raccomandazione di prima linea?",
+      "opzioni": {
+        "A": "Applicare un corticosteroide di classe III per risolvere rapidamente l'infiammazione.",
+        "B": "Iniziare una 'terapia zero' (Nulltherapie), sospendendo ogni cosmetico e farmaco topico.",
+        "C": "Utilizzare regolarmente una crema a base di urea per contrastare la secchezza.",
+        "D": "Trattare l'area con acido salicilico per eliminare le papule."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La dermatite periorale è spesso causata da un eccesso di cura (over-care) o dall'uso di steroidi. La 'terapia zero' (solo acqua) è essenziale per almeno 3 settimane \nper eliminare i trigger [15, 16]. Gli steroidi peggiorano la condizione a lungo termine [16].",
+      "numero": 12,
+      "id": "q12"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie della pelle - onicomicosi",
+      "tipo": "kprim",
+      "domanda": "In merito al trattamento dell'onicomicosi (micosi delle unghie) in farmacia, valutate le seguenti affermazioni:",
+      "opzioni": {
+        "1": "Il trattamento con lacche antimicotiche (es. Amorolfina) richiede solitamente da 3 a 9 mesi per le unghie dei piedi.",
+        "2": "Il trattamento topico è efficace anche se la matrice dell'unghia è già stata colpita dal fungo.",
+        "3": "La terapia deve proseguire per alcuni giorni oltre la scomparsa visibile dei sintomi per prevenire recidive.",
+        "4": "Nei pazienti diabetici, l'onicomicosi è considerata una 'Red Flag' che richiede valutazione medica."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "La crescita lenta delle unghie richiede mesi di cura [17]. Se la matrice è coinvolta, la sola terapia topica è spesso insufficiente e serve quella sistemica [18]. La \nprosecuzione post-guarigione è fondamentale per l'eradicazione [19, 20]. I diabetici sono ad alto rischio e richiedono il medico [17, 18].",
+      "numero": 13,
+      "id": "q13"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie della pelle - acne e rosacea",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale caratteristica clinica permette di distinguere con maggiore certezza la Rosacea dall'Acne vulgaris durante una consulenza in farmacia?",
+      "opzioni": {
+        "A": "La presenza di arrossamento sulle guance e sul naso.",
+        "B": "L'assenza totale di comedoni (punti neri e bianchi) nella rosacea.",
+        "C": "La comparsa di papule e pustole infiammatorie.",
+        "D": "L'insorgenza dei sintomi in età adolescenziale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La rosacea si distingue dall'acne principalmente per l'assenza di comedoni e la presenza di teleangiektasien (capillari visibili) [21, 22]. Inoltre, la rosacea \ncolpisce tipicamente adulti sopra i 30 anni, mentre l'acne è più comune nei giovani [22].",
+      "numero": 14,
+      "id": "q14"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Disturbi psichiatrici - Ansia e SSRI",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 35 anni si presenta in farmacia con una nuova prescrizione di sertralina (Zoloft®) per un disturbo d'ansia. Lamenta che, dopo tre giorni di terapia, si \nsente più agitato e nervoso di prima. Qual è l'intervento di counselling più appropriato?",
+      "opzioni": {
+        "A": "Consigliare di interrompere immediatamente il farmaco perché si tratta di una reazione allergica paradossa.",
+        "B": "Rassicurare il paziente che un aumento iniziale di ansia e irrequietezza è possibile e spiegare che l'effetto terapeutico completo può richiedere dalle 2 alle 6 settimane.",
+        "C": "Suggerire di raddoppiare la dose immediatamente per superare la fase di adattamento più velocemente.",
+        "D": "Spiegare che gli SSRI agiscono istantaneamente sui recettori e che il nervosismo è dovuto a una comorbidità non diagnosticata."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, all'inizio della terapia con SSRI/SNRI nei disturbi d'ansia è possibile un incremento iniziale della sintomatologia ansiosa, dell'irrequietezza e del\nnervosismo [1, 2]. È fondamentale informare il paziente sulla latenza d'azione (2-6 settimane per i primi effetti, fino a 10 per l'efficacia piena) per migliorare l'aderenza [3, 4]. \nL'opzione A è errata poiché non è un'allergia; la C è errata perché il dosaggio va aumentato progressivamente e lentamente per ridurre le UAW [5]; la D è errata poiché l'azione clinica è \nritardata nonostante il blocco immediato della ricaptazione [3, 6].",
+      "numero": 15,
+      "id": "q15"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Sicurezza farmacologica - Anziani e Benzodiazepine",
+      "tipo": "kprim",
+      "domanda": "Riguardo all'uso di benzodiazepine (BZD) e Z-drugs nei pazienti geriatrici (>65 anni), quali delle seguenti affermazioni sono corrette secondo le linee guida e le evidenze\nfornite?",
+      "opzioni": {
+        "1": "L'uso regolare aumenta significativamente il rischio di cadute e di fratture del femore, anche a dosaggi considerati bassi.",
+        "2": "Nei pazienti anziani, le BZD possono causare disturbi cognitivi e stati di confusione definiti talvolta come 'pseudo-demenza'.",
+        "3": "Per ridurre gli effetti di 'hangover' mattutino, è sempre preferibile utilizzare molecole a emivita molto lunga come il flurazepam.",
+        "4": "L'uso di BZD negli anziani è associato a un aumento del rischio di polmonite a causa di possibili disturbi della deglutizione."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. Vero: il rischio di cadute e fratture aumenta, specialmente nella prima settimana di terapia o cambio dosaggio [7-9]. 2. Vero: le BZD possono causare confusione e \ndisturbi cognitivi che mimano la demenza [8, 10]. 3. Falso: le molecole a emivita lunga aumentano il rischio di accumulo e hangover; per l'insonnia sono preferite emivite brevi o medie \n[11-13]. 4. Vero: le BZD possono causare disturbi della deglutizione, aumentando il rischio di polmonite [14].",
+      "numero": 16,
+      "id": "q16"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Farmacoterapia - Depressione e Antipsicotici",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente in terapia con un antidepressivo per una depressione unipolare presenta anche insonnia grave e agitazione. Il medico decide di aggiungere una bassa dose di un \nfarmaco con spiccato effetto sedativo (H1-antagonista) e blocco Alpha-2. Quale farmaco è stato verosimilmente prescritto?",
+      "opzioni": {
+        "A": "Bupropione (Wellbutrin®)",
+        "B": "Reboxetina (Edronax®)",
+        "C": "Mirtazapina (Remeron®)",
+        "D": "Escitalopram (Cipralex®)"
+      },
+      "risposta_corretta": "C",
+      "motivazione": "La mirtazapina è un antagonista dei recettori Alpha-2 che stimola la liberazione di serotonina e noradrenalina; ha un forte effetto sedativo (schlafanstossend) \nspecialmente a bassi dosaggi e causa spesso aumento di peso [15, 16]. Il bupropione è un inibitore della ricaptazione di DA/NA ed è attivante [17, 18]. La reboxetina è un NERI puro [17, \n18]. L'escitalopram è un SSRI e non ha il profilo recettoriale descritto [19, 20].",
+      "numero": 17,
+      "id": "q17"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Counselling - Sostituzione generica di psicofarmaci",
+      "tipo": "kprim",
+      "domanda": "Un paziente stabilizzato da anni con un antidepressivo originale esprime timore per la sostituzione con un generico proposta in farmacia. Quali aspetti della comunicazione\ne della gestione sono corretti?",
+      "opzioni": {
+        "1": "Le linee guida suggeriscono di evitare, se possibile, il cambio di produttore in pazienti psichiatrici già stabilizzati.",
+        "2": "Il 'Nocebo-Effekt' indica che le aspettative negative del paziente possono causare un peggioramento reale dei sintomi o effetti avversi indipendenti dal principio attivo.",
+        "3": "Utilizzare il 'Positive-Message-Framing' significa sottolineare che il farmaco è 'più economico' per convincere il paziente.",
+        "4": "In caso di sostituzione in farmacia, è raccomandato informare il medico curante e monitorare il paziente più strettamente."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. Vero: si raccomanda di evitare il cambio se il paziente è stabile per prevenire ricadute o perdita di aderenza [16, 21, 22]. 2. Vero: le aspettative negative \npossono scatenare reazioni avverse reali (effetto nocebo) [23, 24]. 3. Falso: il Positive-Message-Framing evita termini come 'economico' o 'generico' (spesso percepiti come inferiori) \npreferendo 'equivalente' o 'ugualmente efficace' [22, 24]. 4. Vero: la comunicazione con il medico e il monitoraggio (follow-up) sono essenziali in caso di switch [16, 22].",
+      "numero": 18,
+      "id": "q18"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Trattamento dell'insonnia - Zolpidem",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente richiede un rinnovo per lo Zolpidem (Stilnox®), che assume ogni sera da 3 mesi. Qual è la raccomandazione corretta basata sulla sicurezza e le linee guida \nsvizzere?",
+      "opzioni": {
+        "A": "Rinnovare senza problemi poiché le Z-drugs non danno mai dipendenza a lungo termine.",
+        "B": "Spiegare che il trattamento ipnotico deve essere il più breve possibile (max 4 settimane) e che l'uso prolungato richiede una nuova valutazione medica e un piano di \nsvezzamento graduale.",
+        "C": "Consigliare di passare a una benzodiazepina a emivita lunga per facilitare la sospensione.",
+        "D": "Informare che lo Zolpidem non ha alcun effetto sulla capacità di guidare il mattino successivo."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La durata massima consigliata per gli ipnotici è di 4 settimane, compresa la fase di sospensione graduale (tapering) [13, 25]. Le Z-drugs causano dipendenza, \ntolleranza e possono aumentare il rischio di incidenti stradali [14, 25, 26]. L'opzione A è falsa (causano dipendenza [27]); la C è errata (le emivite lunghe aumentano i rischi \nnell'anziano [11]); la D è falsa (esiste un rischio di hangover e incidenti [25, 26]).",
+      "numero": 19,
+      "id": "q19"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Interazioni e Controindicazioni - SSRI",
+      "tipo": "kprim",
+      "domanda": "In merito alla sicurezza degli SSRI (Inibitori Selettivi della Ricaptazione della Serotonina), quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Citalopram ed Escitalopram sono associati a un rischio dose-dipendente di prolungamento dell'intervallo QT.",
+        "2": "L'uso concomitante di SSRI e FANS o anticoagulanti aumenta il rischio di emorragie, in particolare gastrointestinali.",
+        "3": "La combinazione di un SSRI con l'erba di San Giovanni (Iperico) è sicura poiché l'iperico è un prodotto naturale.",
+        "4": "In caso di sospensione brusca della paroxetina o della venlafaxina, il rischio di sintomi da astinenza (discontinuation syndrome) è elevato."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. Vero: Citalopram ed Escitalopram hanno avvertenze specifiche per il QT [28, 29]. 2. Vero: gli SSRI aumentano la tendenza al sanguinamento, specialmente se combinati\ncon antiaggreganti o FANS [28, 29]. 3. Falso: l'iperico ha un profilo serotoninergico e può causare sindrome serotoninergica o interazioni farmacocinetiche [28, 30]. 4. Vero: paroxetina e\nvenlafaxina sono note per causare fenomeni di astinenza se interrotte bruscamente [15, 31].",
+      "numero": 20,
+      "id": "q20"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Farmacoterapia - Ansia e Anticonvulsivanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Quale farmaco anticonvulsivante è ufficialmente indicato in Svizzera come opzione terapeutica per il Disturbo d'Ansia Generalizzato (GAS)?",
+      "opzioni": {
+        "A": "Levetiracetam (Keppra®)",
+        "B": "Pregabalin (Lyrica®)",
+        "C": "Valproato (Depakine®)",
+        "D": "Lamotrigina (Lamictal®)"
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il pregabalin è l'unico anticonvulsivante menzionato nelle fonti come ufficialmente indicato e raccomandato (1ª o 2ª scelta a seconda della linea guida) per il \ntrattamento del disturbo d'ansia generalizzato (GAS) [32, 33]. Gli altri anticonvulsivanti elencati non hanno questa specifica indicazione clinica nei documenti analizzati.",
+      "numero": 21,
+      "id": "q21"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Diabete - Terapia orale GLP-1",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente si presenta al banco con una ricetta di Rybelsus® (semaglutide orale) 7 mg. Quale istruzione specifica deve fornire il farmacista per garantirne l'assorbimento\nottimale secondo le linee guida svizzere?",
+      "opzioni": {
+        "A": "Assumere la compressa subito dopo la colazione per ridurre gli effetti collaterali gastrointestinali.",
+        "B": "Assumere la compressa al mattino a digiuno, con al massimo 120 ml di acqua e attendere almeno 30 minuti prima di mangiare o assumere altri farmaci.",
+        "C": "Assumere la compressa alla sera prima di coricarsi, evitando l'assunzione di liquidi nelle due ore precedenti.",
+        "D": "Sciogliere la compressa sotto la lingua (via sublinguale) per evitare l'inattivazione da parte dei succhi gastrici."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti [1, 2], la semaglutide orale (Rybelsus) richiede condizioni di assunzione molto rigide a causa della sua bassa biodisponibilità: deve essere assunta a\ndigiuno con un volume limitato d'acqua (max 1.2 dl) e con un tempo di attesa di 30 minuti prima di cibo o altri medicinali. Le altre opzioni sono errate perché l'assunzione con cibo (A) o\nin altri orari/modalità (C, D) ne annullerebbe l'assorbimento.",
+      "numero": 22,
+      "id": "q22"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Diabete - Obiettivi HbA1c e diagnosi",
+      "tipo": "kprim",
+      "domanda": "In merito alla diagnosi di diabete e agli obiettivi terapeutici di emoglobina glicata (HbA1c) indicati nelle linee guida SGED, quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Un valore di HbA1c ≥ 6.5% è considerato uno dei criteri diagnostici per il diabete mellito.",
+        "2": "Per un paziente giovane senza malattie cardiovascolari, l'obiettivo terapeutico di HbA1c è generalmente ≤ 6.5% - 7.5%.",
+        "3": "In pazienti molto anziani (> 80 anni) o polymorbidi, un valore di HbA1c dell'8% è considerato un obiettivo accettabile.",
+        "4": "Un valore di HbA1c compreso tra 5.7% e 6.4% classifica il paziente in uno stato di pre-diabete."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tutte le affermazioni sono supportate dalle fonti: la diagnosi di diabete si pone a ≥ 6.5% [3, 4], mentre il pre-diabete è tra 5.7 e 6.4% [4]. Gli obiettivi sono \npersonalizzati: più ambiziosi (6.5-7.5%) per i giovani [4, 5] e più flessibili (8%) per gli anziani o pazienti fragili [4, 6].",
+      "numero": 23,
+      "id": "q23"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Diabete - SGLT2 inibitori",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente in terapia con Jardiance® (empagliflozin) vi riferisce durante una consulenza al banco di avvertire un forte malessere generale, nausea e dolori addominali, \nnonostante la sua glicemia misurata a casa sia solo di 12 mmol/L. Qual è il sospetto clinico più urgente da considerare?",
+      "opzioni": {
+        "A": "Semplice intolleranza alla metformina, spesso associata agli SGLT2.",
+        "B": "Infezione micotica genitale, effetto collaterale molto comune della classe.",
+        "C": "Crisi ipoglicemica imminente dovuta all'escrezione urinaria di glucosio.",
+        "D": "Chetoacidosi diabetica euglicemica, una complicanza rara ma grave degli SGLT2."
+      },
+      "risposta_corretta": "D",
+      "motivazione": "Gli SGLT2 inibitori possono causare chetoacidosi diabetica anche con livelli di glicemia solo moderatamente elevati (euglicemica), il che può ritardare la diagnosi [7,\n8]. I sintomi descritti (nausea, malessere) sono campanelli d'allarme. Le infezioni micotiche (B) sono comuni ma non causano malessere sistemico così grave, mentre l'ipoglicemia (C) non è\ntipica degli SGLT2 in monoterapia.",
+      "numero": 24,
+      "id": "q24"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Diabete - Gestione insuline",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla gestione pratica e alla farmacocinetica delle insuline moderne in farmacia, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "L'insulina degludec (Tresiba®) ha una durata d'azione superiore a 42 ore e raggiunge lo steady state solo dopo circa 3 giorni.",
+        "2": "Nel passaggio da un'insulina Toujeo® (300 U/ml) a una glargine standard (100 U/ml), è opportuno considerare inizialmente una riduzione della dose del 20%.",
+        "3": "Le insuline torbide (come Insulatard® o le miscele) devono essere capovolte o rullate almeno 10-20 volte prima dell'uso per garantire l'efficacia.",
+        "4": "L'insulina ultra-rapida Fiasp® può essere iniettata subito prima del pasto o anche fino a 20 minuti dopo l'inizio dello stesso."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tresiba ha una durata ultra-lunga e richiede 3 giorni per la stabilità [9]. Il passaggio da Toujeo a 100 U/ml richiede prudenza (riduzione 20%) [10]. La miscelazione è\nvitale per le sospensioni NPH [9, 11, 12]. Fiasp offre flessibilità d'uso pre o post-pasto grazie alla sua velocità [9, 12].",
+      "numero": 25,
+      "id": "q25"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Diabete - Regole di guida",
+      "tipo": "multipla_scelta",
+      "domanda": "Un conducente svizzero (Gruppo 1) in terapia con insulina basale e bolo chiede consiglio sulla sicurezza alla guida. Qual è la raccomandazione ufficiale riguardo al valore\nglicemico minimo prima di mettersi al volante?",
+      "opzioni": {
+        "A": "Il valore deve essere superiore a 3.9 mmol/L (soglia dell'ipoglicemia).",
+        "B": "Il valore deve essere superiore a 5.0 mmol/L; se inferiore, occorre assumere 10-20g di carboidrati e attendere 30 minuti.",
+        "C": "Non è necessaria la misurazione prima di ogni viaggio se l'ultimo HbA1c era inferiore al 7.5%.",
+        "D": "È sufficiente non avvertire sintomi di ipoglicemia (Clarke Score < 4) per poter guidare."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida svizzere e le raccomandazioni SGED [13, 14], per chi assume farmaci a rischio ipoglicemia è obbligatorio misurare la glicemia prima di guidare e\navere un valore > 5.0 mmol/L. Sotto questa soglia è necessaria la correzione con carboidrati e la rivalutazione dopo 30 minuti.",
+      "numero": 26,
+      "id": "q26"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Obesità - Farmacoterapia",
+      "tipo": "kprim",
+      "domanda": "In Svizzera, l'assunzione dei costi da parte delle casse malati per farmaci contro l'obesità come Saxenda® o Wegovy® è soggetta a limitazioni. Quali di queste condizioni \nsono previste?",
+      "opzioni": {
+        "1": "Il farmaco è rimborsato per pazienti con BMI ≥ 30 kg/m² o ≥ 28 kg/m² in presenza di comorbilità legate al peso.",
+        "2": "La durata massima della copertura dei costi da parte dell'assicurazione di base è limitata a 3 anni.",
+        "3": "La prescrizione deve essere effettuata da un medico specialista in endocrinologia/diabetologia o da centri specializzati per l'obesità.",
+        "4": "È necessario documentare un calo ponderale minimo (es. 5% in 10 mesi) per continuare la terapia rimborsata."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "La limitazione svizzera (SL) prevede il rimborso solo per BMI specifici [15-17], per un massimo di 3 anni [15, 18] e sotto la supervisione di specialisti [15, 18]. È \ninoltre richiesto il monitoraggio dell'efficacia tramite il raggiungimento di obiettivi di perdita di peso [15].",
+      "numero": 27,
+      "id": "q27"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Diabete - Gestione ipoglicemia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente diabetico di tipo 1 lamenta di non avvertire più i sintomi premonitori dell'ipoglicemia (tachicardia, tremore). Quale classe di farmaci, se assunta \ncontemporaneamente, potrebbe spiegare questo fenomeno di 'masking'?",
+      "opzioni": {
+        "A": "ACE-inibitori (es. enalapril).",
+        "B": "SGLT2-inibitori (es. dapagliflozin).",
+        "C": "Beta-bloccanti non selettivi (es. propranololo).",
+        "D": "Statine (es. atorvastatina)."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "I beta-bloccanti (specialmente quelli non selettivi) possono mascherare i sintomi adrenergici dell'ipoglicemia, come il tremore e la tachicardia, rendendo la reazione \npericolosamente asintomatica [19-21]. Gli ACE-inibitori possono aumentare la sensibilità all'insulina ma non mascherano i sintomi [19, 22].",
+      "numero": 28,
+      "id": "q28"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Diabete - Monitoraggio continuo (CGM)",
+      "tipo": "kprim",
+      "domanda": "In merito all'uso dei sistemi di monitoraggio continuo della glicemia (CGM/FGM) come il FreeStyle Libre, quali affermazioni sono corrette secondo le fonti?",
+      "opzioni": {
+        "1": "I valori misurati nel liquido interstiziale dal sensore hanno un ritardo di circa 5-10 minuti rispetto ai valori capillari sanguigni.",
+        "2": "Se i valori glicemici sul sensore sono in rapida discesa, il valore reale capillare può essere del 10-15% ancora più basso.",
+        "3": "In Svizzera, il FreeStyle Libre (FGM) è rimborsato per pazienti con diabete mellito in terapia insulinica intensificata (Basal-Bolo o pompa).",
+        "4": "La posizione raccomandata per il sensore è la parte dorsale del braccio; posizioni diverse possono dare letture tendenzialmente più basse."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Il ritardo fisiologico tra sangue e interstizio è noto [23]. Durante le variazioni rapide, la differenza tra sensore e capillare aumenta [24]. Il rimborso (MiGeL \n21.06) è legato alla terapia insulinica intensificata [25, 26]. Il sito di applicazione influenza l'accuratezza della misurazione [23].",
+      "numero": 29,
+      "id": "q29"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Disfunzione erettile - dispensazione e categorie",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 45 anni entra in farmacia e chiede una confezione di Sildenafil 50 mg senza ricetta medica, avendo letto che la categoria di dispensazione è cambiata. Quale\ndelle seguenti affermazioni descrive correttamente il quadro normativo svizzero attuale?",
+      "opzioni": {
+        "A": "Il farmacista può dispensare Sildenafil in qualsiasi dosaggio (25, 50 o 100 mg), purché esegua una consultazione documentata in un'area discreta.",
+        "B": "Solo il Sildenafil nel dosaggio di 25 mg (confezione da 4 compresse) può essere dispensato dal farmacista senza ricetta medica dopo un'accurata anamnesi (Lista B+).",
+        "C": "Tutti gli inibitori della PDE5 (sildenafil, tadalafil, vardenafil) sono passati alla categoria B+ e possono essere dispensati dopo triage del farmacista.",
+        "D": "Il Sildenafil 50 mg può essere dispensato solo se il paziente ha già ricevuto una prescrizione medica negli ultimi 12 mesi per lo stesso dosaggio."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In base alle linee guida svizzere e alla revisione della legge sugli agenti terapeutici (HMG), dal 01.04.2020 solo il Sildenafil 25 mg in confezione da 4 compresse è \nstato inserito nella lista B+ per la dispensazione diretta in farmacia [1-3]. Gli altri dosaggi di Sildenafil e tutti gli altri inibitori della PDE5 (tadalafil, vardenafil, avanafil) \nrichiedono ancora una ricetta medica [2, 4]. La dispensazione richiede un triage documentato e la responsabilità è del farmacista [5].",
+      "numero": 30,
+      "id": "q30"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Disfunzione erettile - diagnosi differenziale e triage",
+      "tipo": "kprim",
+      "domanda": "Durante una consulenza discreta, un uomo di 28 anni descrive una comparsa improvvisa di difficoltà erettile. Il farmacista deve valutare se l'origine sia organica o \npsicogena. Quali delle seguenti affermazioni riguardanti la distinzione tra cause organiche e psicogene sono corrette?",
+      "opzioni": {
+        "1": "La presenza di normali erezioni notturne o al risveglio suggerisce fortemente una causa psicogena piuttosto che organica.",
+        "2": "Negli uomini giovani e sani che sviluppano improvvisamente una disfunzione erettile, si sospetta spesso una causa psicologica.",
+        "3": "L'insorgenza graduale e la perdita di erezioni spontanee durante la notte sono tipiche della disfunzione erettile organica.",
+        "4": "Le cause vascolari, come l'arteriosclerosi dei corpi cavernosi, sono più frequenti nei pazienti giovani a causa dello stress lavorativo."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Le fonti indicano che gli uomini con DE psicogena hanno solitamente erezioni notturne e mattutine normali, a differenza di chi soffre di DE organica [6, 7]. Un esordio\nimprovviso in soggetti giovani suggerisce una causa psicologica [6, 7], mentre l'esordio graduale è tipico delle cause organiche come l'arteriosclerosi o il diabete [7, 8]. L'opzione 4 è \nfalsa poiché l'arteriosclerosi è una causa organica legata all'età, al fumo o al diabete, non tipica della DE psicogena nei giovani [9].",
+      "numero": 31,
+      "id": "q31"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Disfunzione erettile - controindicazioni e interazioni",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente cardiopatico abituale della vostra farmacia vi chiede informazioni sul Sildenafil. Sapete che assume periodicamente Isosorbide dinitrato (Isoket) per l'angina \npectoris. Qual è il consiglio corretto?",
+      "opzioni": {
+        "A": "Può assumere Sildenafil purché distanzi i due farmaci di almeno 4 ore per evitare cali pressori.",
+        "B": "L'uso contemporaneo è assolutamente controindicato perché il Sildenafil potenzia l'effetto ipotensivo dei nitrati, con rischio di collasso cardiovascolare.",
+        "C": "Il Sildenafil può essere assunto solo se l'Isosorbide dinitrato viene sostituito da un beta-bloccante il giorno del rapporto sessuale.",
+        "D": "L'interazione è significativa solo con il Nitroglicerina spray, mentre i nitrati orali a lento rilascio non presentano rischi."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il Sildenafil potenzia l'effetto ipotensivo dei donatori di ossido di azoto e dei nitrati (come Isosorbide dinitrato, Nitroglicerina, Molsidomina) [10, 11]. L'uso \nconcomitante è una controindicazione assoluta a causa del rischio di ipotensione grave, sincope o infarto [11, 12]. Non è una questione di semplice distanziamento di poche ore; le linee \nguida indicano un divieto totale di associazione [10, 11].",
+      "numero": 32,
+      "id": "q32"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Disfunzione erettile - farmacocinetica e consulenza",
+      "tipo": "kprim",
+      "domanda": "Un paziente richiede consigli sull'assunzione corretta degli inibitori della PDE5. Quali dei seguenti consigli terapeutici sono corretti secondo le fonti?",
+      "opzioni": {
+        "1": "Il Sildenafil deve essere assunto circa 1 ora prima del rapporto sessuale e l'effetto dura solitamente fino a 4-5 ore.",
+        "2": "L'assunzione di pasti molto ricchi di grassi può ritardare l'inizio dell'effetto del Sildenafil.",
+        "3": "Il Tadalafil ha una durata d'azione molto più lunga rispetto al Sildenafil, potendo arrivare fino a 36 ore.",
+        "4": "La stimolazione sessuale non è necessaria per l'efficacia dei farmaci PDE5 inibitori: l'erezione avviene automaticamente dopo l'assunzione."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Il Sildenafil va assunto circa 1 ora prima e dura 4-5 ore [13-15]. I pasti grassi ne ritardano l'assorbimento [3, 13, 16]. Il Tadalafil è noto per la sua lunga emivita\ne durata d'azione fino a 36 ore [15, 17]. L'opzione 4 è falsa: la stimolazione sessuale è indispensabile affinché questi farmaci inducano l'erezione [13, 16, 18].",
+      "numero": 33,
+      "id": "q33"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Disfunzione erettile - dosaggio in popolazioni speciali",
+      "tipo": "multipla_scelta",
+      "domanda": "Un uomo di 72 anni con insufficienza renale lieve si presenta con una prescrizione medica per Sildenafil. Secondo le raccomandazioni ufficiali, qual è la dose iniziale \nappropriata per questo paziente?",
+      "opzioni": {
+        "A": "100 mg, per compensare la ridotta circolazione periferica dovuta all'età.",
+        "B": "50 mg, che è la dose standard per tutti gli adulti senza malattie epatiche gravi.",
+        "C": "25 mg, a causa dell'età superiore ai 65 anni e della funzione renale compromessa.",
+        "D": "Il Sildenafil è controindicato nei pazienti sopra i 70 anni; deve essere usato il Tadalafil 5 mg."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Per i pazienti di età superiore ai 65 anni o con insufficienza renale grave (clearance della creatinina < 30 ml/min) o insufficienza epatica, la dose iniziale \nraccomandata di Sildenafil è di 25 mg [13, 19, 20]. Sebbene la funzione renale sia descritta come 'lieve', l'età superiore ai 65 anni è di per sé un criterio per iniziare con 25 mg \n[19-21].",
+      "numero": 34,
+      "id": "q34"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Disfunzione erettile - Red Flags e Triage",
+      "tipo": "kprim",
+      "domanda": "Durante l'anamnesi in farmacia per una richiesta di Sildenafil (Lista B+), il farmacista deve identificare i segnali d'allarme (Red Flags). In quali dei seguenti casi il \nfarmacista deve rifiutare la dispensazione e indirizzare il paziente a un medico?",
+      "opzioni": {
+        "1": "Il paziente riferisce di aver avuto un infarto del miocardio 4 mesi fa.",
+        "2": "Il paziente presenta una deformazione anatomica del pene (es. malattia di Peyronie).",
+        "3": "Il paziente soffre di 'anestesia a sella' (perdita di sensibilità nella zona genitale) o incontinenza urinaria recente.",
+        "4": "Il paziente ha una pressione arteriosa misurata in farmacia di 180/115 mmHg."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tutte le opzioni rappresentano motivi di esclusione per la dispensazione B+ o segnali di allarme. Un infarto recente (< 6 mesi) è una controindicazione/avvertenza \nseria [10, 22, 23]. Le malformazioni del pene richiedono cautela medica [10, 24]. L'anestesia a sella e l'incontinenza suggeriscono una causa neurologica (es. ernia del disco) che \nrichiede accertamenti medici immediati [6, 25]. Una pressione >170/110 mmHg è classificata come ipertensione non controllata ed è un motivo per sconsigliare l'uso del farmaco [22, 23, \n26].",
+      "numero": 35,
+      "id": "q35"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Disfunzione erettile - effetti collaterali e urgenze",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente telefona in farmacia spaventato perché ha un'erezione che dura da più di 4 ore dopo l'assunzione di un inibitore della PDE5. Qual è l'istruzione corretta da \nfornire?",
+      "opzioni": {
+        "A": "Applicare impacchi freddi e attendere altre 2 ore; se non passa, assumere un antistaminico.",
+        "B": "Si tratta di un effetto normale del farmaco che può durare fino a 12 ore se si è assunto Tadalafil.",
+        "C": "È un'urgenza medica (priapismo); deve recarsi immediatamente al pronto soccorso o consultare un medico per evitare danni permanenti ai tessuti del pene.",
+        "D": "Il paziente deve camminare velocemente per deviare il flusso sanguigno verso i muscoli delle gambe."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Un'erezione che dura più di 4 ore (priapismo o erezione prolungata) è considerata un'emergenza urologica [27, 28]. Se non trattata tempestivamente, può causare danni \nirreversibili al tessuto erettile e la perdita permanente della funzione sessuale [28, 29]. Il paziente deve consultare un medico o andare in ospedale immediatamente [27, 29, 30].",
+      "numero": 36,
+      "id": "q36"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Red flags oculari - Triage in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente si presenta in farmacia con un occhio rosso e riferisce dolore. Quale delle seguenti situazioni costituisce una 'Red Flag' assoluta che richiede l'invio \nimmediato all'oftalmologo o al pronto soccorso?",
+      "opzioni": {
+        "A": "Presenza di secrezione acquosa bilaterale associata a forte prurito.",
+        "B": "Portatore di lenti a contatto con occhio rosso, dolente e fotofobia.",
+        "C": "Presenza di secrezioni purulente giallo-verdi con palpebre incollate al mattino.",
+        "D": "Sensazione di sabbia nell'occhio che migliora con l'uso di lacrime artificiali."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida e le 'Red Flags' (fonti [1-3]), un occhio rosso e dolente in un portatore di lenti a contatto è un'emergenza per il rischio di infezione/ulcera \ncorneale. Le opzioni A e C descrivono congiuntiviti (allergica e batterica) gestibili inizialmente in farmacia (B+). La D descrive un occhio secco lieve.",
+      "numero": 37,
+      "id": "q37"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Glaucoma - Terapia e precauzioni",
+      "tipo": "kprim",
+      "domanda": "In merito alla terapia farmacologica del glaucoma e alla gestione dei colliri beta-bloccanti (es. Timololo), quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "I beta-bloccanti sono controindicati in pazienti con asma bronchiale o bradicardia grave.",
+        "2": "Dopo l'instillazione, è raccomandato premere il condotto lacrimale per 1-2 minuti per ridurre l'assorbimento sistemico.",
+        "3": "Gli analoghi delle prostaglandine vanno applicati preferibilmente al mattino per massimizzare l'efficacia.",
+        "4": "In caso di prescrizione di più colliri, è necessario attendere almeno 15 minuti tra le due applicazioni."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1 è V (fonti [4, 5]). 2 è V (fonte [6]). 3 è F: le prostaglandine si applicano la sera (fonti [4, 5]). 4 è V: le fonti [5, 7] raccomandano un intervallo di 5-15 minuti\nper evitare l'effetto 'wash-out'.",
+      "numero": 38,
+      "id": "q38"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Congiuntivite - Classificazione e Triage",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente descrive un esordio improvviso di arrossamento oculare bilaterale, prurito intenso e secrezione acquosa limpida. Qual è la sospetta diagnosi più probabile \nbasata sul triage?",
+      "opzioni": {
+        "A": "Congiuntivite batterica.",
+        "B": "Congiuntivite virale (Adenovirus).",
+        "C": "Congiuntivite allergica.",
+        "D": "Cheratite attinica."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il prurito intenso è il sintomo guida della congiuntivite allergica, solitamente bilaterale con secrezione acquosa (fonti [8-10]). La batterica ha secrezione purulenta\n(A), la virale è spesso inizialmente unilaterale e meno pruriginosa (B), la cheratite dà dolore forte e fotofobia (D).",
+      "numero": 39,
+      "id": "q39"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Infezioni oculari - Collirio antibiotico e Lista B+",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla dispensazione di farmaci oftalmici in Svizzera (Lista B+) e al trattamento della congiuntivite batterica, quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Il farmacista può dispensare Tobramicina come prima scelta per una congiuntivite batterica acuta non complicata.",
+        "2": "La durata massima del trattamento per un farmaco della lista B+ (es. antistaminici) è di 1 mese.",
+        "3": "Il disinfettante Desomedin (Esamidina) può essere usato per 2-3 giorni per prevenire superinfezioni batteriche in forme virali.",
+        "4": "La dispensazione B+ è possibile anche se il paziente non è presente fisicamente, purché noto alla farmacia."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1 è V (fonti [11, 12]). 2 è V (fonti [13, 14]). 3 è V (fonti [15, 16]). 4 è F: il paziente deve essere personalmente presente per la validazione e documentazione B+ \n(fonti [1, 17]).",
+      "numero": 40,
+      "id": "q40"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Irrigazione occhi - Primo soccorso",
+      "tipo": "multipla_scelta",
+      "domanda": "In caso di ustione chimica (acido o base) negli occhi, qual è la procedura di primo soccorso corretta da attuare in farmacia prima del rinvio d'urgenza?",
+      "opzioni": {
+        "A": "Applicare immediatamente una pomata antibiotica e bendare l'occhio.",
+        "B": "Irrigare l'occhio con acqua o soluzione fisiologica per almeno 20-30 minuti.",
+        "C": "Neutralizzare l'acido con una soluzione basica diluita prima di sciacquare.",
+        "D": "Attendere l'arrivo dell'ambulanza senza toccare l'occhio per non peggiorare il danno."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In caso di verruzioni (ustioni chimiche), l'irrigazione immediata e prolungata (20-30 min) è fondamentale per limitare il danno tissutale prima del trasporto in \nospedale (fonti [18-20]). Non si usano pomate (A) né tentativi di neutralizzazione chimica (C).",
+      "numero": 41,
+      "id": "q41"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Lenti a contatto e Farmaci",
+      "tipo": "kprim",
+      "domanda": "Quali precauzioni devono essere spiegate a un portatore di lenti a contatto riguardo all'uso di colliri?",
+      "opzioni": {
+        "1": "Le lenti a contatto morbide possono assorbire il conservante benzalconio cloruro, subendo alterazioni o decolorazione.",
+        "2": "In presenza di congiuntivite, è preferibile continuare a indossare le lenti per proteggere la cornea dai batteri.",
+        "3": "Dopo l'instillazione di un collirio, è necessario attendere solitamente almeno 15-30 minuti prima di reinserire le lenti.",
+        "4": "Il gel Lacrycon richiede un'attesa di 30 minuti prima del reinserimento delle lenti."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1 è V (fonte [21]). 2 è F: l'uso delle lenti va sospeso fino a guarigione (fonti [10, 22]). 3 è V (fonti [10, 21]). 4 è V (fonte [21]).",
+      "numero": 42,
+      "id": "q42"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Glaucoma - Triage della pressione intraoculare (IOP)",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante una misurazione della pressione intraoculare in farmacia, si ottiene un valore di 55 mmHg. Qual è l'azione corretta da intraprendere secondo il protocollo di \ntriage?",
+      "opzioni": {
+        "A": "Consigliare un controllo oftalmologico entro il mese successivo.",
+        "B": "Ripetere la misurazione dopo 2 ore per confermare il dato.",
+        "C": "Considerare la situazione come un'emergenza oculistica e inviare subito al pronto soccorso.",
+        "D": "Consigliare l'uso profilattico di un collirio beta-bloccante della lista B+."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Un valore di IOP ≥ 50 mmHg è classificato come 'Augennotfall' (emergenza oculare) e richiede l'invio immediato in clinica o all'oculista (fonti [23, 24]). Non esistono\ncolliri per il glaucoma in lista B+ (D).",
+      "numero": 43,
+      "id": "q43"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Parassiti - Scabbia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente si presenta in farmacia con una diagnosi confermata di scabbia. Secondo le nuove linee guida svizzere di novembre 2024, qual è l'attuale raccomandazione per il \ntrattamento di prima scelta per massimizzare il successo terapeutico?",
+      "opzioni": {
+        "A": "Monoterapia con crema di permetrina al 5%, da applicare una sola volta.",
+        "B": "Terapia combinata di permetrina 5% (uso topico) e ivermectina orale (200 µg/kg), da ripetere entrambi dopo 7-10 giorni.",
+        "C": "Monoterapia con ivermectina orale in dose singola senza ripetizione.",
+        "D": "Applicazione topica di benzoato di benzile al 25% per 5 giorni consecutivi."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le nuove linee guida svizzere del 2024, a causa dell'alto tasso di fallimento della sola permetrina (resistenze e pseudo-resistenze), la monoterapia non è più \nla scelta elettiva [1, 2]. Viene ora raccomandata la combinazione di permetrina topica e ivermectina sistemica, con ripetizione obbligatoria dopo 7-10 giorni per colpire le larve appena \nschiuse [1, 3, 4].",
+      "numero": 44,
+      "id": "q44"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Parassiti - Pediculosi",
+      "tipo": "kprim",
+      "domanda": "Una madre chiede consiglio sul trattamento dei pidocchi del capo per suo figlio. Quali delle seguenti affermazioni riguardanti il ciclo di trattamento e la biologia sono \ncorrette secondo le fonti fornite?",
+      "opzioni": {
+        "1": "Il trattamento deve essere ripetuto al giorno 8, 9 o 10 per eliminare le larve nate nel frattempo.",
+        "2": "Le ninfe (larve) appena schiuse possono già spostarsi da un ospite all'altro.",
+        "3": "Le lendini (nits) sono i gusci vuoti delle uova e non rappresentano più un pericolo di infestazione.",
+        "4": "Dopo 14 giorni di controlli senza ritrovamento di pidocchi vivi, il trattamento è considerato concluso."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "La ripetizione tra il giorno 8 e 10 è fondamentale per interrompere il ciclo vitale [5]. Le ninfe non possono cambiare ospite; solo il pidocchio adulto è in grado di \nfarlo [5]. Le lendini sono effettivamente i gusci vuoti e sono un problema puramente estetico [5]. Il monitoraggio per 14 giorni conferma l'eradicazione [5].",
+      "numero": 45,
+      "id": "q45"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Insetti - Zecche e Borreliosi",
+      "tipo": "multipla_scelta",
+      "domanda": "Un adulto si presenta con un eritema migrante (raggio rosso che si espande) dopo una puntura di zecca avvenuta 10 giorni fa. Qual è il trattamento antibiotico di prima \nscelta raccomandato in Svizzera per questo paziente?",
+      "opzioni": {
+        "A": "Amoxicillina 500 mg, 3 volte al giorno per 7 giorni.",
+        "B": "Doxiciclina 100 mg, 2 volte al giorno per 2-4 settimane.",
+        "C": "Azitromicina 500 mg, dose singola per 3 giorni.",
+        "D": "Nessun antibiotico, monitoraggio dei sintomi neurologici per 1 mese."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Per gli adulti (o sopra i 12 anni), la doxiciclina 100 mg due volte al giorno per 2-4 settimane è il trattamento standard per la borreliosi precoce [6-8]. \nL'amoxicillina è l'alternativa o la prima scelta nei bambini sotto i 12 anni [7, 8].",
+      "numero": 46,
+      "id": "q46"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Parassiti - Scabbia e Gravidanza",
+      "tipo": "kprim",
+      "domanda": "Una donna al secondo trimestre di gravidanza ha contratto la scabbia. Riguardo alle opzioni terapeutiche e precauzioni, quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "La crema alla permetrina 5% è considerata sicura e può essere utilizzata in gravidanza.",
+        "2": "L'ivermectina orale è il trattamento di prima scelta assoluta per tutte le donne incinte.",
+        "3": "In caso di allattamento, è necessario sospendere la poppata per 8-12 ore durante l'applicazione topica della permetrina.",
+        "4": "Il benzoato di benzile al 25% è controindicato durante la gravidanza."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "La permetrina è considerata sicura in gravidanza [9-11]. L'ivermectina è generalmente evitata o usata solo in casi eccezionali/gravi sotto stretto controllo medico \n[9-11]. Durante l'allattamento è raccomandata una pausa di 8-12 ore durante l'uso topico [9-11]. Il benzoato di benzile 25% è considerato sicuro in gravidanza dalle fonti svizzere [10, \n11].",
+      "numero": 47,
+      "id": "q47"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Insetti - Reazioni allergiche",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente viene punto da una vespa in farmacia. Sviluppa rapidamente orticaria generalizzata, gonfiore alle labbra e riferisce difficoltà a deglutire. Qual è l'azione \nprioritaria?",
+      "opzioni": {
+        "A": "Somministrare un antistaminico orale e monitorare il paziente per 30 minuti.",
+        "B": "Applicare un gel a base di dimetindene sulla zona della puntura.",
+        "C": "Allertare immediatamente il 144 (emergenza) per sospetta reazione sistemica grave.",
+        "D": "Consigliare un impacco freddo e l'assunzione di paracetamolo."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Sintomi come gonfiore delle mucose (labbra, lingua), disfagia o dispnea indicano una reazione allergica sistemica (Grado II o superiore), che richiede l'intervento \nimmediato del medico d'urgenza (144) e potenzialmente l'uso di adrenalina [12-14].",
+      "numero": 48,
+      "id": "q48"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Parassiti - Scabbia gestione ambientale",
+      "tipo": "kprim",
+      "domanda": "Per eradicare con successo la scabbia in un nucleo familiare, quali misure igieniche e di contatto devono essere adottate?",
+      "opzioni": {
+        "1": "Tutti i membri della famiglia e i contatti stretti devono essere trattati contemporaneamente, anche se asintomatici.",
+        "2": "I vestiti e la biancheria usati nei 4 giorni precedenti devono essere lavati a almeno 60 °C.",
+        "3": "Gli oggetti non lavabili devono essere sigillati in sacchetti di plastica per almeno 4 giorni a 21 °C.",
+        "4": "I pazienti devono essere isolati in una stanza separata per l'intera durata del trattamento (10 giorni)."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Il trattamento simultaneo dei contatti è cruciale per evitare l'effetto 'ping-pong' [1, 15, 16]. Il lavaggio a 60°C e l'uso di sacchetti per 4 giorni garantiscono la \nmorte degli acari fuori dall'ospite [17, 18]. L'isolamento non è necessario; è sufficiente evitare il contatto fisico stretto e non condividere il letto fino a 24 ore dopo il trattamento \n[19].",
+      "numero": 49,
+      "id": "q49"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Insetti - Repellenti e prevenzione",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente chiede come proteggersi dalle punture di zanzare e zecche durante un'escursione. Qual è il consiglio corretto riguardo all'uso dei repellenti e della \nprotezione?",
+      "opzioni": {
+        "A": "I repellenti naturali a base di oli essenziali offrono una protezione di 8-10 ore.",
+        "B": "L'uso di vestiti chiari è sconsigliato perché attira le zecche.",
+        "C": "Sostanze come DEET o Icaridina sono tra le più efficaci; vanno applicate 15-30 minuti dopo la crema solare.",
+        "D": "La vitamina B1 assunta oralmente è un metodo provato per respingere le zanzare."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "DEET e Icaridina sono i principi attivi di riferimento; l'intervallo con la crema solare è necessario per non ridurne l'efficacia [14]. I vestiti chiari aiutano a \nindividuare le zecche prima che mordano [20, 21]. Gli oli essenziali durano poco e la vitamina B1 non ha evidenza scientifica come repellente [14].",
+      "numero": 50,
+      "id": "q50"
+    }
+  ]
+}

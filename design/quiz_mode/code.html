@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exam Mode - The Clinical Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#6e797b",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-container": "#d5f9ff",
+                        "on-tertiary-container": "#fff0e7",
+                        "primary": "#005f6a",
+                        "primary-fixed-dim": "#7ad4e2",
+                        "tertiary": "#824715",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d3e6e9",
+                        "surface-tint": "#006874",
+                        "on-background": "#191c1d",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-fixed-variant": "#394a4c",
+                        "on-tertiary-fixed-variant": "#6f3805",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb782",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#56676a",
+                        "secondary-fixed-dim": "#b8cacd",
+                        "inverse-primary": "#7ad4e2",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#9f5f2b",
+                        "on-primary-fixed": "#001f24",
+                        "on-secondary-fixed": "#0d1e21",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#506164",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed": "#301400",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#bdc8cb",
+                        "on-primary-fixed-variant": "#004f57",
+                        "surface-variant": "#e1e3e4",
+                        "primary-container": "#007a87",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "on-surface-variant": "#3e494a",
+                        "primary-fixed": "#97f0ff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-fixed": "#d3e6e9",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeeef",
+                        "tertiary-fixed": "#ffdcc5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .question-grid-item {
+            aspect-ratio: 1/1;
+        }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell (The Anchor) -->
+<header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl border-b border-[#005f6a]/10 shadow-[0px_12px_32px_rgba(25,28,29,0.05)] flex justify-between items-center px-12 h-20">
+<div class="flex items-center gap-8">
+<span class="font-['Manrope'] text-[#005f6a] uppercase tracking-widest text-xs font-black">Exam Mode</span>
+<div class="h-6 w-[1px] bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-primary text-sm">Question 12 of 100</span>
+<div class="w-48 h-2 bg-surface-container-highest rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-primary w-[12%]"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+<span class="font-['Inter'] font-semibold text-primary">03:30:00</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+<span class="text-xs font-medium">Auto-save: Saved</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-variant rounded-xl transition-all"><span class="material-symbols-outlined text-on-surface-variant">grid_view</span></button>
+<button class="p-2 hover:bg-surface-variant rounded-xl transition-all"><span class="material-symbols-outlined text-on-surface-variant">flag</span></button>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-bold text-sm shadow-sm hover:opacity-90 active:scale-95 transition-all">
+                Finish Exam
+            </button>
+</div>
+</header>
+<main class="pt-28 pb-12 px-12 min-h-screen flex gap-12">
+<!-- Content Area (The Editorial Layout) -->
+<div class="flex-grow max-w-4xl">
+<!-- Question Metadata -->
+<div class="mb-8">
+<div class="inline-flex items-center px-3 py-1 bg-tertiary-container/10 text-tertiary rounded-full text-xs font-bold tracking-wide mb-4">
+                    PHYTOTHERAPY
+                </div>
+<h1 class="font-headline font-extrabold text-3xl text-on-surface leading-tight tracking-tight max-w-2xl">
+                    Evaluation of standardized Hypericum perforatum extract in the management of depressive episodes.
+                </h1>
+</div>
+<!-- K-PRIM Question Card -->
+<div class="space-y-6">
+<div class="bg-surface-container-low p-8 rounded-[2rem]">
+<p class="text-on-surface-variant text-lg leading-relaxed font-medium mb-8">
+                        Regarding the clinical application and pharmacological profile of St. John's Wort (Hypericum perforatum) in pharmaceutical practice, which of the following statements are correct?
+                    </p>
+<div class="space-y-4">
+<!-- Statement 1 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-lowest rounded-2xl group hover:shadow-md transition-shadow">
+<span class="text-on-surface font-medium pr-8">The main active constituents responsible for the antidepressant effect are hyperforin and hypericin.</span>
+<div class="flex bg-surface-container-low rounded-xl p-1 gap-1">
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s1" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-primary peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">TRUE</div>
+</label>
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s1" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-error peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">FALSE</div>
+</label>
+</div>
+</div>
+<!-- Statement 2 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-lowest rounded-2xl group hover:shadow-md transition-shadow">
+<span class="text-on-surface font-medium pr-8">Hyperforin is a potent inducer of the cytochrome P450 enzyme CYP3A4, leading to numerous drug interactions.</span>
+<div class="flex bg-surface-container-low rounded-xl p-1 gap-1">
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s2" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-primary peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">TRUE</div>
+</label>
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s2" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-error peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">FALSE</div>
+</label>
+</div>
+</div>
+<!-- Statement 3 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-lowest rounded-2xl group hover:shadow-md transition-shadow">
+<span class="text-on-surface font-medium pr-8">Standardized extracts of Hypericum are contraindicated in patients concurrently taking cyclosporine or oral anticoagulants of the coumarin type.</span>
+<div class="flex bg-surface-container-low rounded-xl p-1 gap-1">
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s3" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-primary peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">TRUE</div>
+</label>
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s3" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-error peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">FALSE</div>
+</label>
+</div>
+</div>
+<!-- Statement 4 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-lowest rounded-2xl group hover:shadow-md transition-shadow">
+<span class="text-on-surface font-medium pr-8">Photosensitization is a common side effect at standard therapeutic dosages (900mg extract per day).</span>
+<div class="flex bg-surface-container-low rounded-xl p-1 gap-1">
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s4" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-primary peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">TRUE</div>
+</label>
+<label class="cursor-pointer group/radio">
+<input class="hidden peer" name="q12_s4" type="radio"/>
+<div class="px-5 py-2 rounded-lg peer-checked:bg-error peer-checked:text-white text-on-surface-variant font-bold text-xs transition-colors">FALSE</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Buttons -->
+<div class="flex justify-between items-center pt-8">
+<button class="flex items-center gap-2 px-6 py-3 rounded-xl border border-outline-variant/20 font-headline font-bold text-primary hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+                        Previous Question
+                    </button>
+<button class="flex items-center gap-2 px-8 py-3 rounded-xl bg-primary text-on-primary font-headline font-bold shadow-lg hover:opacity-90 active:scale-95 transition-all">
+                        Next Question
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sidebar Navigation (Question Grid) -->
+<aside class="w-80 flex-shrink-0">
+<div class="sticky top-28 bg-surface-container-low rounded-[2rem] p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline font-bold text-on-surface">Question Navigator</h3>
+<span class="text-[10px] font-bold text-on-surface-variant/50 tracking-tighter">FPH PHARMACY 2024</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mb-8">
+<!-- Example Grid Items -->
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">1</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">2</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">3</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">4</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">5</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">6</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">7</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">8</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">9</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">10</div>
+<div class="question-grid-item flex items-center justify-center bg-primary text-on-primary rounded-lg text-xs font-bold cursor-pointer hover:opacity-80 transition-all">11</div>
+<div class="question-grid-item flex items-center justify-center ring-2 ring-primary bg-surface-container-lowest text-primary rounded-lg text-xs font-black cursor-pointer shadow-sm">12</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">13</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">14</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">15</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">16</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">17</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">18</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">19</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">20</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">21</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">22</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">23</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">24</div>
+<div class="question-grid-item flex items-center justify-center bg-surface-container-highest text-on-surface-variant rounded-lg text-xs font-bold cursor-pointer hover:bg-surface-variant transition-all">25</div>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-lowest rounded-2xl">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Reference Case</span>
+<span class="material-symbols-outlined text-primary text-sm">open_in_new</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Microscopic view of botanical cellular structures, clean laboratory aesthetic, high-key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXDw2iMi-wnN4es2HFwez03VC1VnARMY6ATxleArF5LMJhrXLB2QnkyDtDIrBSKpZQPeCyO8U1exbY7OSnKqxcD16_zGDRZN0BH4MnfZf0rSOwLmheRoy3cMXZGtWkc37m6RBSOWRPamyHpluegO_ngbi-zvJ7AtO_c5SZiWlDcGLx09wNrBTiJflOtzgS5qtfIY7gpEay0t46JV4AuwBfG8b39p71UqISAFTXvLhcCn13ZFYZ6Fy4cwkN-DrQ0WVNbSSF_ZRqCK0S"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Depressive Episode</p>
+<p class="text-[10px] text-on-surface-variant">Clinical Case ID: 4492</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2">
+<div class="flex-shrink-0 w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Answered</span>
+<div class="flex-shrink-0 w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Remaining</span>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Contextual FAB (Hidden as per focus mandate for exam) -->
+</body></html>

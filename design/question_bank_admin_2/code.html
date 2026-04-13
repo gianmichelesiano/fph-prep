@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-surface": "#191c1d",
+                    "on-tertiary-fixed": "#301400",
+                    "secondary": "#506164",
+                    "on-secondary-fixed": "#0d1e21",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#9f5f2b",
+                    "on-primary-fixed": "#001f24",
+                    "tertiary-fixed": "#ffdcc5",
+                    "surface-container": "#edeeef",
+                    "inverse-surface": "#2e3132",
+                    "secondary-fixed": "#d3e6e9",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-surface-variant": "#3e494a",
+                    "primary-fixed": "#97f0ff",
+                    "background": "#f8f9fa",
+                    "primary-container": "#007a87",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e1e3e4",
+                    "outline-variant": "#bdc8cb",
+                    "on-primary-fixed-variant": "#004f57",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#006874",
+                    "on-background": "#191c1d",
+                    "tertiary": "#824715",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#7ad4e2",
+                    "secondary-container": "#d3e6e9",
+                    "primary": "#005f6a",
+                    "on-tertiary-container": "#fff0e7",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-container": "#d5f9ff",
+                    "outline": "#6e797b",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b8cacd",
+                    "inverse-primary": "#7ad4e2",
+                    "on-secondary-container": "#56676a",
+                    "surface-container-highest": "#e1e3e4",
+                    "tertiary-fixed-dim": "#ffb782",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#394a4c",
+                    "on-tertiary-fixed-variant": "#6f3805",
+                    "surface-dim": "#d9dadb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 12px 32px rgba(25, 28, 29, 0.05);
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- SideNavBar Shell -->
+<aside class="flex flex-col fixed left-0 top-0 h-full h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="px-6 py-8">
+<h1 class="text-xl font-bold text-[#005f6a] dark:text-[#007a87] tracking-tighter">FPH Prep</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1 font-bold">Admin Terminal</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#005f6a] hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors font-['Manrope'] font-semibold tracking-tight rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<!-- Active Tab: Question Bank -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#005f6a] dark:text-[#007a87] font-bold border-r-2 border-[#005f6a] bg-slate-100 dark:bg-slate-800/50 transition-colors font-['Manrope'] tracking-tight rounded-l-xl" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">database</span>
+                Question Bank
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#005f6a] hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors font-['Manrope'] font-semibold tracking-tight rounded-xl" href="#">
+<span class="material-symbols-outlined">group</span>
+                Users
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#005f6a] hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors font-['Manrope'] font-semibold tracking-tight rounded-xl" href="#">
+<span class="material-symbols-outlined">psychology</span>
+                AI Generator
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<button class="w-full flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add</span>
+                Create New Exam
+            </button>
+</div>
+</aside>
+<!-- TopNavBar Shell -->
+<header class="flex justify-between items-center w-full pl-64 pr-8 py-3 sticky top-0 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200/20 dark:border-slate-800/20 font-['Inter'] text-sm">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full focus:ring-1 focus:ring-[#005f6a]/30 transition-all text-sm outline-none" placeholder="Search questions, IDs, or topics..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-400 hover:text-[#007a87] transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-slate-600 dark:text-slate-400 hover:text-[#007a87] transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-slate-200/50"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="font-semibold text-xs text-on-surface">Administrator</p>
+<p class="text-[10px] text-slate-500">Superuser</p>
+</div>
+<img alt="Administrator" class="w-8 h-8 rounded-full border border-slate-200" data-alt="professional portrait of a medical administrator in a clean office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALMwB559WF6jGplHm3FcjT15Arv57XLYoNcaG4_eMSCZXjmWoPP1HBy-rNac9AViG4t4ptMG1hpVOH1qqDc9MyqmGBdonuSA43cOe5oflDETSYiHR_XFUpfT8hEwCAUCTAwvHeHa0Zo8vUz99S2v7mKgX93WTMo-9tEZ03TNw4lD1zpzwCWxChNGRnCCZqdjch1DRXa0kmc6LxImBQdiSeL1clIQ3tQk4zHRtTmkR0jePFH-mzrzja1KGZXZ_IG_b6bDuC22xGFE4G"/>
+</div>
+</div>
+</header>
+<main class="pl-64 min-h-screen">
+<div class="p-8 space-y-8">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight text-primary font-headline">Question Bank</h2>
+<p class="text-on-surface-variant mt-2 font-body">Manage the core clinical curriculum for FPH certification.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest text-primary border border-outline-variant/20 rounded-xl font-semibold hover:bg-surface-container-low transition-colors editorial-shadow">
+<span class="material-symbols-outlined">upload_file</span>
+                        Bulk Import
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-bold editorial-shadow hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_circle</span>
+                        Add New Question
+                    </button>
+</div>
+</div>
+<!-- Filters Area -->
+<div class="flex flex-wrap items-center gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Area:</span>
+<select class="bg-transparent border-none text-sm focus:ring-0 cursor-pointer font-medium">
+<option>All Themes</option>
+<option>Clinical Pharmacy</option>
+<option>Phytotherapy</option>
+<option>Recipe Validation</option>
+<option>Triage</option>
+</select>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Type:</span>
+<select class="bg-transparent border-none text-sm focus:ring-0 cursor-pointer font-medium">
+<option>All Types</option>
+<option>Multiple Choice</option>
+<option>K-PRIM</option>
+</select>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Language:</span>
+<select class="bg-transparent border-none text-sm focus:ring-0 cursor-pointer font-medium">
+<option>All Languages</option>
+<option>DE (German)</option>
+<option>FR (French)</option>
+<option>IT (Italian)</option>
+<option>EN (English)</option>
+</select>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Status:</span>
+<select class="bg-transparent border-none text-sm focus:ring-0 cursor-pointer font-medium">
+<option>Active &amp; Draft</option>
+<option>Active</option>
+<option>Draft</option>
+<option>Archived</option>
+</select>
+</div>
+<button class="ml-auto text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-sm">filter_list_off</span>
+                    Clear Filters
+                </button>
+</div>
+<!-- Main Data Table Container -->
+<div class="bg-surface-container-lowest rounded-2xl editorial-shadow overflow-hidden">
+<!-- Bulk Action Header -->
+<div class="px-6 py-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<input class="w-4 h-4 rounded text-primary border-outline-variant/30 focus:ring-primary/20" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant">2 questions selected</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-1.5 text-sm text-on-surface-variant font-semibold hover:bg-slate-200/50 rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">drive_file_rename_outline</span>
+                            Change Status
+                        </button>
+<button class="px-4 py-1.5 text-sm text-error font-semibold hover:bg-error/5 rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">delete</span>
+                            Delete Permanent
+                        </button>
+</div>
+</div>
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/30">
+<th class="pl-6 pr-4 py-4 w-10"></th>
+<th class="px-4 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest">Question Details</th>
+<th class="px-4 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest">Area</th>
+<th class="px-4 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest">Type</th>
+<th class="px-4 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest text-center">Lang</th>
+<th class="px-4 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest">Status</th>
+<th class="pl-4 pr-6 py-4 text-right"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="pl-6 pr-4 py-5">
+<input checked="" class="w-4 h-4 rounded text-primary border-outline-variant/30 focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-4 py-5 max-w-md">
+<p class="text-sm font-bold text-primary truncate">Phytotherapeutic treatment of acute cystitis</p>
+<p class="text-xs text-on-surface-variant/70 mt-1 truncate">What is the recommended dosage for Arctostaphylos uva-ursi extract when...</p>
+</td>
+<td class="px-4 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#E8F5E9] text-[#2E7D32] uppercase tracking-tighter">Phytotherapy</span>
+</td>
+<td class="px-4 py-5">
+<span class="text-xs font-medium text-on-secondary-container">Multiple Choice</span>
+</td>
+<td class="px-4 py-5 text-center">
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container rounded px-2 py-1">DE</span>
+</td>
+<td class="px-4 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+<span class="text-xs font-bold text-emerald-700">Active</span>
+</div>
+</td>
+<td class="pl-4 pr-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Edit">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors" title="Delete">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="pl-6 pr-4 py-5">
+<input class="w-4 h-4 rounded text-primary border-outline-variant/30 focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-4 py-5 max-w-md">
+<p class="text-sm font-bold text-primary truncate">Pharmacokinetic interactions in Geriatric patients</p>
+<p class="text-xs text-on-surface-variant/70 mt-1 truncate">Identify the correct statements regarding the Beers Criteria for elderly individuals...</p>
+</td>
+<td class="px-4 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#E1F5FE] text-[#0277BD] uppercase tracking-tighter">Clinical Pharmacy</span>
+</td>
+<td class="px-4 py-5">
+<span class="text-xs font-medium text-on-secondary-container">K-PRIM</span>
+</td>
+<td class="px-4 py-5 text-center">
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container rounded px-2 py-1">FR</span>
+</td>
+<td class="px-4 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+<span class="text-xs font-bold text-emerald-700">Active</span>
+</div>
+</td>
+<td class="pl-4 pr-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="pl-6 pr-4 py-5">
+<input checked="" class="w-4 h-4 rounded text-primary border-outline-variant/30 focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-4 py-5 max-w-md">
+<p class="text-sm font-bold text-primary truncate">Recipe Validation: High-risk Prescription</p>
+<p class="text-xs text-on-surface-variant/70 mt-1 truncate">A prescription for Methotrexate 10mg once daily is presented. What is the action...</p>
+</td>
+<td class="px-4 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#FFF3E0] text-[#EF6C00] uppercase tracking-tighter">Recipe Validation</span>
+</td>
+<td class="px-4 py-5">
+<span class="text-xs font-medium text-on-secondary-container">Multiple Choice</span>
+</td>
+<td class="px-4 py-5 text-center">
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container rounded px-2 py-1">IT</span>
+</td>
+<td class="px-4 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
+<span class="text-xs font-bold text-slate-500">Draft</span>
+</div>
+</td>
+<td class="pl-4 pr-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="pl-6 pr-4 py-5">
+<input class="w-4 h-4 rounded text-primary border-outline-variant/30 focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-4 py-5 max-w-md">
+<p class="text-sm font-bold text-primary truncate">Triage Protocols for Ocular Pain</p>
+<p class="text-xs text-on-surface-variant/70 mt-1 truncate">According to the FPH triage guidelines, which of these symptoms requires immediate referral...</p>
+</td>
+<td class="px-4 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#F3E5F5] text-[#7B1FA2] uppercase tracking-tighter">Triage</span>
+</td>
+<td class="px-4 py-5">
+<span class="text-xs font-medium text-on-secondary-container">Multiple Choice</span>
+</td>
+<td class="px-4 py-5 text-center">
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container rounded px-2 py-1">EN</span>
+</td>
+<td class="px-4 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+<span class="text-xs font-bold text-emerald-700">Active</span>
+</div>
+</td>
+<td class="pl-4 pr-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 (Archived) -->
+<tr class="hover:bg-slate-50/80 transition-colors group bg-slate-50/30">
+<td class="pl-6 pr-4 py-5">
+<input class="w-4 h-4 rounded text-primary border-outline-variant/30 focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-4 py-5 max-w-md opacity-60">
+<p class="text-sm font-bold text-primary truncate">Historical Law: Pharmacy Act 2012</p>
+<p class="text-xs text-on-surface-variant/70 mt-1 truncate">Obsolete regulatory framework for community pharmacy storage...</p>
+</td>
+<td class="px-4 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#ECEFF1] text-[#455A64] uppercase tracking-tighter">Regulatory</span>
+</td>
+<td class="px-4 py-5">
+<span class="text-xs font-medium text-on-secondary-container">Multiple Choice</span>
+</td>
+<td class="px-4 py-5 text-center">
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container rounded px-2 py-1">DE</span>
+</td>
+<td class="px-4 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+<span class="text-xs font-bold text-red-700">Archived</span>
+</div>
+</td>
+<td class="pl-4 pr-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">restore</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination & Stats Footer -->
+<div class="px-6 py-4 bg-slate-50/50 flex items-center justify-between">
+<p class="text-xs text-on-surface-variant font-medium">
+                        Showing <span class="font-bold text-on-surface">1 - 5</span> of <span class="font-bold text-on-surface">1,248</span> questions
+                    </p>
+<div class="flex items-center gap-2">
+<button class="p-1.5 text-slate-400 hover:text-primary transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white text-xs font-bold">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-slate-200 text-xs font-bold transition-colors">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-slate-200 text-xs font-bold transition-colors">3</button>
+<span class="text-xs px-1 text-slate-400">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-slate-200 text-xs font-bold transition-colors">250</button>
+</div>
+<button class="p-1.5 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dashboard Stats Overview (Bento Grid Style) -->
+<div class="grid grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-xl">library_books</span>
+<span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+12 Today</span>
+</div>
+<p class="text-2xl font-extrabold text-on-surface">1,248</p>
+<p class="text-xs font-semibold text-on-surface-variant mt-1 uppercase tracking-wider">Total Questions</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-tertiary bg-tertiary/10 p-2 rounded-xl">translate</span>
+<span class="text-[10px] font-bold text-on-surface-variant bg-slate-100 px-2 py-0.5 rounded-full">4 Languages</span>
+</div>
+<p class="text-2xl font-extrabold text-on-surface">88%</p>
+<p class="text-xs font-semibold text-on-surface-variant mt-1 uppercase tracking-wider">Multilingual Coverage</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow border-l-4 border-primary">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-xl">verified</span>
+</div>
+<p class="text-2xl font-extrabold text-on-surface">1,102</p>
+<p class="text-xs font-semibold text-on-surface-variant mt-1 uppercase tracking-wider">Validated Items</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-error bg-error/10 p-2 rounded-xl">warning</span>
+<span class="text-[10px] font-bold text-error bg-error/5 px-2 py-0.5 rounded-full">Critical</span>
+</div>
+<p class="text-2xl font-extrabold text-on-surface">14</p>
+<p class="text-xs font-semibold text-on-surface-variant mt-1 uppercase tracking-wider">Flagged for Review</p>
+</div>
+</div>
+</div>
+</main>
+</body></html>

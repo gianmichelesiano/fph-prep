@@ -1,0 +1,169 @@
+{
+  "common": {
+    "back": "Indietro", "save": "Salva", "cancel": "Annulla", "delete": "Elimina",
+    "edit": "Modifica", "search": "Cerca", "filter": "Filtra", "loading": "Caricamento...",
+    "error": "Errore", "confirm": "Conferma", "yes": "Sì", "no": "No", "close": "Chiudi",
+    "create": "Crea", "add": "Aggiungi", "import": "Importa", "export": "Esporta",
+    "approve": "Approva", "discard": "Scarta", "preview": "Anteprima", "status": "Stato",
+    "actions": "Azioni", "total": "Totale", "of": "di", "questions": "domande",
+    "minutes": "minuti", "free": "Gratuito", "premium": "Premium", "draft": "Bozza",
+    "active": "Attivo", "archived": "Archiviato", "retry": "Riprova",
+    "saved": "Salvato ✓", "saving": "Salvataggio...", "saveError": "Errore salvataggio"
+  },
+  "nav": {
+    "home": "Home", "dashboard": "Dashboard", "stats": "Statistiche",
+    "upgrade": "Sblocca Premium", "settings": "Impostazioni",
+    "logout": "Esci", "admin": "Admin",
+    "getPremium": "Ottieni Premium", "fphCandidate": "Candidato FPH", "fphPremium": "FPH Premium"
+  },
+  "auth": {
+    "email": "Email", "password": "Password", "confirmPassword": "Conferma password",
+    "fullName": "Nome completo", "login": "Accedi", "register": "Registrati",
+    "loginTitle": "Accedi a FPH Prep", "registerTitle": "Crea il tuo account",
+    "orContinueWith": "oppure", "googleLogin": "Accedi con Google",
+    "googleRegister": "Registrati con Google", "noAccount": "Non hai un account?",
+    "hasAccount": "Hai già un account?", "registerLink": "Registrati", "loginLink": "Accedi",
+    "checkEmail": "Controlla la tua email!",
+    "checkEmailDesc": "Ti abbiamo inviato un link di conferma. Clicca per attivare il tuo account.",
+    "goToLogin": "Vai al login",
+    "errors": {
+      "invalidCredentials": "Email o password non corretti",
+      "emailNotConfirmed": "Controlla la tua email per confermare l'account",
+      "passwordMismatch": "Le password non coincidono",
+      "passwordTooShort": "La password deve avere almeno 6 caratteri",
+      "requiredField": "Questo campo è obbligatorio",
+      "generic": "Errore di accesso. Riprova."
+    }
+  },
+  "landing": {
+    "heroTitle": "Supera l'esame FPH al primo tentativo",
+    "heroSubtitle": "Simulazioni d'esame realistiche, tracking progressi e spiegazioni dettagliate per farmacisti specialisti in Svizzera.",
+    "tryFree": "Prova gratis", "learnMore": "Scopri di più",
+    "featuresTitle": "Tutto quello che ti serve per prepararti",
+    "feature1Title": "Simulazioni realistiche",
+    "feature1Desc": "100 domande per simulazione sulle 9 aree tematiche FPH. Multipla scelta e K-PRIM.",
+    "feature2Title": "Tracking progressi",
+    "feature2Desc": "Monitora i risultati per area, identifica i punti deboli e migliora sessione dopo sessione.",
+    "feature3Title": "Spiegazioni dettagliate",
+    "feature3Desc": "Ogni risposta include una motivazione completa con il ragionamento clinico.",
+    "feature4Title": "9 aree tematiche",
+    "feature4Desc": "Copertura completa di tutte le aree FPH Offizin: da validazione ricette a galenica.",
+    "howItWorksTitle": "Come funziona",
+    "step1": "Registrati gratuitamente", "step1Desc": "Crea il tuo account in 30 secondi.",
+    "step2": "Prova gratis", "step2Desc": "Accedi a 2 simulazioni complete gratuite.",
+    "step3": "Sblocca tutto", "step3Desc": "Un pagamento unico per tutte le simulazioni.",
+    "pricingTitle": "Un investimento per la tua carriera",
+    "freeTitle": "Gratuito", "freeDesc": "Per iniziare",
+    "premiumTitle": "Accesso completo", "premiumPrice": "89 CHF", "premiumPriceDesc": "pagamento unico",
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Quanto dura l'accesso?", "faq1A": "L'accesso è permanente. Paghi una volta, accedi per sempre inclusi aggiornamenti.",
+    "faq2Q": "È possibile avere un rimborso?", "faq2A": "Sì, rimborso completo entro 14 giorni dall'acquisto.",
+    "faq3Q": "In quali lingue è disponibile?", "faq3A": "Interfaccia in IT, DE, FR, EN. Le simulazioni sono nelle lingue dell'esame.",
+    "faq4Q": "Le domande sono aggiornate?", "faq4A": "Sì, aggiornate regolarmente secondo le ultime linee guida FPH."
+  },
+  "dashboard": {
+    "title": "Le mie simulazioni", "completed": "completate",
+    "passThreshold": "Soglia superamento: 67/100 (≈ 67%)",
+    "startTest": "Inizia", "continueTest": "Continua", "retakeTest": "Ripeti",
+    "locked": "Bloccato", "unlockBanner": "Sblocca tutte le simulazioni", "unlockCta": "Sblocca ora",
+    "greetingMorning": "Buongiorno", "greetingAfternoon": "Buon pomeriggio", "greetingEvening": "Buona sera",
+    "subtitle": "Continua la preparazione per l'Esame Federale di Farmacia FPH.",
+    "globalCompletion": "Completamento Globale",
+    "globalCompletionSub": "I tuoi progressi generali in tutti i moduli di simulazione.",
+    "simulationsCompleted": "Simulazioni Completate",
+    "readinessIndicator": "Indicatore di Prontezza",
+    "readinessSub": "Basato sulle tue performance e la tua costanza recenti.",
+    "simulationModules": "Moduli di Simulazione",
+    "allAreas": "Tutte le Aree", "filterPending": "In Attesa", "filterCompleted": "Completati",
+    "notStarted": "Non Iniziato", "premiumContent": "Contenuto Premium", "unattempted": "Non Tentato",
+    "reviewResult": "Rivedi Risultati", "resume": "Riprendi", "startExam": "Inizia Esame",
+    "upgradeBtn": "Upgrade", "questions": "Domande", "inProgress": "In Corso",
+    "passedLabel": "Superato", "failedLabel": "Non Superato",
+    "copyright": "© 2024 FPH Prep. Tutti i diritti riservati.",
+    "curriculumInfo": "Info Curriculum", "fphWebsite": "Sito FPH Ufficiale", "helpCenter": "Centro Assistenza"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "subtitle": "Personalizza la tua esperienza su FPH Prep.",
+    "langTitle": "Lingua dell'interfaccia",
+    "langSub": "Seleziona la lingua in cui visualizzare la piattaforma.",
+    "langSaved": "Lingua salvata correttamente."
+  },
+  "quiz": {
+    "question": "Domanda", "back": "Indietro", "next": "Avanti", "submit": "Consegna",
+    "answeredOf": "risposte", "timeExpired": "Tempo scaduto! Salvataggio in corso...",
+    "notFound": "Test non trovato", "goHome": "Torna alla home"
+  },
+  "results": {
+    "title": "Risultati", "passed": "Superato!", "failed": "Non superato (soglia 67%)",
+    "correct": "corrette", "retake": "Ripeti il test", "home": "Home",
+    "reviewTitle": "Revisione domande", "motivation": "Motivazione", "notFound": "Risultati non trovati"
+  },
+  "stats": {
+    "title": "Statistiche", "subtitle": "Riepilogo progressi", "globalScore": "Media generale",
+    "correctOf": "corrette su", "totalCompleted": "Test completati", "remaining": "Da fare",
+    "totalQuestions": "Domande fatte", "byArea": "Per area tematica",
+    "weakTopics": "Argomenti da ripassare", "weakTopicsSubtitle": "Ordinati per % errori",
+    "toReview": "Da ripassare", "wrong": "errate su", "tests": "test",
+    "noData": "Nessun dato ancora", "noDataDesc": "Completa almeno un test per vedere le tue statistiche di performance.",
+    "goToTests": "Vai ai test",
+    "performanceAnalytics": "Performance Analytics",
+    "statsSubtitle": "Una panoramica clinica del tuo percorso verso la certificazione FPH.",
+    "examReadiness": "Prontezza Esame", "target67": "Obiettivo 67%",
+    "testsDone": "Test svolti",
+    "performanceTrends": "Andamento Performance",
+    "scorePerSim": "Punteggio per simulazione completata",
+    "mockExams": "Esami Simulati",
+    "knowledgeMap": "Mappa delle Conoscenze",
+    "criticalPoints": "Punti Critici",
+    "noCritical": "Nessun punto critico identificato.",
+    "nextStep": "Prossimo passo",
+    "reviewCompleted": "Rivedi i test completati",
+    "wrongOutOf": "{{wrong}} errate su {{total}}",
+    "remainingSims": "{{n}} simulazioni rimanenti"
+  },
+  "upgrade": {
+    "title": "Sblocca l'accesso completo", "subtitle": "Tutto quello che ti serve per superare l'esame FPH",
+    "price": "89 CHF", "priceDesc": "pagamento unico · accesso a vita",
+    "cta": "Sblocca ora", "processing": "Reindirizzamento...",
+    "lockedTitle": "Simulazione premium", "lockedDesc": "Questa simulazione richiede l'accesso completo.",
+    "alreadyPremium": "Hai già l'accesso completo!", "guarantee": "Rimborso garantito entro 14 giorni",
+    "features": {
+      "allSims": "Tutte le simulazioni d'esame",
+      "stats": "Statistiche avanzate per area",
+      "explanations": "Spiegazioni complete per ogni domanda",
+      "updates": "Aggiornamenti inclusi a vita",
+      "lifetime": "Accesso permanente"
+    },
+    "faq": {
+      "access": { "q": "Quanto dura l'accesso?", "a": "Permanente. Paghi una volta, accedi per sempre." },
+      "refund": { "q": "Posso avere un rimborso?", "a": "Sì, rimborso completo entro 14 giorni." },
+      "update": { "q": "Gli aggiornamenti sono inclusi?", "a": "Sì, tutti gli aggiornamenti futuri inclusi." }
+    }
+  },
+  "payment": {
+    "successTitle": "Pagamento completato!",
+    "successDesc": "Il tuo account è stato aggiornato ad accesso completo. Ora puoi accedere a tutte le simulazioni.",
+    "startStudying": "Inizia a studiare", "loading": "Aggiornamento account..."
+  },
+  "admin": {
+    "title": "Pannello Admin", "dashboard": "Dashboard", "questions": "Domande",
+    "simulations": "Simulazioni", "users": "Utenti", "generate": "Genera AI",
+    "totalUsers": "Utenti totali", "premiumUsers": "Utenti premium",
+    "revenue": "Revenue totale", "completedQuizzes": "Quiz completati",
+    "conversion": "Tasso conversione", "registrationTrend": "Registrazioni (30 giorni)",
+    "newQuestion": "Nuova domanda", "importJson": "Importa JSON", "exportJson": "Esporta JSON",
+    "newSimulation": "Nuova simulazione", "generateQuestions": "Genera domande",
+    "area": "Area", "type": "Tipo", "language": "Lingua", "questionText": "Testo domanda",
+    "options": "Opzioni", "correctAnswer": "Risposta corretta", "explanation": "Spiegazione",
+    "topic": "Tema", "timer": "Timer (minuti)", "isFree": "Gratuita", "questionCount": "N° domande",
+    "generateBtn": "Genera", "generating": "Generazione in corso...",
+    "approveAll": "Approva tutte", "generatedQuestions": "Domande generate",
+    "count": "Numero domande", "role": "Argomento"
+  },
+  "areas": {
+    "1": "Validazione ricette", "2": "Fitoterapia", "3": "Medicina complementare",
+    "4": "Farmacia Clinica", "5": "Anamnesi e terapia", "6": "Preparazione medicinali",
+    "7": "Risultati di laboratorio", "8": "Situazioni d'emergenza", "9": "Vaccinazioni e prelievi"
+  }
+}

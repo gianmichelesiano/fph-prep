@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Stats | The Clinical Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9fa",
+                    "on-surface-variant": "#3e494a",
+                    "primary-fixed": "#97f0ff",
+                    "surface-variant": "#e1e3e4",
+                    "outline-variant": "#bdc8cb",
+                    "on-primary-fixed-variant": "#004f57",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#007a87",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-fixed": "#ffdcc5",
+                    "surface-container": "#edeeef",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#d3e6e9",
+                    "secondary": "#506164",
+                    "on-surface": "#191c1d",
+                    "on-tertiary-fixed": "#301400",
+                    "tertiary-container": "#9f5f2b",
+                    "on-primary-fixed": "#001f24",
+                    "on-secondary-fixed": "#0d1e21",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb782",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed-variant": "#394a4c",
+                    "on-tertiary-fixed-variant": "#6f3805",
+                    "secondary-fixed-dim": "#b8cacd",
+                    "inverse-primary": "#7ad4e2",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary-container": "#56676a",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-container": "#d5f9ff",
+                    "outline": "#6e797b",
+                    "surface-tint": "#006874",
+                    "on-background": "#191c1d",
+                    "primary": "#005f6a",
+                    "on-tertiary-container": "#fff0e7",
+                    "tertiary": "#824715",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#7ad4e2",
+                    "secondary-container": "#d3e6e9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gap { margin-bottom: 2.5rem; }
+        .no-line-card { transition: transform 0.2s ease; }
+        .no-line-card:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0px_12px_32px_rgba(25,28,29,0.05)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold text-[#005f6a] dark:text-[#007a87] font-headline tracking-tight">FPH Prep</div>
+<div class="hidden md:flex gap-8 items-center text-slate-500 dark:text-slate-400 font-['Manrope'] font-semibold">
+<a class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded" href="#">Dashboard</a>
+<a class="text-[#005f6a] border-b-2 border-[#005f6a] pb-1" href="#">Global Stats</a>
+<a class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded" href="#">Study Areas</a>
+<a class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded" href="#">Upgrade</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#005f6a] cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-[#005f6a] cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<div class="flex pt-16 min-h-screen">
+<aside class="hidden md:flex flex-col h-screen w-64 p-4 fixed left-0 bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm antialiased overflow-y-auto">
+<div class="mb-8 px-2 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional female pharmacist wearing a white lab coat with a warm approachable smile in a clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnIoysIcfVAY2vMFr9kNEeCg0jV-NEJMXPB2bLfv7L6nBHl2erJTo6GP2ePL1rEfc0mkMtEklMelt2e8TohyawlMF9ytPKDY42BgDX3uertDs7Yy653_Vo1XvBaSqXcarVLKfFSb5Zsu-0MbzOOHNm4nL7pwtXUB3O7YGzRr6bTsBrZupd9GtKlG_rwsa81tWxiutb0yIyEIfSMGFmjC6ypjbFYl_Pz-AT3SeHF-gnVjiX72sgqfObRDMYXuSnm4AYc2o27cmsSext"/>
+</div>
+<div>
+<p class="font-black text-[#005f6a] text-lg leading-tight">FPH Candidate</p>
+<p class="text-slate-600 dark:text-slate-400 text-xs">Clinical Pharmacy</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#005f6a] text-white rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span>Global Stats</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+<span>Study Areas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
+<span>Upgrade</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-primary-container/10 rounded-xl">
+<p class="text-primary font-semibold mb-2">Ready for trial?</p>
+<button class="w-full py-2 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl text-xs font-bold uppercase tracking-wider">Start Practice</button>
+</div>
+</aside>
+<main class="flex-1 md:ml-64 p-6 lg:p-12 max-w-7xl mx-auto">
+<header class="editorial-gap">
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface tracking-tighter mb-2">Performance Analytics</h1>
+<p class="text-lg text-secondary font-light max-w-2xl">A clinical overview of your journey towards FPH certification. Precision metrics for the next generation of Swiss pharmacists.</p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col items-center justify-center text-center shadow-[0px_12px_32px_rgba(25,28,29,0.05)] border border-outline-variant/10">
+<h3 class="text-secondary text-sm font-bold uppercase tracking-widest mb-6">Exam Readiness</h3>
+<div class="relative w-48 h-48 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.92" stroke-dashoffset="121.6" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-5xl font-headline font-black text-primary">78%</span>
+<span class="text-xs text-secondary font-semibold uppercase">Target 85%</span>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-2 gap-4 w-full">
+<div class="p-4 bg-surface-container-low rounded-xl">
+<p class="text-2xl font-headline font-bold text-on-surface">142h</p>
+<p class="text-[10px] text-secondary uppercase font-bold tracking-tighter">Total Study</p>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl">
+<p class="text-2xl font-headline font-bold text-on-surface">2.4k</p>
+<p class="text-[10px] text-secondary uppercase font-bold tracking-tighter">Questions</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-on-surface text-xl font-headline font-bold">Performance Trends</h3>
+<p class="text-secondary text-sm">Monthly progression across mock sessions</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold text-primary shadow-sm">Mock Exams</span>
+<span class="px-3 py-1 bg-white/50 rounded-full text-[10px] font-bold text-secondary">Global Avg</span>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-2 px-2 relative">
+<div class="absolute inset-0 flex flex-col justify-between py-2 text-[10px] text-outline pointer-events-none">
+<div class="border-b border-outline-variant/20 w-full flex justify-between"><span>100%</span></div>
+<div class="border-b border-outline-variant/20 w-full flex justify-between"><span>75%</span></div>
+<div class="border-b border-outline-variant/20 w-full flex justify-between"><span>50%</span></div>
+<div class="border-b border-outline-variant/20 w-full flex justify-between"><span>25%</span></div>
+</div>
+<div class="w-full flex items-end justify-around h-48 relative z-10">
+<div class="group relative flex flex-col items-center gap-2">
+<div class="bg-primary/20 w-12 rounded-t-lg h-24 group-hover:bg-primary/40 transition-all"></div>
+<span class="text-[10px] font-bold text-secondary">JAN</span>
+</div>
+<div class="group relative flex flex-col items-center gap-2">
+<div class="bg-primary/30 w-12 rounded-t-lg h-32 group-hover:bg-primary/50 transition-all"></div>
+<span class="text-[10px] font-bold text-secondary">FEB</span>
+</div>
+<div class="group relative flex flex-col items-center gap-2">
+<div class="bg-primary/50 w-12 rounded-t-lg h-28 group-hover:bg-primary/70 transition-all"></div>
+<span class="text-[10px] font-bold text-secondary">MAR</span>
+</div>
+<div class="group relative flex flex-col items-center gap-2">
+<div class="bg-primary/70 w-12 rounded-t-lg h-36 group-hover:bg-primary/90 transition-all"></div>
+<span class="text-[10px] font-bold text-secondary">APR</span>
+</div>
+<div class="group relative flex flex-col items-center gap-2">
+<div class="bg-primary w-12 rounded-t-lg h-44 transition-all"></div>
+<span class="text-[10px] font-bold text-secondary">MAY</span>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-8 shadow-[0px_12px_32px_rgba(25,28,29,0.05)]">
+<h3 class="text-on-surface text-xl font-headline font-bold mb-6">Knowledge Map</h3>
+<div class="space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span class="text-[#005f6a]">Clinical Pharmacy</span>
+<span class="text-secondary">92%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span class="text-[#824715]">Phytotherapy</span>
+<span class="text-secondary">64%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[64%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span class="text-[#007a87]">Recipe Validation</span>
+<span class="text-secondary">78%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[78%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span class="text-secondary">Legislation</span>
+<span class="text-secondary">85%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[85%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span class="text-[#ba1a1a]">Pharmacology</span>
+<span class="text-secondary">42%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error w-[42%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col gap-6">
+<div class="bg-error-container/30 rounded-xl p-8 border-l-4 border-error">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+<h3 class="text-on-error-container text-lg font-headline font-bold">Critical Weak Points</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-on-surface">Drug-Drug Interactions</p>
+<p class="text-[10px] text-secondary uppercase tracking-wider">Clinical Pharmacy</p>
+</div>
+<span class="text-xs font-black text-error">24%</span>
+</li>
+<li class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-on-surface">Toxicology of Alkaloids</p>
+<p class="text-[10px] text-secondary uppercase tracking-wider">Phytotherapy</p>
+</div>
+<span class="text-xs font-black text-error">31%</span>
+</li>
+<li class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-on-surface">Opiate Legal Dispensing</p>
+<p class="text-[10px] text-secondary uppercase tracking-wider">Legislation</p>
+</div>
+<span class="text-xs font-black text-error">38%</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex items-center justify-between group cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Next Step</p>
+<p class="text-on-surface font-headline font-bold">Review Pharmacology Labs</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="w-full py-8 mt-auto bg-slate-50 dark:bg-slate-950 border-t border-slate-200/20 font-['Inter'] text-xs uppercase tracking-widest">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-screen-2xl mx-auto gap-4">
+<div class="text-slate-400">© 2024 FPH Prep. Swiss Pharmacy Excellence.</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-[#007a87] transition-opacity opacity-80 hover:opacity-100" href="#">© 2024 FPH Prep. Swiss Pharmacy Excellence.</a>
+<a class="text-slate-400 hover:text-[#007a87] transition-opacity opacity-80 hover:opacity-100" href="#">© 2024 FPH Prep. Swiss Pharmacy Excellence.</a>
+<a class="text-slate-400 hover:text-[#007a87] transition-opacity opacity-80 hover:opacity-100" href="#">© 2024 FPH Prep. Swiss Pharmacy Excellence.</a>
+</div>
+</div>
+</footer>
+</body></html>

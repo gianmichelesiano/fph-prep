@@ -1,0 +1,24 @@
+{
+  "id": "simulazione-20260308-2104",
+  "title": "Simulazione Esame – 08/03/2026 21:04",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 4,
+      "tema": "Farmacia clinica - Patologie respiratorie",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla gestione della tosse in età pediatrica e adulta, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "La codeina e il destrometorfano non sono raccomandati per i bambini di età inferiore ai 12 anni.",
+        "2": "La tosse è considerata cronica negli adulti se persiste per più di 8 settimane.",
+        "3": "L'uso concomitante di antitussivi ed espettoranti è raccomandato per accelerare la guarigione.",
+        "4": "Il miele può ridurre la frequenza e la gravità della tosse nei bambini sopra l'anno di età."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Codeina e destrometorfano sono sconsigliati sotto i 12 anni. La tosse è cronica dopo 8 settimane negli adulti. La combinazione antitussivo/espettorante non ha senso clinico. Il miele è efficace sopra i 12 mesi.",
+      "numero": 19,
+      "id": "q19"
+    }
+  ]
+}

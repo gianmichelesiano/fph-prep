@@ -1,0 +1,1288 @@
+{
+  "id": "simulazione-20260321-1638",
+  "title": "Simulazione Esame – 21/03/2026 16:38",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 75 anni con insufficienza cardiaca assume regolarmente Lisinopril e Idroclorotiazide [1]. Si \npresenta in farmacia con una ricetta per Diclofenac 75 mg per un dolore acuto [2]. Qual è il rischio clinico principale \nlegato a questa combinazione ('Triple Whammy')?",
+      "opzioni": {
+        "A": "Aumento del rischio di emorragie gastrointestinali dovute all'effetto sinergico tra FANS e ACE-inibitori.",
+        "B": "Aumento del rischio di insufficienza renale acuta a causa della riduzione drastica della pressione di \nfiltrazione glomerulare [3, 4].",
+        "C": "Crisi ipertensiva causata dall'antagonismo del FANS sull'effetto del diuretico.",
+        "D": "Ipokaliemia severa dovuta alla perdita di potassio indotta dal diuretico e potenziata dal FANS."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La combinazione di un inibitore del sistema RAAS, un diuretico e un FANS è definita 'Triple Whammy' [4].\nL'ACE-inibitore dilata l'arteriola efferente, il diuretico riduce il volume plasmatico e il FANS costringe l'arteriola \nafferente tramite l'inibizione delle prostaglandine [3]. Questo annulla i meccanismi compensatori renali, portando a una \ncaduta della filtrazione glomerulare [3]. L'iperkaliemia, e non l'ipokaliemia, è il rischio elettrolitico associato agli \ninibitori del RAAS [1, 2].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - controindicazioni",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 70 anni assume Escitalopram 20 mg/die [5]. Le viene prescritto Clarithromycin per \nun'infezione [6]. Valuta la validità delle seguenti affermazioni basandoti sul rischio di prolungamento dell'intervallo \nQT:",
+      "opzioni": {
+        "1": "L'Escitalopram è associato a un rischio di prolungamento del QT dose-dipendente, ma il rischio è considerato \ncirca il 50% inferiore rispetto al Citalopram [5].",
+        "2": "L'età superiore ai 65 anni e il sesso femminile sono considerati fattori di rischio indipendenti per lo sviluppo\ndi Torsioni di Punta [7, 8].",
+        "3": "Secondo le Informazioni Professionali svizzere, l'uso concomitante di Escitalopram e Claritromicina è \ngeneralmente controindicato a causa del rischio aritmico additivo [6, 9].",
+        "4": "La Claritromicina agisce come un potente induttore del CYP3A4, riducendo i livelli plasmatici di Escitalopram e \nil rischio di aritmia [6, 10]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1: Vero, studi riportano che l'Escitalopram allunga il QT meno del Citalopram [5]. 2: Vero, età avanzata\ne sesso femminile sono fattori di rischio demografici noti [8, 11]. 3: Vero, le FI svizzere segnalano la controindicazione \nper combinazioni che aumentano il QT [6, 9]. 4: Falso, la claritromicina è un potente inibitore (Red Flag) del CYP3A4, non \nun induttore, e può aumentare i livelli dei substrati [6, 10].",
+      "numero": 2,
+      "id": "q2"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - errori di dosaggio",
+      "tipo": "multipla_scelta",
+      "domanda": "Una giovane donna in terapia cronica con Carbamazepina richiede la contraccezione d'emergenza orale (pillola\ndel giorno dopo) [12]. Qual è la raccomandazione corretta secondo le linee guida IENK [12, 13]?",
+      "opzioni": {
+        "A": "L'uso di Ulipristal acetato è la prima scelta poiché non è influenzato dall'induzione del CYP3A4.",
+        "B": "Si consiglia l'uso della spirale al rame come metodo più efficace; in alternativa, raddoppiare la dose di \nLevonorgestrel (3 mg invece di 1.5 mg) [12, 13].",
+        "C": "Consegnare la dose standard di Levonorgestrel 1.5 mg; l'effetto di induzione della carbamazepina non è rilevante\nper una dose singola.",
+        "D": "Attendere almeno 48 ore dalla sospensione della carbamazepina prima di somministrare il contraccettivo \nd'emergenza [14, 15]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La carbamazepina è un potente induttore del CYP3A4 [10, 15]. Essa accelera il metabolismo del \nlevonorgestrel, riducendone l'efficacia [12, 16]. La spirale al rame è la prima scelta; se non possibile, è necessario \nraddoppiare la dose di Levonorgestrel (3 mg) [12, 13, 16]. L'Ulipristal acetato non è raccomandato in presenza di induttori \nenzimatici [13]. L'effetto induttivo può persistere fino a 4 settimane dopo lo stop del farmaco [14, 15].",
+      "numero": 3,
+      "id": "q3"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "kprim",
+      "domanda": "Un paziente che assume Sertralina (SSRI) riceve una prescrizione di Linezolid per un'infezione grave [17, \n18]. Valuta le seguenti affermazioni riguardanti il rischio di Sindrome Serotoninergica (S-Syn):",
+      "opzioni": {
+        "1": "Il Linezolid contribuisce al rischio serotoninergico perché agisce come inibitore delle monoamino ossidasi \n(MAO-I) [17, 19].",
+        "2": "Secondo i criteri di Hunter, i sintomi tipici includono tremore, iperreflessia e clono [20, 21].",
+        "3": "L'uso concomitante di un SSRI e di un Triptano per l'emicrania è assolutamente controindicato per l'alto rischio\ndi S-Syn [19, 22].",
+        "4": "In caso di sospetta S-Syn, è fondamentale sospendere immediatamente tutti i farmaci serotoninergici; i sintomi \nsolitamente si risolvono entro 24 ore [23, 24]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, il linezolid ha proprietà MAO-I che aumentano i livelli di serotonina [17, 19]. 2: Vero, sono \nsegni neuromuscolari classici per la diagnosi [20, 21]. 3: Falso, l'associazione SSRI e Triptano è generalmente considerata \nsicura/accettabile poiché i triptani non sono 'serotonin spreader' [19, 22, 25]. 4: Vero, la gestione immediata prevede lo \nstop dei farmaci e il monitoraggio [23].",
+      "numero": 4,
+      "id": "q4"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - polifarmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante la validazione di un piano terapeutico, si nota che un paziente assume Simvastatina 40 mg e riceve \nuna nuova prescrizione di Claritromicina [7]. Qual è l'intervento più appropriato del farmacista?",
+      "opzioni": {
+        "A": "Proseguire entrambe le terapie, poiché le statine non subiscono interazioni metaboliche con i macrolidi.",
+        "B": "Sospendere temporaneamente la statina (statin pause) per la durata del ciclo di claritromicina per evitare il \nrischio di rabdomiolisi [7].",
+        "C": "Assumere i farmaci a distanza di 12 ore per evitare l'interazione a livello intestinale.",
+        "D": "Raddoppiare la dose di statina per compensare l'inibizione enzimatica causata dalla Claritromicina [10]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La claritromicina è un potente inibitore del CYP3A4 (Red Flag) [10]. La simvastatina è un substrato \nsensibile del CYP3A4 [26, 27]. L'uso concomitante aumenta massicciamente l'esposizione alla statina, elevando il rischio di \ntossicità muscolare grave [6, 7]. La sospensione temporanea è la strategia raccomandata per gestire questa interazione [7].",
+      "numero": 5,
+      "id": "q5"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - validazione ricette mediche",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione della sicurezza renale e delle interazioni elettrolitiche, valuta la correttezza \ndelle seguenti affermazioni:",
+      "opzioni": {
+        "1": "L'uso concomitante di un sartano (es. Telmisartan) e Trimethoprim richiede cautela a causa del rischio additivo \ndi iperkaliemia [26, 28].",
+        "2": "In un paziente con insufficienza renale severa (GFR < 30 ml/min), l'uso dei FANS è considerato controindicato \n[2, 4, 29].",
+        "3": "Il Paracetamolo rappresenta un'alternativa sicura per il trattamento del dolore anche in pazienti con \ndisidratazione (exsikkose) [29-31].",
+        "4": "In caso di gastroenterite con vomito e diarrea, i pazienti in terapia con ACE-inibitori dovrebbero raddoppiare \nla dose per proteggere il rene [2, 29]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1: Vero, entrambi i farmaci possono aumentare i livelli di potassio [28]. 2: Vero, i FANS sono \ncontroindicati con GFR < 30 ml/min [2, 4]. 3: Vero, il paracetamolo è indicato come alternativa sicura nel contesto renale \n[29, 31]. 4: Falso, in caso di exsikkose è indicato sospendere temporaneamente gli ACE-inibitori e i diuretici per prevenire\nl'insufficienza renale acuta [29, 31].",
+      "numero": 6,
+      "id": "q6"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - interazioni farmacologiche rilevanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente che ha ricevuto uno stent coronarico assume Clopidogrel. Viene prescritto Omeprazolo per \nprotezione gastrica [32]. Qual è la rilevanza di questa interazione?",
+      "opzioni": {
+        "A": "L'Omeprazolo aumenta il rischio di sanguinamento potenziando l'effetto del Clopidogrel.",
+        "B": "L'Omeprazolo inibisce il CYP2C19, riducendo l'attivazione del Clopidogrel e aumentando il rischio di eventi \ncardiovascolari [32].",
+        "C": "L'interazione non è rilevante poiché l'Omeprazolo agisce solo a livello gastrico.",
+        "D": "Il Pantoprazolo ha lo stesso impatto del Clopidogrel sull'enzima CYP2C19 [32]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il clopidogrel è un profarmaco che richiede l'attivazione tramite il CYP2C19 [32]. L'omeprazolo inibisce\nquesto enzima, riducendo la formazione del metabolita attivo del clopidogrel e la sua efficacia antiaggregante [32]. Il \npantoprazolo è considerato un'alternativa con minore impatto su questa via metabolica [32].",
+      "numero": 7,
+      "id": "q7"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - polifarmacia",
+      "tipo": "kprim",
+      "domanda": "In merito alla combinazione di oppioidi e farmaci depressori del sistema nervoso centrale (SNC), valuta le \nseguenti affermazioni:",
+      "opzioni": {
+        "1": "La combinazione di oppioidi e gabapentinoidi (es. Pregabalin) può aumentare il rischio di depressione \nrespiratoria fatale [33].",
+        "2": "Questa interazione ha guadagnato importanza clinica a causa del crescente uso improprio dei gabapentinoidi \n[33].",
+        "3": "In farmacia è sempre necessario rifiutare la consegna di gabapentinoidi se il paziente assume già un oppioide \n[33].",
+        "4": "La combinazione di oppioidi e benzodiazepine aumenta la d'ampiezza centrale e il rischio di sedazione eccessiva \n[33]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, l'effetto depressivo sul SNC è additivo e potenzialmente pericoloso [33]. 2: Vero, la vigilanza\nè aumentata per i casi di abuso e incidenti critici [33]. 3: Falso, la combinazione richiede una valutazione attenta del \nrischio, ma l'intervento diretto (rifiuto) è indicato solo in casi selezionati, non 'sempre' [33]. 4: Vero, le \nbenzodiazepine potenziano la d'ampiezza centrale degli oppioidi [33].",
+      "numero": 8,
+      "id": "q8"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - piani terapeutici",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente che assume regolarmente Rivaroxaban come anticoagulante desidera acquistare un estratto di \nIperico ad alto contenuto di iperforina [10, 17]. Qual è il rischio principale?",
+      "opzioni": {
+        "A": "Aumento del rischio emorragico per inibizione del metabolismo del Rivaroxaban.",
+        "B": "Perdita di efficacia del Rivaroxaban e aumento del rischio di trombosi a causa dell'induzione del CYP3A4 e della\nP-gp [10, 34].",
+        "C": "Sindrome serotoninergica causata dall'azione combinata dell'Iperico e del Rivaroxaban.",
+        "D": "Nessuna interazione rilevante, poiché il Rivaroxaban non è influenzato dagli induttori enzimatici [26]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'estratto di Iperico ricco di iperforina è un potente induttore (Red Flag) del CYP3A4 e della \nP-glicoproteina [10]. Poiché il Rivaroxaban è un substrato di entrambi i sistemi [26, 27], l'induzione ne accelera \nl'eliminazione, riducendone i livelli plasmatici e l'efficacia anticoagulante [34]. Questo espone la paziente a un grave \nrischio di eventi trombotici.",
+      "numero": 9,
+      "id": "q9"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette e piani terapeutici - controindicazioni",
+      "tipo": "kprim",
+      "domanda": "In merito al rischio di prolungamento del QT in farmacia, valuta le seguenti affermazioni riguardanti i \nfarmaci comuni:",
+      "opzioni": {
+        "1": "Il Domperidone è considerato un farmaco ad alto rischio QT, specialmente in pazienti anziani o a dosaggi elevati\n[27, 35, 36].",
+        "2": "L'Azitromicina è preferibile alla Claritromicina perché non è un inibitore del CYP3A4, pur richiedendo cautela \nper il rischio QT [6, 37].",
+        "3": "Gli antidepressivi triciclici come l'Amitriptilina hanno un rischio QT trascurabile a dosaggi non psichiatrici \n(< 75 mg) [6].",
+        "4": "L'ipokaliemia e l'ipomagnesiemia sono condizioni elettrolitiche che riducono il rischio di aritmie indotte da \nfarmaci [7, 8, 11]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1: Vero, è segnalato con 'Known Risk' per QT e TdP [35, 36]. 2: Vero, l'azitromicina non inibisce il \nCYP3A4, riducendo il rischio di interazioni farmacocinetiche [37]. 3: Vero, studi suggeriscono un basso rischio per dosi non\npsichiatriche [6]. 4: Falso, gli squilibri elettrolitici (specialmente ipokaliemia) aumentano significativamente il rischio \ndi Torsione di Punta [8, 11].",
+      "numero": 10,
+      "id": "q10"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie intestinali - Crohn e Colite Ulcerosa",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 30 anni riferisce diarrea cronica, calo ponderale e dolori addominali segmentali. Quale \ncaratteristica distingue patologicamente il Morbus Crohn dalla Colite Ulcerosa?",
+      "opzioni": {
+        "A": "L'infiammazione è limitata esclusivamente alla mucosa del colon.",
+        "B": "Il coinvolgimento è tipicamente continuo e risale dal retto.",
+        "C": "L'infiammazione è transmurale (wanddurchdringend) e può colpire qualsiasi parte del tratto G/I.",
+        "D": "La complicanza più frequente è il megacolon tossico, raro nel Crohn."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il Morbo di Crohn è caratterizzato da un'infiammazione transmurale e segmentale che può interessare \ntutto il tratto gastrointestinale [1]. La Colite Ulcerosa è invece continua, superficiale (limitata alla mucosa) e interessa\nsolo il colon [1, 2].",
+      "numero": 11,
+      "id": "q11"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Farmacia clinica - PPI e rischi a lungo termine",
+      "tipo": "kprim",
+      "domanda": "Riguardo all'uso cronico di inibitori di pompa protonica (PPI) e ai rischi clinici associati, valutate le \nseguenti affermazioni:",
+      "opzioni": {
+        "1": "L'ipocloridria indotta da PPI può inibire l'assorbimento della vitamina B12, richiedendo monitoraggio \nsoprattutto nei pazienti anziani.",
+        "2": "Nei pazienti con cirrosi epatica avanzata, l'uso di PPI è associato a un rischio significativamente aumentato di\nperitonite batterica spontanea (PBS).",
+        "3": "L'omeprazolo è il PPI di scelta in combinazione con il clopidogrel perché non interferisce con il suo \nmetabolismo.",
+        "4": "L'ipomagnesiemia da PPI è un effetto collaterale comune che si manifesta solitamente entro le prime 48 ore di \nterapia."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "La soppressione dell'acido ostacola il rilascio della B12 dalle proteine [3, 4]. Nella cirrosi, i PPI \naumentano il rischio di PBS (69% vs 31%) [5, 6]. L'omeprazolo va evitato con clopidogrel perché inibisce il CYP2C19 [7, 8]. \nL'ipomagnesiemia compare solitamente dopo almeno 3 mesi di terapia [9, 10].",
+      "numero": 12,
+      "id": "q12"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malattie intestinali - Stipsi da oppioidi (OIC)",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente in terapia cronica con oppioidi per dolori oncologici lamenta stitichezza grave. Quale \nraccomandazione è corretta secondo le linee guida?",
+      "opzioni": {
+        "A": "Utilizzare formatori di massa (Quellmittel) per stimolare fisiologicamente la peristalsi.",
+        "B": "Utilizzare lassativi osmotici (Macrogol o Lattulosio) come prima scelta.",
+        "C": "Sospendere i lassativi dopo una settimana, poiché l'intestino sviluppa tolleranza all'effetto degli oppioidi.",
+        "D": "L'olio di paraffina è il trattamento di elezione per prevenire l'ostruzione intestinale in questi pazienti."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Nella stipsi da oppioidi (OIC) i lassativi osmotici sono la prima scelta [11]. I formatori di massa \n(Quellmittel) sono controindicati perché aumentano il rischio di ostruzione intestinale a causa della ridotta motilità [11, \n12]. L'intestino non sviluppa tolleranza all'effetto costipante degli oppioidi [11].",
+      "numero": 13,
+      "id": "q13"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Legislazione e competenze - Lista B+",
+      "tipo": "kprim",
+      "domanda": "In Svizzera, la dispensazione di lassativi nel quadro delle competenze Lista B+ segue regole specifiche. \nValutate le seguenti affermazioni:",
+      "opzioni": {
+        "1": "Il farmacista può dispensare Macrogol e Sodio picosolfato definendo autonomamente la durata della terapia se non\nindicata nell'IP.",
+        "2": "I preparati di Macrogol in Lista B+ contengono la stessa quantità di principio attivo per dose singola di quelli\nin Lista D.",
+        "3": "La dispensazione B+ richiede una documentazione che permetta la tracciabilità della decisione del farmacista.",
+        "4": "È possibile dispensare farmaci in Lista B+ anche a donne in gravidanza senza consulto medico preventivo."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "Il farmacista può definire la durata in B+ [13]. I preparati B+ (es. Movicol) contengono spesso dosaggi \no confezioni diverse rispetto alla lista D [14, 15]. La documentazione è obbligatoria per legge [16, 17]. La dispensazione \nB+ è generalmente esclusa per donne in gravidanza o allattamento senza consulto medico [18].",
+      "numero": 14,
+      "id": "q14"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Chirurgia bariatrica - Gestione farmacologica",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente sottoposto a bypass gastrico richiede un consiglio per un dolore acuto. Quale di queste \naffermazioni è corretta riguardo alla gestione farmacologica post-operatoria?",
+      "opzioni": {
+        "A": "I FANS (NSAR) possono essere usati a dosaggi ridotti per brevi periodi.",
+        "B": "Le forme farmaceutiche 'Retard' sono preferibili per compensare il transito accelerato.",
+        "C": "I FANS (NSAR) sono controindicati a causa dell'elevato rischio di ulcerazione nel piccolo stomaco residuo.",
+        "D": "Le formulazioni liquide contenenti sorbitolo sono ideali per evitare la sindrome da dumping."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "I FANS sono controindicati post-bypass per il rischio di ulcere anastomotiche e sanguinamenti [19, 20]. \nLe forme retard vanno evitate per il transito alterato [19]. Il sorbitolo può scatenare la sindrome da dumping [19].",
+      "numero": 15,
+      "id": "q15"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Diarrea del viaggiatore - Triage e terapia",
+      "tipo": "kprim",
+      "domanda": "Un cliente torna da un viaggio in Thailandia con diarrea. Valutate le seguenti affermazioni sulla gestione \ndella diarrea del viaggiatore:",
+      "opzioni": {
+        "1": "Il loperamide può essere usato come monoterapia solo in assenza di febbre e sangue nelle feci.",
+        "2": "La durata massima raccomandata per l'automedicazione con loperamide è di 48 ore.",
+        "3": "In caso di decorso grave (incapacità di svolgere attività), l'azitromicina è considerata l'antibiotico di prima \nscelta.",
+        "4": "I probiotici sono raccomandati dalle linee guida AWMF come profilassi efficace per tutti i viaggiatori."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Loperamide richiede assenza di febbre/sangue e max 48h di uso [21-23]. Azitromicina è il gold standard \nempirico per decorsi gravi [22, 24]. Le linee guida non raccomandano i probiotici né per la profilassi né per la terapia \ndella diarrea del viaggiatore [25-28].",
+      "numero": 16,
+      "id": "q16"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Reflusso e Dispepsia - Consulenza al banco",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 65 anni lamenta bruciore epigastrico insorto da 10 giorni. Quale 'Red Flag' impone l'invio \nimmediato al medico senza trattamento in farmacia?",
+      "opzioni": {
+        "A": "Sintomi che peggiorano dopo il consumo di caffè o cibi speziati.",
+        "B": "Età superiore ai 60 anni con sintomi di nuova insorgenza.",
+        "C": "Peggioramento dei sintomi in posizione supina durante la notte.",
+        "D": "Risposta parziale dopo l'assunzione di un antacido occasionale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'insorgenza di sintomi dispeptici o di reflusso in pazienti sopra i 50-60 anni è un segnale d'allarme \n(Red Flag) che richiede accertamenti (es. gastroscopia) [29-31]. Peggioramento con cibo o posizione sono sintomi tipici ma \nnon segnali d'allarme organico [32].",
+      "numero": 17,
+      "id": "q17"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Gastroenterologia in gravidanza",
+      "tipo": "kprim",
+      "domanda": "Riguardo al trattamento della nausea e del vomito in gravidanza (NVP), valutate la correttezza delle \nseguenti opzioni terapeutiche:",
+      "opzioni": {
+        "1": "La vitamina B6 (Piridossina) è considerata un trattamento di prima scelta per la nausea.",
+        "2": "Lo zenzero (Zintona) ha una buona efficacia contro la nausea ma non è efficace contro il vomito.",
+        "3": "L'ondansetron può essere usato liberamente durante tutto il primo trimestre di gravidanza.",
+        "4": "In caso di stipsi in gravidanza, il magnesio organico (citrato) è preferibile perché ha anche un effetto \nrilassante sull'utero."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Vitamina B6 e zenzero sono stadio 1 [33]. Ondansetron è controindicato nel 1° trimestre dal 2019 per \nrischio malformazioni [34]. Il magnesio organico è ideale per il duplice effetto lassativo e tocolitico [35, 36].",
+      "numero": 18,
+      "id": "q18"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Malassorbimento e Microbiota",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente con sospetta sindrome dell'intestino irritabile (IBS) vuole testare la malassorbimento del \nfruttosio. Quale affermazione è corretta?",
+      "opzioni": {
+        "A": "La malassorbimento del fruttosio è una rara malattia ereditaria diagnosticata nell'infanzia.",
+        "B": "La diagnosi si effettua tramite l'H2-Atest (test del respiro al idrogeno).",
+        "C": "Tutti i pazienti con test positivo devono seguire una dieta priva di fruttosio a vita.",
+        "D": "Il fruttosio non assorbito viene fermentato nel tenue producendo vitamina B12."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'H2-Atest è lo strumento diagnostico principale [37]. La forma ereditaria è l'intolleranza ereditaria \n(HFI), che è diversa dalla malassorbimento comune [37]. La dieta deve essere personalizzata, non necessariamente priva a \nvita [38]. La fermentazione avviene nel colon e produce gas, non B12 [37].",
+      "numero": 19,
+      "id": "q19"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Parassitologia - Enterobiasi",
+      "tipo": "kprim",
+      "domanda": "Un genitore chiede mebendazolo (Vermox) per il figlio di 6 anni con sospetto di ossiuri. Valutate le \nseguenti istruzioni:",
+      "opzioni": {
+        "1": "Il trattamento prevede una dose singola da 100 mg da ripetere dopo 2 settimane.",
+        "2": "Tutti i membri della famiglia conviventi dovrebbero essere trattati contemporaneamente.",
+        "3": "Il mebendazolo agisce paralizzando la muscolatura del verme tramite blocco neuromuscolare.",
+        "4": "Il lavaggio della biancheria a 60-90°C è una misura igienica fondamentale per evitare la reinfestazione."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Dosaggio e ripetizione dopo 2 settimane sono standard [39, 40]. Il trattamento familiare è necessario \n[40]. Il mebendazolo inibisce la polimerizzazione dei microtubuli (non è un bloccante neuromuscolare come il pirantel) [39].\nL'igiene della biancheria è cruciale [40].",
+      "numero": 20,
+      "id": "q20"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente si presenta in farmacia con un risultato di laboratorio che indica un valore di HbA1c (emoglobina\nglicata) del 6.9%. In base alle raccomandazioni EviPrev e ADA, come deve essere interpretato questo risultato?",
+      "opzioni": {
+        "A": "Il valore è nell'intervallo di normalità (< 5.7%).",
+        "B": "Il valore indica una condizione di prediabete (5.7 - 6.4%).",
+        "C": "Il valore è indicativo di diabete mellito (>= 6.5%).",
+        "D": "Il valore è troppo basso e suggerisce un rischio di anemia emolitica."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le linee guida per lo screening del diabete, un valore di HbA1c pari o superiore al 6.5% è \nconsiderato indicativo di diabete mellito [1-3]. L'intervallo 5.7-6.4% definisce il prediabete, mentre valori inferiori al \n5.7% sono normali [3].",
+      "numero": 21,
+      "id": "q21"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "kprim",
+      "domanda": "Durante la gravidanza, diversi parametri di laboratorio subiscono variazioni fisiologiche a causa \ndell'aumento del volume plasmatico e dei cambiamenti ormonali. Quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "I livelli di TSH tendono a diminuire, specialmente nel primo trimestre, a causa dell'attività dell'HCG.",
+        "2": "La concentrazione di ferritina aumenta fisiologicamente per proteggere le riserve marziali materne.",
+        "3": "I valori di fibrinogeno e D-dimero risultano aumentati (stato di ipercoagulabilità).",
+        "4": "Il numero di leucociti (in particolare i granulociti) tende fisiologicamente ad aumentare."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "In gravidanza il TSH diminuisce nel 1° trimestre per compensazione ormonale [4, 5]. La ferritina \ndiminuisce a causa dell'espansione del volume plasmatico [4-6]. L'aumento di fibrinogeno/D-dimero e dei leucociti sono \nvariazioni fisiologiche attese [4, 5, 7].",
+      "numero": 22,
+      "id": "q22"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "multipla_scelta",
+      "domanda": "Per valutare la funzione renale di un paziente anziano al banco della farmacia per un aggiustamento \nposologico, quale parametro è considerato il più affidabile rispetto alla sola creatinina sierica?",
+      "opzioni": {
+        "A": "Il valore isolato del potassio sierico.",
+        "B": "La eGFR (velocità di filtrazione glomerulare stimata), calcolata con la formula CKD-EPI.",
+        "C": "L'esame dell'albumina nelle urine tramite striscia reattiva (Urinstix).",
+        "D": "Il livello di transaminasi (ALT/AST) per escludere la sindrome epatorenale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La eGFR è considerata un parametro migliore della sola creatinina per valutare la funzione renale, \npoiché integra età, sesso e creatinina sierica [8, 9]. La formula CKD-EPI è quella attualmente più raccomandata per questa \nstima [9, 10].",
+      "numero": 23,
+      "id": "q23"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "kprim",
+      "domanda": "In farmacia è fondamentale riconoscere i 'Vital Red Flags' nei risultati di laboratorio. Quali delle \nseguenti soglie indicano una situazione vitale critica che richiede un rinvio medico immediato?",
+      "opzioni": {
+        "1": "Emoglobina (Hb) < 60 g/L.",
+        "2": "Troponina positiva (indicativa di possibile infarto miocardico).",
+        "3": "Neutrofili < 0.5 G/L (rischio acuto di infezione).",
+        "4": "Proteina C-Reattiva (CRP) < 5 mg/L."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Hb < 60 g/L, troponina positiva e neutropenia grave (< 0.5 G/L) sono esplicitamente elencati come valori\nvitali critici [5, 11, 12]. Un valore di CRP < 5 mg/L è invece considerato nell'intervallo di normalità [13, 14].",
+      "numero": 24,
+      "id": "q24"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "multipla_scelta",
+      "domanda": "Secondo le raccomandazioni svizzere AGLA per lo screening cardiovascolare, a quale età dovrebbe iniziare lo \nscreening dei lipidi in un uomo senza fattori di rischio noti?",
+      "opzioni": {
+        "A": "A partire dai 18 anni, ogni 3 anni.",
+        "B": "A partire dai 40 anni.",
+        "C": "Solo dopo i 65 anni, contestualmente allo screening per l'aneurisma aortico.",
+        "D": "A partire dai 25 anni, ma solo se il BMI è superiore a 30 kg/m²."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le linee guida AGLA specificano che il calcolo del rischio cardiovascolare e lo screening lipidico \ndevono iniziare a 40 anni per gli uomini e a 50 anni (o in postmenopausa) per le donne [15-17].",
+      "numero": 25,
+      "id": "q25"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "kprim",
+      "domanda": "Riguardo all'uso e all'interpretazione della Proteina C-Reattiva (CRP) in farmacia, quali affermazioni sono \ncorrette?",
+      "opzioni": {
+        "1": "I livelli di CRP aumentano con un ritardo di circa 12-24 ore rispetto all'inizio dell'infiammazione.",
+        "2": "La CRP è un parametro specifico esclusivamente per le infezioni batteriche delle vie urinarie.",
+        "3": "Un valore di CRP > 100 mg/L è un segnale di allerta per una possibile sepsi.",
+        "4": "Secondo le direttive Qualab, la deviazione massima ammissibile per la misurazione della CRP è del +/- 21%."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "La CRP ha una cinetica ritardata di 12-24 ore [18]. Non è specifica per un organo o solo per i batteri, \nma aumenta in ogni infiammazione o danno tissutale [18]. Valori > 100 mg/L indicano infezioni gravi [5]. La tolleranza \nQualab del 21% è corretta [18].",
+      "numero": 26,
+      "id": "q26"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente in terapia con anticoagulanti orali (VKA) effettua un controllo POCT in farmacia. Il valore di \nINR è 5.2. Qual è l'azione di triage più appropriata?",
+      "opzioni": {
+        "A": "Consigliare di saltare la dose successiva e ripetere il test dopo 48 ore.",
+        "B": "Tranquillizzare il paziente e validare il risultato come accettabile in assenza di lividi.",
+        "C": "Indirizzare immediatamente il paziente al medico o al pronto soccorso (Vital Red Flag).",
+        "D": "Suggerire l'assunzione di Vitamina K orale immediatamente in farmacia."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Un valore di INR superiore a 4.5 è considerato un segnale di allerta vitale critico (Vital Red Flag) per\nl'elevato rischio di emorragia e richiede un intervento medico immediato [5, 11]. Il farmacista non deve gestire \nautonomamente dosaggi o antidoti in questa situazione critica.",
+      "numero": 27,
+      "id": "q27"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "kprim",
+      "domanda": "La valutazione della ferritina è un tassello fondamentale nel counselling per la stanchezza. Quali delle \nseguenti affermazioni sulla ferritina e sui parametri correlati sono corrette?",
+      "opzioni": {
+        "1": "Valori di ferritina < 15 ng/ml o > 300 ng/ml sono considerati Red Flags che richiedono il rinvio al medico.",
+        "2": "La ferritina può risultare aumentata in corso di processi infiammatori, mascherando una carenza di ferro.",
+        "3": "Un valore di ferritina normale esclude sempre la necessità di misurare il TSH in un paziente stanco.",
+        "4": "L'HbA1c riflette la media della glicemia degli ultimi 2-3 mesi (8-12 settimane)."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "I valori < 15 e > 300 sono soglie di rinvio [19]. La ferritina è una proteina di fase acuta e aumenta \ncon l'infiammazione [20]. Stanchezza e ferritina normale richiedono spesso la verifica del TSH per escludere ipotiroidismo \n[21]. La definizione temporale dell'HbA1c è corretta [1, 22].",
+      "numero": 28,
+      "id": "q28"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente presenta i seguenti valori: Emoglobina 100 g/L (rif. 135-175), MCV 70 fl (rif. 80-100) e MCH 20 \npg (rif. 26-34). Qual è l'interpretazione più probabile?",
+      "opzioni": {
+        "A": "Anemia macrocitica, probabilmente da carenza di Vitamina B12.",
+        "B": "Anemia normocitica dovuta a una perdita ematica acuta.",
+        "C": "Anemia microcitica ipocromica, compatibile con una carenza di ferro.",
+        "D": "Valori normali per un paziente maschio adulto."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Valori bassi di emoglobina associati a volume cellulare ridotto (MCV < 80) e basso contenuto \nemoglobinico (MCH < 26) definiscono l'anemia microcitica ipocromica, tipica della carenza marziale [23-25].",
+      "numero": 29,
+      "id": "q29"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "kprim",
+      "domanda": "Lo screening del diabete mellito secondo le raccomandazioni EviPrev e ADA si basa su criteri specifici. \nQuali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Lo screening è raccomandato ogni 3 anni per tutti gli adulti a partire dai 40-45 anni.",
+        "2": "Un BMI >= 25 kg/m² è un fattore di rischio che giustifica uno screening precoce.",
+        "3": "L'emoglobina glicata (HbA1c) tra 5.7% e 6.4% indica una condizione di prediabete.",
+        "4": "Una glicemia plasmatica a digiuno >= 7.0 mmol/l è un criterio diagnostico per il diabete."
+      },
+      "risposta_corretta": "VVVV",
+      "motivazione": "Tutti i punti riflettono correttamente i criteri svizzeri e internazionali: lo screening inizia a 40-45 \nanni [1, 26], il BMI elevato è un fattore di rischio [27], e i valori soglia per prediabete (HbA1c 5.7-6.4%) e diabete \n(glicemia >= 7.0) sono corretti [3, 27].",
+      "numero": 30,
+      "id": "q30"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Epilessia",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 35 anni, in terapia con Lamictal® (Lamotrigina) e libera da crisi da 3 anni, si presenta in \nfarmacia. Per motivi di costo, l'assicurazione richiede il passaggio a un preparato generico. Qual è la raccomandazione \ncorretta secondo le linee guida della Lega Svizzera contro l'Epilessia?",
+      "opzioni": {
+        "A": "Effettuare la sostituzione con il generico meno costoso, poiché la bioequivalenza garantisce la stessa efficacia\nclinica.",
+        "B": "Sconsigliare vivamente il cambio di preparato («Keine Generika!») in pazienti stabilizzati, poiché variazioni \nminime nei livelli plasmatici possono scatenare crisi da 'breakthrough'.",
+        "C": "Sostituire il farmaco solo se si aumenta contemporaneamente il dosaggio del 10% per compensare eventuali \ndifferenze di assorbimento.",
+        "D": "Procedere alla sostituzione solo se la paziente assume contemporaneamente contraccettivi ormonali, che \nstabilizzano i livelli di Lamotrigina."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti [1-4], la regola d'oro per gli antiepilettici è «Keine Generika!» per pazienti già \nstabilizzati («Anfallsfreiheit»). Gli ASM hanno una finestra terapeutica stretta e una farmacocinetica complessa; uno switch\ntra produttori diversi può comportare rischi clinici significativi [5, 6]. La sostituzione è accettabile solo in caso di \nnuova diagnosi/instaurazione della terapia [7, 8].",
+      "numero": 31,
+      "id": "q31"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Alzheimer/Demenza",
+      "tipo": "kprim",
+      "domanda": "Un paziente di 80 anni con diagnosi di Alzheimer in stadio moderato assume Memantina (Axura®). Valutate le \nseguenti affermazioni riguardanti questo farmaco e la gestione della patologia.",
+      "opzioni": {
+        "1": "La Memantina agisce come un antagonista non competitivo del recettore NMDA, proteggendo i neuroni dal \nsovraccarico di calcio.",
+        "2": "Il dosaggio standard di mantenimento è di 20 mg/die, da raggiungere preferibilmente tramite una titolazione \nlenta (incrementi di 5 mg a settimana).",
+        "3": "L'assunzione di Memantina deve avvenire rigorosamente a stomaco vuoto per evitare interferenze con il \nmetabolismo CYP.",
+        "4": "La Memantina può potenziare l'effetto di farmaci dopaminergici come la L-Dopa, richiedendo un monitoraggio dei \nsintomi motori."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, è il meccanismo d'azione descritto [9]. 2: Vero, la titolazione lenta migliora la tollerabilità\n[9, 10]. 3: Falso, la Memantina può essere assunta indipendentemente dai pasti e non presenta metabolismo CYP rilevante \n[10]. 4: Vero, le fonti indicano un potenziamento dell'effetto della L-Dopa e degli agonisti dopaminergici [9, 10].",
+      "numero": 32,
+      "id": "q32"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Interazioni ASM",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente epilettico trattato con successo con Acido Valproico (Depakine® Chrono) viene ricoverato per una\ngrave infezione e gli viene prescritto l'antibiotico Ertapenem (Invanz®). Qual è il rischio maggiore di questa \nassociazione?",
+      "opzioni": {
+        "A": "Aumento del rischio di epatotossicità sinergica tra i due farmaci.",
+        "B": "Crollo drastico (fino al 95%) dei livelli plasmatici di Valproato con conseguente perdita del controllo delle \ncrisi.",
+        "C": "Induzione enzimatica del Valproato che rende l'antibiotico inefficace.",
+        "D": "Rischio di sindrome serotoninergica dovuto all'inibizione del metabolismo del Valproato."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le fonti di farmacovigilanza ospedaliera [11] indicano chiaramente che i carbapenemi (come l'Ertapenem) \ncausano una massiccia riduzione dei livelli di acido valproico (Abfall Valproinsäure-Spiegel um bis zu 95%), rendendo \nl'associazione estremamente pericolosa per il rischio di crisi convulsive.",
+      "numero": 33,
+      "id": "q33"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Epilessia nell'anziano",
+      "tipo": "kprim",
+      "domanda": "Per il trattamento dell'epilessia in un paziente sopra i 65 anni, la scelta del farmaco (ASM) deve seguire \ncriteri specifici di tollerabilità. Valutate le seguenti affermazioni.",
+      "opzioni": {
+        "1": "La Lamotrigina è considerata il farmaco di prima scelta nell'anziano per il suo profilo favorevole.",
+        "2": "Farmaci 'classici' come il Fenobarbital o la Fenitoina dovrebbero essere evitati per il rischio di sedazione e \ndisturbi cognitivi.",
+        "3": "L'uso di Benzodiazepine a lungo termine è raccomandato per stabilizzare la soglia convulsiva nel paziente \ngeriatrico.",
+        "4": "In caso di politerapia, bisogna considerare che gli ASM induttori enzimatici (es. Carbamazepina) possono ridurre\nl'efficacia di molti farmaci cronici."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, Lamotrigina è la prima scelta sopra i 65 anni [7, 12]. 2: Vero, le vecchie sostanze («alten» \nSubstanzen) vanno evitate [12]. 3: Falso, le Benzodiazepine vanno evitate nell'anziano, salvo uso a breve termine del \nClobazam [12]. 4: Vero, le interazioni da induzione enzimatica sono un problema critico [4, 5].",
+      "numero": 34,
+      "id": "q34"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Soglia convulsiva",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente assume Donepezil (Aricept®) per la demenza di Alzheimer. Gli viene prescritta Ciprofloxacina \n(Ciproxin®) per una cistite. Quale considerazione farmacologica è prioritaria?",
+      "opzioni": {
+        "A": "Entrambi i farmaci possono abbassare la soglia convulsiva, aumentando il rischio di crisi epilettiche.",
+        "B": "Il Donepezil inibisce il metabolismo della Ciprofloxacina, portando a tossicità renale.",
+        "C": "La Ciprofloxacina riduce l'assorbimento gastrointestinale degli inibitori della colinesterasi.",
+        "D": "Non esistono interazioni rilevanti tra queste due classi di farmaci."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Secondo le tabelle sulla soglia convulsiva [11, 13], sia il Donepezil (0,1-1%) che la Ciprofloxacina \n(0,01-0,1%) sono associati a un rischio di crisi epilettiche. L'effetto può essere additivo, specialmente in pazienti \nanziani con barriera emato-encefalica più permeabile [14].",
+      "numero": 35,
+      "id": "q35"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Assunzione farmaci",
+      "tipo": "kprim",
+      "domanda": "Alcuni farmaci antiepilettici (ASM) moderni hanno modalità di assunzione particolari correlate al cibo. \nValutate le seguenti istruzioni.",
+      "opzioni": {
+        "1": "Il Cannabidiolo (Epidyolex®) deve essere assunto in modo costante (sempre con cibo o sempre senza), poiché i \ngrassi aumentano i livelli di 4-5 volte.",
+        "2": "La Rufinamide (Inovelon®) deve essere assunta preferibilmente a digiuno per massimizzare la biodisponibilità.",
+        "3": "Lo Stiripentolo (Diacomit®) va somministrato sempre durante i pasti.",
+        "4": "Il Brivaracetam (Briviact®) raggiunge il picco plasmatico più velocemente se assunto a stomaco vuoto."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1: Vero, l'assunzione deve essere costante a causa dell'effetto dei grassi [15]. 2: Falso, la Rufinamide\nva assunta con il cibo [16]. 3: Vero, lo Stiripentolo va assunto durante i pasti [16]. 4: Vero, il digiuno accelera il picco\n(tmax) [17].",
+      "numero": 36,
+      "id": "q36"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Epilessia e Gravidanza",
+      "tipo": "multipla_scelta",
+      "domanda": "Qual è la raccomandazione attuale per una donna con epilessia che desidera una gravidanza?",
+      "opzioni": {
+        "A": "Sospendere immediatamente ogni terapia antiepilettica per evitare malformazioni fetali.",
+        "B": "Passare obbligatoriamente all'Acido Valproico, considerato il farmaco più sicuro in gravidanza.",
+        "C": "Iniziare l'assunzione di acido folico (0,4-0,8 mg/die) già prima del concepimento e preferire Lamotrigina o \nLevetiracetam.",
+        "D": "Utilizzare contraccettivi ormonali a dosaggio aumentato fino al terzo mese di gravidanza per proteggere il \nfeto."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Le linee guida svizzere [7, 8] raccomandano l'acido folico preventivo e indicano Lamotrigina e \nLevetiracetam come farmaci di prima scelta (1. Wahl Schwangerschaft). Il Valproato è invece il farmaco più pericoloso \n(teratogeno) e va evitato nelle donne in età fertile [7, 18].",
+      "numero": 37,
+      "id": "q37"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Parkinson",
+      "tipo": "kprim",
+      "domanda": "La gestione della terapia nel Morbus Parkinson richiede attenzione agli effetti collaterali psichiatrici. \nValutate le seguenti affermazioni.",
+      "opzioni": {
+        "1": "I dopamino-agonisti (es. Pramipexolo, Ropinirolo) possono causare disturbi del controllo degli impulsi (gioco \nd'azzardo, shopping compulsivo).",
+        "2": "In caso di psicosi parkinsoniana indotta da farmaci, la Clozapina è considerata l'opzione più efficace ma \nrichiede cautela negli epilettici.",
+        "3": "L'Akineton® (Biperidene) è il farmaco di scelta per il tremore nel paziente anziano con demenza associata.",
+        "4": "La somministrazione di Quetiapina può essere compromessa dall'uso concomitante di Carbamazepina (induttore \nCYP3A4)."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, è un effetto collaterale tipico discusso nel counselling [Conversazione]. 2: Vero, Clozapina è \nmolto efficace ma ha un alto rischio pro-convulsivo [37, Conversazione]. 3: Falso, gli anticolinergici come il Biperidene \npeggiorano i deficit cognitivi e sono sconsigliati nell'anziano. 4: Vero, la Carbamazepina riduce drasticamente i livelli di\nQuetiapina [Conversazione].",
+      "numero": 38,
+      "id": "q38"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Fitoterapia (Ginkgo)",
+      "tipo": "multipla_scelta",
+      "domanda": "Qual è il ruolo dell'estratto di Ginkgo biloba (EGb 761®) nel trattamento della demenza di Alzheimer secondo\nle evidenze citate?",
+      "opzioni": {
+        "A": "È indicato solo per il trattamento del tinnitus, senza benefici cognitivi dimostrati.",
+        "B": "Alla dose di 240 mg/die, può migliorare i sintomi cognitivi e comportamentali con una tollerabilità superiore ai\nfarmaci sintetici.",
+        "C": "È controindicato in tutti i pazienti che assumono anticoagulanti per l'elevato rischio di emorragia cerebrale.",
+        "D": "Sostituisce completamente la Memantina negli stadi gravi della malattia."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le meta-analisi citate supportano l'uso dell'estratto standardizzato EGb 761® a 240 mg/die per \nmigliorare le prestazioni mentali e i sintomi della demenza [Conversazione]. Gli estratti di qualità non influenzano la \ncoagulazione in modo significativo.",
+      "numero": 39,
+      "id": "q39"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Patologie neuronali - Gabapentinoidi",
+      "tipo": "kprim",
+      "domanda": "Pregabalin e Gabapentin sono farmaci utilizzati sia nell'epilessia che nel dolore neuropatico. Valutate le \nseguenti affermazioni.",
+      "opzioni": {
+        "1": "Agiscono legandosi alla subunità alfa-2-delta dei canali del calcio voltaggio-dipendenti.",
+        "2": "Il Pregabalin è considerato un farmaco privo di potenziale d'abuso o dipendenza.",
+        "3": "In caso di interruzione della terapia, è necessario uno scalaggio graduale per evitare crisi da rimbalzo o \nsintomi da astinenza.",
+        "4": "Entrambi i farmaci vengono eliminati prevalentemente per via renale senza subire metabolismo epatico \nsignificativo."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1: Vero, è il meccanismo d'azione corretto [19]. 2: Falso, il Pregabalin presenta rischi di abuso \n(euforia) documentati [19, 20]. 3: Vero, la sospensione brusca è pericolosa [Conversazione]. 4: Vero, l'eliminazione renale \nè una caratteristica chiave di questi farmaci [19].",
+      "numero": 40,
+      "id": "q40"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Deprescrizione farmaci - deprescrizione",
+      "tipo": "multipla_scelta",
+      "domanda": "Il signor Müller, 80 anni, assume Zolpidem 10 mg da quattro anni per insonnia. Durante una revisione della \nterapia (Medication Review) in farmacia, emerge che il paziente soffre di cefalee mattutine e stanchezza diurna, sintomi \nriconducibili a una possibile apnea notturna. Qual è la procedura di deprescrizione più sicura raccomandata per questo \npaziente?",
+      "opzioni": {
+        "A": "Sospensione immediata del farmaco per eliminare il rischio di depressione respiratoria notturna.",
+        "B": "Riduzione graduale del 25-50% della dose giornaliera ogni 1-4 settimane.",
+        "C": "Sostituzione immediata dello Zolpidem con Amitriptilina 25 mg per le sue proprietà sedative.",
+        "D": "Passaggio a un'assunzione al bisogno, consigliando di non superare le 3 dosi settimanali."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, lo Zolpidem (una Z-drug) deve essere sospeso gradualmente per evitare sintomi da \nastinenza e insonnia di rimbalzo; una riduzione del 25-50% ogni 1-4 settimane è considerata la procedura standard [1, 2]. La\nsospensione immediata (A) è rischiosa nell'anziano per il potenziale effetto rebound [2, 3]. L'Amitriptilina (C) è un \nfarmaco potenzialmente inappropriato (PIM) con alto carico anticholinergico che aumenta il rischio di cadute e confusione \nmentale [4, 5]. L'assunzione al bisogno (D) non costituisce un piano di deprescrizione strutturato per un paziente in \nterapia cronica da anni [1].",
+      "numero": 41,
+      "id": "q41"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Polifarmacia nell'anziano - Carico anticholinergico",
+      "tipo": "kprim",
+      "domanda": "State effettuando una revisione della terapia per un paziente di 78 anni che assume 9 farmaci. Valutate la \ncorrettezza delle seguenti affermazioni relative al rischio anticholinergico e agli strumenti di screening (ACB score, \nPIM):",
+      "opzioni": {
+        "1": "Un punteggio ACB (Anticholinergic Cognitive Burden) totale ≥ 3 è associato a un aumento del declino cognitivo e \ndella mortalità.",
+        "2": "L'Amitriptilina (Saroten®) contribuisce con un punteggio di 3 alla carica anticholinergica totale, rendendola un\nPIM critico nell'anziano.",
+        "3": "L'uso di farmaci anticholinergici in pazienti con demenza può antagonizzare l'effetto terapeutico dei medicinali\ninibitori della colinesterasi.",
+        "4": "In caso di bocca secca (xerostomia) causata da farmaci anticholinergici, la soluzione prioritaria è sempre \nl'aggiunta di un farmaco sialogogo."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'affermazione 1 è corretta: un punteggio ACB ≥ 3 è clinicamente problematico e legato a esiti negativi \n[6, 7]. L'affermazione 2 è corretta: l'Amitriptilina ha una forte attività anticholinergica con punteggio 3 ed è \nclassificata come PIM da evitare [4, 5]. L'affermazione 3 è corretta: gli anticholinergici bloccano i recettori \ndell'acetilcolina, agendo contro gli inibitori della colinesterasi [8]. L'affermazione 4 è falsa: l'aggiunta di un farmaco \nper trattare un effetto collaterale (xerostomia) configura una 'cascata prescrittiva'; la priorità dovrebbe essere la \nriduzione o sostituzione dell'agente causale [9, 10].",
+      "numero": 42,
+      "id": "q42"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Sicurezza dei farmaci - Cascata prescrittiva",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 72 anni, in terapia con Amlodipina 10 mg per l'ipertensione, si presenta al banco della \nfarmacia lamentando edema alle caviglie. Chiede un consiglio per un diuretico naturale o un farmaco per 'sgonfiare le \ngambe'. Quale intervento del farmacista rappresenta la 'Good Practice' clinica secondo le fonti?",
+      "opzioni": {
+        "A": "Consigliare un preparato a base di betulla o ortosiphon per favorire il drenaggio dei liquidi.",
+        "B": "Contattare il medico curante per suggerire una riduzione della dose di Amlodipina o il passaggio a un'altra \nclasse di antipertensivi.",
+        "C": "Validare la prescrizione di un diuretico dell'ansa (es. Torasemide) che il medico probabilmente aggiungerà a \nbreve.",
+        "D": "Consigliare calze a compressione graduata e l'uso di un integratore a base di potassio per prevenire crampi."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'edema malleolare è un noto effetto collaterale dei calcio-antagonisti come l'Amlodipina; trattarlo con\nun diuretico è un classico esempio di cascata prescrittiva inappropriata [11]. La soluzione corretta è la modifica della \nterapia ipertensiva originale [11]. L'uso di diuretici o integratori (A, C, D) aggiunge complessità alla terapia e aumenta \nil rischio di squilibri elettrolitici e cadute nell'anziano [11, 12].",
+      "numero": 43,
+      "id": "q43"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Polifarmacia nell'anziano - Clinical Frailty Scale (CFS)",
+      "tipo": "kprim",
+      "domanda": "La valutazione della gebrechilità è fondamentale per personalizzare la terapia. Valutate le seguenti \naffermazioni basandovi sulla 'Clinical Frailty Scale' (CFS):",
+      "opzioni": {
+        "1": "Un punteggio CFS pari a 5 definisce un paziente 'lievemente fragile' (mildly frail) che necessita di aiuto in \nattività complesse come la gestione dei farmaci.",
+        "2": "Per i pazienti con un punteggio CFS ≥ 5, l'obiettivo primario della terapia farmacologica deve essere sempre la \nriduzione della mortalità a lungo termine.",
+        "3": "La CFS è validata per persone di età pari o superiore a 65 anni per prevedere il rischio di ospedalizzazione e \nmortalità.",
+        "4": "Nelle persone con demenza, il punteggio CFS è determinato esclusivamente dalla loro capacità motoria, \nindipendentemente dalla funzione cognitiva."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "L'affermazione 1 è corretta: il livello 5 indica dipendenza nelle attività strumentali della vita \nquotidiana, inclusa la farmacoterapia [13, 14]. L'affermazione 2 è falsa: per i pazienti fragili, l'obiettivo si sposta \nverso il mantenimento della funzionalità e della qualità della vita (approccio palliativo) [15, 16]. L'affermazione 3 è \ncorretta: la scala è uno strumento internazionale validato per la popolazione geriatrica [17]. L'affermazione 4 è falsa: \nnelle persone con demenza, il grado di CFS corrisponde spesso alla gravità del deficit cognitivo [18, 19].",
+      "numero": 44,
+      "id": "q44"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Strumenti di screening - FORTA e STOPP/START",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante la validazione di una ricetta per un paziente di 82 anni, notate la prescrizione di una \nbenzodiazepina a lunga durata d'azione. Quale strumento di screening è più appropriato per identificare se questo farmaco è \npotenzialmente inappropriato (PIM) secondo i criteri europei?",
+      "opzioni": {
+        "A": "ACB Calculator, per misurare il rischio di tossicità epatica.",
+        "B": "Criteri STOPP (Screening Tool of Older Persons' Prescriptions).",
+        "C": "Algoritmo di Garfinkel, utilizzato esclusivamente per la terapia oncologica.",
+        "D": "Scala di Glasgow, per valutare la compliance del paziente."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "I criteri STOPP sono specificamente progettati per identificare prescrizioni potenzialmente \ninappropriate negli anziani, includendo farmaci che aumentano il rischio di cadute come le benzodiazepine [20, 21]. L'ACB \n(A) valuta il carico anticholinergico, non la tossicità epatica [7]. L'algoritmo di Garfinkel (C) è un metodo di \ndeprescrizione generale per la geriatria, non limitato all'oncologia [22, 23]. La scala di Glasgow (D) valuta il livello di \ncoscienza, non la farmacoterapia .",
+      "numero": 45,
+      "id": "q45"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Revisione della terapia - Analisi dei problemi correlati ai farmaci",
+      "tipo": "kprim",
+      "domanda": "State conducendo una revisione della terapia strutturata. Valutate la correttezza dei seguenti criteri per \nl'identificazione di pazienti a rischio di problemi legati ai farmaci (Medication Related Problems):",
+      "opzioni": {
+        "1": "Un numero totale di farmaci ≥ 7 (inclusi i farmaci al bisogno) è considerato un fattore di rischio \nsignificativo.",
+        "2": "La presenza di almeno 3 farmaci attivi sul sistema nervoso centrale (es. antidepressivi, oppioidi, \nbenzodiazepine) aumenta drasticamente il rischio di cadute.",
+        "3": "Un punteggio totale di rischio ≥ 5 (ottenuto tramite l'apposito tool di screening) indica la necessità urgente \ndi una revisione della terapia da parte del farmacista.",
+        "4": "La 'doppia prescrizione' (es. un farmaco originale e il suo generico assunti contemporaneamente) è un errore \nraro che non richiede attenzione specifica nel tool di screening."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'affermazione 1 è corretta: la soglia di 7 farmaci è usata nel tool di screening per identificare \npazienti complessi [24]. L'affermazione 2 è corretta: la combinazione di ≥3 farmaci ZNS è un noto fattore di rischio \ngeriatrico [24, 25]. L'affermazione 3 è corretta: il cut-off di 5 punti è validato per raccomandare l'intervento \nfarmaceutico [26]. L'affermazione 4 è falsa: la doppia prescrizione è un punto critico dello screening (punteggio 3) poiché \ncausa sovradosaggi pericolosi [27].",
+      "numero": 46,
+      "id": "q46"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Revisione della terapia - Insufficienza renale nell'anziano",
+      "tipo": "multipla_scelta",
+      "domanda": "Il signor Max, 85 anni, ha una clearance della creatinina (eGFR) stimata di 19 ml/min (Stadio 4 CKD). Assume\nCo-Lisinopril 20/12.5 mg. Qual è la raccomandazione corretta basata sull'esempio di deprescrizione fornito nelle fonti?",
+      "opzioni": {
+        "A": "Aumentare la dose a 1 compressa intera per compensare la ridotta escrezione renale.",
+        "B": "Mantenere la terapia attuale monitorando il potassio una volta all'anno.",
+        "C": "Sospendere il farmaco (Co-Lisinopril) poiché è controindicato con GFR < 30 ml/min e monitorare la pressione.",
+        "D": "Sostituire Co-Lisinopril con Ibuprofene per gestire eventuali dolori associati all'insufficienza renale."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo il caso clinico di Max Muster, con una GFR di 19 ml/min, il Co-Lisinopril è controindicato e \ndeve essere sospeso (Priorità alta) [28, 29]. Gli ACE-inibitori e i diuretici tiazidici richiedono cautela estrema o \nsospensione in caso di grave insufficienza renale [30, 31]. L'Ibuprofene (D) è un FANS, che è esso stesso potenzialmente \nnefrotossico e spesso inappropriato nell'anziano [12, 32].",
+      "numero": 47,
+      "id": "q47"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Deprescrizione farmaci - Inibitori di Pompa Protonica (PPI)",
+      "tipo": "kprim",
+      "domanda": "Un paziente di 75 anni assume Pantoprazolo 40 mg da due anni senza una diagnosi chiara di ulcera o esofagite\nsevera. Valutate le strategie di deprescrizione per i PPI:",
+      "opzioni": {
+        "1": "La sospensione brusca deve essere evitata a causa del rischio di ipersecrezione acida di rimbalzo (rebound).",
+        "2": "Una strategia efficace consiste nel dimezzare la dose ogni 1-2 settimane prima della sospensione definitiva.",
+        "3": "In caso di comparsa di sintomi lievi (acidità) durante il tapering, si deve tornare immediatamente alla dose \npiena iniziale per tempo indeterminato.",
+        "4": "I PPI sono considerati farmaci 'resistenti' alla deprescrizione nonostante gli sforzi clinici, spesso per timore\ndel paziente del ritorno dei sintomi."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "L'affermazione 1 è corretta: il rebound acido è la principale barriera alla sospensione dei PPI [33, \n34]. L'affermazione 2 è corretta: è la procedura raccomandata (es. ridurre del 50% ogni 1-2 settimane) [34]. L'affermazione \n3 è falsa: se compaiono sintomi, si suggerisce di tornare alla dose precedente (75%) o usare antiacidi al bisogno, non \nnecessariamente alla dose piena a vita [34]. L'affermazione 4 è corretta: i PPI sono tra i farmaci più difficili da \nsospendere stabilmente [35].",
+      "numero": 48,
+      "id": "q48"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Revisione della terapia - Transizione delle cure",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 80 anni viene dimessa dall'ospedale dopo un'esacerbazione di BPCO. La nuova ricetta include \nAzitromicina 500 mg 1x/die e Saroten® (Amitriptilina) 25 mg 1x/die. Quale criticità deve identificare il farmacista durante \nla validazione?",
+      "opzioni": {
+        "A": "Nessuna, l'azitromicina è sempre prescritta giornalmente per un anno intero.",
+        "B": "Il rischio di prolungamento dell'intervallo QT dovuto all'interazione tra Azitromicina e Saroten®.",
+        "C": "L'assoluta necessità di aggiungere un antistaminico di prima generazione per prevenire allergie \nall'antibiotico.",
+        "D": "Il fatto che il Saroten® debba essere assunto solo a stomaco vuoto per evitare interazioni con le fibre."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo il caso clinico di dimissione ospedaliera, l'uso concomitante di Azitromicina e Amitriptilina \n(Saroten®) aumenta il rischio di prolungamento del QT, richiedendo monitoraggio [36, 37]. Inoltre, l'Azitromicina come \nprofilassi per la BPCO è solitamente somministrata 3 volte a settimana, non giornalmente [36, 38]. L'aggiunta di un \nantistaminico di 1a generazione (C) aumenterebbe drasticamente il carico anticholinergico in modo inappropriato [5].",
+      "numero": 49,
+      "id": "q49"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Sicurezza dei farmaci - Errori in istituzione",
+      "tipo": "kprim",
+      "domanda": "Nella gestione della farmacia in una casa di cura, il farmacista deve prevenire errori comuni. Valutate la \ncorrettezza delle seguenti analisi sulle cause di errore:",
+      "opzioni": {
+        "1": "Macerare o dividere compresse retard può annullare il meccanismo di rilascio controllato, causando picchi \nplasmatici tossici o inefficacia.",
+        "2": "L'uso di farmaci propri dei residenti (portati da casa) senza controllo può portare a errori di dosaggio o \nscadenze non verificate.",
+        "3": "L'errore 'Sound-alike, Look-alike' (farmaci con nomi o confezioni simili) è prevenibile ottimizzando la \ndisposizione negli armadi e usando la scansione del codice a barre.",
+        "4": "Le soluzioni orali in gocce hanno un rischio di errore trascurabile rispetto alle compresse, poiché la dose è \nsempre facilmente visibile."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'affermazione 1 è corretta: la manipolazione di forme retard è un errore galenico grave [39, 40]. \nL'affermazione 2 è corretta: i farmaci portati dai residenti rappresentano un rischio per la qualità e la sicurezza [41]. \nL'affermazione 3 è corretta: queste sono strategie standard di gestione del rischio [41, 42]. L'affermazione 4 è falsa: le \ngocce e le unità liquide sono fonti frequenti di errore di dosaggio a causa di diverse unità di misura e contagocce non \nstandard [42].",
+      "numero": 50,
+      "id": "q50"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - farmaci analgesici",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente alla 30ª settimana di gravidanza chiede un consiglio per un forte mal di schiena. Quale delle \nseguenti affermazioni sulla gestione del dolore è corretta secondo le linee guida svizzere?",
+      "opzioni": {
+        "A": "L'ibuprofene è il farmaco di scelta fino alla 32ª settimana, poiché il rischio per il dotto di Botallo è \nrilevante solo nell'ultimo mese.",
+        "B": "Il paracetamolo rimane l'analgetico di prima scelta durante tutta la gravidanza, ma il suo uso dovrebbe essere \nlimitato alla dose minima efficace e per il minor tempo possibile.",
+        "C": "L'acido acetilsalicilico (1000 mg) è preferibile all'ibuprofene nel terzo trimestre per il suo minor effetto \nsulla funzione renale fetale.",
+        "D": "I FANS topici (es. Diclofenac gel) possono essere utilizzati senza restrizioni su ampie superfici cutanee nel \nterzo trimestre poiché l'assorbimento è trascurabile."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il paracetamolo è considerato l'analgetico di scelta in ogni fase della gestazione [1-3]. L'uso di FANS \n(come l'ibuprofene o il diclofenac) è espressamente controindicato a partire dalla 28ª settimana di gravidanza (terzo \ntrimestre) a causa del rischio di chiusura prematura del dotto arterioso di Botallo e di possibili danni renali al feto [1, \n3, 4]. Anche l'uso topico di FANS su ampie superfici è sconsigliato nel terzo trimestre per il potenziale assorbimento \nsistemico [3, 5].",
+      "numero": 51,
+      "id": "q51"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - prevenzione e supplementazione",
+      "tipo": "kprim",
+      "domanda": "In merito alla supplementazione vitaminica e minerale in gravidanza secondo le raccomandazioni BLV e le \nevidenze svizzere, quali affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Il BLV raccomanda una supplementazione di 0.4 mg di acido folico al giorno a partire da 4 settimane prima del \nconcepimento fino alla 12ª settimana di gravidanza.",
+        "2": "Per le donne con epilessia in terapia con antiepilettici, la dose raccomandata di acido folico è di 5 mg al \ngiorno.",
+        "3": "Circa il 73% delle donne incinte in Svizzera presenta livelli insufficienti di Vitamina D nel primo trimestre.",
+        "4": "La supplementazione di iodio è superflua in Svizzera poiché il sale iodato garantisce un apporto sufficiente per\ntutta la popolazione, incluse le gravide."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1) È corretto: 0.4 mg/die è la dose standard per la prevenzione dei difetti del tubo neurale [6, 7]. 2) \nÈ corretto: le donne in terapia antiepilettica necessitano di dosi maggiori (5 mg) [8, 9]. 3) È corretto: studi svizzeri \nconfermano questa carenza diffusa (73%) [7, 10]. 4) È errato: la dieta e il sale iodato spesso non bastano a coprire \nl'aumentato fabbisogno in gravidanza, rendendo necessaria una supplementazione specifica [11].",
+      "numero": 52,
+      "id": "q52"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - nausea e vomito (NVP)",
+      "tipo": "multipla_scelta",
+      "domanda": "Una donna all'8ª settimana di gravidanza soffre di nausea moderata. Secondo il concetto a tappe \n(Stufenschema) presentato dalla SAPP, qual è l'approccio farmacologico iniziale appropriato?",
+      "opzioni": {
+        "A": "Iniziare immediatamente con Ondansetron 4 mg due volte al giorno per prevenire l'iperemesi.",
+        "B": "Utilizzare Vitamina B6 (Piridossina) e/o Zenzero come prima linea di trattamento.",
+        "C": "Prescrivere Metoclopramide 10 mg 3 volte al giorno come farmaco di scelta iniziale.",
+        "D": "Consigliare l'uso di Domperidone, poiché è il farmaco meglio studiato per la nausea nel primo trimestre."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il trattamento della NVP segue un approccio a tappe: la Tappa 1 prevede misure sullo stile di vita, \nVitamina B6 e Zenzero [12-14]. Farmaci come la meclozina (Tappa 2) o la metoclopramide (Tappa 3) sono indicati per sintomi \npiù gravi o persistenti [15-18]. L'ondansetron deve essere evitato nel primo trimestre a causa di possibili rischi di \nmalformazioni orofacciali (avviso Swissmedic 2020) [19-21].",
+      "numero": 53,
+      "id": "q53"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - antibiotici",
+      "tipo": "kprim",
+      "domanda": "Quali delle seguenti affermazioni riguardanti l'uso di antibiotici in gravidanza e allattamento sono \ncorrette?",
+      "opzioni": {
+        "1": "Le penicilline (es. Amoxicillina) sono considerate sicure e rappresentano spesso la prima scelta.",
+        "2": "I fluorochinoloni sono controindicati in gravidanza per il rischio di danni alla cartilagine fetale osservati in\nstudi animali.",
+        "3": "In caso di infezione urinaria in gravidanza, il Co-Amoxicillina è preferito alla Nitrofurantoina per ragioni di \nsicurezza neonatale (rischio emolisi).",
+        "4": "Le tetracicline possono essere utilizzate in modo sicuro durante tutto il secondo trimestre poiché \nl'ossificazione non è ancora iniziata."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1) È corretto: le penicilline hanno una lunga esperienza d'uso e sicurezza [22, 23]. 2) È corretto: i \nchinoloni sono relativamente controindicati per potenziali artropatie [24, 25]. 3) È corretto: il Co-Amoxicillina è spesso \npreferito; la nitrofurantoina può causare anemia emolitica nel neonato con deficit di G6PD [23]. 4) È errato: le \ntetracicline sono controindicate perché interferiscono con lo sviluppo di ossa e smalto dentale del feto [26].",
+      "numero": 54,
+      "id": "q54"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - epilessia",
+      "tipo": "multipla_scelta",
+      "domanda": "Una giovane donna in terapia con Valproato per epilessia generalizzata sta pianificando una gravidanza. \nQuale consiglio deve dare il farmacista specialistico FPH?",
+      "opzioni": {
+        "A": "Sospendere immediatamente il Valproato non appena si decide di concepire, senza consultare il medico per evitare\nmalformazioni.",
+        "B": "Iniziare una supplementazione di 0.4 mg di acido folico e continuare la terapia invariata poiché il rischio \nteratogeno è minimo sotto i 1000 mg/die.",
+        "C": "Pianificare con il neurologo il passaggio a Lamotrigina o Levetiracetam, idealmente un anno prima del \nconcepimento.",
+        "D": "Il Valproato è assolutamente sicuro nel secondo e terzo trimestre, quindi il passaggio ad altri farmaci è \nnecessario solo per le prime 12 settimane."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il Valproato è fortemente teratogeno (rischio di malformazioni del 10% e disturbi cognitivi nel 30-40% \ndei casi) [27, 28]. Se possibile, le donne in età fertile dovrebbero passare a alternative più sicure come Lamotrigina o \nLevetiracetam prima di una gravidanza [29-31]. La sospensione brusca è pericolosa per il rischio di crisi convulsive, che \npossono danneggiare il feto [29, 32].",
+      "numero": 55,
+      "id": "q55"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - ipertensione",
+      "tipo": "kprim",
+      "domanda": "Riguardo al trattamento dell'ipertensione in gravidanza, quali affermazioni sono in linea con le fonti \nfornite?",
+      "opzioni": {
+        "1": "Gli ACE-inibitori e i sartani sono farmaci di prima scelta per la protezione renale materna.",
+        "2": "Il Labetalolo e la Nifedipina (forme ritardate) sono tra i farmaci di prima scelta raccomandati.",
+        "3": "La Metildopa è considerata sicura, con dati di follow-up sui bambini fino a 7 anni.",
+        "4": "Lo Spironolattone è controindicato nei feti maschi a causa del suo effetto anti-androgenico."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "1) È errato: ACE-inibitori e sartani sono controindicati per gravi rischi di tossicità renale e \nmalformazioni fetali [33-35]. 2) È corretto: sono opzioni di prima linea [36]. 3) È corretto: farmaco classico con buona \ndocumentazione di sicurezza [34]. 4) È corretto: inibisce i recettori del testosterone, influenzando lo sviluppo genitale \nmaschile [33, 37].",
+      "numero": 56,
+      "id": "q56"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - allattamento e galattogoghi",
+      "tipo": "multipla_scelta",
+      "domanda": "Una madre che allatta lamenta una scarsa produzione di latte e chiede Domperidone, avendone sentito parlare \nonline. Qual è la corretta valutazione del rischio?",
+      "opzioni": {
+        "A": "Il Domperidone può essere consegnato senza problemi, poiché non passa affatto nel latte materno.",
+        "B": "L'uso galattogogo è off-label e richiede cautela; bisogna valutare il rischio di prolungamento del tratto QT \nnella madre, specialmente a dosi elevate.",
+        "C": "Il Domperidone è controindicato perché causa sedazione profonda e depressione respiratoria nel neonato.",
+        "D": "Il Domperidone è preferibile alla Metoclopramide perché quest'ultima inibisce la lattazione."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'uso di domperidone come galattogogo è diffuso ma off-label; le società scientifiche mettono in guardia\nsul rischio di aritmie ventricolari e prolungamento del QT materno, soprattutto in presenza di altri fattori di rischio o \ninibitori del CYP3A4 [38, 39]. La quantità che passa nel latte è molto bassa (<0.1%) [39].",
+      "numero": 57,
+      "id": "q57"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - farmacocinetica",
+      "tipo": "kprim",
+      "domanda": "Quali modifiche farmacocinetiche avvengono fisiologicamente durante la gravidanza e influenzano la \nterapia?",
+      "opzioni": {
+        "1": "Il volume di distribuzione totale aumenta a causa dell'aumento dell'acqua corporea totale e del compartimento \nfeto-placentare.",
+        "2": "I livelli di albumina sierica diminuiscono, aumentando potenzialmente la quota libera di farmaci ad alto legame \nproteico.",
+        "3": "La clearance renale diminuisce drasticamente, rendendo necessaria una riduzione del dosaggio di antibiotici \nbeta-lattamici.",
+        "4": "Il pH gastrico aumenta, il che può influenzare l'assorbimento di alcuni farmaci."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1) È corretto: l'aumento dell'acqua corporea espande il volume di distribuzione [40]. 2) È corretto: la \nriduzione delle proteine plasmatiche aumenta la frazione libera attiva, ma accelera anche l'eliminazione [41]. 3) È errato: \nla clearance renale in realtà aumenta, rendendo spesso necessari intervalli di dosaggio più brevi per antibiotici come \nl'amoxicillina [42, 43]. 4) È corretto: l'aumento del pH gastrico è una variazione documentata [40].",
+      "numero": 58,
+      "id": "q58"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - corticosteroidi",
+      "tipo": "multipla_scelta",
+      "domanda": "In caso di necessità di una terapia sistemica con corticosteroidi per una malattia autoimmune della madre \n(es. asma grave), qual è la scelta preferibile e perché?",
+      "opzioni": {
+        "A": "Desametasone, perché attraversa bene la placenta e protegge anche il feto.",
+        "B": "Prednisone o Prednisolone, perché vengono ampiamente inattivati dall'enzima placentare 11β-HSD2, limitando \nl'esposizione fetale.",
+        "C": "Betametasone, poiché ha la minor emivita e non causa soppressione surrenalica nella madre.",
+        "D": "Nessun corticosteroide sistemico può essere usato, poiché causano sistematicamente palatoschisi \nindipendentemente dalla dose."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Per la terapia materna, Prednisone e Prednisolone sono i farmaci di scelta perché la placenta funge da \nbarriera grazie all'enzima 11β-HSD2 che li inattiva [44-46]. Betametasone e Desametasone sono invece usati specificamente \nper la maturazione polmonare fetale perché non vengono inattivati dalla placenta [44]. Il rischio di malformazioni con brevi\ncicli a dosi minime è considerato basso e il beneficio per la madre prevale [46, 47].",
+      "numero": 59,
+      "id": "q59"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Gravidanza e allattamento - fitoterapia e rischi",
+      "tipo": "kprim",
+      "domanda": "Quali affermazioni sull'uso di droghe vegetali in gravidanza e allattamento sono corrette secondo le \nfonti?",
+      "opzioni": {
+        "1": "Il consumo cronico di liquerizia (Süssholz) può inibire l'enzima placentare 11β-HSD2, portando a un aumento del \ncortisolo fetale.",
+        "2": "La Salvia (in dosi terapeutiche) è consigliata durante l'allattamento per stimolare la produzione di latte.",
+        "3": "L'olio essenziale di Melaleuca (Teebaumöl) non deve essere assunto per via interna.",
+        "4": "I preparati a base di foglie di Uva Ursina (Bärentraube) sono sconsigliati per l'alto contenuto di idrochinone e\nil possibile effetto sulla lattazione."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1) È corretto: l'acido glicirretico inibisce l'enzima guardiano della placenta [44, 48]. 2) È errato: la\nsalvia è nota per inibire la secrezione lattea e viene usata per lo svezzamento [49, 50]. 3) È corretto: l'uso interno è \ncontroindicato; l'uso esterno è possibile ma con cautela [51]. 4) È corretto: l'idrochinone è tossico e la pianta può \nridurre la produzione di latte [52].",
+      "numero": 60,
+      "id": "q60"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Parassiti - Scabbia (Nuove Linee Guida)",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente si presenta in farmacia con una diagnosi confermata di scabbia. Secondo le nuove linee guida \nsvizzere di novembre 2024, qual è attualmente la terapia di prima scelta raccomandata per massimizzare il successo \nterapeutico e contrastare le resistenze?",
+      "opzioni": {
+        "A": "Monoterapia con permetrina crema 5%, applicata una sola volta per 8-12 ore.",
+        "B": "Terapia combinata di permetrina 5% (topica) e ivermectina orale (200 µg/kg), da ripetere entrambi dopo 7-10 \ngiorni.",
+        "C": "Monoterapia con ivermectina orale in dose singola, ripetuta dopo 14 giorni solo se compaiono nuove lesioni.",
+        "D": "Applicazione topica di benzoato di benzile al 25% per 3 giorni consecutivi, senza ripetizione."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le nuove linee guida svizzere (novembre 2024), a causa degli alti tassi di fallimento della \nmonoterapia con permetrina (resistenze e pseudo-resistenze), la prima scelta è ora la combinazione di permetrina topica e \nivermectina sistemica, con ripetizione obbligatoria dopo 7-10 giorni [1, 2].",
+      "numero": 61,
+      "id": "q61"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Insetti e parassiti - pediculosi",
+      "tipo": "kprim",
+      "domanda": "Una madre chiede consulenza per il trattamento dei pidocchi del capo del figlio. Quali delle seguenti \naffermazioni riguardanti il ciclo biologico e lo schema terapeutico sono corrette secondo le fonti fornite?",
+      "opzioni": {
+        "1": "La seconda applicazione del prodotto deve avvenire obbligatoriamente tra il giorno 8 e il giorno 10 per \neliminare le larve nate nel frattempo.",
+        "2": "Le lendini (nits) sono gusci vuoti e, una volta terminata correttamente la terapia, rappresentano solo un \nproblema estetico.",
+        "3": "Le ninfe (larve) appena schiuse sono già in grado di spostarsi da un ospite all'altro.",
+        "4": "Il trattamento è considerato concluso con successo se non si trovano pidocchi vivi dopo 14 giorni di controlli \nbisettimanali."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La ripetizione al giorno 8-10 è cruciale per interrompere il ciclo vitale [3]. Le lendini sono gusci \nvuoti privi di pericolo dopo la cura [3]. Le ninfe non possono cambiare ospite; solo il pidocchio adulto può farlo [3]. Il \nmonitoraggio per 14 giorni conferma l'eradicazione [3].",
+      "numero": 62,
+      "id": "q62"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Parassiti - Ivermectina (Validazione)",
+      "tipo": "multipla_scelta",
+      "domanda": "Ricevete una prescrizione magistrale di Ivermectina sospensione per un bambino di 12 kg affetto da scabbia. \nQual è la valutazione corretta della ricetta secondo le direttive svizzere?",
+      "opzioni": {
+        "A": "L'ivermectina è controindicata sotto i 15 kg di peso corporeo; la ricetta deve essere rifiutata.",
+        "B": "Il dosaggio corretto è di 200 µg/kg e, sebbene off-label sotto i 15 kg, è ammesso dalle linee guida (es. \nPEDeDose).",
+        "C": "Le compresse di Subvectin® possono essere somministrate intere a questa età per garantire la precisione del \ndosaggio.",
+        "D": "L'ivermectina deve essere assunta durante un pasto ricco di grassi per migliorarne l'assorbimento contro la \nscabbia."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In Svizzera l'ivermectina è approvata sopra i 15 kg, ma l'uso off-label a partire dai 5 kg (200 µg/kg) è\nriconosciuto e indicato nelle linee guida [4, 5]. Deve essere assunta a digiuno (2 ore prima o dopo i pasti) [5, 6].",
+      "numero": 63,
+      "id": "q63"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Insetti - Triage e Reazioni allergiche",
+      "tipo": "kprim",
+      "domanda": "Un paziente punta da una vespa si presenta in farmacia. Quali di questi segni o sintomi richiedono un invio \nimmediato al medico d'urgenza (144) o al pronto soccorso?",
+      "opzioni": {
+        "1": "Sviluppo di orticaria generalizzata e prurito su tutto il corpo.",
+        "2": "Difficoltà a deglutire (disfagia) o sensazione di costrizione alla gola.",
+        "3": "Eritema locale di circa 5 cm di diametro attorno alla puntura.",
+        "4": "Presenza di stridore (fischio durante la respirazione) o dispnea."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Reazioni sistemiche (orticaria generalizzata), gonfiore delle mucose (disfagia) e problemi respiratori \n(dispnea, stridore) sono segnali di emergenza [7]. Una reazione locale < 10 cm senza altri sintomi è considerata lieve [8].",
+      "numero": 64,
+      "id": "q64"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Zecche - Borreliosi",
+      "tipo": "multipla_scelta",
+      "domanda": "Una madre mostra la schiena del figlio di 6 anni che presenta una macchia rossa ad anello di 7 cm che si sta\nespandendo (Erythema migrans). Qual è la corretta gestione farmacologica di prima scelta per questo paziente?",
+      "opzioni": {
+        "A": "Doxiciclina 100 mg, 2 volte al giorno per 14 giorni.",
+        "B": "Amoxicillina 50 mg/kg/giorno (divisa in 3 dosi) per 14-21 giorni.",
+        "C": "Applicazione locale di crema al cortisone e monitoraggio per 10 giorni.",
+        "D": "Somministrazione di una dose singola di Azitromicina 500 mg."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Per i bambini sotto i 12 anni, l'amoxicillina è il trattamento di prima scelta per la borreliosi \n(Erythema migrans) [9, 10]. La doxiciclina è indicata sopra i 12 anni (o dagli 8 anni in casi specifici) [9].",
+      "numero": 65,
+      "id": "q65"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Scabbia - Gestione dei contatti e ambiente",
+      "tipo": "kprim",
+      "domanda": "Per il successo del trattamento della scabbia in una famiglia, quali misure ambientali e di contatto devono \nessere consigliate?",
+      "opzioni": {
+        "1": "Tutti i membri del nucleo familiare e i contatti stretti devono essere trattati contemporaneamente, anche se \nasintomatici.",
+        "2": "I vestiti e la biancheria usati negli ultimi 4 giorni devono essere lavati a almeno 60 °C.",
+        "3": "Gli oggetti non lavabili devono essere sigillati in sacchetti di plastica per 4 giorni a una temperatura \ncostante di almeno 21 °C.",
+        "4": "Il paziente deve essere isolato in una stanza separata per almeno 10 giorni dopo la prima applicazione."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Il trattamento simultaneo dei contatti è essenziale per evitare reinfestazioni [1]. Il lavaggio a 60°C o\nil sacchetto per 4 giorni a 21°C garantiscono la morte dell'acaro fuori dall'ospite [11]. L'isolamento non è necessario; \nbasta evitare contatti fisici stretti e non condividere il letto per 24 ore dopo il trattamento [12].",
+      "numero": 66,
+      "id": "q66"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Insetti - Cimici dei letti (Bedbugs)",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente lamenta punture pruriginose disposte in linea retta ('colazione, pranzo e cena') comparse dopo un\nsoggiorno in ostello. Qual è il consiglio professionale corretto?",
+      "opzioni": {
+        "A": "Si tratta probabilmente di scabbia; applicare subito permetrina su tutto il corpo.",
+        "B": "Sono tipiche punture di cimici dei letti; è necessario trattare sintomaticamente il prurito e contattare un \ndisinfestatore professionista.",
+        "C": "È una reazione alle pulci degli animali; basta trattare il cane o il gatto con un collare \nall'antiparassitario.",
+        "D": "Le cimici dei letti trasmettono comunemente l'epatite B, quindi è necessario un prelievo di sangue immediato."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La disposizione lineare delle punture è patognomonica per le cimici dei letti (Cimicosis) [13]. La \ngestione richiede un intervento professionale (disinfestatore) e trattamento sintomatico [13]. La trasmissione di patogeni \ncome l'epatite B è discussa ma non confermata come via primaria [14].",
+      "numero": 67,
+      "id": "q67"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Parassiti - Scabbia in Gravidanza",
+      "tipo": "kprim",
+      "domanda": "Una donna al secondo trimestre di gravidanza ha contratto la scabbia. Quali opzioni terapeutiche sono \nconsiderate sicure o appropriate in Svizzera?",
+      "opzioni": {
+        "1": "La crema alla permetrina 5% è considerata sicura e può essere utilizzata come prima linea.",
+        "2": "L'ivermectina orale è la prima scelta assoluta per tutte le donne in gravidanza.",
+        "3": "Il benzoato di benzile al 25% è considerato sicuro ed efficace durante la gravidanza.",
+        "4": "In caso di allattamento, l'uso di ivermectina è generalmente possibile poiché l'escrezione nel latte è molto \nbassa."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "Permetrina e benzoato di benzile sono trattamenti topici di prima linea sicuri in gravidanza [15]. \nL'ivermectina è evitata in gravidanza tranne in casi eccezionali [15, 16]. Durante l'allattamento, l'ivermectina è \nconsiderata compatibile [15].",
+      "numero": 68,
+      "id": "q68"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Repellenti - Counselling",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente deve acquistare un repellente per insetti e una crema solare per un viaggio. Qual è l'istruzione \ncorretta da fornire per garantirne l'efficacia?",
+      "opzioni": {
+        "A": "Mescolare i due prodotti nel palmo della mano prima dell'applicazione per risparmiare tempo.",
+        "B": "Applicare prima il repellente e poi la crema solare sopra di esso.",
+        "C": "Applicare prima la crema solare e attendere 15-30 minuti prima di applicare il repellente.",
+        "D": "I repellenti naturali a base di oli essenziali offrono la stessa durata di protezione (8 ore) del DEET."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il repellente va applicato sempre per ultimo, rispettando un intervallo di 15-30 minuti dopo la \nprotezione solare per non comprometterne l'efficacia [7]. Gli oli essenziali hanno una durata d'azione molto breve rispetto \na DEET o Icaridina [7].",
+      "numero": 69,
+      "id": "q69"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Scabbia - Counselling post-terapia",
+      "tipo": "kprim",
+      "domanda": "Un paziente riferisce che, nonostante abbia terminato il trattamento per la scabbia due settimane fa, \navverte ancora un intenso prurito. Quale deve essere l'approccio del farmacista?",
+      "opzioni": {
+        "1": "Tranquillizzare il paziente: il prurito post-scabbia può persistere per 2-4 settimane dopo la morte delle \nmilbe.",
+        "2": "Consigliare immediatamente un nuovo ciclo di ivermectina perché il prurito indica un fallimento terapeutico.",
+        "3": "Suggerire l'uso di antistaminici orali e creme emollienti o steroidi topici per gestire la reazione allergica ai\nresti degli acari.",
+        "4": "Indirizzare al medico se compaiono nuove gallerie (burrows) o lesioni papulose dopo il trattamento corretto."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "Il prurito persistente non è sinonimo di fallimento; è una reazione allergica a feci e acari morti che \ndura settimane [2, 17, 18]. Si gestisce sintomaticamente [18]. Solo la comparsa di nuove lesioni sospette richiede \nrivalutazione medica [2, 19].",
+      "numero": 70,
+      "id": "q70"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Viaggi e Malaria - profilassi",
+      "tipo": "multipla_scelta",
+      "domanda": "Un viaggiatore di 35 anni si presenta in farmacia con una ricetta per meflochina (Mephaquin®) per un viaggio\nin Senegal. Durante l'anamnesi, riferisce di aver sofferto di attacchi di panico e depressione in passato. Qual è la \ncondotta professionale più appropriata secondo le linee guida?",
+      "opzioni": {
+        "A": "Validare la prescrizione spiegando che gli effetti collaterali psichiatrici sono rari e compaiono solo a dosaggi\nda trattamento.",
+        "B": "Contattare il medico per proporre un'alternativa (es. Atovaquone/Proguanil), poiché la meflochina è \ncontroindicata in presenza di disturbi psichiatrici [1].",
+        "C": "Suggerire al paziente di assumere la dose di prova 3 settimane prima per verificare la tollerabilità e decidere \nse continuare.",
+        "D": "Consigliare l'assunzione di iperico (Erba di San Giovanni) in associazione per contrastare l'eventuale calo del \ntono dell'umore."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La meflochina è formalmente controindicata in pazienti con anamnesi di depressione, disturbi d'ansia o \naltre patologie psichiatriche a causa del rischio di neurotossicità [1, 2]. Le fonti indicano che il rapporto \nbeneficio-rischio è sfavorevole in questi casi e si dovrebbero preferire Atovaquone/Proguanil o Doxiciclina [2, 3].",
+      "numero": 71,
+      "id": "q71"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Viaggi tropicali - gestione farmaci e fuso orario",
+      "tipo": "kprim",
+      "domanda": "Una paziente che assume diversi farmaci cronici deve affrontare un volo verso ovest con un fuso orario di -8\nore. Quali delle seguenti indicazioni sulla gestione della terapia sono corrette secondo le fonti?",
+      "opzioni": {
+        "1": "Per i corticosteroidi, l'orario di assunzione deve essere spostato gradualmente di 2 ore ogni giorno fino a \nraggiungere l'orario locale [4, 5].",
+        "2": "Se assume una pillola contraccettiva combinata, con una differenza di fuso orario superiore a 9 ore, deve \nassumere una 'pillola intermedia' dopo 12 ore dalla precedente [6].",
+        "3": "Gli ormoni tiroidei richiedono un aggiustamento rigoroso: l'intervallo tra due dosi non deve mai superare le 24 \nore [7].",
+        "4": "In caso di terapia con anticoagulanti orali (es. Marcoumar®), la variazione del fuso orario è considerata \ntrascurabile ai fini dell'assunzione [7]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, per farmaci influenzati dal ritmo circadiano come il cortisone si consiglia un adattamento di 2\nore al giorno [4, 5]. 2: Vero, per i contraccettivi combinati sopra le 9 ore di fuso è prevista la dose supplementare [6]. \n3: Falso, l'intervallo per gli ormoni tiroidei può arrivare fino a 36 ore senza problemi clinici significativi [7]. 4: Vero,\nper gli anticoagulanti orali la variazione del fuso è trascurabile [7].",
+      "numero": 72,
+      "id": "q72"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Diarrea del viaggiatore - triage e counselling",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente rientrato da una settimana dai tropici lamenta diarrea persistente, forte dolore addominale e \npresenza di sangue nelle feci. Chiede di poter acquistare Loperamide. Qual è la raccomandazione corretta?",
+      "opzioni": {
+        "A": "Vendere la Loperamide spiegando che blocca la motilità intestinale e accelera la guarigione.",
+        "B": "Sconsigliare la Loperamide e raccomandare una visita medica immediata, poiché sangue nelle feci e dolore \nsuggeriscono germi invasivi e la Loperamide è controindicata in questi casi senza antibiotico [8].",
+        "C": "Suggerire l'assunzione di un probiotico insieme alla Loperamide per ripristinare la flora batterica.",
+        "D": "Consigliare l'assunzione di Aspirina® per ridurre l'infiammazione intestinale e il dolore addominale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La Loperamide è controindicata in caso di sospetti germi invasivi (febbre, sangue nelle feci, forti \ndolori) a meno che non sia associata a una terapia antibiotica [8]. Inoltre, nei viaggiatori di ritorno da zone malariche, \nsintomi gastrointestinali con febbre richiedono l'esclusione immediata della malaria [9].",
+      "numero": 73,
+      "id": "q73"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Viaggi e diabete - competenze pratiche",
+      "tipo": "kprim",
+      "domanda": "Un paziente diabetico di tipo 1 sta pianificando un viaggio nel Sud-Est asiatico (clima caldo-umido). Quali \nconsigli pratici deve fornire il farmacista riguardo alla gestione dei dispositivi e dei farmaci?",
+      "opzioni": {
+        "1": "L'insulina e i glucagon-hypokit devono essere trasportati preferibilmente nel bagaglio da stiva per evitare \nsbalzi di pressione in cabina [10, 11].",
+        "2": "In climi molto caldi, i sintomi di un'ipoglicemia potrebbero essere percepiti meno chiaramente dal paziente \n[12].",
+        "3": "Le strisce reattive per la glicemia perdono affidabilità se esposte a temperature superiori a 35°C o alta \numidità [13, 14].",
+        "4": "In caso di viaggio aereo superiore alle 3-4 ore, la dose di insulina basale deve essere adattata \nproporzionalmente al numero di ore guadagnate o perse [5, 15]."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "1: Falso, l'insulina non deve mai congelare e va tenuta nel bagaglio a mano [10, 11]. 2: Vero, il calore\npuò mascherare i sintomi dell'ipoglicemia [12]. 3: Vero, le strisce sono sensibili a calore (>35°C) e umidità [13, 14]. 4: \nVero, le linee guida suggeriscono un aggiustamento proporzionale dell'insulina basale per voli lunghi [5, 15].",
+      "numero": 74,
+      "id": "q74"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Malaria - trattamento d'emergenza (SBET)",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente di 70 kg riceve una prescrizione di Riamet® (Artemether/Lumefantrina) come trattamento di riserva\n(SBET). Qual è la posologia corretta da spiegare durante la validazione per un adulto di questo peso?",
+      "opzioni": {
+        "A": "1 compressa al giorno per 3 giorni, sempre a stomaco vuoto.",
+        "B": "4 compresse subito, seguite da altre 4 compresse dopo 8 ore, per un totale di 2 dosi.",
+        "C": "Un totale di 6 dosi da 4 compresse ciascuna, distribuite su 3 giorni (colazione e cena), da assumere \nobbligatoriamente con cibo grasso o latte [16].",
+        "D": "2 compresse ogni 12 ore per 5 giorni, indipendentemente dai pasti."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Il regime standard per adulti >35 kg con Riamet® prevede 6 dosi (ciascuna da 4 compresse) nell'arco di 3\ngiorni. L'assunzione con cibo lipidico (latte, grassi) è fondamentale per l'assorbimento della lumefantrina [16, 17].",
+      "numero": 75,
+      "id": "q75"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Malaria - interazioni farmacologiche",
+      "tipo": "kprim",
+      "domanda": "Il farmacista deve convalidare una profilassi malarica per un paziente in politerapia. Quali delle seguenti \ninterazioni o precauzioni sono supportate dalle fonti svizzere?",
+      "opzioni": {
+        "1": "Il Lumefantrina è un substrato del CYP3A4; pertanto, l'uso concomitante di induttori enzimatici come l'erba di \nSan Giovanni (iperico) può ridurne l'efficacia [18].",
+        "2": "La doxiciclina utilizzata per la profilassi malarica può compromettere l'efficacia dei contraccettivi orali \ncombinati [6].",
+        "3": "In pazienti che assumono Marcoumar®, l'INR deve essere controllato una settimana dopo l'inizio della \nchemioprofilassi con proguanil o doxiciclina per un possibile aumento dell'effetto anticoagulante [7].",
+        "4": "L'atovaquone è un potente inibitore del CYP3A4 e richiede cautela con tutti i farmaci metabolizzati da questo \nenzima [17]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1: Vero, il metabolismo via CYP3A4 rende critica l'interazione con induttori [18]. 2: Vero, la \ndoxiciclina è citata come farmaco che può interferire con la pillola [6]. 3: Vero, è raccomandato il monitoraggio dell'INR \ndopo l'inizio della profilassi con questi agenti [7]. 4: Falso, le fonti indicano che l'atovaquone non ha interazioni \nsignificative via CYP [17].",
+      "numero": 76,
+      "id": "q76"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Farmaci e fotosensibilità",
+      "tipo": "multipla_scelta",
+      "domanda": "Durante il counselling per la profilassi malarica con Doxiciclina, quale avvertenza è prioritario fornire al\npaziente riguardo all'esposizione solare?",
+      "opzioni": {
+        "A": "La doxiciclina protegge la pelle dalle scottature solari agendo come filtro interno.",
+        "B": "Esiste un rischio significativo di reazioni fototossiche; è necessario utilizzare una protezione solare elevata \ne ripetere l'applicazione frequentemente [1, 19].",
+        "C": "La fotosensibilità si verifica solo se il farmaco viene applicato topicamente sulla pelle.",
+        "D": "In caso di comparsa di eritema solare, si deve interrompere immediatamente la profilassi e passare \nall'Aspirina®."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le tetracicline, e specificamente la doxiciclina, sono note per causare reazioni di fototossicità [1, \n19]. È essenziale informare il paziente sulla necessità di protezione solare rigorosa [4].",
+      "numero": 77,
+      "id": "q77"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Vaccini e biologia della malaria",
+      "tipo": "kprim",
+      "domanda": "Relativamente alle innovazioni nel campo della malaria e alla biologia del parassita, quali affermazioni \nsono corrette?",
+      "opzioni": {
+        "1": "I vaccini RTS,S (Mosquirix™) e R21/Matrix-M mirano alla proteina circumsporozoitica (CSP) di P. falciparum per \nprevenire l'infezione epatica [20].",
+        "2": "P. vivax e P. ovale possono formare ipnozoiti nel fegato, responsabili di ricadute anche mesi dopo il viaggio \n[21, 22].",
+        "3": "L'artemisinina agisce principalmente nella fase epatica del ciclo del parassita, eliminando le forme dormienti \n[23, 24].",
+        "4": "Secondo l'OMS, il Plasmodium falciparum è la specie più letale e diffusa, giustificando le raccomandazioni di \nprofilassi in Africa subsahariana [21, 25]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, entrambi i vaccini targettano la CSP [20]. 2: Vero, queste due specie causano forme persistenti\n(ipnozoiti) [21, 22]. 3: Falso, l'artemisinina e i suoi derivati (ACT) agiscono principalmente sulla fase eritrocitaria \n(sangue) [23]. 4: Vero, P. falciparum è l'agente della malaria tropica, la forma più grave [21, 25].",
+      "numero": 78,
+      "id": "q78"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Diarrea del viaggiatore - antibiotici",
+      "tipo": "multipla_scelta",
+      "domanda": "Un viaggiatore si reca in una zona del Sud-Est asiatico dove è nota un'elevata resistenza dei patogeni \nintestinali ai fluorochinoloni. Quale antibiotico è attualmente considerato di prima scelta per l'automedicazione in caso di\ndiarrea febbrile grave in questa regione?",
+      "opzioni": {
+        "A": "Ciprofloxacina 500 mg due volte al giorno per 3 giorni.",
+        "B": "Azitromicina (es. 1000 mg dose singola o 500 mg/die per 3 giorni) [26].",
+        "C": "Amoxicillina 1g tre volte al giorno per una settimana.",
+        "D": "Rifampicina 600 mg una volta al giorno."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "L'azitromicina è diventata la prima scelta in molte regioni del mondo a causa delle crescenti resistenze\nai fluorochinoloni (come ciprofloxacina). Per forme gravi è preferibile il regime di 3 giorni [26].",
+      "numero": 79,
+      "id": "q79"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Salute in viaggio - consigli vari",
+      "tipo": "kprim",
+      "domanda": "Il farmacista fornisce consigli per la prevenzione di rischi legati all'ambiente tropicale. Quali delle \nseguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "I farmaci per il mal d'auto (antiemetici ZNS-attivi) possono aumentare la sensibilità all'ebbrezza da alti \nfondali nei subacquei [27].",
+        "2": "Il rischio di trombosi venosa raddoppia per viaggi di durata superiore alle 4 ore e rimane elevato per 8 \nsettimane dopo il viaggio [28].",
+        "3": "In caso di contatto con tentacoli di meduse, la zona colpita va sciacquata immediatamente con acqua dolce \ncorrente per inattivare le tossine [29].",
+        "4": "L'aspirina (Aspirin®) è il farmaco di scelta per il trattamento della febbre in zone endemiche per Dengue, \ngrazie al suo effetto antiaggregante [30]."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "1: Vero, questi farmaci aumentano il rischio di 'Tieferausch' [27]. 2: Vero, il rischio relativo \nraddoppia dopo 4 ore [28]. 3: Falso, bisogna usare acqua salata; l'acqua dolce può causare la scarica delle nematocisti \n[29]. 4: Falso, l'aspirina è controindicata per il rischio di emorragie in caso di Dengue [30].",
+      "numero": 80,
+      "id": "q80"
+    }
+  ]
+}

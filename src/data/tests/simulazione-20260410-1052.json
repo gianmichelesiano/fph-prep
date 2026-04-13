@@ -1,0 +1,1480 @@
+{
+  "id": "simulazione-20260410-1052",
+  "title": "Simulazione Esame – 10/04/2026 10:52",
+  "area": 4,
+  "timer": 210,
+  "questions": [
+    {
+      "ruolo": 1,
+      "tema": "Interazioni farmacologiche - interazioni farmacologiche rilevanti",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente in terapia cronica con Quetiapina (Seroquel® XR) 400 mg x 2/die riceve una nuova prescrizione di Claritromicina 250 mg x \n2/die. Qual è l'intervento più appropriato del farmacista specialista in base alle Informazioni Professionali svizzere?",
+      "opzioni": {
+        "A": "Consegnare i farmaci raccomandando di distanziarne l'assunzione di 4 ore per evitare l'interazione a livello del lume intestinale.",
+        "B": "Rifiutare la consegna della Claritromicina poiché, in quanto potente inibitore del CYP3A4, causa un aumento tossico dei livelli di \nquetiapina; proporre al medico l'Azitromicina come alternativa.",
+        "C": "Consigliare al paziente di dimezzare la dose di Quetiapina per tutta la durata del ciclo antibiotico per compensare l'inibizione \nenzimatica.",
+        "D": "Consegnare l'antibiotico senza modifiche, poiché l'interazione tra macrolidi e antipsicotici è considerata rilevante solo in caso di \nsomministrazione endovenosa."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, l'associazione tra Quetiapina e Claritromicina è controindicata a causa della potente inibizione del CYP3A4 \nesercitata dal macrolide, che porta a un accumulo massiccio di antipsicotico. La gestione corretta prevede il rifiuto della consegna e la proposta di\nun'alternativa come l'Azitromicina, che non inibisce il CYP3A4 [1].",
+      "numero": 1,
+      "id": "q1"
+    },
+    {
+      "ruolo": 1,
+      "tema": "Validazione ricette - Rischio prolungamento QT",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 67 anni in terapia cronica con Zuclopenthixol (Clopixol® depot) e Venlafaxina (Efexor® ER) riceve una prescrizione di\nAzitromicina (1000 mg in dose singola) per un'infezione da Chlamydia. Valuta la validità delle seguenti affermazioni sulla gestione del rischio di \nprolungamento del QT:",
+      "opzioni": {
+        "1": "L'effetto di più sostanze che prolungano l'intervallo QT è additivo, aumentando significativamente il rischio di Torsione di Punta \n(TdP).",
+        "2": "Il rischio aritmico è considerato nullo poiché l'antibiotico viene somministrato in un'unica dose singola invece di un ciclo di 3-5 \ngiorni.",
+        "3": "Il sesso femminile e l'età superiore ai 65 anni sono fattori di rischio indipendenti che aumentano la suscettibilità al prolungamento \niatrogeno del QTc.",
+        "4": "In fase di counselling, il farmacista deve istruire la paziente a monitorare e segnalare segnali d'allarme quali palpitazioni, vertigini \no sincopi."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1: Vero, gli effetti sul QT delle diverse classi farmacologiche (neurolettici, antidepressivi, macrolidi) si sommano [2, 3]. 2: \nFalso, la reazione avversa può manifestarsi anche dopo una singola somministrazione [2, 3]. 3: Vero, età avanzata e genere femminile sono fattori di \nrischio demografici accertati per TdP [3, 4]. 4: Vero, l'identificazione precoce dei sintomi aritmici è parte integrante della gestione della \nsicurezza del paziente [3].",
+      "numero": 2,
+      "id": "q2"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Fitoterapia - legislazione e sicurezza",
+      "tipo": "multipla_scelta",
+      "domanda": "Una madre chiede in farmacia una tisana al finocchio per il suo neonato di 6 mesi che soffre di coliche neonatali. Qual è la corretta\nraccomandazione basata sulle direttive Swissmedic di marzo 2024?",
+      "opzioni": {
+        "A": "La somministrazione è sicura fino a un massimo di 3,0 g di frutti di finocchio al giorno, come indicato per la fascia d'età pediatrica.",
+        "B": "L'uso non è raccomandato sotto i 4 anni a causa della presenza di estragolo; si consigliano alternative più sicure come fiori di \ncamomilla o foglie di melissa.",
+        "C": "È preferibile utilizzare frutti di finocchio amaro perché, secondo la Farmacopea Europea, contengono una percentuale di estragolo \ninferiore rispetto al finocchio dolce.",
+        "D": "Si raccomanda di schiacciare accuratamente i frutti prima dell'infusione per ridurre la quantità di estragolo rilasciata nell'acqua."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le raccomandazioni Swissmedic del 6 marzo 2024 (basate sulle direttive EMA/HMPC), l'uso del finocchio sotto i 4 anni non \nè raccomandato poiché l'estragolo ha mostrato un potenziale genotossico e cancerogeno in studi in vitro e su animali [1-3]. Il limite di sicurezza di\n1,0 μg/kg/die non può essere garantito nella preparazione domestica [2, 4]. L'opzione A è errata poiché 3,0 g è il limite per bambini dai 4 ai 12 \nanni [2]. L'opzione D è errata poiché schiacciare i frutti aumenta il rilascio di estragolo di circa tre volte [5]. Melissa e camomilla sono le \nalternative suggerite dalle linee guida [6].",
+      "numero": 3,
+      "id": "q3"
+    },
+    {
+      "ruolo": 2,
+      "tema": "Fitoterapia - interazioni piante-farmaci",
+      "tipo": "kprim",
+      "domanda": "Un paziente in terapia cronica con atorvastatina (substrato di CYP3A4 e OATP2B1) desidera assumere un preparato a base di iperico per\nuna depressione lieve. Valutate le seguenti affermazioni riguardanti le interazioni e i prodotti svizzeri:",
+      "opzioni": {
+        "1": "L'iperforina è il principale componente responsabile delle interazioni farmacologiche poiché attiva il recettore PXR, inducendo CYP3A4 e \nP-gp.",
+        "2": "Preparati come Remotiv® o Rebalance® (estratto Ze 117) contengono meno di 1 mg di iperforina al giorno e sono considerati privi di \ninterazioni clinicamente rilevanti.",
+        "3": "L'iperforina interagisce anche con il trasportatore intestinale OATP2B1, potendo influenzare l'assorbimento di farmaci come le statine o \ngli antistaminici.",
+        "4": "Tutti i preparati a base di iperico registrati in Svizzera in categoria di consegna D presentano lo stesso profilo di sicurezza e assenza\ndi interazioni dell'estratto Ze 117."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'iperforina induce CYP3A4 e P-gp via PXR [7, 8]. Gli estratti 'hyperforin-low' come Ze 117 (Remotiv, Rebalance) contengono < 1 \nmg/die di iperforina, limite sotto il quale Swissmedic ha rimosso le avvertenze sulle interazioni dalle informazioni professionali [9, 10]. Nuove \nevidenze confermano l'interazione diretta con il trasportatore OATP2B1 [11, 12]. L'affermazione 4 è falsa perché prodotti in cat. D come Jarsin® \ncontengono dosi elevate di iperforina (circa 6,3 mg/die) e mantengono un alto potenziale di interazione [13-15].",
+      "numero": 4,
+      "id": "q4"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Fitoterapia (approfondimento) - fitoterapici in farmacia",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente trapiantata in terapia con ciclosporina (substrato di CYP3A4 e P-gp) richiede un consiglio per una forma lieve di \ndepressione. Sulla base delle linee guida svizzere e degli aggiornamenti delle Fachinformation dal 2020, quale approccio è corretto per la \ndispensazione di un preparato a base di Iperico (Hypericum perforatum)?",
+      "opzioni": {
+        "A": "L'Iperico è un potente induttore enzimatico e rimane assolutamente controindicato in ogni sua forma per evitare il rischio di rigetto \ndell'organo [1].",
+        "B": "È possibile consigliare specifici estratti hyperforin-low (come Ze 117) con apporto giornaliero di iperforina < 1 mg, poiché per questi \npreparati la controindicazione è stata rimossa [2, 3].",
+        "C": "Si può dispensare qualsiasi preparato di categoria D, in quanto il dosaggio dei prodotti senza ricetta non è sufficiente a causare \ninduzione enzimatica [4].",
+        "D": "L'assunzione è possibile solo se la paziente monitora i livelli plasmatici di ciclosporina ogni 48 ore durante le prime tre settimane di \ntrattamento [5]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il potenziale di interazione dell'Iperico è direttamente correlato al contenuto di iperforina, che attiva il recettore nucleare \nPXR inducendo l'espressione di CYP3A4 e P-gp [1, 6]. Gli studi clinici hanno dimostrato che estratti standardizzati a basso contenuto di iperforina \n(apporto < 1 mg/giorno, come l'estratto Ze 117 presente in Remotiv o Rebalance) non causano interazioni clinicamente rilevanti, portando \nall'adeguamento delle schede tecniche svizzere [2, 7]. L'opzione A è obsoleta, la C è errata poiché molti prodotti di categoria D hanno alti livelli \ndi iperforina [4], e la D non è una pratica di triage sicura in farmacia.",
+      "numero": 5,
+      "id": "q5"
+    },
+    {
+      "ruolo": 3,
+      "tema": "Fitoterapia (approfondimento) - evidenze e pediatria",
+      "tipo": "kprim",
+      "domanda": "Un farmacista analizza le evidenze cliniche e la sicurezza d'uso di alcuni estratti vegetali secondo le fonti fornite. Indica se le \nseguenti affermazioni sono Vere (V) o False (F).",
+      "opzioni": {
+        "1": "La meta-analisi ERA-PRIMA indica che l'uso preventivo di Echinacea purpurea (estratto alcolico di pianta fresca) riduce il rischio di \ncomplicazioni delle infezioni respiratorie del 56% [8].",
+        "2": "La tintura madre di assenzio (Absinthium) può essere utilizzata nei neonati per trattare l'inappetenza e l'atonicità gastrica [9].",
+        "3": "L'estratto di Pelargonium sidoides ha dimostrato efficacia clinica nel trattamento di tonsilliti e rinosinusiti anche in bambini di età \ninferiore ai 6 anni [10].",
+        "4": "Il preparato adaptogeno Vitango (Rhodiola rosea), indicato per stanchezza e irritabilità, è raccomandato in Svizzera a partire dai 12 \nanni di età [11]."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "1: Vera. I dati della meta-analisi ERA-PRIMA confermano che l'Echinacea riduce le complicazioni del 56% e i giorni di terapia \nantibiotica del 71% [8, 12]. 2: Falsa. L'assenzio è esplicitamente controindicato per i neonati ('Neonati') [9]. 3: Vera. Le tabelle sulle infezioni \nrespiratorie confermano l'efficacia del Pelargonium sotto i 6 anni [10, 13]. 4: Falsa. L'estratto di Rhodiola rosea (Vitango) è indicato solo a \npartire dai 18 anni [11, 14].",
+      "numero": 6,
+      "id": "q6"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Omeopatia e medicina complementare - triage ferite",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente si presenta in farmacia con una ferita da punta profonda provocata da un vecchio chiodo e richiede lo 'Similasan Spray \ncicatrizzante'. Qual è la gestione corretta del caso secondo le linee guida sulle 'Bandiere Rosse' (Red Flags)?",
+      "opzioni": {
+        "A": "Dispensare lo spray consigliando da 3 a 6 applicazioni al giorno, poiché lo spray è indicato per ferite di ogni tipo dai 2 anni in su. \n[1, 2]",
+        "B": "Indirizzare immediatamente il paziente a un medico, poiché le ferite da punta o profonde comportano un rischio di tetano e richiedono \ncure specialistiche. [3, 4]",
+        "C": "Consigliare l'uso dello spray solo se la ferita non guarisce spontaneamente entro 24 ore o se compare pus. [5, 6]",
+        "D": "Suggerire l'assunzione di 7 globuli di Arnica montana ogni mezz'ora evitando il rinvio al medico se lo stato generale è buono. [7, 8]"
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Le fonti indicano chiaramente che le ferite da punta, profonde o molto sporche rappresentano 'Bandiere Rosse' che richiedono \nobbligatoriamente un trattamento medico per il rischio di tetano. [3, 4] Lo spray cicatrizzante è indicato specificamente per piccole ferite \nsuperficiali, tagli e abrasioni. [1, 9] Nei casi di lesioni profonde, non è corretto limitarsi all'automedicazione omeopatica o attendere \nl'evoluzione naturale della ferita. [3]",
+      "numero": 7,
+      "id": "q7"
+    },
+    {
+      "ruolo": 4,
+      "tema": "Omeopatia e medicina complementare - metodo e dosaggio",
+      "tipo": "kprim",
+      "domanda": "Un farmacista deve istruire un paziente riguardo alla posologia e alle possibili interferenze durante un trattamento omeopatico per \nun disturbo acuto. Valutate la correttezza delle seguenti affermazioni basate sul metodo presentato:",
+      "opzioni": {
+        "1": "Nei casi acuti, la frequenza della somministrazione (es. ogni mezz'ora) è considerata più importante della quantità di globuli assunti \nper singola dose. [10]",
+        "2": "Se in un caso acuto non si nota un netto miglioramento entro mezza giornata (poche ore), è necessario interrompere il trattamento e \nrivalutare il rimedio. [10]",
+        "3": "L'assunzione di caffè deve essere sempre vietata in modo categorico a tutti i pazienti, poiché annulla sistematicamente l'effetto del \nrimedio scelto. [11, 12]",
+        "4": "I preparati omeopatici presentano un elevato rischio di interazioni farmacologiche con i comuni farmaci antipertensivi o \nipocolesterolemizzanti. [13, 14]"
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "La frequenza è il fattore determinante negli stati acuti perché l'effetto tende a esaurirsi più rapidamente. [10] Un rimedio \ncorretto deve mostrare risultati in fase acuta entro poche ore; se ciò non avviene, la scelta del rimedio va rivista. [10] Il caffè non è un ostacolo\nuniversale alla guarigione e la sua influenza dipende dalla sensibilità individuale del paziente. [11, 12] Uno dei principali vantaggi dell'omeopatia\nè l'assenza di interazioni con altri farmaci, rendendola ideale per i pazienti anziani in politerapia. [13, 14]",
+      "numero": 8,
+      "id": "q8"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Malattie respiratorie - rinite allergica",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 35 anni si presenta in farmacia per una rinite allergica stagionale. Descrive l'impatto dei sintomi nasali sulla sua \nqualità di vita con un punteggio VAS (Visual Analog Scale) di 65. Qual è l'approccio corretto secondo la normativa svizzera Lista B+ e le linee guida\nARIA riportate nelle fonti?",
+      "opzioni": {
+        "A": "Essendo il VAS ≥ 50, la prima scelta terapeutica raccomandata è un corticosteroide intranasale (INGK), dispensabile per un massimo di 1 \nmese.",
+        "B": "Con un VAS di 65, il farmacista deve dispensare obbligatoriamente un antistaminico orale poiché gli INGK sono indicati solo per VAS < \n50.",
+        "C": "La dispensazione in Lista B+ di uno steroide nasale può coprire un fabbisogno terapeutico fino a 3 mesi senza necessità di ricetta.",
+        "D": "Se il paziente presentasse anosmia (perdita dell'olfatto), il farmacista dovrebbe procedere con la dispensazione e rivalutare dopo 10 \ngiorni."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Secondo le fonti (Fonte [1], [2]), un valore VAS ≥ 50 indica sintomi moderato-gravi e individua i corticosteroidi intranasali \n(INGK) come terapia di prima scelta. La normativa svizzera Lista B+ (Fonte [3], [1]) limita la durata della dispensazione a un massimo di 1 mese e \nrichiede che il paziente abbia più di 18 anni. L'anosmia è una 'Red Flag' (Fonte [1]) che richiede l'invio al medico e non la dispensazione \nimmediata.",
+      "numero": 9,
+      "id": "q9"
+    },
+    {
+      "ruolo": 5,
+      "tema": "Malattie respiratorie - BPCO e dispositivi",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla gestione della BPCO (COPD) secondo la classificazione GOLD 2023 e alla corretta tecnica di utilizzo dei dispositivi \ninalatori, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Per i pazienti appartenenti al 'Gruppo E' (alto rischio di esacerbazioni), la terapia farmacologica iniziale raccomandata è la \ncombinazione LABA + LAMA.",
+        "2": "Il dispositivo Ellipta® (es. Relvar®) deve essere eliminato 6 settimane dopo l'apertura della vaschetta protettiva in alluminio.",
+        "3": "Gli inalatori a polvere secca (DPI) richiedono un'inspirazione lenta e costante per garantire la corretta deposizione del farmaco nei \npolmoni.",
+        "4": "In caso di triage, la cianosi e l'incapacità di pronunciare frasi complete (Sprechdyspnoe) sono segnali di allarme che impongono la \nchiamata immediata al 144."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: La GOLD 2023 (Fonte [4], [5]) raccomanda la doppia broncodilatazione per il Gruppo E. 2: Il dispositivo Ellipta ha una \nstabilità di 6 settimane dall'apertura (Fonte [6]). 3: I DPI richiedono un'inspirazione forte e profonda per attivare il rilascio della polvere, \nmentre l'inspirazione lenta è tipica degli aerosol (MDI) o Respimat (Fonte [7], [8]). 4: Cianosi e Sprechdyspnoe sono Red Flags critiche per l'invio \nd'urgenza (Fonte [9], [10]).",
+      "numero": 10,
+      "id": "q10"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Malattie respiratorie pediatriche - bronchiolite e Smarter Medicine",
+      "tipo": "multipla_scelta",
+      "domanda": "Un genitore si presenta in farmacia con un lattante di 6 mesi (peso circa 8 kg) che da due giorni manifesta rinite, tosse \ninizialmente secca e ora produttiva, e una leggera difficoltà nell'alimentazione. Non riferisce febbre. In base alle linee guida svizzere e \nall'iniziativa 'Smarter Medicine', qual è il consiglio terapeutico e di triage più appropriato?",
+      "opzioni": {
+        "A": "Dispensare un flacone di acetilcisteina (es. Fluimucil®) per facilitare l'eliminazione del muco, avvisando di consultare il pediatra solo\nin caso di febbre alta.",
+        "B": "Consigliare una toilette nasale accurata con soluzione fisiologica (NaCl 0.9%) prima dei pasti e del sonno, monitorando attivamente segni\ndi allarme come rientramenti sternali o respirazione rapida (tachipnea).",
+        "C": "Suggerire la somministrazione di salbutamolo (es. Ventolin®) tramite camera di espansione per prevenire l'ostruzione bronchiale, in \nquanto il 'wheezing' è probabile in questa fascia d'età.",
+        "D": "Consigliare l'applicazione di un unguento balsamico a base di canfora e mentolo sul petto per favorire la respirazione notturna."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La risposta B è corretta perché la bronchiolite del lattante (picco a 6 mesi) richiede principalmente terapia di supporto: igiene\nnasale e idratazione [1-3]. Le linee guida svizzere (Paediatrica 2022) sconsigliano esplicitamente l'uso routinario di simpaticomimetici \n(salbutamolo), corticosteroidi o mucolitici in caso di bronchiolite acuta [2, 3]. La risposta A è errata poiché i mucolitici non sono raccomandati \nsotto i 2 anni [4]. La C è errata secondo la 'Smarter Medicine' per la bronchiolite [2]. La D è errata poiché le sostanze balsamiche forti sono \ncontroindicate nei lattanti per il rischio di laringospasmo. Il monitoraggio della tachipnea e dei rientramenti è fondamentale nel triage \nfarmaceutico [1, 5].",
+      "numero": 11,
+      "id": "q11"
+    },
+    {
+      "ruolo": 6,
+      "tema": "Emergenze pediatriche e gestione dell'asma - Croup, Epiglottite e Asma acuto",
+      "tipo": "kprim",
+      "domanda": "Durante il servizio di guardia, un bambino di 3 anni viene portato in farmacia con tosse 'abbaiante' e un rumore stridulo \ninspiratorio improvviso insorto di notte. In merito alla gestione farmacologica e al triage differenziale secondo le fonti svizzere, quali \naffermazioni sono corrette?",
+      "opzioni": {
+        "1": "Il dosaggio raccomandato di betametasone (es. Betnesol®) per os in caso di Krupp-Syndrom è di 0.2 mg/kg.",
+        "2": "Se il bambino presenta febbre alta, scialorrea (salivazione abbondante) e posizione seduta obbligata, il farmacista deve ispezionare \nimmediatamente la gola con un abbassalingua per escludere un corpo estraneo.",
+        "3": "In un attacco acuto d'asma nel bambino, l'uso di un inalatore a polvere secca (DPI) è preferibile al dosatore aerosol (MDI) per garantire\nuna penetrazione più profonda del principio attivo.",
+        "4": "L'esposizione all'aria fredda e secca (es. aprire la finestra o il frigorifero) è una misura non farmacologica raccomandata per ridurre \nl'edema della mucosa nel Croup."
+      },
+      "risposta_corretta": "VFFV",
+      "motivazione": "1. Vero: Il dosaggio di 0.2 mg/kg di betametasone è indicato come efficace per la profilassi/terapia del Krupp [6, 7]. 2. Falso: \nQuesti sintomi (febbre alta, bava, posizione seduta) suggeriscono un'epiglottite, un'emergenza vitale; l'ispezione del cavo orale è assolutamente \ncontroindicata perché può causare laringospasmo fatale [7, 8]. 3. Falso: In caso di attacco acuto, non si devono usare inalatori a polvere poiché \nrichiedono un flusso inspiratorio che il bambino in dispnea non può garantire; si usa l'MDI con camera di espansione o il nebulizzatore [7, 9, 10]. \n4. Vero: L'aria fredda e secca aiuta a ridurre il gonfiore subglottico tipico del Croup, a differenza dell'aria calda-umida che non è più \nraccomandata come prima scelta [6, 7].",
+      "numero": 12,
+      "id": "q12"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Dolore - dolore acuto lombare e gestione Lista B+",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 72 anni, con anamnesi di insufficienza cardiaca e renale (in terapia con ramipril, bisoprololo e torasemide 200mg), \nchiede un consiglio per una lombalgia acuta (intensità 4/10) insorta il giorno precedente. Ha già assunto 500 mg di paracetamolo ogni 6 ore senza \nbeneficio. Qual è la raccomandazione corretta del farmacista in base alle linee guida svizzere e alla Lista B+?",
+      "opzioni": {
+        "A": "Dispensare Ibuprofene 400 mg ogni 6-8 ore, essendo il FANS di prima scelta per la lombalgia.",
+        "B": "Aumentare il dosaggio di Paracetamolo a 1000 mg ogni 6 ore per raggiungere la dose massima terapeutica.",
+        "C": "Dispensare Metamizolo (max 3000 mg/die) come migliore alternativa ai FANS, documentando la decisione.",
+        "D": "Dispensare un oppioide debole poiché il dolore è refrattario ai trattamenti di primo livello."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le fonti [1, 2], l'insufficienza cardiaca e renale rappresentano una controindicazione per i FANS come l'ibuprofene. Il \nparacetamolo non è raccomandato per la lombalgia acuta in quanto non superiore al placebo per questa specifica indicazione [3, 4]. Il metamizolo è \nindicato come la migliore alternativa ai FANS in questo scenario clinico [5, 6]. L'uso di oppioidi è sconsigliato nella gestione in farmacia del mal \ndi schiena aspecifico [3, 4].",
+      "numero": 13,
+      "id": "q13"
+    },
+    {
+      "ruolo": 7,
+      "tema": "Farmacia Clinica - Interazioni farmacologiche e sicurezza",
+      "tipo": "kprim",
+      "domanda": "In merito alla sicurezza d'uso e alle interazioni degli analgesici della Lista B+, valutare la veridicità delle seguenti affermazioni\nbasandosi sulle fonti fornite:",
+      "opzioni": {
+        "1": "L'assunzione concomitante di FANS (es. acido mefenamico o ibuprofene) e antidepressivi SSRI aumenta significativamente il rischio di \nemorragie gastrointestinali [7-9].",
+        "2": "Il metamizolo può indurre gli enzimi CYP2B6 e CYP3A4, riducendo potenzialmente i livelli plasmatici di farmaci come la sertralina o il \nmetadone [10, 11].",
+        "3": "Per i pazienti con alto rischio cardiovascolare, il diclofenac è preferibile all'ibuprofene grazie alla sua maggiore selettività per la \nCOX-2 [12-14].",
+        "4": "In pazienti che assumono Aspirina Cardio, l'ibuprofene deve essere assunto con un intervallo di almeno 2 ore per non compromettere \nl'effetto antiaggregante dell'acido acetilsalicilico [15, 16]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. Vero: gli SSRI aumentano il rischio emorragico se associati ai FANS [7, 8]. 2. Vero: il metamizolo è un noto induttore \nenzimatico per questi citocromi [10, 11]. 3. Falso: il diclofenac presenta una maggiore tossicità cardiovascolare rispetto all'ibuprofene ed è \nsconsigliato in pazienti a rischio [12-14]. 4. Vero: le linee guida svizzere raccomandano un intervallo di almeno 2 ore per evitare l'interazione \nfarmacodinamica tra ibuprofene e aspirina a basso dosaggio [15, 16].",
+      "numero": 14,
+      "id": "q14"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Sistema cardiocircolatorio - insufficienza cardiaca",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente affetto da insufficienza cardiaca HFrEF si presenta in farmacia con una nuova prescrizione di Sacubitril/Valsartan \n(Entresto®) per sostituire il trattamento in corso con Enalapril. Quale istruzione deve fornire il farmacista per garantire la sicurezza del \npaziente?",
+      "opzioni": {
+        "A": "Assumere la prima dose di Sacubitril/Valsartan 12 ore dopo l'ultima dose di Enalapril.",
+        "B": "Attendere un periodo di lavaggio (wash-out) di almeno 36 ore tra l'ultima dose di ACE-inibitore e la prima di Sacubitril/Valsartan.",
+        "C": "Iniziare il nuovo farmaco immediatamente, ma dimezzando la dose target per i primi 7 giorni.",
+        "D": "Assumere i due farmaci insieme per le prime 24 ore per garantire la stabilità della pressione arteriosa."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In base alle linee guida e alle informazioni sui farmaci, il passaggio da un ACE-inibitore a un ARNI (Sacubitril/Valsartan) \nrichiede tassativamente un intervallo di 36 ore per ridurre al minimo il rischio di angioedema grave [1-3]. Le opzioni A, C e D sono errate poiché \nignorano questo intervallo di sicurezza critico o suggeriscono una somministrazione concomitante pericolosa.",
+      "numero": 15,
+      "id": "q15"
+    },
+    {
+      "ruolo": 8,
+      "tema": "Sistema cardiocircolatorio - anticoagulanti orali diretti (DOAC)",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione e al counselling clinico dei pazienti in terapia con Anticoagulanti Orali Diretti (DOAC) in Svizzera, valuti \nla correttezza delle seguenti affermazioni:",
+      "opzioni": {
+        "1": "Il Rivaroxaban (Xarelto®) ai dosaggi di 15 mg e 20 mg deve essere assunto obbligatoriamente con un pasto per garantirne la \nbiodisponibilità ottimale.",
+        "2": "Il Dabigatran (Pradaxa®) è l'unico DOAC la cui eliminazione è prevalentemente non renale (circa il 20%).",
+        "3": "L'assunzione concomitante di Iperico (Erba di San Giovanni) riduce i livelli plasmatici dei DOAC, aumentando potenzialmente il rischio di\neventi trombotici.",
+        "4": "A causa della loro emivita breve, il rischio di trombosi aumenta significativamente già poche ore dopo una dose dimenticata."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1: Vero, il cibo aumenta la biodisponibilità di Rivaroxaban ad alto dosaggio [4]. 2: Falso, il Dabigatran ha la più alta quota di\neliminazione renale tra i DOAC (80%), mentre solo il 20% è eliminato per via non renale [4]. 3: Vero, l'iperico è un induttore del CYP3A4 e della \nP-gp che riduce l'efficacia dei DOAC [5, 6]. 4: Vero, l'aderenza è critica proprio perché l'effetto dei DOAC svanisce rapidamente dopo la mancata \nassunzione [7].",
+      "numero": 16,
+      "id": "q16"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Dermatite atopica pediatrica e xerosi",
+      "tipo": "multipla_scelta",
+      "domanda": "Una madre si presenta in farmacia con il figlio di 4 mesi che presenta chiazze rosse e secche sulle guance, riconducibili a una \ndermatite atopica lieve. Quale delle seguenti raccomandazioni di trattamento e consulenza è corretta secondo le linee guida?",
+      "opzioni": {
+        "A": "Applicare una crema a base di urea al 5% per contrastare la xerosi cutanea tipica del lattante.",
+        "B": "Utilizzare un dermocorticoide di classe II (es. Locoid®) applicandolo 2 volte al giorno per massimizzare l'effetto antinfiammatorio.",
+        "C": "Per coprire l'area di viso e collo del lattante di questa età, istruire la madre ad applicare circa 1 FTU (Finger Tip Unit) di \nprodotto.",
+        "D": "Iniziare immediatamente una 'terapia del weekend' applicando cortisonici potenti per prevenire recidive a lungo termine."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le tabelle FTU specifiche per l'età pediatrica, per un bambino di 3-6 mesi la dose per viso e collo è di 1 FTU [1]. La \nrisposta A è errata perché l'urea non deve essere usata sotto i 3 anni per rischio di irritazione e potenziale tossicità (uremia) [1, 2]. La B è \nerrata perché i dermocorticoidi hanno un 'effetto serbatoio' e l'applicazione una volta al giorno è normalmente sufficiente per garantire l'efficacia\nriducendo i rischi [3, 4]. La D è errata perché la terapia del weekend (applicazione 2 giorni a settimana) è una strategia di mantenimento dopo aver \nottenuto la remissione, non l'approccio iniziale [4, 5].",
+      "numero": 17,
+      "id": "q17"
+    },
+    {
+      "ruolo": 9,
+      "tema": "Dermatomicosi e gestione farmaci Lista B+",
+      "tipo": "kprim",
+      "domanda": "Un paziente adulto richiede un trattamento per una sospetta micosi infiammata tra le dita dei piedi. Valutate la correttezza delle \nseguenti affermazioni riguardanti la consegna di Imacort® (clotrimazolo, esamidina, prednisolone acetato) come farmaco di Lista B+ in farmacia:",
+      "opzioni": {
+        "1": "Il farmacista può decidere la durata della terapia in base al quadro clinico, ma per Imacort® il limite massimo di consegna senza ricetta\nè di 2 settimane.",
+        "2": "La consegna in Lista B+ è permessa anche se il paziente non è fisicamente presente, a condizione che la consulenza avvenga \ntelefonicamente.",
+        "3": "L'uso di questo preparato è controindicato se il paziente presenta contemporaneamente lesioni da rosacea o dermatite periorale sul \nviso.",
+        "4": "In caso di gravidanza accertata, il farmacista può procedere alla consegna in Lista B+ solo se il beneficio terapeutico supera il rischio\npotenziale."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "L'affermazione 1 è corretta: Imacort rappresenta un'eccezione alla durata standard dei cortisonici B+ e può essere consegnato per\nun massimo di 2 settimane [6, 7]. La 2 è falsa: la presenza fisica del paziente in farmacia è un requisito legale e professionale obbligatorio per la\ndispensazione in Lista B+ [6, 8]. La 3 è corretta: i corticosteroidi topici sono rigorosamente controindicati in caso di rosacea o dermatite \nperiorale, poiché possono scatenare o peggiorare significativamente queste condizioni [4]. La 4 è falsa: le condizioni per la consegna facilitata \n(Lista B+) specificano chiaramente che non è permessa la dispensazione a donne in gravidanza o durante l'allattamento [4, 6, 8].",
+      "numero": 18,
+      "id": "q18"
+    },
+    {
+      "ruolo": 10,
+      "tema": "Malattie esantematiche e pelle bambini - Triage e malattie infettive",
+      "tipo": "multipla_scelta",
+      "domanda": "Una madre si presenta in farmacia con il figlio di 5 anni che ha febbre alta e mal di gola. Notate un'eruzione cutanea di colore \nrosso intenso, costituita da piccolissime papule che al tatto sembrano 'carta vetrata' (sandpaper), localizzata soprattutto alle pieghe cutanee. La \nlingua appare inizialmente biancastra e poi diventa di un rosso vivo ('lingua a fragola'). Qual è il triage corretto e la raccomandazione secondo le \nlinee guida svizzere?",
+      "opzioni": {
+        "A": "Sospettare la Sesta Malattia (Exanthema subitum) e consigliare solo paracetamolo per la febbre.",
+        "B": "Sospettare la Scarlattina e indirizzare urgentemente il paziente al medico per la prescrizione di una terapia antibiotica sistemica.",
+        "C": "Applicare una crema a base di idrocortisone (classe 1) per ridurre l'infiammazione cutanea prima della diagnosi medica.",
+        "D": "Consigliare l'uso di urea al 10% per trattare la rugosità della pelle descritta come carta vetrata."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La descrizione (rash a carta vetrata, febbre, mal di gola e lingua a fragola) è patognomonica per la scarlattina, causata da \nstreptococchi beta-emolitici di gruppo A [1]. Le fonti indicano che per la scarlattina è necessaria una terapia antibiotica sistemica [1]. La A è \nerrata perché il Dreitagefieber (sesta malattia) presenta febbre per 3-4 giorni seguita da rash maculare dopo la scomparsa della febbre [2]. La C è \nerrata perché gli steroidi non sono indicati per esantemi infettivi batterici [1]. La D è errata perché l'urea è controindicata nei bambini piccoli \nper il rischio di irritazione [3, 4].",
+      "numero": 19,
+      "id": "q19"
+    },
+    {
+      "ruolo": 10,
+      "tema": "Malattie esantematiche e pelle bambini - Dermatite atopica e consulenza",
+      "tipo": "kprim",
+      "domanda": "In merito alla consulenza farmaceutica per un bambino con dermatite atopica (eczema atopico) e alle tecniche di applicazione dei \ntopici, valutate la correttezza delle seguenti affermazioni basandovi sulle fonti fornite:",
+      "opzioni": {
+        "1": "Il metodo 'Soak and Seal' raccomanda l'applicazione dell'emolliente entro 3 minuti dal bagno per sigillare l'umidità nella pelle.",
+        "2": "Per la terapia degli episodi acuti, i glucocorticoidi 'soft' (come mometasone o metilprednisolone aceponato) vanno applicati di norma una\nvolta al giorno per 5-10 giorni.",
+        "3": "L'uso di preparati contenenti Urea è vivamente raccomandato fin dai primi mesi di vita per la sua eccellente tollerabilità sulla pelle \ndei neonati.",
+        "4": "Secondo il metodo Fingertip Unit (FTU), una singola unità FTU (circa 0.5g) è sufficiente per coprire una superficie pari a due palmi di \nmano (comprese le dita)."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "L'affermazione 1 è corretta: il 'soak and seal' prevede l'applicazione entro 3 minuti per mantenere l'idratazione [4]. La 2 è \ncorretta: gli steroidi moderni si usano 1 volta al giorno per periodi brevi (5-10 giorni) nelle fasi acute [5]. La 3 è falsa: l'urea può causare \nbruciore e irritazione (uritemia) e non deve essere usata nei primi anni di vita [3, 4, 6]. La 4 è corretta: 1 FTU copre l'area di due palmi di un \nadulto .",
+      "numero": 20,
+      "id": "q20"
+    },
+    {
+      "ruolo": 11,
+      "tema": "Malattie intestinali - Triage e MICI",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 35 anni si presenta in farmacia riferendo dolori addominali ricorrenti, diarrea cronica da diversi mesi e un calo \nponderale involontario. In anamnesi riporta pregressi interventi per fistole perianali. Quale caratteristica distingue patologicamente il sospetto \nMorbo di Crohn dalla Colite Ulcerosa?",
+      "opzioni": {
+        "A": "L'infiammazione è tipicamente continua, superficiale e risale progressivamente dal retto.",
+        "B": "L'infiammazione è transmurale, segmentale e può colpire qualsiasi segmento del tratto gastrointestinale.",
+        "C": "Il coinvolgimento è limitato esclusivamente alla mucosa del colon e del retto.",
+        "D": "La complicanza più caratteristica è il megacolon tossico, mentre le fistole sono assenti."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il Morbo di Crohn si distingue per un'infiammazione transmurale (che penetra l'intera parete) e segmentale ('a macchia di \nleopardo'), con la possibilità di colpire tutto il tratto G/I [1, 2]. La Colite Ulcerosa è invece superficiale, continua e limitata al solo colon \n[2]. La presenza di fistole e ascessi è una complicanza tipica della natura transmurale del Crohn [1, 2].",
+      "numero": 21,
+      "id": "q21"
+    },
+    {
+      "ruolo": 11,
+      "tema": "Farmacia Clinica - Gestione della stipsi",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione della stitichezza in farmacia, alle linee guida terapeutiche (S2k) e alle competenze della Lista B+, valutate\nle seguenti affermazioni:",
+      "opzioni": {
+        "1": "Il Macrogol (PEG) è un lassativo di prima scelta che agisce fisicamente legando l'acqua nel colon, stimolando la motilità senza essere \nassorbito sistematicamente.",
+        "2": "L'olio di paraffina è raccomandato dalle linee guida come trattamento di prima linea per gli anziani stitici grazie alla sua azione \nlubrificante sicura.",
+        "3": "Secondo la legislazione svizzera, la dispensazione di Macrogol in Lista B+ consente al farmacista di definire la durata della terapia \nsecondo il proprio giudizio, superando i limiti della Lista D.",
+        "4": "I lassativi di massa (Quellmittel come lo psillio) sono controindicati nei pazienti in terapia con oppioidi a causa dell'aumentato \nrischio di ostruzione intestinale."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1 è Vera: Macrogol è farmaco di prima scelta e agisce fisicamente [3, 4]. 2 è Falsa: l'uso di olio di paraffina non è \nraccomandato, specialmente negli anziani, per il rischio di polmonite lipidica da aspirazione [3, 5]. 3 è Vera: le specialità in lista D sono \nlimitate a 14 giorni, mentre la Lista B+ (es. Movicol®) permette al farmacista di gestire la durata della terapia previa documentazione [6, 7]. 4 è \nVera: i formatori di massa sono specificamente controindicati in corso di trattamento con oppioidi [8].",
+      "numero": 22,
+      "id": "q22"
+    },
+    {
+      "ruolo": 12,
+      "tema": "Reflusso gastroesofageo - Triage e Red Flags",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 55 anni, in sovrappeso, lamenta bruciore retrosternale e raucedine persistente da circa 10 giorni. Riferisce di \nassumere occasionalmente Diclofenac per dolori articolari. Qual è la condotta corretta del farmacista secondo le linee guida per la dispensazione di \nfarmaci della lista B+?",
+      "opzioni": {
+        "A": "Dispensare Pantoprazolo 20 mg per 14 giorni, raccomandando l'assunzione al mattino a digiuno.",
+        "B": "Consigliare l'uso di un antiacido (sali di calcio e magnesio) al bisogno e rivalutare tra una settimana.",
+        "C": "Indirizzare il paziente al medico per accertamenti (EGDS) a causa dell'età e dei sintomi potenzialmente extra-esofagei.",
+        "D": "Suggerire la sostituzione del Diclofenac con un Coxib e iniziare una terapia con PPI a basso dosaggio."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le fonti [1, 2], l'età superiore ai 50 anni è considerata un segnale d'allarme (Red Flag) che impone l'invio al medico \nper una gastroscopia (EGDS) per escludere cause organiche come il carcinoma o l'ulcera. Inoltre, la raucedine e la tosse cronica sono sintomi di GERD\ncon possibile rischio di complicazioni a lungo termine [3]. In presenza di Red Flags, non è consentito il trattamento autonomo in farmacia tramite \nlista B+ [2, 4].",
+      "numero": 23,
+      "id": "q23"
+    },
+    {
+      "ruolo": 12,
+      "tema": "Farmacoterapia e Counselling PPI",
+      "tipo": "kprim",
+      "domanda": "In merito alla consulenza al banco per un paziente che inizia una terapia con Inibitori di Pompa Protonica (PPI) per una sospetta \nGERD, valutate la correttezza delle seguenti affermazioni basandovi sulle fonti:",
+      "opzioni": {
+        "1": "Il pieno effetto di inibizione acida dei PPI si manifesta solitamente dopo 4-5 giorni di assunzione regolare.",
+        "2": "L'assunzione ideale del farmaco è al mattino a stomaco vuoto oppure prima di cena in caso di sintomi prevalentemente notturni.",
+        "3": "Esistono differenze significative di efficacia terapeutica tra i diversi principi attivi (Omeprazolo, Pantoprazolo, Lansoprazolo) ai \ndosaggi raccomandati.",
+        "4": "In caso di mancato miglioramento dei sintomi dopo 14 giorni di terapia a basso dosaggio, è indicata l'esecuzione di una gastroscopia."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La 1 è corretta: la soppressione acida completa richiede 4-5 giorni [5]. La 2 è corretta: riflette le modalità d'assunzione per \nottimizzare la farmacocinetica [5]. La 3 è falsa: le fonti dichiarano esplicitamente che non vi sono grandi differenze di efficacia o vantaggi \nterapeutici tra i vari PPI [6]. La 4 è corretta: se non vi è risposta dopo due settimane, è necessario un approfondimento diagnostico tramite EGDS \n[4].",
+      "numero": 24,
+      "id": "q24"
+    },
+    {
+      "ruolo": 14,
+      "tema": "Anamnesi e cure primarie - Infezioni urinarie",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 30 anni senza patologie pregresse si presenta in farmacia con sintomi tipici di cistite non complicata (disuria e \npollachiuria). Dopo aver escluso Red Flags, decidete di consegnare una dose singola di Fosfomicina 3g. Quale istruzione di counselling è fondamentale\nper garantire l'efficacia del trattamento?",
+      "opzioni": {
+        "A": "Assumere il farmaco preferibilmente la sera dopo aver svuotato la vescica e non bere più di 2 litri di liquidi al giorno.",
+        "B": "Assumere il farmaco al mattino a stomaco vuoto e bere almeno 3-4 litri d'acqua per favorire il lavaggio delle vie urinarie.",
+        "C": "Dividere il contenuto della bustina in due dosi da assumere a distanza di 12 ore l'una dall'altra.",
+        "D": "Assumere il farmaco immediatamente e ripetere la dose dopo 24 ore se i sintomi persistono."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Secondo le linee guida medinform, la fosfomicina va assunta idealmente la sera dopo lo svuotamento vescicale affinché il \nprincipio attivo possa agire più a lungo nei tessuti della vescica [1, 2]. È fondamentale raccomandare di non superare i 2 litri di liquidi al \ngiorno, poiché un'eccessiva idratazione diluirebbe troppo la concentrazione del farmaco, riducendone l'efficacia clinica [1].",
+      "numero": 25,
+      "id": "q25"
+    },
+    {
+      "ruolo": 14,
+      "tema": "Anamnesi e cure primarie - Triage mal di gola",
+      "tipo": "kprim",
+      "domanda": "Il punteggio di McIsaac (Centor modificato) è uno strumento essenziale per il triage dell'angina tonsillare in farmacia. Valuta la \ncorrettezza delle seguenti affermazioni relative all'assegnazione dei punti e alla gestione clinica:",
+      "opzioni": {
+        "1": "La presenza di una tosse persistente e fastidiosa aggiunge 1 punto al punteggio totale.",
+        "2": "L'età del paziente pari o superiore a 45 anni comporta la sottrazione di 1 punto (-1) dal totale.",
+        "3": "Linfonodi cervicali anteriori gonfi e dolorabili alla palpazione aggiungono 1 punto.",
+        "4": "In presenza di un McIsaac Score compreso tra 0 e 2, le linee guida svizzere raccomandano di non effettuare il test rapido Strep A e di \nnon somministrare antibiotici."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "Il punteggio di McIsaac assegna 1 punto per l'assenza di tosse (Kein Husten), non per la sua presenza [3, 4]. Gli altri parametri\nsono corretti: l'età ≥45 anni toglie un punto perché riduce la probabilità statistica di infezione da Streptococco A, mentre i linfonodi dolenti sono\nun criterio positivo [3]. Con un punteggio di 0-2 la probabilità di infezione batterica è molto bassa, quindi si evita il test e si procede con il \nsolo trattamento sintomatico [5, 6].",
+      "numero": 26,
+      "id": "q26"
+    },
+    {
+      "ruolo": 15,
+      "tema": "Preparazione medicinali e galenica - categorie dispensazione",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente abituale si presenta in farmacia richiedendo lo sciroppo Resyl Plus® (contenente codeina), ricordando che in passato era \ndisponibile in Lista C. Dopo aver effettuato l'anamnesi e il triage per escludere complicazioni, decidete di dispensare il prodotto. Quale obbligo \nlegale dovete assolvere secondo la revisione della VAM?",
+      "opzioni": {
+        "A": "Potete consegnarlo senza formalità, poiché i prodotti della ex Lista C sono stati riclassificati in Lista E (libera vendita).",
+        "B": "Dovete obbligatoriamente registrare la dispensazione nel dossier del paziente, poiché i preparati a base di codeina della ex Lista C sono\nstati riclassificati in Lista B (minus).",
+        "C": "La codeina è stata spostata in Lista A; pertanto, la dispensazione è possibile solo previa presentazione di una ricetta medica ufficiale \nper stupefacenti.",
+        "D": "È possibile la dispensazione solo se il farmacista rietichetta il prodotto come 'Formula propria' e ne limita la validità a 12 mesi."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo la revisione della VAM (Art. 42 lett. f), la maggior parte dei medicinali che precedentemente appartenevano alla \ncategoria C (come quelli a base di codeina) è stata riclassificata nella categoria di dispensazione B (denominata B minus) [1, 2]. La loro consegna \nda parte del farmacista senza prescrizione medica richiede una consulenza specialistica e l'obbligo di documentazione nel dossier del paziente per \ngarantire la tracciabilità, trattandosi di sostanze controllate [2-4].",
+      "numero": 27,
+      "id": "q27"
+    },
+    {
+      "ruolo": 15,
+      "tema": "Preparazione medicinali e galenica - preparazione galenica",
+      "tipo": "kprim",
+      "domanda": "Una farmacia allestisce una 'Formula magistralis' (pomata all'acido salicilico 10%) per un paziente specifico su prescrizione medica.\nIn merito ai requisiti di etichettatura e stabilità stabiliti dalla Ph. Helv. XII e dalla VAM, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "La dicitura della categoria 'Formula magistralis' deve essere riportata sull'etichetta con una dimensione del carattere di almeno 7 \npunti.",
+        "2": "È obbligatorio indicare quantitativamente i principi attivi e qualitativamente gli eccipienti di particolare interesse (secondo Allegato \n3a AMZV).",
+        "3": "In assenza di dati di stabilità specifici per la formula, il periodo di validità (EXP) deve essere limitato a un massimo di 12 mesi.",
+        "4": "Il nome e l'anno di nascita del paziente sono dati facoltativi se sull'etichetta è presente l'indirizzo della farmacia e il numero di \nlotto."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "La normativa svizzera (VAM Art. 39 e Ph. Helv. 12) impone che la dicitura 'Formula magistralis' abbia una dimensione minima di \n7pt [5-7]. La composizione deve dichiarare i principi attivi quantitativamente e gli eccipienti rilevanti qualitativamente [7]. Secondo l'Art. 36 \ndella VAM, senza specifici dati di stabilità, la validità massima è di 12 mesi e la produzione non deve superare il fabbisogno annuo [8, 9]. \nL'identificazione del paziente (nome e data di nascita) è invece un elemento obbligatorio e fondamentale per la sicurezza della formula magistrale \n[5, 10, 11].",
+      "numero": 28,
+      "id": "q28"
+    },
+    {
+      "ruolo": 16,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente anziano in terapia cronica con Marcoumar® (fenprocumone) effettua un controllo POCT dell'INR presso la vostra farmacia. \nIl valore rilevato è 5.2. Il paziente si sente bene e non presenta segni visibili di sanguinamento. Qual è l'intervento di triage corretto secondo i \nprotocolli svizzeri per le 'Vital Red Flags'?",
+      "opzioni": {
+        "A": "Tranquillizzare il paziente, suggerire di saltare la dose successiva e ripetere l'analisi in farmacia tra 48 ore.",
+        "B": "Indirizzare immediatamente il paziente al medico o al pronto soccorso a causa dell'elevato rischio di emorragia spontanea.",
+        "C": "Validare il risultato come accettabile, poiché in assenza di ematomi o melena il rischio clinico è considerato basso.",
+        "D": "Somministrare autonomamente 10 mg di Vitamina K gocce per riportare rapidamente l'INR nel range terapeutico (2.0-3.0)."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, un valore di INR > 4.5 è classificato come un segnale di allerta vitale critico (Vital Red Flag), indicativo di\nun pericolo imminente di emorragia, indipendentemente dalla presenza di sintomi visibili [1-3]. Il farmacista non può modificare autonomamente la \nposologia di anticoagulanti (A) né somministrare antidoti senza consulto medico (D) in questa situazione di rischio estremo.",
+      "numero": 29,
+      "id": "q29"
+    },
+    {
+      "ruolo": 16,
+      "tema": "Analisi di laboratorio - esami ematici",
+      "tipo": "kprim",
+      "domanda": "La corretta valutazione dei parametri biochimici richiede la conoscenza delle variazioni fisiologiche e dei target di screening. \nValuti la correttezza delle seguenti affermazioni basate sulle linee guida svizzere (EviPrev, AGLA, KDIGO).",
+      "opzioni": {
+        "1": "In gravidanza, i livelli di TSH tendono a diminuire fisiologicamente nel primo trimestre come forma di compenso all'attività dell'HCG.",
+        "2": "Un valore di eGFR (velocità di filtrazione glomerulare stimata) < 60 mL/min/1.73m² è il parametro di riferimento per definire \nun'insufficienza renale cronica.",
+        "3": "Secondo le raccomandazioni AGLA, lo screening dei lipidi (colesterolo e trigliceridi) in un uomo senza fattori di rischio noti deve \niniziare a 40 anni.",
+        "4": "In un emocromo, un valore di emoglobina (Hb) di 100 g/L (rif. 135-175) in un uomo è considerato un Vital Red Flag che richiede il rinvio \nimmediato al pronto soccorso."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "La 1 è corretta: l'HCG ha attività TSH-simile che porta a un calo compensatorio del TSH nel 1° trimestre [4, 5]. La 2 è corretta:\nl'eGFR è il parametro d'elezione KDIGO per valutare la funzione renale [6, 7]. La 3 è corretta: le linee guida AGLA/EviPrev indicano i 40 anni come \netà d'inizio per lo screening lipidico maschile [8-10]. La 4 è falsa: sebbene 100 g/L sia un valore anemico da approfondire, la soglia per il rinvio \nvitale critico immediato è Hb < 60 g/L [2, 5].",
+      "numero": 30,
+      "id": "q30"
+    },
+    {
+      "ruolo": 17,
+      "tema": "Vaccini e BLS - Vaccinazione antinfluenzale",
+      "tipo": "multipla_scelta",
+      "domanda": "Un uomo di 70 anni, affetto da insufficienza cardiaca cronica (classe NYHA II), si presenta in farmacia a novembre per la \nvaccinazione antinfluenzale stagionale. Secondo il Piano vaccinale svizzero 2025/2026, quale delle seguenti affermazioni è corretta riguardo alla \nscelta del vaccino e al rimborso?",
+      "opzioni": {
+        "A": "È preferibile somministrare un vaccino ad alto dosaggio (es. Efluelda®) e i costi del vaccino sono rimborsati dall'assicurazione \nobbligatoria (AOMS).",
+        "B": "Deve essere somministrato esclusivamente un vaccino a dosaggio standard; il vaccino ad alto dosaggio è rimborsato dall'AOMS solo a \npartire dai 75 anni compiuti.",
+        "C": "Il vaccino ad alto dosaggio è preferibile, ma i costi sono interamente a carico dell'utente poiché l'insufficienza cardiaca non è \nconsiderata un fattore di rischio sufficiente per il rimborso sotto i 75 anni.",
+        "D": "La vaccinazione antinfluenzale è controindicata nei pazienti con patologie cardiache croniche a causa del potenziale stress immunitario."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Secondo le novità del piano vaccinale (fonti [1-3]), per le persone a partire dai 65 anni con un fattore di rischio aggiuntivo \n(come l'insufficienza cardiaca citata nel cap. 3.1, fonti [4-6]) è preferibile l'uso del vaccino ad alto dosaggio rispetto a quello standard. L'AOMS \nassume i costi del vaccino ad alto dosaggio per tutti i soggetti ≥ 75 anni e per i soggetti tra 65 e 74 anni che presentano comorbilità ad alto \nrischio (fonte [3]). La risposta B è errata perché il limite dei 75 anni non è esclusivo se è presente un rischio. La C è errata perché il rimborso è\nprevisto per le categorie a rischio. La D è errata poiché le malattie cardiache sono un'indicazione prioritaria alla vaccinazione (fonti [4, 7]).",
+      "numero": 31,
+      "id": "q31"
+    },
+    {
+      "ruolo": 17,
+      "tema": "Vaccini e BLS - Triage, HPV e gestione emergenze",
+      "tipo": "kprim",
+      "domanda": "Una giovane donna di 19 anni desidera completare la vaccinazione contro l'HPV in farmacia. Durante l'anamnesi dichiara di aver \nricevuto solo la prima dose all'età di 14 anni. Quali delle seguenti affermazioni sono corrette secondo le linee guida e i protocolli svizzeri \n(UFSP/FPH)?",
+      "opzioni": {
+        "1": "Poiché sono trascorsi 5 anni dalla prima dose, lo schema vaccinale (3 dosi per questa fascia d'età) deve essere ricominciato da zero per \ngarantire una protezione immunitaria efficace.",
+        "2": "Se la paziente dichiara di aver avuto febbre (38.5°C) la sera precedente, la vaccinazione deve essere posticipata a quando sarà senza \nfebbre da almeno 48 ore.",
+        "3": "La vaccinazione contro l'HPV in farmacia è rimborsata dall'assicurazione obbligatoria (AOMS) solo se effettuata all'interno di un \nprogramma cantonale.",
+        "4": "In caso di arresto cardiaco improvviso durante l'osservazione post-vaccinale, se la paziente indossa un cerotto medicamentoso nella zona \ndi applicazione degli elettrodi del DAE, questo va rimosso prima dell'applicazione."
+      },
+      "risposta_corretta": "FVVV",
+      "motivazione": "1: Falso. In caso di interruzione, lo schema vaccinale non deve mai essere ricominciato da zero; si somministrano solo le dosi \nmancanti (fonti [8-10]). 2: Vero. La febbre nelle ultime 48 ore è un criterio di esclusione temporanea che impone il rinvio (fonti [11-13]). 3: Vero.\nI costi della vaccinazione HPV sono coperti dall'AOMS solo se eseguiti nell'ambito di programmi cantonali (fonti [14-16]). 4: Vero. I cerotti \nmedicamentosi sono classificati come 'situazioni particolari' e vanno rimossi (pulendo la pelle) se si trovano dove vanno applicati gli elettrodi per\nevitare interferenze o ustioni (fonte [17]).",
+      "numero": 32,
+      "id": "q32"
+    },
+    {
+      "ruolo": 18,
+      "tema": "Lista B+ - Broncospasmi",
+      "tipo": "multipla_scelta",
+      "domanda": "Nell'ottobre 2024, la combinazione Budesonide/Formoterolo (es. Symbicort®) è stata inserita nella Lista B+. Un paziente di 45 anni, \nfumatore da 20 anni, si presenta con fiato corto e sibili respiratori chiedendo il farmaco. Come deve agire il farmacista secondo le linee guida GINA\ne le condizioni di dispensazione svizzere?",
+      "opzioni": {
+        "A": "Il farmacista può dispensare il preparato come dispensazione singola, poiché il paziente è adulto e presenta sintomi chiari di \nbroncospasmo.",
+        "B": "La dispensazione di Budesonide/Formoterolo in regime B+ è esclusa per i fumatori; il farmacista può valutare la consegna di Salbutamolo o\nTerbutalina.",
+        "C": "È possibile dispensare il farmaco solo se il paziente firma una dichiarazione di rinuncia al fumo durante il colloquio di consulenza.",
+        "D": "Il farmacista può dispensare il preparato ma ha l'obbligo di consegnare la confezione più grande disponibile per garantire la continuità \nterapeutica."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le condizioni specifiche per Budesonide/Formoterolo in Lista B+, la dispensazione facilitata è permessa solo ad adulti \nnon fumatori [1-3]. Questa restrizione serve a escludere una possibile BPCO non diagnosticata, per la quale il farmaco non è indicato come 'reliever'\nin questo regime [3, 4]. Per i fumatori con broncospasmo acuto, è invece possibile dispensare Salbutamolo o Terbutalina (SABA) per una durata massima\ndi 2 settimane [1, 3]. L'opzione D è errata perché le raccomandazioni 'smarter medicine' sconsigliano la dispensazione di confezioni grandi \nall'inizio di una terapia [5, 6].",
+      "numero": 33,
+      "id": "q33"
+    },
+    {
+      "ruolo": 18,
+      "tema": "Smarter Medicine - Pharmazie an Schnittstellen",
+      "tipo": "kprim",
+      "domanda": "In conformità alle raccomandazioni 'smarter medicine' per la farmacia alle interfacce (Top-5), quali delle seguenti procedure sono \nconsiderate 'best practice' per garantire la sicurezza del paziente?",
+      "opzioni": {
+        "1": "Effettuare la riconciliazione terapeutica (Medication Reconciliation) consultando almeno due fonti di informazione indipendenti (es. \npiano terapeutico e anamnesi del paziente).",
+        "2": "Includere nell'anamnesi farmacologica anche i medicamenti di automedicazione, i prodotti fitoterapici e gli integratori alimentari.",
+        "3": "Al momento della dimissione ospedaliera, dispensare sistematicamente tutti i farmaci prescritti, indipendentemente dalle scorte che il \npaziente ha già a domicilio.",
+        "4": "In caso di sostituzione generica o modifica del dosaggio, il farmacista deve istruire il paziente e assicurarsi che gli altri \nprofessionisti coinvolti siano informati."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La dichiarazione 1 e 2 riflettono la prima raccomandazione di 'smarter medicine', che impone l'uso di almeno due fonti \nindipendenti e un'anamnesi ampia che includa l'automedicazione per prevenire errori [7, 8]. La terza dichiarazione è falsa perché la quarta \nraccomandazione vieta la dispensazione senza aver prima chiarito il reale fabbisogno del paziente, evitando sprechi e rischi di doppie assunzioni se \nesistono scorte domestiche [9, 10]. La quarta dichiarazione riflette correttamente la terza raccomandazione sulla comunicazione interprofessionale e \nl'educazione del paziente in caso di modifiche della terapia [11, 12].",
+      "numero": 34,
+      "id": "q34"
+    },
+    {
+      "ruolo": 19,
+      "tema": "Allergie stagionali - allergie stagionali",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente di 35 anni si presenta in farmacia durante la stagione dei pollini lamentando starnuti, prurito oculare e un forte senso \ndi naso chiuso che disturba il sonno. Valuta il suo fastidio con un punteggio VAS di 65. Non riferisce segnali d'allarme (niente febbre o secrezioni \npurulente). Quale approccio terapeutico è prioritario secondo le linee guida ARIA e le competenze svizzere della Lista B+?",
+      "opzioni": {
+        "A": "Consegnare un antistaminico di prima generazione (es. Clemastina) per sfruttare l'effetto sedativo notturno.",
+        "B": "Consegnare un corticosteroide intranasale (INGK) come il Mometasone, istruendo il paziente sulla tecnica di applicazione a croce.",
+        "C": "Raccomandare l'uso di un decongestionante nasale a base di Xilometazolina come terapia di base per tutta la durata della stagione \npollinica.",
+        "D": "Inviare il paziente al medico per una prescrizione, poiché i farmaci per la rinite allergica non possono essere dispensati dal farmacista\nsenza ricetta."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, per valori VAS ≥ 50 (rinite da moderata a grave), i corticosteroidi intranasali (INGK) sono il trattamento di \nprima scelta in quanto più efficaci degli antistaminici orali sulla congestione nasale [1, 2]. In Svizzera, farmaci come il Mometasone possono essere\nconsegnati dal farmacista ad adulti (>18 anni) nell'ambito della Lista B+ [3]. La risposta A è errata perché gli antistaminici di 1a generazione non \nsono più raccomandati a causa degli effetti sedativi e anticholinergici [4]. La C è errata poiché i decongestionanti non devono superare i 7-10 \ngiorni d'uso per il rischio di rinite medicamentosa [5, 6]. La D è errata poiché la Lista B+ abilita il farmacista alla dispensazione autonoma previa\nconsulenza documentata [7, 8].",
+      "numero": 35,
+      "id": "q35"
+    },
+    {
+      "ruolo": 19,
+      "tema": "Allergie stagionali - allergie stagionali",
+      "tipo": "kprim",
+      "domanda": "Riguardo alla gestione della rinite allergica e alla desensibilizzazione (SIT) in farmacia, valuta la veridicità delle seguenti \naffermazioni basandoti sulle linee guida citate nelle fonti:",
+      "opzioni": {
+        "1": "La Bilastina deve essere assunta preferibilmente a stomaco pieno per migliorare l'assorbimento sistemico del principio attivo.",
+        "2": "L'ostruzione nasale persistente deve essere trattata adeguatamente per prevenire la progressione dell'infiammazione allergica verso i \npolmoni (cambio di piano o 'Etagenwechsel').",
+        "3": "L'immunoterapia specifica (SIT) è indicata, tra le altre cose, se i sintomi stagionali persistono da oltre 3 anni o in caso di comparsa \ndi asma allergico.",
+        "4": "In una donna in gravidanza che soffre di rinite allergica, il farmacista può dispensare farmaci di Lista B+ dopo aver documentato il \ncolloquio."
+      },
+      "risposta_corretta": "FVVF",
+      "motivazione": "1: Falso. La Bilastina va assunta a digiuno poiché il cibo e i succhi di frutta riducono significativamente la sua \nbiodisponibilità [9, 10]. 2: Vero. L'ostruzione nasale persistente è un fattore che favorisce il 'cambio di piano' verso l'asma bronchiale [2, 11]. \n3: Vero. Le indicazioni per la SIT includono il fallimento della terapia farmacologica, la durata dei sintomi >3 anni e la prevenzione dell'asma [12,\n13]. 4: Falso. La dispensazione di farmaci di Lista B+ è esplicitamente esclusa per le donne in gravidanza o allattamento; in questi casi la prima \nscelta è il lavaggio nasale con soluzione fisiologica [14, 15].",
+      "numero": 36,
+      "id": "q36"
+    },
+    {
+      "ruolo": 20,
+      "tema": "Antibiotici - Stewardship e PK/PD",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 70 anni si presenta in farmacia con una prescrizione per Co-Amoxicillina (Amoxicillina/Acido Clavulanico) 1g, da \nassumere 2 volte al giorno per una polmonite acquisita in comunità (CAP). Secondo le linee guida SSI e i principi di farmacocinetica/farmacodinamica \n(PK/PD) citati nelle fonti, quale intervento del farmacista è più appropriato per ottimizzare la terapia?",
+      "opzioni": {
+        "A": "Validare la prescrizione così com'è, poiché la somministrazione biquotidiana garantisce la massima aderenza terapeutica nel paziente \nanziano.",
+        "B": "Contattare il medico per suggerire la ripartizione della dose in 625 mg 3 volte al giorno, al fine di massimizzare il tempo sopra la MIC \n(T > MHK), trattandosi di un antibiotico tempo-dipendente.",
+        "C": "Informare il paziente che la durata standard per la CAP è di 10-14 giorni e che deve terminare assolutamente la confezione anche se si \nsente bene dopo 3 giorni.",
+        "D": "Consigliare l'assunzione a stomaco vuoto (almeno 1 ora prima dei pasti) per aumentare la biodisponibilità dell'amoxicillina, che \naltrimenti verrebbe degradata dall'acidità gastrica."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti [1-3], i beta-lattamici come l'amoxicillina hanno una cinetica tempo-dipendente (T > MHK). Ripartire la dose \ngiornaliera in tre somministrazioni (3x625mg) è farmacologicamente preferibile a due somministrazioni (2x1g) poiché mantiene i livelli plasmatici \nsopra la minima concentrazione inibitoria per un tempo più lungo [1, 4]. Per quanto riguarda la durata (opzione C), le nuove linee guida SSI \nsuggeriscono durate più brevi (3-5 giorni) per la CAP [5, 6]. L'assunzione all'inizio di un pasto (contrariamente alla D) è raccomandata per \nmigliorare la tollerabilità gastrointestinale [7].",
+      "numero": 37,
+      "id": "q37"
+    },
+    {
+      "ruolo": 20,
+      "tema": "Antibiotici - Triage e validazione nelle infezioni urinarie",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 75 anni desidera acquistare un preparato per una sospetta cistite (bruciore alla minzione, pollachiuria). Durante \nl'anamnesi in farmacia, emergono diversi fattori. Valuta la correttezza delle seguenti affermazioni basandoti sul protocollo 'short cut' e sulle \nlinee guida svizzere per le infezioni del tratto urinario (IVU):",
+      "opzioni": {
+        "1": "La presenza di dolore al fianco e brividi rappresenta una 'Red Flag' (sintomi di pielonefrite) che impone l'invio immediato della \npaziente a un medico o al pronto soccorso.",
+        "2": "A causa dell'età (>65 anni), la paziente rientra in un gruppo a rischio ('Red Flag' per gruppo di pazienti) e la dispensazione autonoma \ndi un antibiotico da parte del farmacista non è indicata.",
+        "3": "Se il medico prescrivesse Nitrofurantoina, il farmacista dovrebbe verificare la funzione renale; con una Clearance della Creatinina \n(Clcr) < 45 ml/min, il farmaco è controindicato.",
+        "4": "In caso di sintomi lievi, il 'Watchful Waiting' (trattamento sintomatico per 48h con Ibuprofene e idratazione) è un'opzione terapeutica \nvalida anche se la paziente ha avuto una cistite trattata con antibiotici 10 giorni fa."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "L'affermazione 1 è corretta: dolore al fianco e brividi indicano un possibile coinvolgimento renale (pielonefrite), classificato \ncome emergenza [8]. L'affermazione 2 è corretta: l'età superiore ai 65 anni è una 'Red Flag' per gruppo di pazienti che richiede una valutazione \nmedica [8]. L'affermazione 3 è corretta: la Nitrofurantoina è controindicata se la Clcr è inferiore a 45 ml/min [9]. L'affermazione 4 è errata: se \nuna recidiva di IVU si verifica entro 14 giorni da una precedente infezione trattata con antibiotici, la paziente è classificata come 'Red Flag' e \nnon è idonea per il triage farmacologico standard o il semplice watchful waiting senza consulto medico [8].",
+      "numero": 38,
+      "id": "q38"
+    },
+    {
+      "ruolo": 21,
+      "tema": "Acne e Rosacea - Rosacea",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente di 52 anni si presenta in farmacia con un eritema centrofacciale simmetrico, teleangiektasien e diverse papule e pustole \ninfiammate. Durante l'anamnesi nega la presenza di comedoni, ma riferisce una fastidiosa sensazione di 'sabbia negli occhi' e secchezza oculare. Qual\nè il comportamento corretto del farmacista specialista secondo le linee guida?",
+      "opzioni": {
+        "A": "Dispensare autonomamente Metronidazolo crema (Lista B+) per le lesioni cutanee e consigliare un collirio lubrificante per gli occhi.",
+        "B": "Eseguire il triage per sospetta rosacea oculare e indirizzare la paziente a un controllo oftalmologico; per le lesioni cutanee è \npossibile dispensare Ivermectina 1% crema (Lista B+).",
+        "C": "Consigliare un corticosteroide topico di classe II per ridurre rapidamente l'infiammazione e l'eritema cutaneo, evitando il contatto con \ngli occhi.",
+        "D": "Validare la situazione come acne tardiva (Spätakne) data la presenza di pustole e dispensare Adapalene gel (Lista B+)."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La presenza di sintomi oculari (sensazione di corpo estraneo, secchezza) in un quadro di rosacea richiede obbligatoriamente un \nrinvio allo specialista oftalmologo [1-3]. L'Ivermectina 1% (Soolantra®) è l'unico principio attivo per la rosacea papulo-pustolosa inserito nella \nLista B+ per la dispensazione autonoma [4-6]. Il Metronidazolo è classificato in Lista B [4, 7]. I corticosteroidi sono controindicati nella rosacea \npoiché possono indurre una 'steroidrosacea' [8, 9]. L'assenza di comedoni esclude la diagnosi di acne vulgaris [10-12].",
+      "numero": 39,
+      "id": "q39"
+    },
+    {
+      "ruolo": 21,
+      "tema": "Acne e Rosacea - Isotretinoina orale",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 20 anni presenta una prescrizione medica per Isotretinoina orale (categoria A) per il trattamento di un'acne \nconglobata. Quali dei seguenti obblighi di sicurezza e criteri di validazione devono essere rispettati dal farmacista in Svizzera (direttive \nSwissmedic HPC)?",
+      "opzioni": {
+        "1": "Per le donne in età fertile, la prescrizione deve essere limitata a un fabbisogno massimo di 30 giorni.",
+        "2": "La dispensazione del farmaco deve avvenire entro un massimo di 7 giorni dalla data di emissione della ricetta.",
+        "3": "In caso di infiammazione severa, è indicato consigliare l'associazione con Doxycyclina per accelerare la guarigione delle lesioni.",
+        "4": "È vietato donare il sangue durante il trattamento e fino a un mese dopo la fine della terapia."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "Secondo le direttive Swissmedic (HPC), per garantire la sicurezza teratogena, la ricetta deve coprire solo 30 giorni ed essere \nevasa entro 7 giorni dall'emissione [13, 14]. La donazione di sangue è vietata per un mese dopo il termine del trattamento per evitare rischi a \nriceventi gravide [15]. L'associazione con tetracicline (come la Doxycyclina) è invece controindicata a causa del rischio di aumento della pressione \nendocranica (pseudotumor cerebri) [9, 16].",
+      "numero": 40,
+      "id": "q40"
+    },
+    {
+      "ruolo": 22,
+      "tema": "Psoriasi - Trattamento topico e counselling",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 55 anni si presenta in farmacia con una nuova prescrizione di Enstilar® schiuma (calcipotriolo/betametasone) per \ntrattare placche psoriasiche croniche su gomiti e ginocchia. Quale delle seguenti istruzioni di counselling è corretta e sicura secondo le linee \nguida riportate nelle fonti?",
+      "opzioni": {
+        "A": "Applicare la schiuma due volte al giorno (mattina e sera) per le prime 4 settimane per garantire una rapida remissione dei sintomi.",
+        "B": "Applicare una volta al giorno, preferibilmente la sera, e spiegare l'importanza dello scalaggio graduale o del passaggio a una terapia \npulsata per prevenire l'effetto rebound.",
+        "C": "Per migliorare la penetrazione dei principi attivi, mescolare al momento dell'uso la schiuma con una preparazione magistrale a base di \nacido salicilico al 5%.",
+        "D": "È possibile applicare la schiuma anche sulle zone del viso e delle pieghe cutanee per periodi prolungati, poiché la componente di \nvitamina D protegge dall'atrofia steroidea."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La risposta B è corretta perché le combinazioni di vitamina D e steroidi (come Enstilar®) si applicano solitamente una volta al \ngiorno [1, 2]. L'applicazione serale è consigliata poiché la proliferazione dei cheratinociti è maggiore di notte ('la notte è il giorno della \npelle') [3, 4]. Lo scalaggio graduale o la terapia pulsata (es. nel fine settimana) sono fondamentali per evitare l'effetto rebound tipico degli \nsteroidi [3-6]. L'opzione A è errata perché il dosaggio standard è una volta al giorno [1]. La C è errata perché il calcipotriolo è instabile in \nambiente acido e non deve essere combinato con acido salicilico [7, 8]. La D è errata perché i corticosteroidi di classe 3/4 non devono essere usati \nsu viso e pieghe per il rischio di atrofia [9-12].",
+      "numero": 41,
+      "id": "q41"
+    },
+    {
+      "ruolo": 22,
+      "tema": "Psoriasi - Unghie, triage e farmaci biologici",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione della psoriasi ungueale e al monitoraggio dei pazienti in terapia con farmaci biologici in farmacia, quali \ndelle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "La presenza di 'Krümmelnägel' (unghie a briciola) è considerata un segno clinico di psoriasi grave.",
+        "2": "Per la cura delle unghie psoriasiche, si consiglia al paziente di pulire accuratamente lo spazio sottoungueale con strumenti appuntiti \nper prevenire sovrainfezioni.",
+        "3": "In Svizzera, i farmaci biologici (es. Secukinumab o Adalimumab) sono indicati come terapia di prima scelta per la psoriasi a placche \nlieve che non risponde alla sola idratazione.",
+        "4": "Un paziente in terapia con biologici che riferisce sintomi anche lievi di infezione deve essere indirizzato immediatamente al medico, \nevitando l'automedicazione."
+      },
+      "risposta_corretta": "VFFV",
+      "motivazione": "La 1 è vera (V): le 'unghie a briciola' sono esplicitamente indicate come segno di psoriasi grave [13, 14]. La 2 è falsa (F): gli\nstrumenti appuntiti possono sollevare la lamina ungueale e agire come stimolo meccanico peggiorando la patologia; le unghie vanno tenute corte e \npulite delicatamente [15-18]. La 3 è falsa (F): i biologici sono considerati terapie di seconda linea ('Second-Line-Therapie'), da utilizzare solo \ndopo il fallimento o la controindicazione delle terapie convenzionali o della fototerapia [19-24]. La 4 è vera (V): per i pazienti in terapia \nimmunosoppressiva (biologici, MTX), è imperativo il triage medico immediato al minimo segno di infezione, senza ricorrere all'automedicazione [25, \n26].",
+      "numero": 42,
+      "id": "q42"
+    },
+    {
+      "ruolo": 23,
+      "tema": "Micosi - onicomicosi e interazioni",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 72 anni, in terapia cronica con un ACE-inibitore e acenocumarolo (Sintrom®), si presenta in farmacia per una sospetta \nonicomicosi all'alluce (coinvolgimento del 30% della lamina, matrice sana). Richiede un trattamento locale. Quale delle seguenti affermazioni \nrappresenta la corretta gestione clinica e farmacologica secondo le direttive svizzere?",
+      "opzioni": {
+        "A": "Il farmacista può dispensare una lacca a base di amorolfina in Lista B+; tuttavia, l'uso concomitante di miconazolo topico per \nun'eventuale tinea pedis associata richiederebbe cautela per il rischio di potenziamento dell'effetto dell'anticoagulante orale.",
+        "B": "Essendo il paziente in terapia con un ACE-inibitore, la diagnosi di onicomicosi è certa; gli ACE-inibitori fungono da fattore \npredisponente aumentando la suscettibilità ai dermatofiti come Trichophyton rubrum.",
+        "C": "La dispensazione in Lista B+ di una lacca al ciclopirox è controindicata poiché il paziente supera i 65 anni, limite oltre il quale è \nobbligatoria la prescrizione medica per monitorare la funzionalità renale.",
+        "D": "In caso di onicomicosi che coinvolge meno del 50% dell'unghia, le linee guida svizzere raccomandano come prima scelta l'uso di Nistatina \nin pasta, da applicare sotto occlusione per 9-12 mesi."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "La risposta A è corretta perché le fonti indicano che per il miconazolo topico è necessaria cautela in pazienti che assumono \nanticoagulanti orali [1, 2]. Inoltre, le condizioni per la Lista B+ sono soddisfatte (matrice sana, <50% superficie, alluce singolo) [3, 4]. La B è \nerrata perché gli ACE-inibitori possono causare alterazioni ungueali (psoriasi isolata) che 'imitano' la micosi, non la favoriscono [5, 6]. La C è \nerrata perché non esiste un limite di età superiore per la Lista B+. La D è errata perché la Nistatina non ha effetto sui dermatofiti, responsabili \ndella tinea unguium [7-9].",
+      "numero": 43,
+      "id": "q43"
+    },
+    {
+      "ruolo": 23,
+      "tema": "Micosi - candidiasi vaginale e triage",
+      "tipo": "kprim",
+      "domanda": "Una cliente di 26 anni richiede un preparato per un forte prurito intimo e secrezioni biancastre 'a fiocchi'. In qualità di \nfarmacista specialista, valutate la correttezza delle seguenti affermazioni relative al triage e alla terapia basandovi sulle linee guida svizzere \n(Lista B+ e fonti i.mail):",
+      "opzioni": {
+        "1": "Se la cliente riferisce che è la prima volta che avverte questi sintomi, il farmacista non può procedere alla dispensazione di un \nantimicotico in Lista B+ (es. econazolo) e deve indirizzarla al medico.",
+        "2": "L'esecuzione di un autotest del pH vaginale che dia un risultato < 4,5 (normale) supporta l'ipotesi di una candidosi vaginale piuttosto \nche di una vaginosi batterica.",
+        "3": "In caso di gravidanza accertata, è possibile dispensare in Lista B+ il clotrimazolo locale, purché si istruisca la paziente ad applicare \novuli e creme rigorosamente con l'applicatore fornito.",
+        "4": "In presenza di una micosi vaginale ricorrente (definita come >4 episodi all'anno), la gestione in regime di automedicazione è appropriata\nutilizzando cicli intermittenti di fluconazolo orale da 150 mg ogni 3 mesi."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "La 1 è vera: la 'prima infezione' è un criterio di esclusione per l'automedicazione e richiede diagnosi medica [10-12]. La 2 è \nvera: nella candidosi il pH resta tipicamente < 4,5, mentre nella vaginosi sale sopra 4,5 [13, 14]. La 3 è falsa: la gravidanza è un criterio di \nesclusione assoluto per la Lista B+ [15, 16]; inoltre, in gravidanza il clotrimazolo va usato SENZA applicatore [17, 18]. La 4 è falsa: le micosi \nricorrenti (>4x/anno) sono un 'red flag' che richiede consulto medico e non sono idonee alla gestione autonoma in farmacia [11, 19].",
+      "numero": 44,
+      "id": "q44"
+    },
+    {
+      "ruolo": 25,
+      "tema": "Diabete e malattie metaboliche - diabete tipo 1 e 2",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 65 anni in terapia con Jardiance® (empagliflozin) e Metformina riferisce in farmacia di sentirsi molto stanco, di \navere dolori addominali e nausea da alcuni giorni. La sua glicemia capillare misurata al banco è di 13.2 mmol/L. Qual è la gestione più appropriata \nda parte del farmacista secondo le fonti svizzere?",
+      "opzioni": {
+        "A": "Rassicurare il paziente che si tratta dei comuni effetti collaterali gastrointestinali della metformina e suggerire l'assunzione dopo i \npasti.",
+        "B": "Consigliare di sospendere il Jardiance® e aumentare la dose di metformina per abbassare la glicemia sotto i 10 mmol/L.",
+        "C": "Sospettare una chetoacidosi diabetica euglicemica e inviare il paziente immediatamente a un controllo medico o al pronto soccorso.",
+        "D": "Suggerire al paziente di bere molta acqua e ripetere la misurazione della glicemia dopo 24 ore prima di contattare il medico."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le fonti, gli inibitori SGLT2 come empagliflozin possono causare una chetoacidosi diabetica 'euglicemica', ovvero con \nlivelli di glucosio solo moderatamente elevati (spesso < 14 mmol/L), rendendo la diagnosi meno evidente [1, 2]. I sintomi descritti (nausea, dolori \naddominali, malessere) sono segnali d'allarme critici che richiedono un intervento medico immediato [2, 3]. Le altre opzioni ignorano il rischio di \nquesta grave complicazione metabolica.",
+      "numero": 45,
+      "id": "q45"
+    },
+    {
+      "ruolo": 25,
+      "tema": "Diabete e malattie metaboliche - diabete tipo 1 e 2",
+      "tipo": "kprim",
+      "domanda": "In merito alla consulenza tecnica sull'uso delle insuline e dei GLP-1 RA in farmacia, quali delle seguenti affermazioni sono corrette\nbasandosi sulle fonti fornite?",
+      "opzioni": {
+        "1": "Nel passaggio da un'insulina a concentrazione 300 U/ml (Toujeo®) a un'insulina glargine standard da 100 U/ml, il farmacista deve \nconsiderare una riduzione iniziale della dose del 20%.",
+        "2": "Per le insuline basali NPH (es. Insulatard®) e le miscele, è necessario capovolgere o rullare la penna almeno 20 volte prima dell'uso per\ngarantire l'omogeneità della sospensione.",
+        "3": "L'insulina degludec (Tresiba®) ha il vantaggio di raggiungere lo stato stazionario (steady state) già 2 ore dopo la prima iniezione \nsottocutanea.",
+        "4": "Gli agonisti del recettore GLP-1 a breve durata d'azione (es. Byetta®) devono essere somministrati entro 60 minuti prima dei pasti per \nmassimizzare l'effetto sulla glicemia post-prandiale."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, il passaggio da Toujeo a glargine 100 richiede prudenza e una riduzione del 20% della dose [4]. 2: Vero, le insuline \ntorbide (NPH e miscele) richiedono una miscelazione accurata (20x) per non perdere efficacia [4, 5]. 3: Falso, l'insulina degludec (Tresiba) richiede\ncirca 3 giorni per raggiungere lo steady state [6]. 4: Vero, exenatide (Byetta) va somministrata fino a 60 minuti prima del pasto [7, 8].",
+      "numero": 46,
+      "id": "q46"
+    },
+    {
+      "ruolo": 27,
+      "tema": "Patologie neuronali - Epilessia e Interazioni",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 65 anni in terapia cronica con Acido Valproico (Depakine® Chrono) per epilessia generalizzata viene ricoverato per una\npolmonite complicata. Il medico intende prescrivere Ertapenem (Invanz®) per via endovenosa. Qual è la condotta professionale corretta del farmacista \nclinico basata sulle evidenze di farmacovigilanza?",
+      "opzioni": {
+        "A": "Validare la prescrizione senza riserve, poiché non esistono interazioni farmacocinetiche clinicamente rilevanti tra le due classi.",
+        "B": "Sconsigliare l'associazione o suggerire il passaggio a un altro antiepilettico, poiché i carbapenemi causano un crollo drastico (fino al \n95%) dei livelli plasmatici di valproato, con altissimo rischio di crisi convulsive.",
+        "C": "Suggerire di raddoppiare la dose di Acido Valproico durante il trattamento antibiotico, poiché l'Ertapenem agisce come induttore \nenzimatico del CYP2C19.",
+        "D": "Validare la prescrizione raccomandando solo il monitoraggio degli enzimi epatici, a causa del potenziale sinergismo epatotossico."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti fornite [1], l'uso concomitante di Ertapenem e Acido Valproico porta a un massiccio abbassamento dei livelli \nsierici di quest'ultimo (fino al 95%). Questo effetto non può essere compensato semplicemente aumentando il dosaggio del valproato; pertanto, è \nnecessario monitorare strettamente i livelli plasmatici o, preferibilmente, passare a un antiepilettico diverso per evitare la perdita del controllo \ndelle crisi [1].",
+      "numero": 47,
+      "id": "q47"
+    },
+    {
+      "ruolo": 27,
+      "tema": "Patologie neuronali - Alzheimer e Demenza",
+      "tipo": "kprim",
+      "domanda": "Nella gestione farmacologica della malattia di Alzheimer, il farmacista deve validare le terapie basandosi sullo stadio della \nmalattia e sul profilo di sicurezza. Valutate le seguenti affermazioni basate sulle linee guida e le tabelle tecniche.",
+      "opzioni": {
+        "1": "Gli inibitori della colinesterasi (Donepezil, Galantamina, Rivastigmina) rappresentano la terapia di base per pazienti con Alzheimer da \nstadio lieve a moderato [2].",
+        "2": "La Memantina (Axura®) è un antagonista non competitivo dei recettori NMDA ed è indicata principalmente per i pazienti con malattia in \nstadio da moderato a grave [2].",
+        "3": "Donepezil (Aricept®) richiede un'assunzione rigorosamente legata ai pasti a causa del suo metabolismo tramite CYP2D6 e 3A4 [2].",
+        "4": "In caso di sintomi comportamentali (BPSD) e rischio di crisi epilettiche, il Donepezil deve essere usato con cautela poiché è associato a\nun rischio di abbassamento della soglia convulsiva tra lo 0,1% e l'1% [3]."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, sono definiti 'Grundstein' per questi stadi [2]. 2: Vero, è l'indicazione corretta per la Memantina [2]. 3: Falso, la \ntabella tecnica specifica che l'assunzione di Donepezil è 'indipendente dai pasti' (Unabhängig von) [2]. 4: Vero, la tabella sulla soglia convulsiva \nclassifica il Donepezil con un rischio associato tra lo 0,1% e l'1% [3].",
+      "numero": 48,
+      "id": "q48"
+    },
+    {
+      "ruolo": 28,
+      "tema": "Depressione e rischio cardiovascolare",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 68 anni, con una storia recente di infarto del miocardio (MI) e attualmente in terapia con clopidogrel, presenta \nsintomi di depressione moderata. Quale delle seguenti opzioni farmacoterapeutiche è la più appropriata secondo le evidenze e le linee guida \nsvizzere?",
+      "opzioni": {
+        "A": "Sertralina, in quanto è l'SSRI con le migliori prove di sicurezza post-infarto e un basso potenziale di interazioni.",
+        "B": "Citalopram 40 mg, per garantire una rapida remissione dei sintomi depressivi.",
+        "C": "Fluvoxamina, poiché l'inibizione del CYP2C19 favorisce l'attivazione del clopidogrel.",
+        "D": "Amitriptilina, sfruttando l'effetto sedativo per migliorare il riposo notturno del paziente cardiopatico."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "La sertralina è considerata l'SSRI di prima scelta nei pazienti con malattie coronariche o post-infarto per il suo profilo di \nsicurezza cardiovascolare e il basso rischio di interazioni [1]. L'opzione B è errata poiché il citalopram va evitato post-infarto per il rischio di \nprolungamento del QT e la dose di 40 mg è controindicata sopra i 65 anni (max 20 mg) [1-3]. L'opzione C è errata perché la fluvoxamina inibisce il \nCYP2C19, riducendo (non favorendo) l'attivazione del clopidogrel e aumentandone il rischio di inefficacia [3]. L'opzione D è errata perché i \ntriciclici (TZA) come l'amitriptilina presentano un'alta tossicità cardiovascolare e sono sconsigliati negli anziani per gli effetti anticolinergici \n[4, 5].",
+      "numero": 49,
+      "id": "q49"
+    },
+    {
+      "ruolo": 28,
+      "tema": "Validazione e Counselling - SSRI e Benzodiazepine",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 25 anni si presenta con una prima prescrizione di Escitalopram 10 mg/die per disturbo d'ansia generalizzato (GAS). Il\nmedico ha aggiunto Lorazepam 1 mg al bisogno. Quali delle seguenti istruzioni di counselling e validazione sono corrette secondo le linee guida?",
+      "opzioni": {
+        "1": "Bisogna avvisare la paziente che l'effetto dell'escitalopram non è immediato e può richiedere dalle 2 alle 6 settimane per \nmanifestarsi.",
+        "2": "L'uso del lorazepam come 'terapia ponte' nelle prime 2-4 settimane è un'opzione prevista dalle linee guida per gestire l'eventuale \naumento iniziale di ansia.",
+        "3": "In caso di dolore o febbre, si può tranquillamente consigliare l'uso combinato di FANS (es. Ibuprofene) senza precauzioni aggiuntive.",
+        "4": "Data la giovane età, il monitoraggio del rischio di ideazione suicidaria è particolarmente importante nelle prime settimane di \ntrattamento."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. Vero: Gli antidepressivi hanno una latenza d'azione tipica di 2-6 settimane [6, 7]. 2. Vero: Le benzodiazepine possono essere \nusate temporaneamente (2-4 settimane) per coprire la latenza d'azione o gestire l'irrequietezza iniziale degli SSRI [6, 8]. 3. Falso: La combinazione\ndi SSRI e FANS aumenta significativamente il rischio di emorragie gastrointestinali [9, 10]. 4. Vero: Esiste un aumento del rischio di suicidio \nassociato all'inizio della terapia con SSRI/SNRI, specialmente nei giovani adulti, rendendo necessario un monitoraggio stretto [11-13].",
+      "numero": 50,
+      "id": "q50"
+    },
+    {
+      "ruolo": 29,
+      "tema": "Emicrania - Interazioni e Lista B+",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente di 45 anni, nota in farmacia, assume regolarmente Propranololo 80 mg al giorno per la profilassi dell'emicrania. Si \npresenta al banco per richiedere una confezione di Rizatriptan 5 mg tramite dispensazione «Lista B+» per trattare un attacco acuto iniziato da poco. \nQuale indicazione posologica specifica deve fornire il farmacista secondo le linee guida svizzere (i.mail/Mepha)?",
+      "opzioni": {
+        "A": "La dispensazione è controindicata poiché i beta-bloccanti aumentano il rischio di vasospasmi periferici gravi se combinati con i \ntriptani.",
+        "B": "È possibile dispensare il farmaco, ma la singola dose di rizatriptan deve essere limitata a 5 mg e non si devono superare i 15 mg totali \nnelle 24 ore.",
+        "C": "Il farmacista può dispensare la dose standard da 10 mg poiché il propranololo non interferisce con il metabolismo del rizatriptan.",
+        "D": "La dispensazione in «Lista B+» è esclusa per tutti i pazienti che assumono farmaci per la profilassi emicranica, indipendentemente dalla \nmolecola."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In base alle fonti (i.mail Offizin e tabelle di confronto triptani), il propranololo aumenta significativamente la concentrazione\nplasmatica di rizatriptan. Per questa specifica interazione è obbligatorio un aggiustamento del dosaggio: la dose singola iniziale deve essere \nlimitata a 5 mg e la dose massima giornaliera a 15 mg (anziché i 30 mg standard). L'assunzione di un farmaco profilattico come un beta-bloccante non \npreclude la dispensazione B+, a differenza degli antidepressivi SSRI/SNRI che sono criteri di esclusione.",
+      "numero": 51,
+      "id": "q51"
+    },
+    {
+      "ruolo": 29,
+      "tema": "Emicrania - Triage, Red Flags e Counselling",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione del paziente con cefalea in farmacia e ai criteri di dispensazione dei triptani (Lista B+), valuta la \nveridicità delle seguenti affermazioni basandoti sulle linee guida svizzere:",
+      "opzioni": {
+        "1": "Un mal di testa descritto come 'il più forte mai provato' e a insorgenza improvvisa (cefalea a rombo di tuono) è una 'Red Flag' che \nimpone il rinvio urgente al medico o al pronto soccorso.",
+        "2": "Il farmacista è autorizzato a dispensare un triptano in Lista B+ anche se il paziente non ha mai ricevuto una diagnosi medica formale di \nemicrania, purché i sintomi siano tipici.",
+        "3": "Per i pazienti che soffrono di emicrania con aura, è fondamentale consigliare l'assunzione del triptano non appena iniziano i sintomi \nvisivi (fase dell'aura) per bloccare il dolore sul nascere.",
+        "4": "Il counselling deve includere l'avvertenza di non utilizzare i triptani per più di 10 giorni al mese per evitare il rischio di cefalea da\nsovrautilizzo di farmaci (MÜKS)."
+      },
+      "risposta_corretta": "VFFV",
+      "motivazione": "1. VERO: La cefalea a rombo di tuono e l'intensità estrema sono segnali di allarme critici (SNOOP). 2. FALSO: La diagnosi medica \npregressa è una condizione obbligatoria per la dispensazione in Lista B+. 3. FALSO: Le fonti specificano chiaramente che i triptani non devono essere\nassunti durante l'aura, ma solo al termine di essa, all'inizio della fase di cefalea. 4. VERO: Il limite dei 10 giorni al mese è lo standard indicato\nper prevenire la cronicizzazione del mal di testa indotta da farmaci (MÜKS).",
+      "numero": 52,
+      "id": "q52"
+    },
+    {
+      "ruolo": 30,
+      "tema": "Disturbi del sonno - insonnia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 72 anni si presenta al banco chiedendo un preparato a base di difenidramina (es. Benocten®) per gestire risvegli \nnotturni frequenti [1, 2]. Qual è il comportamento corretto del farmacista secondo le linee guida svizzere e le raccomandazioni di i.mail-Offizin [3,\n4]?",
+      "opzioni": {
+        "A": "Dispensare il prodotto raccomandando l'assunzione di 25 gocce 15-30 minuti prima di coricarsi per un periodo prolungato di almeno 4 \nsettimane [1, 5].",
+        "B": "Sconsigliare l'uso di antistaminici H1 poiché in pazienti sopra i 65 anni aumentano il rischio di delirio, confusione e ipotensione \nortostatica [3, 4, 6].",
+        "C": "Suggerire l'assunzione contemporanea di una piccola dose di alcol per potenziare l'effetto sedativo e facilitare l'induzione del sonno \n[6, 7].",
+        "D": "Validare la richiesta come terapia di prima scelta per l'insonnia cronica nell'anziano, documentando la decisione [8-10]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, l'uso di antistaminici H1 (difenidramina, dossilamina) non è raccomandato in pazienti sopra i 65 anni a causa \ndegli effetti collaterali anticolinergici e del rischio elevato di delirio e ipotensione ortostatica [3, 4, 6]. La terapia di prima scelta per \nl'insonnia è rappresentata dalle misure non farmacologiche come la terapia cognitiva comportamentale (CBT-I) [3, 8, 9]. L'opzione A è errata poiché \ndopo 3-4 giorni si sviluppa solitamente tolleranza all'effetto sedativo e il trattamento deve essere solo a breve termine [3, 4, 6]. L'opzione C è \nerrata poiché l'alcol potenzia i rischi di effetti avversi e peggiora drasticamente la qualità del sonno [6, 7, 11, 12].",
+      "numero": 53,
+      "id": "q53"
+    },
+    {
+      "ruolo": 30,
+      "tema": "Igiene del sonno e cronobiotici",
+      "tipo": "kprim",
+      "domanda": "Un cliente richiede una consulenza per gestire il jetlag in vista di un viaggio verso Tokyo (spostamento di 8 fusi orari verso Est) \n[13, 14]. Valuta la correttezza delle seguenti affermazioni basandoti sulle linee guida per l'igiene del sonno e sull'uso dei cronobiotici [15-17]:",
+      "opzioni": {
+        "1": "L'assunzione di melatonina (0.5-5 mg) è indicata per il trattamento del jetlag, risultando particolarmente efficace nei viaggi verso Est \nche superano i 5 fusi orari [13, 14].",
+        "2": "L'uso di dosaggi di melatonina superiori a 5 mg garantisce una significativa riduzione della latenza del sonno rispetto a dosi inferiori \n[5, 14].",
+        "3": "Se il cliente necessita di un sonnellino diurno (power-nap) all'arrivo, questo deve durare al massimo 20 minuti e avvenire prima delle \nore 15:00 [18-20].",
+        "4": "La melatonina deve essere usata con cautela in pazienti che assumono calcioantagonisti diidropiridinici (es. nifedipina) per il rischio \ndi aumento della pressione arteriosa [21]."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "L'affermazione 1 è vera poiché la melatonina è efficace per il jetlag, specialmente verso Est e per spostamenti significativi \n[13, 14]. L'affermazione 2 è falsa poiché dosi superiori a 5 mg non mostrano benefici aggiuntivi rispetto a dosi più basse [5, 14]. L'affermazione 3 \nè vera in quanto i riposi diurni devono essere brevi e terminare entro metà pomeriggio per non compromettere la pressione del sonno serale [18-20]. \nL'affermazione 4 è vera poiché esiste una potenziale interazione farmacodinamica tra melatonina e nifedipina che può elevare i valori pressori [21].",
+      "numero": 54,
+      "id": "q54"
+    },
+    {
+      "ruolo": 31,
+      "tema": "Nausea e vomito - farmacocinetica e sicurezza",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 55 anni chiede al farmacista perché il medico abbia preferito prescrivere il domperidone rispetto alla metoclopramide \nper il suo senso di nausea cronica. Quale spiegazione basata sulle proprietà farmacocinetiche e di sicurezza è corretta secondo le fonti svizzere?",
+      "opzioni": {
+        "A": "Il domperidone attraversa più facilmente la barriera emato-encefalica, garantendo un'azione centrale più rapida ed efficace.",
+        "B": "A differenza della metoclopramide, il domperidone agisce sui recettori dopaminergici situati al di fuori della barriera emato-encefalica,\nriducendo drasticamente il rischio di effetti extrapiramidali.",
+        "C": "Il domperidone non presenta rischi di interazione con inibitori del CYP3A4, rendendolo più sicuro della metoclopramide in pazienti \npolitrattati.",
+        "D": "Il domperidone è l'unico antiemetico che può essere somministrato in presenza di prolungamento dell'intervallo QT già noto."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il domperidone è un antagonista dei recettori D2 della dopamina che attraversa solo in minima parte la barriera emato-encefalica,\nagendo sulla zona trigger dei chemiorecettori che si trova al di fuori di essa [1]. Per questo motivo, non causa praticamente effetti collaterali \nextrapiramidali, a differenza della metoclopramide che attraversa la barriera [1]. L'opzione C è errata poiché il domperidone ha interazioni \npericolose con i forti inibitori del CYP3A4 [2]; l'opzione D è errata perché il prolungamento del QT è una controindicazione al domperidone [1, 2].",
+      "numero": 55,
+      "id": "q55"
+    },
+    {
+      "ruolo": 31,
+      "tema": "Nausea e vomito - Triage e Antiemetici Lista B-",
+      "tipo": "kprim",
+      "domanda": "Durante una consulenza in farmacia per un disturbo di nausea e vomito, valutate la correttezza delle seguenti affermazioni \nriguardanti il triage e la dispensazione di farmaci in Lista B-:",
+      "opzioni": {
+        "1": "Il vomito a getto, la cefalea acuta associata a rigidità nucale e l'assenza di feci da più giorni sono 'Red Flags' che impongono un \nrinvio medico immediato.",
+        "2": "Per un paziente di 65 anni che richiede domperidone (Lista B-), il farmacista può procedere alla dispensazione autonoma senza \nraccomandare un consulto medico preventivo.",
+        "3": "La meclozina (es. Itinerol B6®) è combinata con caffeina per contrastare la sonnolenza indotta dall'effetto antistaminico centrale.",
+        "4": "In caso di cinetosi, le gomme masticabili di dimenidrinato (es. Trawell®) devono essere masticate per 3-10 minuti e poi deglutite per \ngarantirne l'effetto sistemico."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "1. Vero: vomito a getto, meningismo e sospetto di occlusione intestinale sono segnali di allarme critici (Box 1) [3]. 2. Falso: \nper persone sopra i 60 anni è raccomandata la consultazione medica prima di assumere domperidone a causa del rischio aumentato di aritmie \nventricolari [1, 2]. 3. Vero: la caffeina serve a contrastare la stanchezza come effetto avverso dell'antistaminico di 1ª generazione [3]. 4. Falso: \nle gomme non devono essere deglutite, poiché la deglutizione della gomma stessa potrebbe peggiorare la nausea [1, 3].",
+      "numero": 56,
+      "id": "q56"
+    },
+    {
+      "ruolo": 32,
+      "tema": "Gotta - Validazione e Sicurezza della Colchicina",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 68 anni si presenta in farmacia con una prescrizione di Colctab® (colchicina) per un attacco acuto di gotta (1 mg \nsubito, seguito da 0,5 mg dopo 2 ore). Durante l'anamnesi, il farmacista rileva che il paziente assume regolarmente Amiodarone per una fibrillazione \natriale. Qual è l'azione corretta secondo le linee guida svizzere (i.m@il 2024/2025)?",
+      "opzioni": {
+        "A": "Convalidare la ricetta, poiché il dosaggio di colchicina indicato segue le raccomandazioni aggiornate per ridurre gli effetti collaterali\ngastrointestinali.",
+        "B": "Contattare il medico prescrittore per segnalare una controindicazione assoluta e proporre un'alternativa (FANS o glucocorticoidi).",
+        "C": "Convalidare la ricetta raccomandando al paziente di assumere la colchicina lontano dall'amiodarone (almeno 4 ore di distanza) per evitare\ninterazioni.",
+        "D": "Suggerire al paziente di bere abbondante succo di pompelmo per accelerare l'eliminazione renale della colchicina e prevenire la \ntossicità."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La colchicina è un substrato della P-gp e del CYP3A4. L'amiodarone è un inibitore della P-gp e la sua co-somministrazione con \ncolchicina è controindicata nelle informazioni professionali svizzere, poiché può raddoppiare o quadruplicare i livelli plasmatici di colchicina, \nportando a intossicazioni potenzialmente letali [1-3]. In caso di controindicazioni alla colchicina o ai FANS (es. insufficienza renale/cardiaca), i \nglucocorticoidi sono il trattamento di scelta [1, 4]. Il succo di pompelmo è controindicato poiché aumenta i livelli di colchicina [2].",
+      "numero": 57,
+      "id": "q57"
+    },
+    {
+      "ruolo": 32,
+      "tema": "Artrite Reumatoide - Gestione DMARDs e Consulenza",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 55 anni con artrite reumatoide (AR) attiva è in trattamento con Metotressato (15 mg/settimana s.c.) e Prednisolone (5\nmg/die). Deve pianificare alcune vaccinazioni e gestire la terapia. Valutate le seguenti affermazioni basandovi sulle raccomandazioni svizzere ed \nEULAR:",
+      "opzioni": {
+        "1": "La somministrazione del vaccino vivo attenuato contro la febbre gialla è controindicata durante questa terapia immunosoppressiva.",
+        "2": "Secondo la strategia 'Treat to Target', il monitoraggio clinico dell'attività di malattia deve avvenire ogni 1-3 mesi finché non viene \nraggiunta la remissione.",
+        "3": "Se la paziente deve assumere un FANS (es. Brufen®) per un dolore acuto, non è necessaria alcuna protezione gastrica poiché il dosaggio di\nprednisolone è basso (5 mg).",
+        "4": "In caso di remissione persistente, il metotressato deve essere il primo farmaco ad essere sospeso gradualmente (tapering) prima dei \nglucocorticoidi."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "1: VERO. I vaccini vivi attenuati (febbre gialla, MPR, ecc.) sono controindicati nei pazienti in terapia immunosoppressiva con \nDMARD o steroidi [5, 6]. 2: VERO. Le raccomandazioni EULAR per l'AR prevedono un monitoraggio stretto (ogni 1-3 mesi) fino al raggiungimento del \ntarget [7, 8]. 3: FALSO. L'uso combinato di FANS e glucocorticoidi aumenta significativamente il rischio di emorragie gastrointestinali, rendendo \nnecessaria la protezione gastrica (es. PPI) [9, 10]. 4: FALSO. La riduzione graduale dei glucocorticoidi deve essere prioritaria e completata prima \ndi considerare il tapering dei biologici o dei DMARD sintetici [11-13].",
+      "numero": 58,
+      "id": "q58"
+    },
+    {
+      "ruolo": 33,
+      "tema": "Deprescrizione farmaci - deprescrizione",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 80 anni assume Zolpidem 10 mg da quattro anni per insonnia cronica. Durante una revisione della terapia in farmacia, \nemerge una sospetta apnea notturna come causa dei risvegli. Secondo le linee guida sulla deprescrizione e la gestione della sicurezza geriatrica, \nqual è la procedura più sicura raccomandata?",
+      "opzioni": {
+        "A": "Sospensione immediata del farmaco per eliminare il rischio di depressione respiratoria notturna.",
+        "B": "Riduzione graduale del 25-50% della dose giornaliera ogni 1-4 settimane.",
+        "C": "Sostituzione immediata dello Zolpidem con Amitriptilina 25 mg per le sue proprietà sedative.",
+        "D": "Passaggio a una somministrazione al bisogno, raccomandando di non superare le 3 dosi settimanali."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, lo Zolpidem (una Z-drug) deve essere sospeso gradualmente per evitare sintomi da astinenza o insonnia di \nrimbalzo; una riduzione del 25-50% della dose ogni 1-4 settimane è considerata la procedura standard [1, 2]. La sospensione immediata (A) è rischiosa\nnell'anziano. L'Amitriptilina (C) è un farmaco potenzialmente inappropriato (PIM) con un alto carico anticholinergico (score ACB 3) che aumenta il \nrischio di cadute e declino cognitivo [3, 4]. Una somministrazione al bisogno senza un piano strutturato (D) non garantisce il successo della \ndeprescrizione in un paziente in terapia cronica da anni.",
+      "numero": 59,
+      "id": "q59"
+    },
+    {
+      "ruolo": 33,
+      "tema": "Polifarmacia nell'anziano - Carico anticholinergico e screening",
+      "tipo": "kprim",
+      "domanda": "State effettuando una revisione della terapia per un paziente di 78 anni con multimorbilità (CFS 5) che assume 9 farmaci. Valutate la\ncorrettezza delle seguenti affermazioni basandovi sugli strumenti di screening e sui rischi farmacologici descritti nelle fonti:",
+      "opzioni": {
+        "1": "Un punteggio ACB (Anticholinergic Cognitive Burden) totale ≥ 3 è associato a un aumento del declino cognitivo e della mortalità.",
+        "2": "L'uso di Amitriptilina (Saroten®) contribuisce con un punteggio di 3 alla carica anticholinergica totale, rendendola un farmaco \nprioritario per la deprescrizione.",
+        "3": "Secondo la classificazione FORTA, i farmaci di 'Categoria C' (Critical) sono i più vantaggiosi per gli anziani e dovrebbero essere \npreferiti come prima scelta.",
+        "4": "In presenza di un'insufficienza renale con GFR < 30 ml/min, l'aggiustamento posologico dei farmaci a eliminazione renale è raramente \nnecessario se il paziente è stabile."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "L'affermazione 1 è corretta: uno score ACB ≥ 3 è considerato clinicamente problematico e legato a esiti negativi [3, 5]. \nL'affermazione 2 è corretta: l'Amitriptilina ha un'attività anticholinergica elevata (punteggio 3) ed è classificata come PIM da evitare [3, 4, 6]. \nL'affermazione 3 è falsa: la categoria A (Absolutely) rappresenta i farmaci più vantaggiosi, mentre la C è considerata discutibile/fragile e questi \nfarmaci dovrebbero essere sostituiti o sospesi se il paziente assume più di 3 farmaci [7]. L'affermazione 4 è falsa: una GFR < 30 ml/min richiede \nsistematicamente la revisione e spesso l'aggiustamento della dose per evitare accumuli e tossicità [8, 9].",
+      "numero": 60,
+      "id": "q60"
+    },
+    {
+      "ruolo": 34,
+      "tema": "Gravidanza e allattamento - farmaci in gravidanza",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente alla 30ª settimana di gravidanza (terzo trimestre) si presenta in farmacia con un forte dolore lombare e chiede un \nconsiglio. Quale delle seguenti affermazioni sulla gestione del dolore è corretta secondo le direttive svizzere (SAPP/USB) riportate nelle fonti?",
+      "opzioni": {
+        "A": "L'ibuprofene 400 mg è considerato il farmaco di scelta fino alla 32ª settimana, poiché il rischio di chiusura del dotto di Botallo è \nrilevante solo nell'ultimo mese di gestazione.",
+        "B": "Il paracetamolo è l'analgetico di prima scelta in ogni fase della gestazione; l'uso di FANS come l'ibuprofene è controindicato a partire \ndalla 28ª settimana di gravidanza.",
+        "C": "L'acido acetilsalicilico (ASA) a dosi analgesiche (500-1000 mg) è preferibile ai FANS nel terzo trimestre perché non interferisce con la \nfunzione renale fetale.",
+        "D": "L'uso locale di gel a base di Diclofenac su ampie superfici è sicuro nel terzo trimestre poiché l'assorbimento sistemico delle \nformulazioni topiche è nullo."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, il paracetamolo rimane il farmaco di scelta per il dolore e la febbre durante tutta la gravidanza [1-3]. L'uso \ndi FANS (incluso l'ibuprofene) è espressamente controindicato nel terzo trimestre (dalla 28ª settimana) a causa del rischio di chiusura prematura del\ndotto arterioso di Botallo e di potenziali danni renali al feto [1, 4, 5]. Anche l'acido acetilsalicilico a dosi analgesiche è da evitare [4], così \ncome l'uso estensivo di FANS topici per il potenziale assorbimento sistemico [1, 6].",
+      "numero": 61,
+      "id": "q61"
+    },
+    {
+      "ruolo": 34,
+      "tema": "Gravidanza e allattamento - prevenzione e nausea",
+      "tipo": "kprim",
+      "domanda": "In merito alla consulenza farmaceutica per una donna nel primo trimestre di gravidanza, quali delle seguenti affermazioni relative \nalla supplementazione e alla sicurezza dei farmaci sono corrette secondo le raccomandazioni svizzere (BLV/Swissmedic/SAPP)?",
+      "opzioni": {
+        "1": "Il BLV raccomanda una supplementazione di 0.4 mg di folato da almeno 4 settimane prima del concepimento fino alla 12ª settimana di \ngravidanza per prevenire i difetti del tubo neurale.",
+        "2": "In Svizzera, circa il 73% delle donne in gravidanza presenta livelli insufficienti di Vitamina D nel primo trimestre, rendendo spesso \nnecessaria una supplementazione.",
+        "3": "L'Ondansetron è attualmente raccomandato come trattamento di prima scelta per la nausea e il vomito gravidico (NVP) durante tutto il \nprimo trimestre.",
+        "4": "Gli ACE-inibitori sono controindicati solo a partire dal secondo trimestre, poiché l'organogenesi renale non è ancora completata nel \nprimo."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "1) Corretto: la supplementazione di 0.4 mg di acido folico è lo standard raccomandato per la prevenzione della spina bifida [7, \n8]. 2) Corretto: studi svizzeri indicano che il 73% delle gravide è carente di Vitamina D nel primo trimestre [9]. 3) Errato: Swissmedic ha emesso un\navviso (2020) che sconsiglia l'uso di Ondansetron nel primo trimestre per il rischio di malformazioni orofacciali; i farmaci di scelta iniziale sono \nla Vitamina B6 e lo zenzero [10-12]. 4) Errato: gli ACE-inibitori sono controindicati durante l'intera durata della gravidanza a causa di gravi \nrischi di tossicità renale e malformazioni fetali [13, 14].",
+      "numero": 62,
+      "id": "q62"
+    },
+    {
+      "ruolo": 35,
+      "tema": "Mestruazioni e menopausa - menopausa",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 55 anni, con una storia pregressa di tromboembolia venosa (VTE) che controindica la TOS classica, presenta una \nricetta per Veoza® (Fezolinetant) 45 mg (1 compressa/giorno) per gravi vampate di calore. Durante il triage, riferisce di assumere regolarmente \nFluvoxamina. Qual è la corretta gestione farmacistica secondo le attuali linee guida svizzere?",
+      "opzioni": {
+        "A": "Dispensare il farmaco, poiché Veoza® agisce come antagonista NK3 e non ha interazioni con gli inibitori della ricaptazione della \nserotonina.",
+        "B": "Contattare il medico per segnalare che la Fluvoxamina è un potente inibitore del CYP1A2, il che rende l'uso di Veoza® controindicato.",
+        "C": "Suggerire alla paziente di assumere Veoza® a stomaco vuoto per minimizzare l'impatto del metabolismo epatico mediato dal CYP1A2.",
+        "D": "Validare la prescrizione ricordando alla paziente che il monitoraggio delle transaminasi è necessario solo dopo il primo anno di \nterapia."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, il Fezolinetant è metabolizzato principalmente dal CYP1A2. La somministrazione concomitante con inibitori \nmoderati o forti del CYP1A2 (come Fluvoxamina o Ciprofloxacina) aumenta significativamente i livelli plasmatici del farmaco ed è rigorosamente \ncontroindicata [1, 2]. Inoltre, il monitoraggio della funzione epatica deve avvenire prima dell'inizio e durante i primi 3 mesi di trattamento, non \ndopo un anno [3].",
+      "numero": 63,
+      "id": "q63"
+    },
+    {
+      "ruolo": 35,
+      "tema": "Mestruazioni e menopausa - menopausa",
+      "tipo": "kprim",
+      "domanda": "Una cliente di 52 anni con utero intatto desidera informazioni sulla gestione dei sintomi menopausali e sulla prevenzione \ndell'osteoporosi. Quali delle seguenti affermazioni relative al counselling e alle opzioni terapeutiche sono corrette?",
+      "opzioni": {
+        "1": "Nelle donne con utero intatto che seguono una TOS a base di estrogeni, l'aggiunta di un progestinico per almeno 12 giorni al mese è \nobbligatoria per proteggere l'endometrio.",
+        "2": "Il Tibolone (Livial®) è un'opzione efficace per questa paziente perché agisce sui sintomi vasomotori senza stimolare l'endometrio, \neliminando la necessità di un progestinico aggiuntivo.",
+        "3": "In caso di atrofia vaginale isolata, l'uso di estrogeni locali a basso dosaggio (ovuli/creme) richiede comunque una protezione \nendometriale con progestinici orali per evitare il rischio di cancro.",
+        "4": "Per le donne con un rischio basale elevato di trombosi (es. obesità), la via di somministrazione transdermica (cerotti o gel) è \npreferibile a quella orale poiché associata a un minor rischio di VTE."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1 è VERA: la protezione endometriale è necessaria se l'utero è presente [4, 5]. 2 è VERA: il Tibolone non induce iperplasia \nendometriale pur essendo efficace sui sintomi [4, 6]. 3 è FALSA: gli estrogeni locali a basso dosaggio hanno un assorbimento sistemico minimo e non \nrichiedono l'aggiunta di progestinici [7]. 4 è VERA: la via transdermica è associata a un rischio tromboembolico inferiore rispetto alla via orale \n[8, 9].",
+      "numero": 64,
+      "id": "q64"
+    },
+    {
+      "ruolo": 36,
+      "tema": "Contraccezione d'emergenza - contraccezione d'emergenza",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente di 25 anni si presenta in farmacia sabato pomeriggio. Ha dimenticato una compressa della sua pillola monofasica combinata\ndurante la prima settimana del blister (giorno 4) e ha avuto un rapporto non protetto 40 ore fa. Secondo il protocollo IENK/pharmaSuisse, quale \nprincipio attivo è da preferire in questa situazione?",
+      "opzioni": {
+        "A": "Ulipristal acetato (UPA) 30 mg, perché la sua efficacia è superiore a quella del Levonorgestrel indipendentemente dall'uso della \npillola.",
+        "B": "Levonorgestrel (LNG) 1.5 mg, perché i progestinici contenuti nella contraccezione ormonale abituale possono ridurre l'efficacia \ndell'UPA.",
+        "C": "Ulipristal acetato (UPA) 30 mg, raccomandando di non assumere la pillola abituale per i 5 giorni successivi.",
+        "D": "Nessuna contraccezione orale d'emergenza è indicata; la cliente deve essere indirizzata a un medico per una spirale al rame poiché sono \npassate più di 24 ore."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "In base alle linee guida svizzere, per le donne che utilizzano una contraccezione ormonale regolare, il LNG è la prima scelta se \nil rapporto a rischio è avvenuto entro le 72 ore [1-4]. Questo perché l'UPA è un modulatore del recettore del progesterone e la sua efficacia può \nessere compromessa dalla presenza di progestinici (come quelli della pillola), così come l'UPA stesso potrebbe interferire con l'efficacia della \npillola abituale [2, 5, 6]. L'opzione A è errata poiché ignora questa interazione specifica. L'opzione C non è la prima scelta entro le 72 ore. \nL'opzione D è errata perché la CE orale è indicata e gestibile dal farmacista [2, 7].",
+      "numero": 65,
+      "id": "q65"
+    },
+    {
+      "ruolo": 36,
+      "tema": "Contraccezione d'emergenza - contraccezione d'emergenza",
+      "tipo": "kprim",
+      "domanda": "Una donna di 30 anni richiede la contraccezione d'emergenza 36 ore dopo un rapporto a rischio. Durante l'anamnesi dichiara di \nassumere regolarmente Carbamazepina per l'epilessia e di allattare un bambino di 4 mesi. Valuta la correttezza delle seguenti affermazioni basandoti \nsulle raccomandazioni svizzere (IENK):",
+      "opzioni": {
+        "1": "L'inserimento di una spirale al rame (Cu-IUD) rappresenta la prima scelta clinica poiché il suo effetto meccanico non è influenzato dalla\nCarbamazepina.",
+        "2": "Se la cliente rifiuta la Cu-IUD, il farmacista può dispensare una dose doppia di Levonorgestrel (3 mg) per compensare l'induzione \nenzimatica.",
+        "3": "L'Ulipristal acetato (UPA) è da preferire al Levonorgestrel in questo caso perché la Carbamazepina non interagisce con il citocromo P450 \n3A4.",
+        "4": "In caso di assunzione di Levonorgestrel, la madre deve osservare una pausa nell'allattamento di 6 ore, tirando e scartando il latte in \nquesto intervallo."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. Vero: La spirale al rame è la prima scelta assoluta per chi assume induttori del CYP3A4 come la Carbamazepina [1, 2, 5]. 2. \nVero: Se la Cu-IUD non è possibile, le linee guida svizzere prevedono una dose doppia di LNG (3 mg) come alternativa off-label [1, 2, 5, 8]. 3. \nFalso: La Carbamazepina riduce l'efficacia di entrambi i principi attivi (LNG e UPA) essendo un induttore del CYP3A4; l'UPA non è raccomandato in \nquesto scenario [1, 2, 9, 10]. 4. Vero: Con il LNG è sufficiente una pausa dell'allattamento di 6 ore, mentre con l'UPA sarebbe necessaria una \nsettimana [2, 11-13].",
+      "numero": 66,
+      "id": "q66"
+    },
+    {
+      "ruolo": 37,
+      "tema": "Endometriosi - Trattamento farmacologico e validazione",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 28 anni con diagnosi accertata di endometriosi si presenta in farmacia con una nuova prescrizione per un \ncontraccettivo orale combinato (COC) trifasico. Riferisce che il dolore pelvico persiste e chiede se questa terapia sia la più indicata. Qual è la \nvalutazione corretta del farmacista specialista in base alle linee guida S2k?",
+      "opzioni": {
+        "A": "Il preparato trifasico è ideale perché mima il ciclo naturale della paziente, minimizzando gli sbalzi d'umore tipici della malattia [1, \n2].",
+        "B": "I preparati multifasici con concentrazioni ormonali variabili sono considerati controindicati; la terapia dovrebbe mirare all'amenorrea \ntramite progestinici (es. Dienogest 2 mg) o COC assunti in ciclo continuo [1-4].",
+        "C": "La paziente deve passare immediatamente agli analoghi del GnRH, poiché rappresentano l'unica opzione di prima linea rimborsata in \nSvizzera [5, 6].",
+        "D": "Il farmacista deve consigliare l'aggiunta di Vitex agnus-castus (Agnocasto) per bilanciare l'effetto degli estrogeni contenuti nel \npreparato trifasico [7, 8]."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "La risposta B è corretta perché, secondo le fonti, i preparati multifasici sono controindicati nell'endometriosi poiché \nl'obiettivo terapeutico endocrino è indurre l'amenorrea per 'far seccare' le lesioni infiammatorie [1, 2]. Il Dienogest 2 mg è considerato il farmaco\ndi prima scelta 'on-label' e rimborsato dalla LAMal [3-5, 9]. La risposta A è errata in quanto la variazione ormonale non aiuta la regressione delle \nlesioni [1]. La C è errata perché gli analoghi del GnRH sono generalmente indicati come seconda linea o per casi gravi [5, 10]. La D è errata poiché \nl'agnocasto è citato principalmente per la sindrome premestruale e non sostituisce la terapia ormonale corretta per l'endometriosi [7, 11].",
+      "numero": 67,
+      "id": "q67"
+    },
+    {
+      "ruolo": 37,
+      "tema": "Endometriosi - Analoghi del GnRH e Fertilità",
+      "tipo": "kprim",
+      "domanda": "Una cliente di 34 anni deve iniziare un trattamento con Leuprorelina acetato (depot 3.75 mg) per un'endometriosi grave. Esprime \npreoccupazione per gli effetti collaterali e per il suo desiderio di maternità futuro. Valutate la correttezza delle seguenti affermazioni relative a\nquesto scenario terapeutico:",
+      "opzioni": {
+        "1": "Gli analoghi del GnRH inducono uno stato di menopausa artificiale temporanea per privare le lesioni endometriosiche degli estrogeni \nnecessari alla loro crescita [3, 4, 12].",
+        "2": "Per mitigare i sintomi menopausali (vampate, perdita di libido), è raccomandata l'associazione di una terapia 'add-back' con Tibolone 2.5\nmg/die o una terapia ormonale sostitutiva [3, 4].",
+        "3": "L'uso di analoghi del GnRH per 3-6 mesi prima di una procedura di procreazione assistita (IVF/ICSI) è una strategia comprovata per \naumentare i tassi di successo della concezione [13, 14].",
+        "4": "In Svizzera, l'innovativo Endotest® (test salivare miRNA) ha sostituito la laparoscopia come gold standard per monitorare la risposta \nalla terapia con Leuprorelina [6, 15-17]."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "Le affermazioni 1, 2 e 3 sono vere: gli analoghi del GnRH agiscono privando le lesioni di estrogeni [3, 4], la terapia add-back è\nfondamentale per la tollerabilità del trattamento [3, 4] e l'uso pre-IVF è raccomandato per migliorare la fertilità nelle pazienti con endometriosi \nestesa [13, 14]. L'affermazione 4 è falsa: sebbene l'Endotest® sia un'innovazione diagnostica non invasiva disponibile sul mercato svizzero, la \nlaparoscopia con esame istologico rimane il 'gold standard' per una diagnosi e una valutazione certa della patologia [6, 16, 18, 19].",
+      "numero": 68,
+      "id": "q68"
+    },
+    {
+      "ruolo": 38,
+      "tema": "Disturbi vaginali - Diagnosi differenziale e Triage",
+      "tipo": "multipla_scelta",
+      "domanda": "Una cliente di 30 anni si presenta in farmacia lamentando una secrezione vaginale fluida, di colore grigio-biancastro, con un \ncaratteristico odore sgradevole 'di pesce'. Non riferisce prurito, ma è preoccupata. Qual è la corretta valutazione secondo le linee guida citate \nnelle fonti?",
+      "opzioni": {
+        "A": "I sintomi descritti (odore fischartig, secrezione fluida) suggeriscono una vaginosi batterica, che richiede una diagnosi medica; il \nfarmacista non deve consigliare l'autotrattamento con antimicotici [1-3].",
+        "B": "Si tratta con ogni probabilità di una micosi vaginale atipica; si può procedere alla dispensazione di Econazolo (lista B+) previa \nvalidazione del farmacista [4].",
+        "C": "I sintomi indicano una secchezza vaginale dovuta a cambiamenti ormonali; si consiglia l'uso di una barriera protettiva come Deumavan® e \nl'astensione dai rapporti [5].",
+        "D": "È una tipica infezione da Trichomonas; il farmacista può consegnare un test del pH e, se superiore a 4.5, trattare con un antispetico \nlocale per 3 settimane [6, 7]."
+      },
+      "risposta_corretta": "A",
+      "motivazione": "Secondo le fonti, il prurito è il sintomo principale della micosi, mentre secrezioni grigio-biancastre e odore di pesce indicano \nuna probabile vaginosi batterica [1, 2]. In presenza di sintomi insoliti per odore o colore, è necessaria la diagnostica medica [1]. \nL'automedicazione per la micosi è indicata solo se i sintomi sono noti e non è la prima infezione [8]. La secchezza ha sintomi diversi e il \nTrichomonas richiede diagnosi specifica [3, 9].",
+      "numero": 69,
+      "id": "q69"
+    },
+    {
+      "ruolo": 38,
+      "tema": "Validazione e Counselling: Probiotici e Antimicotici",
+      "tipo": "kprim",
+      "domanda": "In merito alla gestione in farmacia di preparati per la salute vaginale e alla consulenza alla paziente, valutate la veridicità delle\nseguenti affermazioni basandovi sulle fonti:",
+      "opzioni": {
+        "1": "Per il preparato Gynoflor® (Lactobacillus acidophilus + Estriolo), il farmacista deve fornire attivamente informazioni sulle \ncontroindicazioni (es. tumori ormono-dipendenti) ad ogni dispensazione [7].",
+        "2": "Il trattamento del partner sessuale è sempre obbligatorio in caso di micosi vaginale accertata, anche se il partner non presenta alcun \nsintomo, per prevenire l'effetto ping-pong [10, 11].",
+        "3": "I preparati a base di probiotici come Gynoflor® devono essere conservati in frigorifero (2–8 °C) [7, 12].",
+        "4": "In caso di micosi vaginale tipica, il pH vaginale misurato tramite autotest risulta solitamente superiore a 4.5 [3, 13]."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "1) Vero: La lista B+ per Gynoflor richiede l'indicazione attiva delle controindicazioni come tumori o malattie tromboemboliche \n[7]. 2) Falso: Il trattamento del partner asintomatico non è raccomandato dalle linee guida [10, 11, 14]. 3) Vero: Le fonti specificano la \nconservazione in frigorifero per i probiotici vaginali come Gynoflor [7, 12]. 4) Falso: Nella micosi tipica il pH rimane normale (acido, < 4.5); un \npH > 4.5 suggerisce invece vaginosi o tricomoniasi [3, 13].",
+      "numero": 70,
+      "id": "q70"
+    },
+    {
+      "ruolo": 39,
+      "tema": "Infezioni vescica e reni - cistite",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 28 anni, altrimenti sana e non in gravidanza, si presenta in farmacia con sintomi lievi di cistite (disuria e \npollachiuria) iniziati da circa 24 ore. Non riferisce febbre, dolore ai fianchi o secrezioni vaginali. Quale approccio terapeutico è prioritario \nsecondo le attuali raccomandazioni svizzere (SSI/netCare) per promuovere l'uso appropriato degli antibiotici?",
+      "opzioni": {
+        "A": "Dispensare immediatamente Fosfomicina 3g in dose singola come prima scelta assoluta.",
+        "B": "Inviare la paziente dal medico per un'urincultura prima di iniziare qualsiasi trattamento.",
+        "C": "Proporre un approccio di 'Watchful Waiting' per 48-72 ore con un trattamento sintomatico (es. Ibuprofene 400 mg 3x/die) e un adeguato \napporto di liquidi.",
+        "D": "Iniziare una terapia con Nitrofurantoina 100 mg 3 volte al giorno per soli 3 giorni."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le linee guida aggiornate (SSI e protocolli svizzeri), per le forme lievi o moderate di cistite non complicata in donne \nsane, si raccomanda inizialmente un approccio non antibiotico ('Watchful Waiting') per 48-72 ore, poiché circa il 30-60% dei casi guarisce \nspontaneamente [1-3]. L'Ibuprofene riduce la necessità di antibiotici del 61% [4]. La risposta A è una seconda scelta [5]. La risposta D riporta una \ndurata errata per la Nitrofurantoina (lo standard 2024 è 5 giorni) [5, 6].",
+      "numero": 71,
+      "id": "q71"
+    },
+    {
+      "ruolo": 39,
+      "tema": "Infezioni vescica e reni - cistite",
+      "tipo": "kprim",
+      "domanda": "State convalidando una prescrizione medica di Nitrofurantoina (es. Furadantin® retard) per una paziente anziana. In base alle fonti e\nalle linee guida svizzere (SSI 2024), quali delle seguenti affermazioni riguardanti questo farmaco e il relativo counselling sono corrette?",
+      "opzioni": {
+        "1": "Il dosaggio standard aggiornato nel 2024 dalla Società Svizzera di Malattie Infettive è di 100 mg ogni 8 ore (3 volte al giorno) per 5 \ngiorni.",
+        "2": "L'uso del farmaco è controindicato se la paziente presenta una funzione renale ridotta con Clearance della Creatinina (Clcr) inferiore a \n45 ml/min.",
+        "3": "L'assunzione concomitante di agenti alcalinizzanti dell'urina (come il citrato di potassio) è consigliata per migliorare l'attività \nbattericida della Nitrofurantoina contro E. coli.",
+        "4": "È importante informare la paziente che la Nitrofurantoina può causare una colorazione arancione delle urine, che è un effetto innocuo del\nfarmaco."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: Vero, è il nuovo schema posologico SSI dal 10.01.2024 [5, 6]. 2: Vero, il farmaco è controindicato sotto i 45 ml/min (alcune \nfonti citano 30 ml/min per brevi periodi, ma la soglia di 45 è quella di riferimento nel compendio) [6, 7]. 3: Falso, la Nitrofurantoina perde \nefficacia se il pH urinario aumenta; gli alcalinizzanti sono quindi controindicati [5]. 4: Vero, la colorazione arancione è un effetto noto e non \npericoloso [6, 7].",
+      "numero": 72,
+      "id": "q72"
+    },
+    {
+      "ruolo": 40,
+      "tema": "Urogenitale - ipertrofia prostatica benigna",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 65 anni si presenta in farmacia con una prescrizione di Tamsulosina 0,4 mg in capsule retard (formulazione standard). \nDurante il colloquio di validazione, il paziente menziona di preferire l'assunzione dei farmaci al risveglio, a stomaco vuoto, per non \ndimenticarsene. Quale istruzione deve fornire il farmacista basandosi sulle proprietà farmacocinetiche descritte nelle fonti svizzere?",
+      "opzioni": {
+        "A": "Può assumerla a digiuno, poiché le formulazioni retard garantiscono un rilascio costante indipendentemente dalla presenza di cibo.",
+        "B": "Deve assumerla necessariamente dopo la colazione o il primo pasto, poiché a digiuno la biodisponibilità sale al 100% aumentando il \nrischio di ipotensione e sincope.",
+        "C": "Deve assumerla a stomaco vuoto per garantire che almeno il 57% del principio attivo venga assorbito correttamente come previsto per le \ncapsule.",
+        "D": "L'assunzione deve avvenire la sera prima di coricarsi per minimizzare l'effetto del picco plasmatico che viene raddoppiato dai pasti \nricchi di grassi."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti, le capsule retard di tamsulosina (es. Axapharm, Mepha, Sandoz Eco) non devono essere assunte a digiuno perché \nin tale stato la biodisponibilità raggiunge il 100%, aumentando drasticamente il rischio di effetti collaterali come ipotensione e sincope [1, 2]. \nL'assunzione dopo un pasto riduce la biodisponibilità a circa il 75%, migliorando la sicurezza [1]. La risposta C si riferisce erroneamente alla \nmodalità iniziale delle compresse OCAS, non delle capsule [1].",
+      "numero": 73,
+      "id": "q73"
+    },
+    {
+      "ruolo": 40,
+      "tema": "Urogenitale - ipertrofia prostatica benigna",
+      "tipo": "kprim",
+      "domanda": "Un paziente di 72 anni, in terapia cronica con Dutasteride 0,5 mg per BPH, lamenta una persistenza dei sintomi irritativi. Il medico \ndecide di aggiungere Tadalafil 5 mg una volta al giorno. Valuti la correttezza delle seguenti affermazioni riguardanti questa combinazione e il \nmonitoraggio del paziente:",
+      "opzioni": {
+        "1": "Il Tadalafil 5 mg è indicato per il trattamento quotidiano sia della disfunzione erettile che dei sintomi del basso apparato urinario \n(LUTS) associati a BPH.",
+        "2": "L'uso concomitante di Dutasteride e Tadalafil è sicuro anche se il paziente dovesse necessitare di nitrati per un attacco di angina \npectoris, purché assunti a 12 ore di distanza.",
+        "3": "A differenza della Dutasteride, che agisce riducendo il volume della prostata nel lungo periodo, il Tadalafil agisce rilassando la \nmuscolatura liscia del tessuto prostatico e penieno.",
+        "4": "Se il paziente presenta improvvisamente febbre alta, brividi e dolore nella zona del perineo, il farmacista deve indirizzarlo \nurgentemente al medico per sospetta prostatite acuta e non attribuire i sintomi alla terapia farmacologica."
+      },
+      "risposta_corretta": "VFVV",
+      "motivazione": "1. Vero: il tadalafil 5 mg è approvato per l'uso quotidiano in entrambe le indicazioni [3, 4]. 2. Falso: l'uso di PDE-5 inibitori\ncon i nitrati è assolutamente controindicato per il rischio di cali pressori fatali; per il tadalafil l'intervallo di sicurezza è di almeno 48 ore \n[4-6]. 3. Vero: la dutasteride (5-ARI) riduce il volume ghiandolare, mentre il tadalafil agisce sul tono muscolare [3, 7, 8]. 4. Vero: febbre, \nbrividi e dolore perineale sono segni di prostatite batterica acuta, che richiede intervento medico immediato [9].",
+      "numero": 74,
+      "id": "q74"
+    },
+    {
+      "ruolo": 41,
+      "tema": "Disfunzione erettile - gestione delle emergenze e interazioni",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente di 60 anni, che utilizza occasionalmente Tadalafil 20 mg per la disfunzione erettile, avverte un forte dolore toracico e \nsi rivolge alla farmacia. In base alle linee guida sulla sicurezza dei PDE5-inibitori, quale intervallo di tempo deve essere rispettato prima di \npoter somministrare in sicurezza un nitrato (es. Nitroglicerina spray)?",
+      "opzioni": {
+        "A": "I nitrati possono essere somministrati dopo 12 ore, poiché l'effetto del Tadalafil è prevalentemente locale.",
+        "B": "È necessario attendere almeno 24 ore dall'ultima assunzione di Tadalafil, lo stesso intervallo previsto per il Sildenafil.",
+        "C": "I nitrati sono controindicati per almeno 48 ore dall'ultima dose di Tadalafil a causa della sua emivita prolungata e del rischio di \nipotensione grave.",
+        "D": "Non esiste una controindicazione assoluta se il paziente non soffre di ipertensione non controllata."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "Secondo le fonti [1], a causa della lunga emivita del Tadalafil (fino a 36 ore di durata d'azione), è necessario attendere almeno\n48 ore prima di somministrare nitrati per evitare un potenziamento fatale dell'effetto ipotensivo. Per Sildenafil e Vardenafil l'intervallo richiesto\nè invece di 24 ore [1]. L'opzione A e D sono errate poiché ignorano il rischio di interazione sistemica grave [2, 3].",
+      "numero": 75,
+      "id": "q75"
+    },
+    {
+      "ruolo": 41,
+      "tema": "Disfunzione erettile - triage B+ e anamnesi",
+      "tipo": "kprim",
+      "domanda": "Un farmacista svizzero sta effettuando un triage per la dispensazione di Sildenafil senza ricetta medica (Lista B+). Quali delle \nseguenti affermazioni relative alla procedura di dispensazione e alla consulenza sono corrette secondo le direttive attuali?",
+      "opzioni": {
+        "1": "La dispensazione diretta in farmacia (Lista B+) è limitata esclusivamente al Sildenafil nel dosaggio di 25 mg e nella confezione da 4 \ncompresse.",
+        "2": "Se durante l'anamnesi il paziente riferisce di aver avuto un infarto del miocardio 4 mesi fa, il farmacista deve rifiutare la \ndispensazione e indirizzarlo al medico.",
+        "3": "L'assunzione concomitante di Ritonavir (inibitore delle proteasi HIV) richiede un aggiustamento del dosaggio di Sildenafil a un massimo \ndi 25 mg ogni 48 ore.",
+        "4": "Per massimizzare la velocità d'azione, il farmacista deve consigliare al paziente di assumere il Sildenafil durante un pasto principale \nmolto ricco di grassi."
+      },
+      "risposta_corretta": "VVVF",
+      "motivazione": "1) È corretto: solo la confezione di Sildenafil 25 mg da 4 pezzi è in lista B+ [4, 5]. 2) È corretto: un evento cardiovascolare \nrecente (< 6 mesi) è una controindicazione/red flag che richiede una valutazione medica [6-8]. 3) È corretto: il Ritonavir è un potente inibitore del\nCYP3A4 e aumenta drasticamente i livelli di Sildenafil, richiedendo dosi ridotte e intervalli più lunghi [6, 9, 10]. 4) È errato: i pasti molto \ngrassi ritardano l'assorbimento e l'inizio dell'effetto del Sildenafil [5, 11, 12].",
+      "numero": 76,
+      "id": "q76"
+    },
+    {
+      "ruolo": 42,
+      "tema": "Malattie sessualmente trasmissibili - Gonorrea e validazione terapeutica",
+      "tipo": "multipla_scelta",
+      "domanda": "Un giovane uomo si presenta in farmacia con una prescrizione medica per il trattamento di una gonorrea urogenitale non complicata. La\nricetta prescrive Ceftriaxone 500 mg i.m. (fiala singola) e Azitromicina 1 g p.o. (dose singola). Secondo le attuali raccomandazioni svizzere citate \nnelle fonti, quale delle seguenti affermazioni sulla terapia e sulla gestione del paziente è corretta?",
+      "opzioni": {
+        "A": "La somministrazione orale di Cefixime 400 mg dovrebbe essere sempre preferita al Ceftriaxone i.m. per migliorare la compliance del \npaziente.",
+        "B": "L'aggiunta di Azitromicina è obbligatoria solo per prevenire lo sviluppo di resistenze del gonococco al Ceftriaxone.",
+        "C": "Poiché l'infezione da gonococco aumenta di 2-3 volte il rischio di acquisizione di HIV, è fondamentale raccomandare al paziente \nl'esecuzione di un test HIV.",
+        "D": "Il trattamento dei partner sessuali è necessario solo se questi presentano sintomi chiari di uretrite o secrezioni purulente."
+      },
+      "risposta_corretta": "C",
+      "motivazione": "La risposta C è corretta perché le fonti [1, 2] indicano esplicitamente che le STI sono associate a un aumento di 2-3 volte del \nrischio di trasmissione/acquisizione di HIV, rendendo il test HIV parte integrante del protocollo. La A è errata poiché il trattamento orale con \nCefixime non è più raccomandato a causa delle crescenti resistenze mondiali [3]. La B è errata perché, sebbene usata, le linee guida svizzere 2021 \nindicano che il trattamento con solo Ceftriaxone (senza Azitromicina) è considerato accettabile [4]. La D è errata perché il trattamento dei partner \n(ultimi 60 giorni) è un pilastro della terapia per evitare reinfezioni, a prescindere dai sintomi [5, 6].",
+      "numero": 77,
+      "id": "q77"
+    },
+    {
+      "ruolo": 42,
+      "tema": "Malattie sessualmente trasmissibili - Chlamydia e counselling",
+      "tipo": "kprim",
+      "domanda": "Una cliente di 22 anni vi chiede consiglio dopo che una sua amica ha ricevuto una diagnosi di infezione da Chlamydia. La cliente è \npreoccupata ma asintomatica. Valutate la correttezza delle seguenti affermazioni basandovi sulle fonti fornite:",
+      "opzioni": {
+        "1": "Nelle donne, l'85-90% delle infezioni da Chlamydia trachomatis decorre in modo del tutto asintomatico.",
+        "2": "L'infezione da Chlamydia è la causa più frequente al mondo di infertilità femminile dovuta a occlusione tubarica bilaterale.",
+        "3": "In Svizzera, le attuali linee guida (BAG/EKSG) raccomandano uno screening sistematico annuale per la Chlamydia a tutte le donne \nsessualmente attive sotto i 25 anni, anche se asintomatiche.",
+        "4": "In caso di reinfezione vaginale dopo una terapia corretta, si deve considerare la possibilità di un'autoinfezione dal serbatoio \nintestinale, dove l'Azitromicina ha un'efficacia limitata."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1) Vero: l'85-90% dei casi è asintomatico [7]. 2) Vero: è la causa principale di sterilità tubarica nel mondo [8]. 3) Falso: \nsebbene in passato fosse suggerito, le fonti svizzere più recenti (Notter, Tarr, BAG 2017) sconsigliano lo screening sistematico delle donne \nasintomatiche perché non considerato 'redditizio' e privo di dati solidi sulla riduzione delle complicanze a lungo termine [9-11]. 4) Vero: il nuovo \nconcetto di autoinfezione anale-vaginale spiega le recidive, poiché l'Azitromicina non è molto efficace nel tratto gastrointestinale [12, 13].",
+      "numero": 78,
+      "id": "q78"
+    },
+    {
+      "ruolo": 43,
+      "tema": "Cancro al seno - Tamoxifene e interazioni CYP2D6",
+      "tipo": "multipla_scelta",
+      "domanda": "Una paziente di 45 anni in pre-menopausa, in terapia adiuvante con Tamoxifene (20 mg/die) per un carcinoma mammario ER+, si presenta \nin farmacia con una nuova prescrizione per Fluoxetina (20 mg/die) a causa di sintomi depressivi. Qual è l'intervento più appropriato da parte del \nfarmacista basato sul profilo farmacocinetico del Tamoxifene?",
+      "opzioni": {
+        "A": "Validare la prescrizione, poiché la Fluoxetina non ha interazioni note con i modulatori selettivi del recettore degli estrogeni.",
+        "B": "Contattare il medico per suggerire un'alternativa come la Venlafaxina, poiché la Fluoxetina è un potente inibitore del CYP2D6 che riduce \nla conversione del Tamoxifene nel suo metabolita attivo Endoxifene.",
+        "C": "Consigliare alla paziente di distanziare l'assunzione dei due farmaci di almeno 12 ore per evitare un'interazione a livello \ndell'assorbimento intestinale.",
+        "D": "Validare la prescrizione, raccomandando però il monitoraggio dei livelli plasmatici di Tamoxifene poiché la Fluoxetina ne induce il \nmetabolismo tramite il CYP3A4."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il Tamoxifene è un profarmaco che richiede l'attivazione metabolica tramite l'enzima CYP2D6 per formare l'Endoxifene, il suo \nmetabolita più attivo [1]. La Fluoxetina è un potente inibitore del CYP2D6 e il suo uso concomitante riduce drasticamente i livelli di Endoxifene, \ncompromettendo potenzialmente l'efficacia della terapia oncologica [1]. Nelle pazienti con cancro al seno, la Venlafaxina (37.5 mg) è indicata come \nalternativa per gestire i sintomi menopausali o depressivi poiché non interferisce significativamente con il CYP2D6 [2].",
+      "numero": 79,
+      "id": "q79"
+    },
+    {
+      "ruolo": 43,
+      "tema": "Cancro al seno - Inibitori dell'aromatasi e gestione effetti collaterali",
+      "tipo": "kprim",
+      "domanda": "Una paziente di 62 anni assume Letrozolo (2.5 mg/die) da 4 mesi. Lamenta dolori articolari (artralgia) diffusi che peggiorano al \nmattino e secchezza vaginale. Quali delle seguenti affermazioni sulla gestione di questo caso in farmacia sono corrette?",
+      "opzioni": {
+        "1": "L'artralgia colpisce circa il 50% delle pazienti in terapia con inibitori dell'aromatasi e tende a raggiungere il picco di intensità dopo\ncirca 6 mesi di trattamento.",
+        "2": "Per le vampate di calore e la secchezza vaginale, il farmacista può raccomandare con sicurezza integratori a base di isoflavoni della \nsoia.",
+        "3": "Per la secchezza vaginale, l'approccio di prima linea deve essere non ormonale, utilizzando gel idratanti o ovuli come Vagisan®, Ainara® \no Gynofit®.",
+        "4": "In caso di dolori articolari intollerabili, il farmacista può suggerire alla paziente di sospendere autonomamente la terapia per due \nsettimane prima di consultare l'oncologo."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "L'affermazione 1 è corretta: l'artralgia interessa il 50% delle pazienti sotto AI, con sintomi che spesso iniziano dopo 1-2 mesi \ne picco a 6 mesi [3, 4]. L'affermazione 2 è falsa: le linee guida oncologiche (es. ESMO) indicano che gli isoflavoni della soia 'non devono' (Soll \nNicht) essere usati nelle pazienti con cancro al seno [2]. L'affermazione 3 è corretta: per l'atrofia vaginale si privilegiano prodotti non ormonali \nper evitare stimolazioni sistemiche [3, 5]. L'affermazione 4 è falsa: l'aderenza alla terapia endocrina è fondamentale per prevenire recidive; \nqualsiasi sospensione o 'switch' deve essere coordinato dal team oncologico poiché i tassi di interruzione spontanea sono già eccessivamente elevati \n(fino al 40%) [6-8].",
+      "numero": 80,
+      "id": "q80"
+    },
+    {
+      "ruolo": 44,
+      "tema": "Red flags oculari - Triage e lenti a contatto",
+      "tipo": "multipla_scelta",
+      "domanda": "Un giovane di 25 anni, abituale portatore di lenti a contatto morbide, si presenta in farmacia con l'occhio sinistro molto arrossato \ne riferisce un dolore acuto insorto dopo aver rimosso le lenti la sera precedente. Lamenta inoltre una forte sensibilità alla luce (fotofobia). Qual \nè la condotta professionale corretta del farmacista secondo le linee guida di triage?",
+      "opzioni": {
+        "A": "Consigliare l'applicazione di un collirio disinfettante a base di esamidina (Desomedin®) per 2-3 giorni e l'astensione dalle lenti.",
+        "B": "Identificare la situazione come una 'Red Flag' assoluta e inviare il paziente immediatamente a un pronto soccorso oculistico per il \nrischio di cheratite batterica.",
+        "C": "Suggerire l'uso di lacrime artificiali ad alta viscosità per lenire una probabile abrasione corneale superficiale dovuta alla rimozione \ndella lente.",
+        "D": "Validare la dispensazione di un collirio antistaminico in Lista B+ (es. Allergodil®) ipotizzando una congiuntivite allergica stagionale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo i protocolli di triage svizzeri (fonti [1-4]), un occhio rosso e dolente in un portatore di lenti a contatto, \nspecialmente se accompagnato da fotofobia, è una 'Red Flag' che indica un potenziale rischio di infezione/ulcera corneale. Questo richiede una \nvalutazione specialistica immediata. L'automedicazione con disinfettanti (A) o antistaminici (D) è controindicata poiché potrebbe mascherare una \npatologia grave o ritardarne il trattamento [2, 5].",
+      "numero": 81,
+      "id": "q81"
+    },
+    {
+      "ruolo": 44,
+      "tema": "Glaucoma e Validazione Lista B+ - Terapia e farmacovigilanza",
+      "tipo": "kprim",
+      "domanda": "In merito alla consulenza farmaceutica sulla terapia del glaucoma e alla validazione di preparati oftalmici secondo la Lista B+, \nquali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "I colliri beta-bloccanti (es. Timololo) richiedono cautela e sono generalmente controindicati in pazienti con asma bronchiale o aritmie \ncardiache.",
+        "2": "Per ridurre l'assorbimento sistemico e i potenziali effetti collaterali dei colliri, è essenziale istruire il paziente a comprimere il \ncondotto lacrimale per 1-2 minuti dopo l'instillazione.",
+        "3": "I colliri antistaminici in Lista B+ (es. Opatanol®) possono essere dispensati dal farmacista per una durata massima di trattamento di 3 \nmesi.",
+        "4": "In caso di prescrizione di più colliri diversi, è necessario raccomandare un intervallo di almeno 5-15 minuti tra le due applicazioni per\nevitare l'effetto di lavaggio."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1 è V: i beta-bloccanti possono aggravare asma e patologie cardiache (fonte [6]). 2 è V: l'occlusione nasolacrimale è la tecnica \nraccomandata per limitare il passaggio del farmaco nel circolo sistemico (fonti [7, 8]). 3 è F: la dispensazione in Lista B+ per congiuntivite \nallergica è limitata a una durata massima di 1 mese (fonti [9-11]). 4 è V: le fonti raccomandano un intervallo di 5-15 minuti tra diversi prodotti \noftalmici per garantirne l'efficacia (fonti [12, 13]).",
+      "numero": 82,
+      "id": "q82"
+    },
+    {
+      "ruolo": 45,
+      "tema": "Otoscopia e orecchio - otite esterna",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente di 28 anni si presenta in farmacia lamentando un forte dolore all'orecchio sinistro, iniziato dopo una sessione di nuoto \nil giorno precedente. Riferisce che il dolore peggiora notevolmente quando tocca l'orecchio o mastica. Non ha febbre né vertigini. All'esame \notoscopico, il condotto uditivo appare arrossato e gonfio, rendendo difficile la visione completa del timpano, che però sembra intatto nella parte \nvisibile. Qual è la gestione più appropriata secondo gli algoritmi medinform?",
+      "opzioni": {
+        "A": "Eseguire un lavaggio auricolare immediato con acqua tiepida per rimuovere eventuali detriti e acqua clorata.",
+        "B": "Consigliare l'uso di gocce antisettiche (es. Taucherohrentropfen o Desomedin) e un analgesico sistemico (FANS) per 3 giorni, monitorando \ni sintomi.",
+        "C": "Inviare immediatamente il paziente al pronto soccorso per escludere una mastoidite data la gravità del dolore.",
+        "D": "Consigliare l'applicazione di gocce a base di corticosteroidi e antibiotici (es. Ciproxin HC) come prima linea per una otite esterna \nlieve."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Il dolore alla pressione del trago o alla trazione del padiglione (Tragusdruckschmerz/Ohrzugschmerz) è un segno patognomonico di \notite esterna [1, 2]. In assenza di Red Flags (febbre alta, calo dell'udito, vertigini), il trattamento di prima linea per forme lievi prevede gocce \nantisettiche e analgesia con FANS [3, 4]. Il lavaggio auricolare (A) è controindicato in presenza di processi infiammatori o sospetta perforazione \n[1, 5]. La mastoidite (C) presenterebbe segni retroauricolari e sintomi sistemici [6]. Le gocce antibiotiche (D) sono generalmente riservate a \ninfezioni manifeste o casi che non rispondono agli antisettici [3, 4].",
+      "numero": 83,
+      "id": "q83"
+    },
+    {
+      "ruolo": 45,
+      "tema": "Triage pediatrico e Red Flags otologici",
+      "tipo": "kprim",
+      "domanda": "Una madre richiede la tua consulenza per il figlio di 4 anni che lamenta dolore all'orecchio destro da alcune ore, dopo aver avuto un\nforte raffreddore la settimana scorsa. Il bambino è vivace, ha una temperatura di 37.6°C e non presenta secrezioni. Valuta le seguenti affermazioni \nriguardanti il triage e il counselling basandoti sulle linee guida FPH e il materiale medinform:",
+      "opzioni": {
+        "1": "Se l'otoscopia mostra una membrana timpanica grigia, opaca e leggermente retratta senza segni di infiammazione acuta, è indicato l'uso di\nuno spray nasale decongestionante per favorire la ventilazione della tuba di Eustachio.",
+        "2": "La comparsa di vertigini, nistagmo o paralisi del nervo facciale nel bambino rappresenta una 'Red Flag' assoluta che richiede l'invio \nimmediato in clinica specialistica.",
+        "3": "Per instillare correttamente eventuali gocce auricolari in un bambino di 4 anni, il padiglione auricolare deve essere tirato \ndelicatamente all'indietro e verso il basso per raddrizzare il condotto.",
+        "4": "Secondo la strategia del 'watchful waiting' (osservazione vigile), in un bambino sopra i 2 anni con buone condizioni generali, è corretto\nattendere 48 ore con soli analgesici prima di rivalutare la necessità di un antibiotico con il medico."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1: VERO. Un timpano retratto e opaco senza segni acuti indica spesso un catarro tubarico (Tubenkatharr), trattabile con \ndecongestionanti nasali [3, 6]. 2: VERO. Vertigini e segni neurologici sono Red Flags critiche per coinvolgimento dell'orecchio interno o \ncomplicazioni [6-8]. 3: FALSO. La trazione verso il basso è indicata per bambini sotto i 3 anni; sopra i 3 anni si segue la modalità dell'adulto \n(indietro e verso l'alto) [9]. 4: VERO. Nelle otiti medie non complicate in bambini sopra i 2 anni con buon stato generale, le linee guida \nsvizzere/medinform prevedono una rivalutazione dopo 48 ore prima di iniziare la terapia antibiotica [10, 11].",
+      "numero": 84,
+      "id": "q84"
+    },
+    {
+      "ruolo": 46,
+      "tema": "Parassiti - Ivermectina e Scabbia",
+      "tipo": "multipla_scelta",
+      "domanda": "Un farmacista riceve una prescrizione magistrale di Ivermectina in sospensione per un bambino di 12 kg affetto da scabbia. Quale \ndelle seguenti considerazioni è corretta per la validazione della ricetta secondo le attuali linee guida svizzere (PEDeDose)?",
+      "opzioni": {
+        "A": "L'ivermectina è assolutamente controindicata sotto i 15 kg di peso corporeo; la ricetta deve essere respinta.",
+        "B": "Il dosaggio raccomandato è di 200 µg/kg e l'uso off-label è ammesso a partire dai 5 kg di peso corporeo.",
+        "C": "Il farmaco deve essere assunto insieme a un pasto ricco di grassi per garantirne l'assorbimento sistemico contro gli acari.",
+        "D": "In caso di trattamento sistemico, la dose è singola e non deve mai essere ripetuta per evitare tossicità neurologica nel bambino."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Sebbene in Svizzera il preparato Subvectin® sia approvato per pazienti di almeno 15 kg, l'uso off-label a partire dai 5 kg \n(dosaggio 200 µg/kg) è riconosciuto e indicato dalle linee guida pediatriche svizzere [1, 2]. Il farmaco va assunto rigorosamente a digiuno (2 ore \nprima o dopo i pasti) e la ripetizione dopo 7-10 giorni è obbligatoria poiché l'ivermectina non è ovicida [2-4].",
+      "numero": 85,
+      "id": "q85"
+    },
+    {
+      "ruolo": 46,
+      "tema": "Parassiti - Pediculosi e biologia",
+      "tipo": "kprim",
+      "domanda": "Durante una consulenza per il trattamento dei pidocchi del capo (pediculosi), quali delle seguenti affermazioni riguardanti il \nprotocollo di trattamento e la biologia del parassita sono corrette?",
+      "opzioni": {
+        "1": "La ripetizione del trattamento al giorno 8, 9 o 10 è fondamentale per eliminare le ninfe nate dalle uova sopravvissute alla prima \napplicazione.",
+        "2": "Le lendini (nits) sono i gusci vuoti delle uova e, dopo la fine del trattamento, non rappresentano più un pericolo di infestazione.",
+        "3": "Le ninfe (larve) sono molto contagiose e possono saltare rapidamente da un ospite all'altro subito dopo la schiusa.",
+        "4": "L'infestazione è considerata eradicata con successo se non vengono trovati pidocchi vivi per 14 giorni consecutivi di monitoraggio."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "La ripetizione tra l'ottavo e il decimo giorno interrompe il ciclo vitale colpendo le larve appena nate [5]. Le lendini sono \ngusci vuoti e rappresentano un problema solo estetico [5]. Il pidocchio non salta né vola, e le ninfe non possono cambiare ospite (solo l'adulto può \nfarlo tramite contatto diretto testa-testa) [5]. Il monitoraggio di 14 giorni conferma l'eradicazione [5].",
+      "numero": 86,
+      "id": "q86"
+    },
+    {
+      "ruolo": 47,
+      "tema": "Malattie trasmesse dalle zecche - Terapia e validazione",
+      "tipo": "multipla_scelta",
+      "domanda": "Un paziente adulto si presenta in farmacia con una prescrizione di Doxiciclina 100 mg per il trattamento di un Erythema migrans \n(stadio 1 della Borreliosi di Lyme), diagnosticato dal medico dopo un morso di zecca avvenuto 10 giorni prima. Quale posologia deve convalidare il \nfarmacista in base alle linee guida svizzere?",
+      "opzioni": {
+        "A": "100 mg p.o. una volta al giorno per 5 giorni.",
+        "B": "100 mg p.o. due volte al giorno (ogni 12 ore) per 10 giorni.",
+        "C": "200 mg p.o. in dose singola (profilassi post-esposizione).",
+        "D": "100 mg p.o. tre volte al giorno per 21 giorni."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le linee guida per la terapia antibiotica dell'Erythema migrans (Box 1 delle fonti), la Doxiciclina rappresenta la prima \nscelta con un dosaggio di 100 mg ogni 12 ore per una durata di 10 giorni [1]. L'opzione A è insufficiente in durata e frequenza. L'opzione C si \nriferisce a una pratica di profilassi non generalmente raccomandata dalle linee guida svizzere per il morso asintomatico [2, 3]. L'opzione D prevede \nuna durata eccessiva per lo stadio 1 precoce senza complicanze [1].",
+      "numero": 87,
+      "id": "q87"
+    },
+    {
+      "ruolo": 47,
+      "tema": "Malattie trasmesse dalle zecche - Triage e Counselling",
+      "tipo": "kprim",
+      "domanda": "Una cliente chiede consiglio in farmacia perché ha trovato una zecca sulla schiena del marito dopo una passeggiata nei boschi del \nCanton Zurigo. Riguardo al triage e alla prevenzione, quali delle seguenti affermazioni sono corrette?",
+      "opzioni": {
+        "1": "Se la zecca viene rimossa correttamente entro le prime 24 ore dal morso, il rischio di trasmissione di Borrelia burgdorferi è considerato\nminimo.",
+        "2": "In caso di comparsa di una reazione cutanea circolare (Erythema migrans) con diametro superiore a 5 cm, il paziente deve essere \nindirizzato a una consultazione medica.",
+        "3": "La vaccinazione contro la FSME (TBE) deve essere raccomandata poiché protegge sia dall'encefalite virale che dalla borreliosi \nbatterica.",
+        "4": "Secondo le raccomandazioni BAG, un richiamo della vaccinazione FSME è necessario ogni 10 anni per mantenere la protezione nelle persone a\nrischio."
+      },
+      "risposta_corretta": "VVFV",
+      "motivazione": "1. VERO: Il rischio di trasmissione di Borrelia è minimo se la rimozione avviene entro 24 ore, poiché i batteri impiegano tempo \nper migrare dall'intestino della zecca [4-6]. 2. VERO: Un Erythema migrans con diametro >5 cm è un criterio di triage per l'invio al medico [1, 2]. \n3. FALSO: La vaccinazione FSME protegge esclusivamente contro il virus dell'encefalite da zecca, non esiste un vaccino contro la Borreliosi [2, 3, \n7]. 4. VERO: L'Ufficio Federale della Sanità Pubblica (BAG) raccomanda attualmente un richiamo ogni 10 anni [2, 7].",
+      "numero": 88,
+      "id": "q88"
+    },
+    {
+      "ruolo": 48,
+      "tema": "Triage clinico e febbre al rientro - viaggi tropicali",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente torna da un viaggio in Senegal da 4 giorni e si presenta in farmacia con febbre a 38.5°C, brividi e alcune scariche di \ndiarrea. Chiede un consiglio per gestire i sintomi prima di decidere se andare dal medico. Qual è l'intervento corretto del farmacista secondo le \nlinee guida svizzere?",
+      "opzioni": {
+        "A": "Consigliare l'assunzione di Aspirina® (acido acetilsalicilico) per la febbre e Loperamide per la diarrea, rivalutando la situazione dopo \n48 ore.",
+        "B": "Identificare il caso come un potenziale triage d'emergenza: consigliare Paracetamolo e indirizzare il paziente a un consulto medico \nimmediato (entro 24 ore) per escludere la malaria.",
+        "C": "Suggerire il trattamento d'emergenza (SBET) con Atovaquone/Proguanil, dato che il paziente ha sintomi tipici e non ha assunto \nprofilassi.",
+        "D": "Triage per 'sommergrippe': consigliare riposo e idratazione, poiché la diarrea indica un'origine virale o batterica piuttosto che \nparassitaria."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le fonti [1, 2], qualsiasi febbre che duri più di 24 ore in un viaggiatore che rientra da una zona a rischio malaria \n(fino a 3 mesi dal rientro) deve essere considerata malaria fino a prova contraria e richiede un accertamento medico immediato (entro 24 ore). La \ndiarrea può accompagnare la fase eritrocitaria della malaria [2]. L'uso di Aspirina® è controindicato [3] per il rischio di emorragie in caso di \nDengue o per il calo piastrinico da malaria. La SBET non si avvia se il medico è raggiungibile entro 48 ore [4, 5].",
+      "numero": 89,
+      "id": "q89"
+    },
+    {
+      "ruolo": 48,
+      "tema": "Validazione farmaceutica e profilassi malaria - viaggi tropicali",
+      "tipo": "kprim",
+      "domanda": "Un paziente di 60 anni, in terapia con Marcoumar® (anticoagulante orale) per fibrillazione atriale e affetto da disturbi d'ansia \ncronici, riceve una prescrizione per Mefloquina (Mephaquin®) come profilassi per un viaggio in Kenya. Valuta la correttezza della prescrizione e dei \nconsigli di counselling:",
+      "opzioni": {
+        "1": "La Mefloquina è controindicata in questo paziente a causa dell'anamnesi di disturbi d'ansia.",
+        "2": "È necessario monitorare l'INR prima di iniziare la profilassi e di nuovo una settimana dopo l'inizio dell'assunzione di Mefloquina.",
+        "3": "In caso di dimenticanza di una compressa, l'efficacia protettiva non viene influenzata grazie alla lunga emivita del farmaco (circa 3 \nsettimane).",
+        "4": "In alternativa alla Mefloquina, si può proporre Atovaquone/Proguanil poiché non presenta interazioni note con gli anticoagulanti orali."
+      },
+      "risposta_corretta": "VVFF",
+      "motivazione": "1: Vero. La Mefloquina è controindicata in pazienti con disturbi d'ansia o altre patologie psichiatriche [6]. 2: Vero. Esiste \nun'interazione nota tra Marcoumar® e antimalarici (proguanil, doxiciclina, mefloquina) che richiede il controllo dell'INR dopo una settimana [7]. 3: \nFalso. Anche se l'emivita è lunga [8], la dimenticanza riduce la protezione plasmatica costante necessaria per la profilassi. 4: Falso. Anche il \nProguanil interagisce con il Marcoumar® [7], quindi il monitoraggio dell'INR sarebbe comunque necessario.",
+      "numero": 90,
+      "id": "q90"
+    },
+    {
+      "ruolo": 49,
+      "tema": "Smettere di fumare - cessazione fumo",
+      "tipo": "multipla_scelta",
+      "domanda": "Un cliente di 45 anni si presenta in farmacia chiedendo vareniclina (Champix®) per smettere di fumare senza prescrizione medica. \nDurante l'anamnesi per la validazione della consegna in categoria B+, quale dei seguenti scenari rappresenta una controindicazione assoluta alla \nconsegna diretta da parte del farmacista secondo le linee guida svizzere?",
+      "opzioni": {
+        "A": "Il paziente fuma la prima sigaretta della giornata circa 60 minuti dopo il risveglio.",
+        "B": "Il paziente riferisce di soffrire di epilessia o di aver avuto crisi convulsive in passato.",
+        "C": "Il paziente ha già effettuato tre tentativi di cessazione con cerotti alla nicotina in passato.",
+        "D": "Il paziente lamenta una tosse persistente dopo una recente infezione influenzale."
+      },
+      "risposta_corretta": "B",
+      "motivazione": "Secondo le direttive svizzere per la consegna di vareniclina in categoria B+, l'epilessia e gli stati con aumentato rischio di \nconvulsioni sono controindicazioni assolute alla consegna in farmacia [1-3]. L'opzione A descrive una dipendenza media, che è anzi un criterio per \nconsigliare la vareniclina [4, 5]. L'opzione C indica precedenti tentativi falliti, che non precludono l'uso di vareniclina [6]. L'opzione D \nrappresenta un comune sintomo di presentazione che può anzi essere lo spunto per proporre la consulenza [7].",
+      "numero": 91,
+      "id": "q91"
+    },
+    {
+      "ruolo": 49,
+      "tema": "Smettere di fumare - cessazione fumo",
+      "tipo": "kprim",
+      "domanda": "Durante una consulenza specialistica per il fumo in farmacia, valutate l'idoneità e la gestione della terapia farmacologica per un \npaziente. Quali delle seguenti affermazioni relative alla vareniclina e alle interazioni sono corrette secondo le fonti?",
+      "opzioni": {
+        "1": "La cessazione del fumo può richiedere un monitoraggio e un eventuale aggiustamento della dose per i farmaci substrati del CYP1A2, come la\nclozapina o la teofillina.",
+        "2": "In farmacia (Liste B+), la vareniclina può essere consegnata anche a donne durante l'allattamento, purché inserite in un programma \nstrutturato.",
+        "3": "Lo schema posologico standard prevede l'assunzione di 0,5 mg una volta al giorno per i primi 3 giorni, seguiti da 0,5 mg due volte al \ngiorno dal giorno 4 al giorno 7.",
+        "4": "L'uso concomitante di vareniclina e terapia sostitutiva della nicotina (NRT) in farmacia è raccomandato per aumentare i tassi di \nastinenza a lungo termine."
+      },
+      "risposta_corretta": "VFVF",
+      "motivazione": "1 è Vera: il fumo induce il CYP1A2; smettendo, l'effetto induttivo scompare e i livelli dei substrati possono aumentare, \nrichiedendo monitoraggio [8, 9]. 2 è Falsa: la gravidanza e l'allattamento sono controindicazioni assolute per la consegna Liste B+ in farmacia [1, \n2, 10]. 3 è Vera: corrisponde allo schema di titolazione raccomandato prima di passare a 1 mg due volte al giorno dal giorno 8 [11, 12]. 4 è Falsa: \nl'uso combinato di vareniclina e NRT non è raccomandato in farmacia a causa dell'aumento degli effetti collaterali (nausea, vertigini) e della \nlimitata evidenza di superiorità [11, 13, 14].",
+      "numero": 92,
+      "id": "q92"
+    }
+  ]
+}

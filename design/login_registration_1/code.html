@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | The Clinical Atelier</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9fa",
+                    "on-surface-variant": "#3e494a",
+                    "primary-fixed": "#97f0ff",
+                    "surface-variant": "#e1e3e4",
+                    "outline-variant": "#bdc8cb",
+                    "on-primary-fixed-variant": "#004f57",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#007a87",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-fixed": "#ffdcc5",
+                    "surface-container": "#edeeef",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#d3e6e9",
+                    "secondary": "#506164",
+                    "on-surface": "#191c1d",
+                    "on-tertiary-fixed": "#301400",
+                    "tertiary-container": "#9f5f2b",
+                    "on-primary-fixed": "#001f24",
+                    "on-secondary-fixed": "#0d1e21",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb782",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed-variant": "#394a4c",
+                    "on-tertiary-fixed-variant": "#6f3805",
+                    "secondary-fixed-dim": "#b8cacd",
+                    "inverse-primary": "#7ad4e2",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary-container": "#56676a",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-container": "#d5f9ff",
+                    "outline": "#6e797b",
+                    "surface-tint": "#006874",
+                    "on-background": "#191c1d",
+                    "primary": "#005f6a",
+                    "on-tertiary-container": "#fff0e7",
+                    "tertiary": "#824715",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#7ad4e2",
+                    "secondary-container": "#d3e6e9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gap { margin-bottom: 2.5rem; }
+        .no-line-card { background-color: #ffffff; }
+        .glass-switcher {
+            background-color: rgba(243, 244, 245, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased min-h-screen flex flex-col">
+<!-- Auth Shell Component Logic: Navigation suppressed for Transactional screen -->
+<main class="flex-grow grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+<!-- Visual/Editorial Side -->
+<section class="hidden lg:flex flex-col justify-between p-16 bg-surface-container-low relative overflow-hidden">
+<div class="z-10">
+<span class="text-primary font-headline font-bold text-2xl tracking-tight">The Clinical Atelier</span>
+<div class="mt-24 max-w-md">
+<h1 class="font-headline text-5xl font-extrabold text-primary leading-tight editorial-gap">
+                        Precision in Pharmacy Excellence.
+                    </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed font-body">
+                        Elevate your FPH preparation with a structured, academic environment designed for the modern Swiss pharmacist.
+                    </p>
+</div>
+</div>
+<!-- Asymmetric Tonal Graphic -->
+<div class="absolute -bottom-20 -right-20 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl"></div>
+<div class="absolute top-1/2 left-1/4 w-64 h-64 bg-secondary-fixed/30 rounded-full blur-2xl"></div>
+<div class="z-10 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional female pharmacist in a clean white laboratory coat with a calm expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADdATAHCrSDMgh1ROr-Du528XfYYsB7aiGv9W3iHZkwOveB2FVwCpurd0jAC0UGcdPQblCgf5NWnrIwkKUPjAuHtc5NvHTR_AmFNkrYBYH3zUF3DTHLbayvVowMcwxjlOEqlXZkbRRi4kTCY_5O_IlYEA9HL5Mpk_LxzhGm5CHRIs5L3BE7Evg2E8KtsMD05XYPNmq7o2ifpq5BReFhMGB4Ob3ck7Qko_U8bGU6VE2G60SCALyEVYCKp-p08eJBwbWdekssZ-Fk-vn"/>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">Dr. Elena Rossi</p>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">FPH Candidate 2024</p>
+</div>
+</div>
+</section>
+<!-- Form Side -->
+<section class="flex items-center justify-center p-8 bg-surface-container-lowest">
+<div class="w-full max-w-sm">
+<!-- Brand Mobile Header -->
+<div class="lg:hidden text-center mb-12">
+<span class="text-primary font-headline font-bold text-xl tracking-tight">The Clinical Atelier</span>
+</div>
+<div class="mb-10 text-center lg:text-left">
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-2">Benvenuto</h2>
+<p class="text-on-surface-variant">Accedi al tuo percorso accademico.</p>
+</div>
+<!-- Toggle Switcher (Glassmorphic Capsule) -->
+<div class="glass-switcher p-1 rounded-full flex mb-8">
+<button class="flex-1 py-2 text-sm font-medium rounded-full transition-all duration-300 bg-white text-primary shadow-[0px_4px_12px_rgba(25,28,29,0.08)]">
+                        Accedi
+                    </button>
+<button class="flex-1 py-2 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-all">
+                        Registrati
+                    </button>
+</div>
+<!-- Social Login -->
+<button class="w-full flex items-center justify-center gap-3 px-6 py-3 rounded-xl border border-outline-variant/20 bg-white text-on-surface text-sm font-medium hover:bg-surface-container transition-colors mb-6 group">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
+</svg>
+                    Accedi con Google
+                </button>
+<div class="relative flex items-center py-4 mb-2">
+<div class="flex-grow border-t border-outline-variant/20"></div>
+<span class="flex-shrink mx-4 text-xs font-label uppercase tracking-widest text-outline">Oppure</span>
+<div class="flex-grow border-t border-outline-variant/20"></div>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<div class="space-y-1.5">
+<label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant ml-1" for="email">Email</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface placeholder:text-outline/50" id="email" placeholder="nome@esempio.it" type="email"/>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center px-1">
+<label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant" for="password">Password</label>
+<a class="text-xs font-label text-primary hover:text-primary-container transition-colors" href="#">Password dimenticata?</a>
+</div>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface placeholder:text-outline/50" id="password" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold text-sm shadow-[0px_12px_32px_rgba(0,95,106,0.15)] hover:scale-[1.01] active:scale-[0.98] transition-all" type="submit">
+                        Accedi alla Piattaforma
+                    </button>
+</form>
+<p class="mt-10 text-center text-xs text-on-surface-variant leading-relaxed">
+                    Accedendo, accetti i nostri <a class="underline hover:text-primary" href="#">Termini di Servizio</a> e la <a class="underline hover:text-primary" href="#">Privacy Policy</a>.
+                </p>
+</div>
+</section>
+</main>
+<!-- Footer Component Logic from JSON -->
+<footer class="w-full py-8 mt-auto bg-slate-50 border-t border-slate-200/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-screen-2xl mx-auto">
+<div class="mb-4 md:mb-0">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400">
+                    © 2024 The Clinical Atelier. Swiss Pharmacy Excellence.
+                </p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400 hover:text-[#007a87] opacity-80 hover:opacity-100 transition-opacity" href="#">Support</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400 hover:text-[#007a87] opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400 hover:text-[#007a87] opacity-80 hover:opacity-100 transition-opacity" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

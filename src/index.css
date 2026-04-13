@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+  .material-symbols-filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@layer components {
+  /* Primary button — teal gradient pill */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-gradient-to-r from-primary to-primary-container
+           text-on-primary font-headline font-bold
+           px-6 py-3 rounded-full
+           shadow-[0px_12px_32px_rgba(0,95,106,0.15)]
+           hover:opacity-90 active:scale-95
+           transition-all duration-200
+           disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100;
+  }
+
+  /* Secondary button — outlined */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-surface-container-lowest text-primary font-headline font-semibold
+           border border-outline-variant
+           px-6 py-3 rounded-full
+           hover:bg-surface-container-low
+           active:scale-95 transition-all duration-200
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  /* Ghost button — text only */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           text-primary font-headline font-semibold
+           px-4 py-2 rounded-xl
+           hover:bg-primary/5 active:scale-95
+           transition-all duration-200;
+  }
+
+  /* Card — white surface */
+  .card {
+    @apply bg-surface-container-lowest rounded-xl
+           shadow-[0px_12px_32px_rgba(25,28,29,0.05)]
+           p-6;
+  }
+
+  /* Card muted — light grey surface */
+  .card-muted {
+    @apply bg-surface-container-low rounded-xl p-6;
+  }
+
+  /* Input field */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl
+           bg-surface-container-low border-none
+           text-on-surface placeholder:text-outline/50
+           font-body text-sm
+           focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest
+           transition-all;
+  }
+
+  /* Label — uppercase tracking */
+  .label-caps {
+    @apply text-xs font-label font-bold uppercase tracking-[0.15em] text-on-surface-variant;
+  }
+
+  /* Area tag badge */
+  .area-tag {
+    @apply px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full;
+  }
+
+  /* Status pill */
+  .status-pill {
+    @apply px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full;
+  }
+}
