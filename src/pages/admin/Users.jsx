@@ -1,24 +1,20 @@
 import { useState, useEffect } from 'react'
 import AdminLayout from '../../components/admin/AdminLayout'
-import { getUsers, setUserPremium } from '../../lib/adminApi'
+import UserDrawer from '../../components/admin/UserDrawer'
+import { getUsers } from '../../lib/adminApi'
 
 export default function AdminUsers() {
   const [users, setUsers] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [filterPremium, setFilterPremium] = useState('')
+  const [selectedUserId, setSelectedUserId] = useState(null)
 
   useEffect(() => {
     getUsers()
-      .then(data => { setUsers(data); setLoading(false) })
+      .then(({ data }) => { setUsers(data); setLoading(false) })
       .catch(() => setLoading(false))
   }, [])
-
-  async function handleTogglePremium(userId, currentPremium) {
-    const newVal = !currentPremium
-    await setUserPremium(userId, newVal)
-    setUsers(prev => prev.map(u => u.id === userId ? { ...u, is_premium: newVal } : u))
-  }
 
   const filtered = users.filter(u => {
     if (filterPremium === 'premium' && !u.is_premium) return false
@@ -26,6 +22,14 @@ export default function AdminUsers() {
     if (search && !u.email?.toLowerCase().includes(search.toLowerCase()) && !u.full_name?.toLowerCase().includes(search.toLowerCase())) return false
     return true
   })
+
+  function handleUserUpdated(updatedProfile) {
+    setUsers(prev => prev.map(u => u.id === updatedProfile.id ? updatedProfile : u))
+  }
+
+  function handleUserDeleted(deletedId) {
+    setUsers(prev => prev.filter(u => u.id !== deletedId))
+  }
 
   return (
     <AdminLayout>
@@ -69,12 +73,15 @@ export default function AdminUsers() {
                   <th className="px-4 py-3 text-left">Utente</th>
                   <th className="px-4 py-3 text-left">Registrato</th>
                   <th className="px-4 py-3 text-left">Stato</th>
-                  <th className="px-4 py-3 text-left">Azioni</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-outline-variant/10">
                 {filtered.map(u => (
-                  <tr key={u.id} className="hover:bg-surface-container-low transition-colors">
+                  <tr
+                    key={u.id}
+                    onClick={() => setSelectedUserId(u.id)}
+                    className="hover:bg-surface-container-low transition-colors cursor-pointer"
+                  >
                     <td className="px-4 py-3">
                       <p className="font-medium text-on-surface">{u.full_name || '—'}</p>
                       <p className="text-xs text-outline">{u.email}</p>
@@ -83,26 +90,21 @@ export default function AdminUsers() {
                       {u.created_at ? new Date(u.created_at).toLocaleDateString('it-IT') : '—'}
                     </td>
                     <td className="px-4 py-3">
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                        u.is_premium
-                          ? 'bg-secondary-container text-on-secondary-container'
-                          : 'bg-surface-container-high text-outline'
-                      }`}>
-                        {u.is_premium ? 'Premium' : 'Free'}
-                      </span>
-                      {u.is_admin && (
-                        <span className="ml-1 text-xs px-2 py-0.5 rounded-full font-medium bg-primary/10 text-primary">
-                          Admin
+                      <div className="flex flex-wrap gap-1">
+                        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                          u.is_premium
+                            ? 'bg-secondary-container text-on-secondary-container'
+                            : 'bg-surface-container-high text-outline'
+                        }`}>
+                          {u.is_premium ? 'Premium' : 'Free'}
                         </span>
-                      )}
-                    </td>
-                    <td className="px-4 py-3">
-                      <button
-                        onClick={() => handleTogglePremium(u.id, u.is_premium)}
-                        className="text-xs text-primary hover:text-primary-container font-semibold transition-colors"
-                      >
-                        {u.is_premium ? 'Revoca premium' : 'Imposta premium'}
-                      </button>
+                        {u.is_admin && (
+                          <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-primary/10 text-primary">Admin</span>
+                        )}
+                        {u.is_blocked && (
+                          <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-error/10 text-error">Bloccato</span>
+                        )}
+                      </div>
                     </td>
                   </tr>
                 ))}
@@ -111,6 +113,13 @@ export default function AdminUsers() {
           </div>
         )}
       </div>
+
+      <UserDrawer
+        userId={selectedUserId}
+        onClose={() => setSelectedUserId(null)}
+        onUserUpdated={handleUserUpdated}
+        onUserDeleted={handleUserDeleted}
+      />
     </AdminLayout>
   )
 }
