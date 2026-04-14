@@ -282,3 +282,68 @@ export async function deleteUser(userId) {
   const { error } = await supabaseAdmin.auth.admin.deleteUser(userId)
   if (error) throw error
 }
+
+// ===== AREE =====
+
+export async function fetchAreas() {
+  const { data, error } = await supabase
+    .from('areas')
+    .select('*')
+    .order('id', { ascending: true })
+  if (error) throw error
+  return data || []
+}
+
+export async function updateArea(id, fields) {
+  const { data, error } = await supabase
+    .from('areas')
+    .update(fields)
+    .eq('id', id)
+    .select()
+    .single()
+  if (error) throw error
+  return data
+}
+
+// ===== NOTEBOOK =====
+
+export async function fetchNotebooks() {
+  const { data, error } = await supabase
+    .from('notebooks')
+    .select('*, areas(id, name, color_class)')
+    .order('area_id', { ascending: true })
+  if (error) throw error
+  return data || []
+}
+
+export async function createNotebook(fields) {
+  const { data, error } = await supabase
+    .from('notebooks')
+    .insert(fields)
+    .select('*, areas(id, name, color_class)')
+    .single()
+  if (error) throw error
+  return data
+}
+
+export async function updateNotebook(id, fields) {
+  const { data, error } = await supabase
+    .from('notebooks')
+    .update(fields)
+    .eq('id', id)
+    .select('*, areas(id, name, color_class)')
+    .single()
+  if (error) throw error
+  return data
+}
+
+export async function deleteNotebook(id) {
+  // controlla se ha domande collegate
+  const { count } = await supabase
+    .from('questions')
+    .select('*', { count: 'exact', head: true })
+    .eq('notebook_id', id)
+  if (count > 0) throw new Error(`Impossibile eliminare: ${count} domande collegate`)
+  const { error } = await supabase.from('notebooks').delete().eq('id', id)
+  if (error) throw error
+}
