@@ -19,7 +19,7 @@ export default function AdminQuestionEditor() {
 
   useEffect(() => {
     if (isNew) return
-    getAllQuestions().then(qs => {
+    getAllQuestions({ pageSize: 2000 }).then(({ data: qs }) => {
       const q = qs.find(x => x.id === id)
       if (q) setForm(q)
       setLoading(false)
