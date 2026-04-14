@@ -22,7 +22,7 @@ export default function AdminQuestions() {
 
   useEffect(() => {
     getAllQuestions()
-      .then(data => { setQuestions(data); setLoading(false) })
+      .then(({ data }) => { setQuestions(data); setLoading(false) })
       .catch(() => setLoading(false))
   }, [])
 
