@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { supabase, supabaseAdmin } from './supabase'
 
 // ===== STATISTICHE =====
 
@@ -258,5 +258,27 @@ export async function setUserPremium(userId, isPremium) {
       premium_since: isPremium ? new Date().toISOString() : null,
     })
     .eq('id', userId)
+  if (error) throw error
+}
+
+export async function setUserAdmin(userId, isAdmin) {
+  const { error } = await supabase
+    .from('profiles')
+    .update({ is_admin: isAdmin })
+    .eq('id', userId)
+  if (error) throw error
+}
+
+export async function setUserBlocked(userId, isBlocked) {
+  const { error } = await supabase
+    .from('profiles')
+    .update({ is_blocked: isBlocked })
+    .eq('id', userId)
+  if (error) throw error
+}
+
+export async function deleteUser(userId) {
+  if (!supabaseAdmin) throw new Error('Admin client non disponibile')
+  const { error } = await supabaseAdmin.auth.admin.deleteUser(userId)
   if (error) throw error
 }
