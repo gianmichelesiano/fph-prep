@@ -6,10 +6,12 @@ Script Node.js `scripts/seed-tests.js` che importa tutte le simulazioni e domand
 
 ## Schema Change
 
-Aggiungere colonna a `questions`:
+Aggiungere colonne a `questions`:
 ```sql
 alter table public.questions add column content_hash text unique;
 create index idx_questions_content_hash on public.questions(content_hash);
+
+alter table public.questions add column expert_approved boolean default false;
 ```
 
 Nuovo file migration: `supabase/migrations/004_content_hash.sql`
@@ -41,6 +43,7 @@ Nuovo file migration: `supabase/migrations/004_content_hash.sql`
 | `'active'` | `status` |
 | sha256 di `(domanda+tipo+risposta_corretta)` | `content_hash` |
 | lookup da notebooks per area | `notebook_id` |
+| `true` (hardcoded) | `expert_approved` (domande da JSON sono già validate) |
 
 ### simulation_questions
 | Campo | Valore |
