@@ -20,6 +20,7 @@ import AdminSimulations from './pages/admin/Simulations'
 import AdminSimulationEditor from './pages/admin/SimulationEditor'
 import AdminUsers from './pages/admin/Users'
 import AdminGenerate from './pages/admin/Generate'
+import AdminCatalog from './pages/admin/Catalog'
 
 export default function App() {
   return (
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="/admin/simulations/new" element={<AdminSimulationEditor />} />
             <Route path="/admin/simulations/:id" element={<AdminSimulationEditor />} />
             <Route path="/admin/users" element={<AdminUsers />} />
+            <Route path="/admin/catalog" element={<AdminCatalog />} />
             <Route path="/admin/generate" element={<AdminGenerate />} />
           </Route>
         </Routes>

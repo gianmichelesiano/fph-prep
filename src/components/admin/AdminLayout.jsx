@@ -6,6 +6,7 @@ const NAV = [
   { to: '/admin/users',       label: 'User Management',  icon: 'group' },
   { to: '/admin/questions',   label: 'Question Bank',    icon: 'database' },
   { to: '/admin/simulations', label: 'Simulations',      icon: 'assignment' },
+  { to: '/admin/catalog',     label: 'Catalog',          icon: 'category' },
   { to: '/admin/generate',    label: 'AI Generate',      icon: 'auto_awesome' },
 ]
 
