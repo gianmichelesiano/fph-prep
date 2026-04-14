@@ -7,6 +7,71 @@ import { AREAS } from '../../data/areas'
 const EMPTY_MULTIPLE = { type: 'multiple', text: '', options: { A: '', B: '', C: '', D: '' }, correct: 'A', motivation: '', area: 4, topic: '', lang: 'it', status: 'draft' }
 const EMPTY_TRUEFALSE = { type: 'truefalse', text: '', items: [{ text: '', correct: true }, { text: '', correct: true }, { text: '', correct: false }, { text: '', correct: false }], motivation: '', area: 4, topic: '', lang: 'it', status: 'draft' }
 
+// DB (Supabase) → editor interno
+function dbToForm(q) {
+  if (q.type === 'multiple_choice') {
+    return {
+      type: 'multiple',
+      text: q.text || '',
+      options: q.options || { A: '', B: '', C: '', D: '' },
+      correct: q.correct_answer || 'A',
+      motivation: q.explanation || '',
+      area: q.area || 4,
+      topic: q.topic || '',
+      lang: q.lang || 'it',
+      status: q.status || 'draft',
+    }
+  } else {
+    const opts = q.options || {}
+    const rc = (q.correct_answer || '').toUpperCase()
+    const items = ['1', '2', '3', '4'].map((k, i) => ({
+      text: opts[k] || '',
+      correct: rc[i] === 'V',
+    }))
+    return {
+      type: 'truefalse',
+      text: q.text || '',
+      items,
+      motivation: q.explanation || '',
+      area: q.area || 4,
+      topic: q.topic || '',
+      lang: q.lang || 'it',
+      status: q.status || 'draft',
+    }
+  }
+}
+
+// editor interno → DB (Supabase)
+function formToDb(form) {
+  if (form.type === 'multiple') {
+    return {
+      type: 'multiple_choice',
+      text: form.text,
+      options: form.options,
+      correct_answer: form.correct,
+      explanation: form.motivation || null,
+      area: form.area,
+      topic: form.topic || null,
+      lang: form.lang,
+      status: form.status,
+    }
+  } else {
+    const rc = (form.items || []).map(it => it.correct ? 'V' : 'F').join('')
+    const options = Object.fromEntries((form.items || []).map((it, i) => [String(i + 1), it.text]))
+    return {
+      type: 'kprim',
+      text: form.text,
+      options,
+      correct_answer: rc,
+      explanation: form.motivation || null,
+      area: form.area,
+      topic: form.topic || null,
+      lang: form.lang,
+      status: form.status,
+    }
+  }
+}
+
 export default function AdminQuestionEditor() {
   const { id } = useParams()
   const navigate = useNavigate()
@@ -21,7 +86,7 @@ export default function AdminQuestionEditor() {
     if (isNew) return
     getAllQuestions({ pageSize: 2000 }).then(({ data: qs }) => {
       const q = qs.find(x => x.id === id)
-      if (q) setForm(q)
+      if (q) setForm(dbToForm(q))
       setLoading(false)
     })
   }, [id])
@@ -51,7 +116,7 @@ export default function AdminQuestionEditor() {
     setSaving(true)
     setError(null)
     try {
-      const data = { ...form, status: status || form.status }
+      const data = formToDb({ ...form, status: status || form.status })
       if (isNew) {
         await createQuestion(data)
       } else {
