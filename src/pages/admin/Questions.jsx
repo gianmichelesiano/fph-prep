@@ -99,6 +99,7 @@ export default function AdminQuestions() {
                   <th className="px-4 py-3 text-left">Tipo</th>
                   <th className="px-4 py-3 text-left">Area</th>
                   <th className="px-4 py-3 text-left">Stato</th>
+                  <th className="px-4 py-3 text-left">Expert</th>
                   <th className="px-4 py-3 text-left">Azioni</th>
                 </tr>
               </thead>
@@ -122,6 +123,11 @@ export default function AdminQuestions() {
                     <td className="px-4 py-3">
                       <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${STATUS_COLORS[q.status] || 'bg-surface-container-high text-outline'}`}>
                         {q.status}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className={`material-symbols-outlined text-[18px] ${q.expert_approved ? 'text-green-600' : 'text-outline/40'}`}>
+                        {q.expert_approved ? 'verified' : 'pending'}
                       </span>
                     </td>
                     <td className="px-4 py-3">
