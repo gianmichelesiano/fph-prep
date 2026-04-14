@@ -21,7 +21,7 @@ export default function AdminQuestions() {
   const [filterStatus, setFilterStatus] = useState('')
 
   useEffect(() => {
-    getAllQuestions()
+    getAllQuestions({ pageSize: 2000 })
       .then(({ data }) => { setQuestions(data); setLoading(false) })
       .catch(() => setLoading(false))
   }, [])
