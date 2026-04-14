@@ -72,7 +72,7 @@ export async function startSession(simulationId, userId) {
     const seen = questions.filter(q => seenIds.has(q.id))
     const pool = [...shuffle(unseen), ...shuffle(seen)]
     pickedIds.push(...pool.slice(0, count).map(q => q.id))
-  }
+  })
 
   const { data: session, error } = await supabase
     .from('quiz_sessions')
