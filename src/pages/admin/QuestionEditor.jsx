@@ -20,6 +20,7 @@ function dbToForm(q) {
       topic: q.topic || '',
       lang: q.lang || 'it',
       status: q.status || 'draft',
+      expert_approved: q.expert_approved || false,
     }
   } else {
     const opts = q.options || {}
@@ -37,6 +38,7 @@ function dbToForm(q) {
       topic: q.topic || '',
       lang: q.lang || 'it',
       status: q.status || 'draft',
+      expert_approved: q.expert_approved || false,
     }
   }
 }
@@ -54,6 +56,7 @@ function formToDb(form) {
       topic: form.topic || null,
       lang: form.lang,
       status: form.status,
+      expert_approved: form.expert_approved || false,
     }
   } else {
     const rc = (form.items || []).map(it => it.correct ? 'V' : 'F').join('')
@@ -68,6 +71,7 @@ function formToDb(form) {
       topic: form.topic || null,
       lang: form.lang,
       status: form.status,
+      expert_approved: form.expert_approved || false,
     }
   }
 }
@@ -246,7 +250,7 @@ export default function AdminQuestionEditor() {
             <textarea
               value={form.motivation || ''}
               onChange={e => setField('motivation', e.target.value)}
-              rows={3}
+              rows={7}
               className="input w-full"
               placeholder="Spiega la risposta corretta..."
             />
@@ -284,6 +288,25 @@ export default function AdminQuestionEditor() {
               </select>
             </div>
           </div>
+
+          {/* Expert approved */}
+          <button
+            type="button"
+            onClick={() => setField('expert_approved', !form.expert_approved)}
+            className={`flex items-center gap-3 px-4 py-3 rounded-xl border-2 w-full text-left transition-colors ${
+              form.expert_approved
+                ? 'border-green-500 bg-green-50 text-green-800'
+                : 'border-outline-variant/30 text-on-surface-variant hover:border-outline-variant/60'
+            }`}
+          >
+            <span className={`material-symbols-outlined text-[22px] ${form.expert_approved ? 'text-green-600' : 'text-outline'}`}>
+              {form.expert_approved ? 'verified' : 'pending'}
+            </span>
+            <div>
+              <p className="text-sm font-semibold">Expert Approved</p>
+              <p className="text-xs opacity-70">{form.expert_approved ? 'Domanda verificata da un esperto' : 'Non ancora verificata'}</p>
+            </div>
+          </button>
 
           {error && <p className="text-error text-sm">{error}</p>}
 
