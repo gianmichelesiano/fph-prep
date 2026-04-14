@@ -48,23 +48,25 @@ export async function startSession(simulationId, userId) {
   const sim = await fetchSimulation(simulationId)
   const areaConfig = sim.area_config || {}
 
-  // Carica la history dell'utente
-  const { data: history } = await supabase
-    .from('user_question_history')
-    .select('question_id')
-    .eq('user_id', userId)
-  const seenIds = new Set((history || []).map(r => r.question_id))
+  const areas = Object.keys(areaConfig).map(Number).filter(a => areaConfig[a] > 0)
+  if (areas.length === 0) throw new Error('La simulazione non ha aree configurate')
+
+  // Carica history utente e domande per tutte le aree in parallelo
+  const [historyResult, ...areaResults] = await Promise.all([
+    supabase.from('user_question_history').select('question_id').eq('user_id', userId),
+    ...areas.map(area =>
+      supabase.from('questions').select('id').eq('area', area).eq('status', 'active')
+    ),
+  ])
+
+  const seenIds = new Set((historyResult.data || []).map(r => r.question_id))
 
   // Pesca domande per ogni area
   const pickedIds = []
-  for (const [areaStr, count] of Object.entries(areaConfig)) {
-    const area = Number(areaStr)
-    const { data: questions } = await supabase
-      .from('questions')
-      .select('id')
-      .eq('area', area)
-      .eq('status', 'active')
-    if (!questions || questions.length === 0) continue
+  areas.forEach((area, i) => {
+    const count = Number(areaConfig[area])
+    const questions = areaResults[i].data || []
+    if (questions.length === 0) return
 
     const unseen = questions.filter(q => !seenIds.has(q.id))
     const seen = questions.filter(q => seenIds.has(q.id))
