@@ -44,11 +44,15 @@ export function useSession(sessionId) {
     const total = questions.length
     for (const q of questions) {
       const userAnswer = answers[q.id]
-      if (q.type === 'multiple_choice') {
-        if (userAnswer === q.correct_answer) score++
+      if (q.type === 'multiple') {
+        if (userAnswer === q.correct) score++
       } else {
-        // kprim: correct_answer = "VFFV", userAnswer = "VFFV"
-        if (userAnswer === q.correct_answer) score++
+        // truefalse: answer = {0: true, 1: false, ...}
+        const ua = userAnswer || {}
+        const allCorrect = q.items.every((item, i) => ua[i] === item.correct)
+        const oneWrong = q.items.filter((item, i) => ua[i] !== item.correct).length === 1
+        if (allCorrect) score += 1
+        else if (oneWrong) score += 0.5
       }
     }
 

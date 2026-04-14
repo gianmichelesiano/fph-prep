@@ -1,5 +1,23 @@
 import { supabase } from './supabase'
 
+function normalizeDbQuestion(q) {
+  if (q.type === 'multiple_choice') {
+    const opts = q.options || {}
+    const options = ['A', 'B', 'C', 'D'].map(k => opts[k]).filter(Boolean)
+    const correct = q.correct_answer
+      ? q.correct_answer.toUpperCase().charCodeAt(0) - 65
+      : 0
+    return { ...q, type: 'multiple', options, correct, motivation: q.explanation }
+  } else {
+    const opts = q.options || {}
+    const rc = (q.correct_answer || '').toUpperCase()
+    const items = ['1', '2', '3', '4']
+      .map((k, i) => ({ text: opts[k] || '', correct: rc[i] === 'V' }))
+      .filter(item => item.text !== '')
+    return { ...q, type: 'truefalse', items, motivation: q.explanation }
+  }
+}
+
 // ===== SIMULAZIONI (template) =====
 
 export async function fetchSimulations() {
@@ -89,7 +107,7 @@ export async function fetchSession(sessionId) {
 
   // Preserva l'ordine originale
   const qMap = Object.fromEntries(questions.map(q => [q.id, q]))
-  const ordered = session.question_ids.map(id => qMap[id]).filter(Boolean)
+  const ordered = session.question_ids.map(id => qMap[id]).filter(Boolean).map(normalizeDbQuestion)
 
   return { ...session, questions: ordered }
 }
