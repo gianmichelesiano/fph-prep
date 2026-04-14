@@ -49,7 +49,6 @@ export default function App() {
             <Route path="/admin/questions/new" element={<AdminQuestionEditor />} />
             <Route path="/admin/questions/:id" element={<AdminQuestionEditor />} />
             <Route path="/admin/simulations" element={<AdminSimulations />} />
-            <Route path="/admin/simulations/new" element={<AdminSimulationEditor />} />
             <Route path="/admin/simulations/:id" element={<AdminSimulationEditor />} />
             <Route path="/admin/users" element={<AdminUsers />} />
             <Route path="/admin/catalog" element={<AdminCatalog />} />
