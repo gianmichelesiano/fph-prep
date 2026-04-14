@@ -339,10 +339,11 @@ export async function updateNotebook(id, fields) {
 
 export async function deleteNotebook(id) {
   // controlla se ha domande collegate
-  const { count } = await supabase
+  const { count, error: countError } = await supabase
     .from('questions')
     .select('*', { count: 'exact', head: true })
     .eq('notebook_id', id)
+  if (countError) throw countError
   if (count > 0) throw new Error(`Impossibile eliminare: ${count} domande collegate`)
   const { error } = await supabase.from('notebooks').delete().eq('id', id)
   if (error) throw error
