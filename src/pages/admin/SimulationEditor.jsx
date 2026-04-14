@@ -35,7 +35,7 @@ export default function AdminSimulationEditor() {
         })
         .catch(() => setLoading(false))
     }
-    getAllQuestions().then(setAllQuestions)
+    getAllQuestions({ pageSize: 2000 }).then(({ data }) => setAllQuestions(data))
   }, [id])
 
   function setField(key, val) {
