@@ -70,6 +70,15 @@ export default function UserLayout({ children }) {
 
         {/* Bottom: premium CTA or sign out */}
         <div className="mt-auto space-y-2">
+          {profile?.is_admin && (
+            <button
+              onClick={() => navigate('/admin')}
+              className="w-full flex items-center gap-2 px-3 py-2 text-xs text-primary hover:bg-primary/5 rounded-lg transition-colors font-semibold"
+            >
+              <span className="material-symbols-outlined text-[16px]">admin_panel_settings</span>
+              Admin Console
+            </button>
+          )}
           {!profile?.is_premium && (
             <button
               onClick={() => navigate('/upgrade')}

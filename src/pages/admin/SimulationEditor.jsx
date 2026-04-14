@@ -41,7 +41,7 @@ export default function AdminSimulationEditor() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (!isNew) {
+    if (!isNew && id && id !== 'undefined') {
       fetchSimulation(id)
         .then(data => {
           setForm({
