@@ -156,6 +156,204 @@ function AreasTab({ areas, onUpdate }) {
   )
 }
 
-function NotebooksTab() {
-  return <div className="text-sm text-outline">Notebooks tab — coming in Task 4</div>
+const EMPTY_NB = { id: '', key: '', title: '', area_id: '', argomento: '' }
+
+function NotebooksTab({ notebooks, areas, onAdd, onUpdate, onDelete }) {
+  const [editingId, setEditingId] = useState(null)
+  const [editFields, setEditFields] = useState({})
+  const [showAdd, setShowAdd] = useState(false)
+  const [newNb, setNewNb] = useState(EMPTY_NB)
+  const [busy, setBusy] = useState(false)
+
+  function areaColor(areaId) {
+    const area = areas.find(a => a.id === areaId)
+    return area?.color_class || 'bg-surface-container-high text-on-surface-variant'
+  }
+
+  function startEdit(nb) {
+    setEditingId(nb.id)
+    setEditFields({ title: nb.title, argomento: nb.argomento || '', area_id: nb.area_id || '' })
+  }
+
+  async function saveEdit(nb) {
+    setBusy(true)
+    try {
+      const updated = await updateNotebook(nb.id, {
+        title: editFields.title,
+        argomento: editFields.argomento || null,
+        area_id: editFields.area_id ? Number(editFields.area_id) : null,
+      })
+      onUpdate(updated)
+      setEditingId(null)
+    } catch (e) {
+      alert(e.message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function handleAreaChange(nb, areaId) {
+    try {
+      const updated = await updateNotebook(nb.id, { area_id: areaId ? Number(areaId) : null })
+      onUpdate(updated)
+    } catch (e) {
+      alert(e.message)
+    }
+  }
+
+  async function handleDelete(nb) {
+    if (!confirm(`Eliminare il notebook "${nb.title}"?`)) return
+    setBusy(true)
+    try {
+      await deleteNotebook(nb.id)
+      onDelete(nb.id)
+    } catch (e) {
+      alert(e.message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function handleAdd() {
+    if (!newNb.id || !newNb.title) { alert('UUID e titolo sono obbligatori'); return }
+    setBusy(true)
+    try {
+      const created = await createNotebook({
+        id: newNb.id,
+        key: newNb.key || null,
+        title: newNb.title,
+        area_id: newNb.area_id ? Number(newNb.area_id) : null,
+        argomento: newNb.argomento || null,
+      })
+      onAdd(created)
+      setNewNb(EMPTY_NB)
+      setShowAdd(false)
+    } catch (e) {
+      alert(e.message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <div>
+      <div className="flex justify-end mb-3">
+        <button className="btn-primary text-sm" onClick={() => setShowAdd(v => !v)}>
+          {showAdd ? 'Annulla' : '+ Aggiungi notebook'}
+        </button>
+      </div>
+
+      {showAdd && (
+        <div className="mb-4 p-4 bg-surface-container-low rounded-xl border border-outline-variant/20 grid grid-cols-2 gap-3">
+          <div>
+            <label className="text-xs text-outline mb-1 block">UUID NotebookLM *</label>
+            <input className="input w-full" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" value={newNb.id} onChange={e => setNewNb(p => ({ ...p, id: e.target.value }))} />
+          </div>
+          <div>
+            <label className="text-xs text-outline mb-1 block">Key (es. fitoterapia)</label>
+            <input className="input w-full" placeholder="chiave_yaml" value={newNb.key} onChange={e => setNewNb(p => ({ ...p, key: e.target.value }))} />
+          </div>
+          <div>
+            <label className="text-xs text-outline mb-1 block">Titolo *</label>
+            <input className="input w-full" placeholder="Titolo notebook" value={newNb.title} onChange={e => setNewNb(p => ({ ...p, title: e.target.value }))} />
+          </div>
+          <div>
+            <label className="text-xs text-outline mb-1 block">Area</label>
+            <select className="input w-full" value={newNb.area_id} onChange={e => setNewNb(p => ({ ...p, area_id: e.target.value }))}>
+              <option value="">— nessuna —</option>
+              {areas.map(a => <option key={a.id} value={a.id}>{a.id} – {a.name}</option>)}
+            </select>
+          </div>
+          <div className="col-span-2">
+            <label className="text-xs text-outline mb-1 block">Argomento</label>
+            <input className="input w-full" placeholder="argomenti, parole chiave..." value={newNb.argomento} onChange={e => setNewNb(p => ({ ...p, argomento: e.target.value }))} />
+          </div>
+          <div className="col-span-2 flex justify-end">
+            <button className="btn-primary text-sm" onClick={handleAdd} disabled={busy}>
+              {busy ? 'Salvataggio...' : 'Salva notebook'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div className="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-outline-variant/20 text-outline text-xs uppercase tracking-wide">
+              <th className="text-left px-4 py-3 w-32">Key</th>
+              <th className="text-left px-4 py-3">Titolo</th>
+              <th className="text-left px-4 py-3 w-48">Area</th>
+              <th className="text-left px-4 py-3">Argomento</th>
+              <th className="w-20" />
+            </tr>
+          </thead>
+          <tbody>
+            {notebooks.map(nb => (
+              <tr key={nb.id} className="border-b border-outline-variant/10 hover:bg-surface-container transition-colors">
+                <td className="px-4 py-3 font-mono text-xs text-outline">{nb.key || '–'}</td>
+                <td className="px-4 py-3">
+                  {editingId === nb.id ? (
+                    <input
+                      autoFocus
+                      className="input w-full"
+                      value={editFields.title}
+                      onChange={e => setEditFields(p => ({ ...p, title: e.target.value }))}
+                    />
+                  ) : (
+                    <span className="font-medium text-on-surface">{nb.title}</span>
+                  )}
+                </td>
+                <td className="px-4 py-3">
+                  {editingId === nb.id ? (
+                    <select
+                      className="input w-full"
+                      value={editFields.area_id}
+                      onChange={e => setEditFields(p => ({ ...p, area_id: e.target.value }))}
+                    >
+                      <option value="">— nessuna —</option>
+                      {areas.map(a => <option key={a.id} value={a.id}>{a.id} – {a.name}</option>)}
+                    </select>
+                  ) : (
+                    <select
+                      className={`text-xs px-2 py-1 rounded-full font-medium border-0 cursor-pointer ${areaColor(nb.area_id)}`}
+                      value={nb.area_id || ''}
+                      onChange={e => handleAreaChange(nb, e.target.value || null)}
+                    >
+                      <option value="">— nessuna —</option>
+                      {areas.map(a => <option key={a.id} value={a.id}>{a.id} – {a.name}</option>)}
+                    </select>
+                  )}
+                </td>
+                <td className="px-4 py-3 text-outline text-xs max-w-xs">
+                  {editingId === nb.id ? (
+                    <input
+                      className="input w-full"
+                      value={editFields.argomento}
+                      onChange={e => setEditFields(p => ({ ...p, argomento: e.target.value }))}
+                      onKeyDown={e => { if (e.key === 'Enter') saveEdit(nb); if (e.key === 'Escape') setEditingId(null) }}
+                    />
+                  ) : (
+                    <span className="truncate block max-w-xs">{nb.argomento || '–'}</span>
+                  )}
+                </td>
+                <td className="px-4 py-3">
+                  {editingId === nb.id ? (
+                    <div className="flex gap-2">
+                      <button onClick={() => saveEdit(nb)} disabled={busy} className="text-xs text-primary hover:underline disabled:opacity-50">Salva</button>
+                      <button onClick={() => setEditingId(null)} className="text-xs text-outline hover:underline">Annulla</button>
+                    </div>
+                  ) : (
+                    <div className="flex gap-2">
+                      <button onClick={() => startEdit(nb)} className="material-symbols-outlined text-[18px] text-outline hover:text-primary transition-colors">edit</button>
+                      <button onClick={() => handleDelete(nb)} disabled={busy} className="material-symbols-outlined text-[18px] text-outline hover:text-error transition-colors disabled:opacity-30">delete</button>
+                    </div>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
 }
