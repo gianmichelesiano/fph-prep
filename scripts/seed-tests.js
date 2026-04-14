@@ -64,7 +64,7 @@ function buildQuestion(q, simArea) {
 
   const domanda = q.domanda || q.text || ''
   const risposta = q.risposta_corretta || q.correct_answer || ''
-  const area = q.ruolo || simArea || 4
+  const area = Math.min(q.ruolo || simArea || 4, 9)
 
   return {
     text: domanda,
