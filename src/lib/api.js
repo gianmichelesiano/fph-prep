@@ -43,43 +43,19 @@ export async function fetchSimulation(id) {
 
 // ===== SESSIONI =====
 
-// Avvia una nuova sessione: pesca le domande e salva in quiz_sessions
+// Avvia una nuova sessione usando le domande pre-salvate nella simulazione
 export async function startSession(simulationId, userId) {
   const sim = await fetchSimulation(simulationId)
-  const areaConfig = sim.area_config || {}
+  const questionIds = sim.question_ids || []
 
-  const areas = Object.keys(areaConfig).map(Number).filter(a => areaConfig[a] > 0)
-  if (areas.length === 0) throw new Error('La simulazione non ha aree configurate')
-
-  // Carica history utente e domande per tutte le aree in parallelo
-  const [historyResult, ...areaResults] = await Promise.all([
-    supabase.from('user_question_history').select('question_id').eq('user_id', userId),
-    ...areas.map(area =>
-      supabase.from('questions').select('id').eq('area', area).eq('status', 'active')
-    ),
-  ])
-
-  const seenIds = new Set((historyResult.data || []).map(r => r.question_id))
-
-  // Pesca domande per ogni area
-  const pickedIds = []
-  areas.forEach((area, i) => {
-    const count = Number(areaConfig[area])
-    const questions = areaResults[i].data || []
-    if (questions.length === 0) return
-
-    const unseen = questions.filter(q => !seenIds.has(q.id))
-    const seen = questions.filter(q => seenIds.has(q.id))
-    const pool = [...shuffle(unseen), ...shuffle(seen)]
-    pickedIds.push(...pool.slice(0, count).map(q => q.id))
-  })
+  if (questionIds.length === 0) throw new Error('La simulazione non ha domande. Salvala di nuovo dall\'admin.')
 
   const { data: session, error } = await supabase
     .from('quiz_sessions')
     .insert({
       user_id: userId,
       simulation_id: simulationId,
-      question_ids: pickedIds,
+      question_ids: questionIds,
       answers: {},
       current_index: 0,
       status: 'in_progress',
@@ -88,6 +64,27 @@ export async function startSession(simulationId, userId) {
     .single()
   if (error) throw error
   return session
+}
+
+// Pesca domande per area_config e ritorna gli UUID ordinati (usato dall'admin al salvataggio)
+export async function pickQuestionsForSimulation(areaConfig) {
+  const areas = Object.keys(areaConfig).map(Number).filter(a => Number(areaConfig[a]) > 0)
+  if (areas.length === 0) return []
+
+  const areaResults = await Promise.all(
+    areas.map(area =>
+      supabase.from('questions').select('id').eq('area', area).eq('status', 'active')
+    )
+  )
+
+  const pickedIds = []
+  areas.forEach((area, i) => {
+    const count = Number(areaConfig[area])
+    const questions = areaResults[i].data || []
+    pickedIds.push(...shuffle(questions).slice(0, count).map(q => q.id))
+  })
+
+  return pickedIds
 }
 
 // Carica una sessione con le domande risolte

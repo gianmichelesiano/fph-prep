@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import AdminLayout from '../../components/admin/AdminLayout'
 import { createSimulation, updateSimulation, deleteSimulation } from '../../lib/adminApi'
-import { fetchSimulation } from '../../lib/api'
+import { fetchSimulation, pickQuestionsForSimulation } from '../../lib/api'
 import { AREAS, EXAM_AREA_CONFIG, EXAM_TIMER } from '../../data/areas'
 
 const EMPTY_EXAM = {
@@ -82,6 +82,8 @@ export default function AdminSimulationEditor() {
     setSaving(true)
     setError(null)
     try {
+      const areaConfig = form.type === 'exam' ? EXAM_AREA_CONFIG : form.area_config
+      const questionIds = await pickQuestionsForSimulation(areaConfig)
       const payload = {
         title: form.title,
         type: form.type,
@@ -89,7 +91,8 @@ export default function AdminSimulationEditor() {
         is_free: form.is_free,
         status: form.status,
         timer: form.type === 'exam' ? EXAM_TIMER : Number(form.timer),
-        area_config: form.type === 'exam' ? EXAM_AREA_CONFIG : form.area_config,
+        area_config: areaConfig,
+        question_ids: questionIds,
       }
       if (isNew) {
         await createSimulation(payload)
