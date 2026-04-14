@@ -92,12 +92,11 @@ export default function AdminSimulationEditor() {
         area_config: form.type === 'exam' ? EXAM_AREA_CONFIG : form.area_config,
       }
       if (isNew) {
-        const sim = await createSimulation(payload)
-        navigate(`/admin/simulations/${sim.id}`)
+        await createSimulation(payload)
       } else {
         await updateSimulation(id, payload)
-        navigate('/admin/simulations')
       }
+      navigate('/admin/simulations')
     } catch (err) {
       setError(err.message)
       setSaving(false)
