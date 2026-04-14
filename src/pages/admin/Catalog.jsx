@@ -193,11 +193,15 @@ function NotebooksTab({ notebooks, areas, onAdd, onUpdate, onDelete }) {
   }
 
   async function handleAreaChange(nb, areaId) {
+    if (busy) return
+    setBusy(true)
     try {
       const updated = await updateNotebook(nb.id, { area_id: areaId ? Number(areaId) : null })
       onUpdate(updated)
     } catch (e) {
       alert(e.message)
+    } finally {
+      setBusy(false)
     }
   }
 
