@@ -12,9 +12,9 @@ export async function getStats() {
   ] = await Promise.all([
     supabase.from('profiles').select('*', { count: 'exact', head: true }),
     supabase.from('profiles').select('*', { count: 'exact', head: true }).eq('is_premium', true),
-    supabase.from('quiz_progress').select('*', { count: 'exact', head: true }).eq('status', 'completed'),
+    supabase.from('quiz_sessions').select('*', { count: 'exact', head: true }).eq('status', 'completed'),
     supabase.from('payments').select('amount').eq('status', 'completed'),
-    supabase.from('quiz_progress').select('score, total').eq('status', 'completed'),
+    supabase.from('quiz_sessions').select('score, total').eq('status', 'completed'),
   ])
 
   const totalRevenue = (revenueData || []).reduce((sum, p) => sum + (p.amount || 0), 0) / 100
@@ -26,17 +26,17 @@ export async function getStats() {
 
 export async function getRecentActivity(limit = 5) {
   const { data, error } = await supabase
-    .from('quiz_progress')
-    .select('user_id, saved_at, score, total, profiles(full_name, email)')
+    .from('quiz_sessions')
+    .select('user_id, started_at, score, total, profiles(full_name, email)')
     .eq('status', 'completed')
-    .order('saved_at', { ascending: false })
+    .order('started_at', { ascending: false })
     .limit(limit)
   if (error) return []
   return (data || []).map(row => {
     const name = row.profiles?.full_name || row.profiles?.email?.split('@')[0] || 'User'
     const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
     const pct = row.total > 0 ? Math.round((row.score / row.total) * 100) : 0
-    return { name, initials, action: 'Test Completed', status: pct >= 67 ? 'PASSED' : 'COMPLETED', time: row.saved_at }
+    return { name, initials, action: 'Test Completed', status: pct >= 67 ? 'PASSED' : 'COMPLETED', time: row.started_at }
   })
 }
 
@@ -122,51 +122,23 @@ export async function deleteQuestion(id) {
 export async function getAllSimulations() {
   const { data, error } = await supabase
     .from('simulations')
-    .select('*, simulation_questions(count)')
-    .order('area', { ascending: true })
+    .select('*, quiz_sessions(count)')
+    .order('type', { ascending: true })
+    .order('title', { ascending: true })
   if (error) throw error
   return (data || []).map(s => ({
     ...s,
-    questionCount: s.simulation_questions?.[0]?.count || 0,
+    sessionCount: s.quiz_sessions?.[0]?.count || 0,
   }))
 }
 
-export async function getSimulationWithQuestions(id) {
+export async function createSimulation(data) {
   const { data: sim, error } = await supabase
     .from('simulations')
-    .select('*')
-    .eq('id', id)
-    .single()
-  if (error) throw error
-
-  const { data: sqRows } = await supabase
-    .from('simulation_questions')
-    .select('position, questions(*)')
-    .eq('simulation_id', id)
-    .order('position', { ascending: true })
-
-  return {
-    ...sim,
-    questions: (sqRows || []).map(r => ({ ...r.questions, position: r.position })),
-  }
-}
-
-export async function createSimulation(simData, questionIds = []) {
-  const { data: sim, error } = await supabase
-    .from('simulations')
-    .insert(simData)
+    .insert(data)
     .select()
     .single()
   if (error) throw error
-
-  if (questionIds.length > 0) {
-    const rows = questionIds.map((qid, i) => ({
-      simulation_id: sim.id,
-      question_id: qid,
-      position: i + 1,
-    }))
-    await supabase.from('simulation_questions').insert(rows)
-  }
   return sim
 }
 
@@ -183,43 +155,6 @@ export async function updateSimulation(id, data) {
 
 export async function deleteSimulation(id) {
   const { error } = await supabase.from('simulations').delete().eq('id', id)
-  if (error) throw error
-}
-
-export async function reorderSimulationQuestions(simulationId, orderedQuestionIds) {
-  const updates = orderedQuestionIds.map((qid, i) =>
-    supabase
-      .from('simulation_questions')
-      .update({ position: i + 1 })
-      .eq('simulation_id', simulationId)
-      .eq('question_id', qid)
-  )
-  await Promise.all(updates)
-}
-
-export async function addQuestionToSimulation(simulationId, questionId) {
-  const { data: existing } = await supabase
-    .from('simulation_questions')
-    .select('position')
-    .eq('simulation_id', simulationId)
-    .order('position', { ascending: false })
-    .limit(1)
-
-  const maxPosition = existing?.[0]?.position || 0
-  const { error } = await supabase.from('simulation_questions').insert({
-    simulation_id: simulationId,
-    question_id: questionId,
-    position: maxPosition + 1,
-  })
-  if (error) throw error
-}
-
-export async function removeQuestionFromSimulation(simulationId, questionId) {
-  const { error } = await supabase
-    .from('simulation_questions')
-    .delete()
-    .eq('simulation_id', simulationId)
-    .eq('question_id', questionId)
   if (error) throw error
 }
 
@@ -244,7 +179,7 @@ export async function getUsers({ premium, search, page = 0, pageSize = 50 } = {}
 export async function getUserDetail(userId) {
   const [{ data: profile }, { data: progress }, { data: payments }] = await Promise.all([
     supabase.from('profiles').select('*').eq('id', userId).single(),
-    supabase.from('quiz_progress').select('*, simulations(title)').eq('user_id', userId).order('saved_at', { ascending: false }),
+    supabase.from('quiz_sessions').select('*, simulations(title)').eq('user_id', userId).order('started_at', { ascending: false }),
     supabase.from('payments').select('*').eq('user_id', userId).order('created_at', { ascending: false }),
   ])
   return { profile, progress: progress || [], payments: payments || [] }
