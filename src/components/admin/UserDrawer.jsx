@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react'
-import { getUserDetail, setUserPremium, setUserAdmin, setUserBlocked, deleteUser } from '../../lib/adminApi'
+import { getUserDetail, setUserPremium, setUserAdmin, setUserBlocked } from '../../lib/adminApi'
 
-export default function UserDrawer({ userId, onClose, onUserUpdated, onUserDeleted }) {
+export default function UserDrawer({ userId, onClose, onUserUpdated }) {
   const [detail, setDetail] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [confirmDelete, setConfirmDelete] = useState(false)
   const [busy, setBusy] = useState(false)
 
   useEffect(() => {
     if (!userId) return
     setLoading(true)
     setDetail(null)
-    setConfirmDelete(false)
     getUserDetail(userId)
       .then(setDetail)
       .finally(() => setLoading(false))
@@ -34,17 +32,6 @@ export default function UserDrawer({ userId, onClose, onUserUpdated, onUserDelet
       const updated = await getUserDetail(userId)
       setDetail(updated)
       onUserUpdated(updated.profile)
-    } finally {
-      setBusy(false)
-    }
-  }
-
-  async function handleDelete() {
-    setBusy(true)
-    try {
-      await deleteUser(userId)
-      onUserDeleted(userId)
-      onClose()
     } finally {
       setBusy(false)
     }
@@ -210,37 +197,6 @@ export default function UserDrawer({ userId, onClose, onUserUpdated, onUserDelet
                 </button>
               </div>
 
-              {/* Delete */}
-              {!confirmDelete ? (
-                <button
-                  disabled={busy}
-                  onClick={() => setConfirmDelete(true)}
-                  className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-sm font-semibold text-error border border-error/20 hover:bg-error/5 transition-colors disabled:opacity-50"
-                >
-                  <span className="material-symbols-outlined text-[16px]">delete</span>
-                  Elimina account
-                </button>
-              ) : (
-                <div className="bg-error/5 border border-error/20 rounded-xl p-3">
-                  <p className="text-sm text-error font-medium mb-2">Eliminare definitivamente questo account?</p>
-                  <div className="flex gap-2">
-                    <button
-                      disabled={busy}
-                      onClick={handleDelete}
-                      className="flex-1 py-1.5 rounded-lg bg-error text-white text-sm font-semibold hover:bg-error/90 transition-colors disabled:opacity-50"
-                    >
-                      {busy ? 'Eliminando…' : 'Conferma'}
-                    </button>
-                    <button
-                      disabled={busy}
-                      onClick={() => setConfirmDelete(false)}
-                      className="flex-1 py-1.5 rounded-lg border border-outline-variant/30 text-sm font-medium hover:bg-surface-container transition-colors disabled:opacity-50"
-                    >
-                      Annulla
-                    </button>
-                  </div>
-                </div>
-              )}
             </div>
           </>
         )}

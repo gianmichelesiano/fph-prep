@@ -19,7 +19,7 @@ export default function Quiz() {
   const { id: sessionId } = useParams()
   const navigate = useNavigate()
   const { user } = useAuth()
-  const { answers, currentIndex, syncStatus, answerQuestion, goToIndex, finish } = useSession(sessionId)
+  const { answers, currentIndex, syncStatus, answerQuestion, goToIndex, finish, saveNow, restoreState } = useSession(sessionId)
 
   const [session, setSession] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -39,9 +39,7 @@ export default function Quiz() {
 
   useEffect(() => {
     if (!restored || !session) return
-    const savedAnswers = session.answers || {}
-    Object.entries(savedAnswers).forEach(([qid, ans]) => answerQuestion(qid, ans))
-    goToIndex(session.current_index || 0)
+    restoreState(session.answers || {}, session.current_index || 0)
   }, [restored])
 
   const questions = session?.questions || []
@@ -116,6 +114,13 @@ export default function Quiz() {
           </div>
         </div>
         <div className="flex items-center gap-4">
+          <button
+            onClick={async () => { await saveNow(); navigate('/') }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-outline-variant/30 text-xs font-headline font-bold text-on-surface-variant hover:bg-surface-container-low transition-all"
+          >
+            <span className="material-symbols-outlined text-sm">home</span>
+            Home
+          </button>
           {timer && !submitting && (
             <div className="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-xl">
               <span className="material-symbols-outlined text-primary text-sm">schedule</span>
@@ -171,7 +176,7 @@ export default function Quiz() {
             </button>
             {currentIndex < totalQ - 1 ? (
               <button
-                onClick={() => goToIndex(currentIndex + 1)}
+                onClick={async () => { await saveNow(); goToIndex(currentIndex + 1) }}
                 className="flex items-center gap-2 px-8 py-3 rounded-xl bg-primary text-on-primary font-headline font-bold shadow-editorial hover:opacity-90 active:scale-95 transition-all"
               >
                 Successiva

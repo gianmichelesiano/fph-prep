@@ -10,17 +10,30 @@ export function useSession(sessionId) {
   const [syncStatus, setSyncStatus] = useState('idle')
   const saveTimer = useRef(null)
 
+  // Refs per avere sempre i valori aggiornati nelle callback async
+  const answersRef = useRef({})
+  const currentIndexRef = useRef(0)
+
+  function restoreState(savedAnswers, savedIndex) {
+    answersRef.current = savedAnswers || {}
+    currentIndexRef.current = savedIndex || 0
+    setAnswers(answersRef.current)
+    setCurrentIndex(currentIndexRef.current)
+  }
+
   function answerQuestion(questionId, answer) {
-    const nextAnswers = { ...answers, [questionId]: answer }
+    const nextAnswers = { ...answersRef.current, [questionId]: answer }
+    answersRef.current = nextAnswers
     setAnswers(nextAnswers)
 
     if (saveTimer.current) clearTimeout(saveTimer.current)
     saveTimer.current = setTimeout(() => {
-      persistProgress(nextAnswers, currentIndex)
+      persistProgress(nextAnswers, currentIndexRef.current)
     }, SAVE_DELAY)
   }
 
   function goToIndex(index) {
+    currentIndexRef.current = index
     setCurrentIndex(index)
   }
 
@@ -39,15 +52,14 @@ export function useSession(sessionId) {
   async function finish(questions) {
     if (!sessionId) return
 
-    // Calcola score
+    const currentAnswers = answersRef.current
     let score = 0
     const total = questions.length
     for (const q of questions) {
-      const userAnswer = answers[q.id]
+      const userAnswer = currentAnswers[q.id]
       if (q.type === 'multiple') {
         if (userAnswer === q.correct) score++
       } else {
-        // truefalse: answer = {0: true, 1: false, ...}
         const ua = userAnswer || {}
         const allCorrect = q.items.every((item, i) => ua[i] === item.correct)
         const oneWrong = q.items.filter((item, i) => ua[i] !== item.correct).length === 1
@@ -56,9 +68,8 @@ export function useSession(sessionId) {
       }
     }
 
-    await completeSession(sessionId, answers, score, total)
+    await completeSession(sessionId, currentAnswers, score, total)
 
-    // Traccia domande viste
     const { data: { user } } = await supabase.auth.getUser()
     if (user) {
       await markQuestionsSeen(user.id, questions.map(q => q.id))
@@ -67,5 +78,10 @@ export function useSession(sessionId) {
     return { score, total }
   }
 
-  return { answers, currentIndex, syncStatus, answerQuestion, goToIndex, finish }
+  async function saveNow() {
+    if (saveTimer.current) clearTimeout(saveTimer.current)
+    await persistProgress(answersRef.current, currentIndexRef.current)
+  }
+
+  return { answers, currentIndex, syncStatus, answerQuestion, goToIndex, finish, saveNow, restoreState }
 }

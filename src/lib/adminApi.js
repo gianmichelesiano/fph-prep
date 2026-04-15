@@ -1,4 +1,4 @@
-import { supabase, supabaseAdmin } from './supabase'
+import { supabase } from './supabase'
 
 // ===== STATISTICHE =====
 
@@ -209,12 +209,6 @@ export async function setUserBlocked(userId, isBlocked) {
     .from('profiles')
     .update({ is_blocked: isBlocked })
     .eq('id', userId)
-  if (error) throw error
-}
-
-export async function deleteUser(userId) {
-  if (!supabaseAdmin) throw new Error('Admin client non disponibile')
-  const { error } = await supabaseAdmin.auth.admin.deleteUser(userId)
   if (error) throw error
 }
 

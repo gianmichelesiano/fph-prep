@@ -13,7 +13,13 @@
       "Bash(ls C:/Users/bandi/Desktop/fph-prep/*.json)",
       "Bash(cmd /c \"cd /d C:\\\\Users\\\\bandi\\\\Desktop\\\\fph-prep && npm run build 2>&1\")",
       "Bash(cmd:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('area:', d.get\\('area'\\)\\); ruoli = [q['ruolo'] for q in d['questions']]; print\\('ruoli unici:', set\\(ruoli\\)\\); print\\('temi unici:', set\\(q['tema'] for q in d['questions']\\)\\); print\\('tipi:', set\\(q['tipo'] for q in d['questions']\\)\\); print\\('num domande:', len\\(d['questions']\\)\\)\")",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(git checkout:*)"
     ]
   }
 }

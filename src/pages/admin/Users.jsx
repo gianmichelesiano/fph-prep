@@ -27,11 +27,7 @@ export default function AdminUsers() {
     setUsers(prev => prev.map(u => u.id === updatedProfile.id ? updatedProfile : u))
   }
 
-  function handleUserDeleted(deletedId) {
-    setUsers(prev => prev.filter(u => u.id !== deletedId))
-  }
-
-  return (
+return (
     <AdminLayout>
       <div className="p-6">
         <div className="flex items-center justify-between mb-6">
@@ -118,7 +114,6 @@ export default function AdminUsers() {
         userId={selectedUserId}
         onClose={() => setSelectedUserId(null)}
         onUserUpdated={handleUserUpdated}
-        onUserDeleted={handleUserDeleted}
       />
     </AdminLayout>
   )
