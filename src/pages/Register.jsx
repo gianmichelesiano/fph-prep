@@ -9,6 +9,8 @@ export default function Register() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [done, setDone] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirm, setShowConfirm] = useState(false)
 
   function set(k, v) { setForm(p => ({ ...p, [k]: v })) }
 
@@ -104,11 +106,21 @@ export default function Register() {
             </div>
             <div>
               <label className="label-caps block mb-1.5 ml-1">Password</label>
-              <input type="password" value={form.password} onChange={e => set('password', e.target.value)} className="input" placeholder="••••••••" required />
+              <div className="relative">
+                <input type={showPassword ? 'text' : 'password'} value={form.password} onChange={e => set('password', e.target.value)} className="input pr-10" placeholder="••••••••" required />
+                <button type="button" onClick={() => setShowPassword(v => !v)} className="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface transition-colors">
+                  <span className="material-symbols-outlined text-xl">{showPassword ? 'visibility_off' : 'visibility'}</span>
+                </button>
+              </div>
             </div>
             <div>
               <label className="label-caps block mb-1.5 ml-1">Conferma password</label>
-              <input type="password" value={form.confirm} onChange={e => set('confirm', e.target.value)} className="input" placeholder="••••••••" required />
+              <div className="relative">
+                <input type={showConfirm ? 'text' : 'password'} value={form.confirm} onChange={e => set('confirm', e.target.value)} className="input pr-10" placeholder="••••••••" required />
+                <button type="button" onClick={() => setShowConfirm(v => !v)} className="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface transition-colors">
+                  <span className="material-symbols-outlined text-xl">{showConfirm ? 'visibility_off' : 'visibility'}</span>
+                </button>
+              </div>
             </div>
             <button type="submit" disabled={loading}
               className="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold text-sm shadow-[0px_12px_32px_rgba(0,95,106,0.15)] hover:scale-[1.01] active:scale-[0.98] transition-all disabled:opacity-40">

@@ -19,7 +19,9 @@
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('area:', d.get\\('area'\\)\\); ruoli = [q['ruolo'] for q in d['questions']]; print\\('ruoli unici:', set\\(ruoli\\)\\); print\\('temi unici:', set\\(q['tema'] for q in d['questions']\\)\\); print\\('tipi:', set\\(q['tipo'] for q in d['questions']\\)\\); print\\('num domande:', len\\(d['questions']\\)\\)\")",
       "Bash(python3:*)",
       "Bash(node:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(xargs ls *)",
+      "Bash(git rm *)"
     ]
   }
 }

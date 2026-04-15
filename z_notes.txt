@@ -1,3 +1,0 @@
-supbase
-accounti gianmichele.siano@gmail.com
-dabatase_pass: T5QPn7crTuKOCHKx
