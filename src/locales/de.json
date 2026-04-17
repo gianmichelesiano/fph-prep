@@ -11,7 +11,7 @@
     "saved": "Gespeichert ✓", "saving": "Speichern...", "saveError": "Speicherfehler"
   },
   "nav": {
-    "home": "Home", "dashboard": "Dashboard", "stats": "Globale Statistiken",
+    "home": "Home", "dashboard": "Dashboard", "study": "Lernen", "stats": "Globale Statistiken",
     "upgrade": "Premium freischalten", "settings": "Einstellungen",
     "logout": "Abmelden", "admin": "Admin",
     "getPremium": "Premium Holen", "fphCandidate": "FPH-Kandidat", "fphPremium": "FPH Premium"
@@ -97,7 +97,17 @@
   "results": {
     "title": "Ergebnisse", "passed": "Bestanden!", "failed": "Nicht bestanden (Schwelle 67%)",
     "correct": "richtig", "retake": "Test wiederholen", "home": "Home",
-    "reviewTitle": "Fragendurchsicht", "motivation": "Begründung", "notFound": "Ergebnisse nicht gefunden"
+    "reviewTitle": "Fragendurchsicht", "motivation": "Begründung", "notFound": "Ergebnisse nicht gefunden",
+    "question": "Frage"
+  },
+  "study": {
+    "title": "Lernen", "subtitle": "Zusammenfassungen pro Gebiet und Thema",
+    "topicsCount": "{{done}}/{{total}} Themen mit Inhalt",
+    "backToAreas": "Zurück zu den Gebieten", "backToArea": "Gebiet {{id}}",
+    "areaNotFound": "Gebiet nicht gefunden.", "noTopics": "Keine Themen verfügbar.",
+    "notReady": "In Vorbereitung",
+    "topicNotFound": "Thema nicht gefunden oder Inhalt noch nicht verfügbar.",
+    "reviewTopic": "Dieses Thema wiederholen"
   },
   "stats": {
     "title": "Statistiken", "subtitle": "Fortschrittsübersicht", "globalScore": "Gesamtdurchschnitt",
@@ -159,7 +169,8 @@
     "topic": "Thema", "timer": "Timer (Minuten)", "isFree": "Kostenlos", "questionCount": "Anzahl Fragen",
     "generateBtn": "Generieren", "generating": "Generierung läuft...",
     "approveAll": "Alle genehmigen", "generatedQuestions": "Generierte Fragen",
-    "count": "Anzahl Fragen", "role": "Thema"
+    "count": "Anzahl Fragen", "role": "Thema",
+    "contents": "Inhalte"
   },
   "areas": {
     "1": "Rezeptvalidierung", "2": "Phytotherapie", "3": "Komplementärmedizin",

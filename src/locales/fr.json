@@ -11,7 +11,7 @@
     "saved": "Enregistré ✓", "saving": "Enregistrement...", "saveError": "Erreur d'enregistrement"
   },
   "nav": {
-    "home": "Accueil", "dashboard": "Tableau de bord", "stats": "Statistiques Globales",
+    "home": "Accueil", "dashboard": "Tableau de bord", "study": "Étudier", "stats": "Statistiques Globales",
     "upgrade": "Débloquer Premium", "settings": "Paramètres",
     "logout": "Se déconnecter", "admin": "Admin",
     "getPremium": "Obtenir Premium", "fphCandidate": "Candidat FPH", "fphPremium": "FPH Premium"
@@ -97,7 +97,17 @@
   "results": {
     "title": "Résultats", "passed": "Réussi !", "failed": "Échoué (seuil 67%)",
     "correct": "correctes", "retake": "Recommencer le test", "home": "Accueil",
-    "reviewTitle": "Révision des questions", "motivation": "Justification", "notFound": "Résultats non trouvés"
+    "reviewTitle": "Révision des questions", "motivation": "Justification", "notFound": "Résultats non trouvés",
+    "question": "Question"
+  },
+  "study": {
+    "title": "Étudier", "subtitle": "Résumés par domaine et thème",
+    "topicsCount": "{{done}}/{{total}} thèmes avec contenu",
+    "backToAreas": "Retour aux domaines", "backToArea": "Domaine {{id}}",
+    "areaNotFound": "Domaine introuvable.", "noTopics": "Aucun thème disponible.",
+    "notReady": "En préparation",
+    "topicNotFound": "Thème introuvable ou contenu non encore disponible.",
+    "reviewTopic": "Réviser ce sujet"
   },
   "stats": {
     "title": "Statistiques", "subtitle": "Récapitulatif des progrès", "globalScore": "Moyenne générale",
@@ -159,7 +169,8 @@
     "topic": "Sujet", "timer": "Chronomètre (min)", "isFree": "Gratuit", "questionCount": "Nb questions",
     "generateBtn": "Générer", "generating": "Génération en cours...",
     "approveAll": "Tout approuver", "generatedQuestions": "Questions générées",
-    "count": "Nombre de questions", "role": "Sujet"
+    "count": "Nombre de questions", "role": "Sujet",
+    "contents": "Contenus"
   },
   "areas": {
     "1": "Validation des ordonnances", "2": "Phytothérapie", "3": "Médecine complémentaire",

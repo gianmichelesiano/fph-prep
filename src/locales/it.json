@@ -11,7 +11,7 @@
     "saved": "Salvato ✓", "saving": "Salvataggio...", "saveError": "Errore salvataggio"
   },
   "nav": {
-    "home": "Home", "dashboard": "Dashboard", "stats": "Statistiche",
+    "home": "Home", "dashboard": "Dashboard", "study": "Studia", "stats": "Statistiche",
     "upgrade": "Sblocca Premium", "settings": "Impostazioni",
     "logout": "Esci", "admin": "Admin",
     "getPremium": "Ottieni Premium", "fphCandidate": "Candidato FPH", "fphPremium": "FPH Premium"
@@ -97,7 +97,17 @@
   "results": {
     "title": "Risultati", "passed": "Superato!", "failed": "Non superato (soglia 67%)",
     "correct": "corrette", "retake": "Ripeti il test", "home": "Home",
-    "reviewTitle": "Revisione domande", "motivation": "Motivazione", "notFound": "Risultati non trovati"
+    "reviewTitle": "Revisione domande", "motivation": "Motivazione", "notFound": "Risultati non trovati",
+    "question": "Domanda"
+  },
+  "study": {
+    "title": "Studia", "subtitle": "Riassunti per area e topic",
+    "topicsCount": "{{done}}/{{total}} topic con contenuto",
+    "backToAreas": "Torna alle aree", "backToArea": "Area {{id}}",
+    "areaNotFound": "Area non trovata.", "noTopics": "Nessun topic disponibile.",
+    "notReady": "In preparazione",
+    "topicNotFound": "Topic non trovato o contenuto non ancora disponibile.",
+    "reviewTopic": "Ripassa questo argomento"
   },
   "stats": {
     "title": "Statistiche", "subtitle": "Riepilogo progressi", "globalScore": "Media generale",
@@ -159,7 +169,8 @@
     "topic": "Tema", "timer": "Timer (minuti)", "isFree": "Gratuita", "questionCount": "N° domande",
     "generateBtn": "Genera", "generating": "Generazione in corso...",
     "approveAll": "Approva tutte", "generatedQuestions": "Domande generate",
-    "count": "Numero domande", "role": "Argomento"
+    "count": "Numero domande", "role": "Argomento",
+    "contents": "Contenuti"
   },
   "areas": {
     "1": "Validazione ricette", "2": "Fitoterapia", "3": "Medicina complementare",
