@@ -20,7 +20,7 @@ export default function StudyArea() {
   const isPremium = profile?.is_premium || profile?.is_admin
 
   useEffect(() => {
-    if (!area) { setLoading(false); return }
+    if (!area) return
     fetchNotebooksByArea(areaId, 'it')
       .then(list => { setNotebooks(list); setLoading(false) })
       .catch(err => { console.error(err); setLoading(false) })
