@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "import-data": "node scripts/import-questions.js"
+    "import-data": "node scripts/import-questions.js",
+    "import-summaries": "node scripts/import-summaries.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.0",
