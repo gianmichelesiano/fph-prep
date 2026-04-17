@@ -1,17 +1,44 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { fetchSession } from '../lib/api'
 import { AREAS } from '../data/areas'
+import { useAuth } from '../contexts/AuthContext'
+import MarkdownView from '../components/MarkdownView'
+import { supabase } from '../lib/supabase'
 
 export default function Results() {
   const { id: sessionId } = useParams()
   const navigate = useNavigate()
   const [session, setSession] = useState(null)
   const [loading, setLoading] = useState(true)
+  const { t } = useTranslation()
+  const { profile } = useAuth()
+  const isPremium = profile?.is_premium || profile?.is_admin
+  const [contentFlags, setContentFlags] = useState({})
 
   useEffect(() => {
     fetchSession(sessionId)
-      .then(data => { setSession(data); setLoading(false) })
+      .then(async data => {
+        setSession(data)
+        setLoading(false)
+        const nbIds = Array.from(
+          new Set(
+            (data?.questions || [])
+              .map(q => q.notebook_id)
+              .filter(Boolean)
+          )
+        )
+        if (nbIds.length === 0) return
+        const { data: rows } = await supabase
+          .from('notebook_contents')
+          .select('notebook_id, is_free')
+          .in('notebook_id', nbIds)
+          .eq('lang', 'it')
+        const map = {}
+        for (const row of rows || []) map[row.notebook_id] = { isFree: row.is_free }
+        setContentFlags(map)
+      })
       .catch(() => setLoading(false))
   }, [sessionId])
 
@@ -135,7 +162,7 @@ export default function Results() {
 
         {(questions || []).length > 0 && (
           <div>
-            <h3 className="font-headline font-bold text-lg mb-4">Revisione domande</h3>
+            <h3 className="font-headline font-bold text-lg mb-4">{t('results.reviewTitle', 'Revisione domande')}</h3>
             <div className="space-y-4">
               {questions.map((q, i) => {
                 const userAnswer = answers?.[q.id]
@@ -151,16 +178,30 @@ export default function Results() {
                         {isCorrect ? 'check_circle' : 'cancel'}
                       </span>
                       <div className="flex-1">
-                        <p className="text-xs text-outline mb-1">Domanda {i + 1} — {AREAS[q.area]?.name || 'Area ' + q.area}</p>
+                        <p className="text-xs text-outline mb-1">{t('results.question', 'Domanda')} {i + 1} — {AREAS[q.area]?.name || 'Area ' + q.area}</p>
                         <p className="font-medium text-on-surface leading-snug">{q.text}</p>
                       </div>
                     </div>
                     {q.motivation && (
                       <div className="ml-8 p-3 bg-surface-container rounded-lg">
                         <p className="text-xs text-outline font-semibold mb-1">Spiegazione</p>
-                        <p className="text-sm text-on-surface-variant leading-relaxed">{q.motivation}</p>
+                        <MarkdownView content={q.motivation} className="prose-sm" />
                       </div>
                     )}
+                    {q.notebook && contentFlags[q.notebook_id] && (() => {
+                      const locked = !contentFlags[q.notebook_id].isFree && !isPremium
+                      return (
+                        <button
+                          onClick={() => locked ? navigate('/upgrade') : navigate(`/study/topic/${q.notebook.key}`)}
+                          className="ml-8 mt-3 inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline"
+                        >
+                          <span className="material-symbols-outlined text-[16px]">
+                            {locked ? 'lock' : 'menu_book'}
+                          </span>
+                          {t('study.reviewTopic', 'Ripassa questo argomento')} — {q.notebook.title}{locked ? ' (Premium)' : ''}
+                        </button>
+                      )
+                    })()}
                   </div>
                 )
               })}

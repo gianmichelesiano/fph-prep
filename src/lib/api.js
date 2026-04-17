@@ -100,7 +100,7 @@ export async function fetchSession(sessionId) {
 
   const { data: questions } = await supabase
     .from('questions')
-    .select('*')
+    .select('*, notebook:notebook_id(key, title)')
     .in('id', session.question_ids)
   if (!questions) return { ...session, questions: [] }
 
