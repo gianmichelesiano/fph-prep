@@ -30,10 +30,12 @@ const SOURCE_DIR = join(__dirname, '../local/summaries')
 const BUCKET = 'summaries'
 
 const URL = process.env.VITE_SUPABASE_URL
-const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
+const KEY =
+  process.env.SUPABASE_SERVICE_ROLE_KEY ||
+  process.env.VITE_SUPABASE_SERVICE_ROLE_KEY
 
 if (!URL || !KEY) {
-  console.error('Missing VITE_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in env.')
+  console.error('Missing VITE_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY (/ VITE_SUPABASE_SERVICE_ROLE_KEY) in env.')
   process.exit(1)
 }
 
