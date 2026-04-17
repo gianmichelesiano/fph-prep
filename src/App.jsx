@@ -24,6 +24,8 @@ import AdminSimulationEditor from './pages/admin/SimulationEditor'
 import AdminUsers from './pages/admin/Users'
 import AdminGenerate from './pages/admin/Generate'
 import AdminCatalog from './pages/admin/Catalog'
+import AdminContents from './pages/admin/Contents'
+import AdminContentEditor from './pages/admin/ContentEditor'
 
 export default function App() {
   return (
@@ -59,6 +61,8 @@ export default function App() {
             <Route path="/admin/users" element={<AdminUsers />} />
             <Route path="/admin/catalog" element={<AdminCatalog />} />
             <Route path="/admin/generate" element={<AdminGenerate />} />
+            <Route path="/admin/contents" element={<AdminContents />} />
+            <Route path="/admin/contents/:notebook_id" element={<AdminContentEditor />} />
           </Route>
         </Routes>
       </BrowserRouter>
