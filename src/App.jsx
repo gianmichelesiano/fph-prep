@@ -12,6 +12,9 @@ import Stats from './pages/Stats'
 import Settings from './pages/Settings'
 import Upgrade from './pages/Upgrade'
 import PaymentSuccess from './pages/PaymentSuccess'
+import Study from './pages/Study'
+import StudyArea from './pages/StudyArea'
+import StudyTopic from './pages/StudyTopic'
 
 import AdminDashboard from './pages/admin/Dashboard'
 import AdminQuestions from './pages/admin/Questions'
@@ -40,6 +43,9 @@ export default function App() {
             <Route path="/results/:id" element={<Results />} />
             <Route path="/stats" element={<Stats />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/study" element={<Study />} />
+            <Route path="/study/area/:area_id" element={<StudyArea />} />
+            <Route path="/study/topic/:key" element={<StudyTopic />} />
           </Route>
 
           {/* Admin (richiede is_admin) */}

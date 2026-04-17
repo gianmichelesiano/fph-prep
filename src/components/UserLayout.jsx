@@ -12,7 +12,8 @@ export default function UserLayout({ children }) {
     : profile?.email?.slice(0, 2).toUpperCase() || '?'
 
   const NAV = [
-    { to: '/',         label: t('nav.dashboard'),  icon: 'dashboard',         end: true },
+    { to: '/',         label: t('nav.dashboard'),  icon: 'dashboard',            end: true },
+    { to: '/study',    label: t('nav.study'),       icon: 'menu_book' },
     { to: '/stats',    label: t('nav.stats'),       icon: 'analytics' },
     { to: '/upgrade',  label: t('nav.upgrade'),     icon: 'workspace_premium' },
     { to: '/settings', label: t('nav.settings'),    icon: 'settings' },
