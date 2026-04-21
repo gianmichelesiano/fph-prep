@@ -32,6 +32,14 @@ def generate_study_path(
     return {"status": "started", "notebook_id": notebook_id, "notebook_key": req.notebook_key}
 
 
+@router.get("/{notebook_id}/jobs")
+def get_jobs(
+    notebook_id: str,
+    svc: StudyPathService = Depends(get_study_path_service),
+) -> list[dict]:
+    return svc.list_jobs(notebook_id)
+
+
 @router.get("/{notebook_id}")
 def get_study_path(
     notebook_id: str,

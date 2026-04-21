@@ -39,6 +39,18 @@ class StudyPathService:
         )
         return rows or []
 
+    def list_jobs(self, notebook_id: str) -> list[dict[str, Any]]:
+        rows = self.db.select(
+            "generation_jobs",
+            select="id,type,status,error_text,created_at,started_at,finished_at",
+            filters={
+                "notebook_id": f"eq.{notebook_id}",
+                "type": "in.(study_guide,flashcards,mind_map)",
+            },
+            order="created_at.desc",
+        )
+        return rows or []
+
     def _create_job(self, notebook_id: str, artifact_type: str) -> str:
         row = self.db.insert(
             "generation_jobs",

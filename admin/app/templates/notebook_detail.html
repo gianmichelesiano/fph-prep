@@ -30,82 +30,80 @@
         >
           Genera Percorso di Studi
         </button>
+        <button
+          class="secondary-button"
+          type="button"
+          onclick="loadDashboard()"
+        >
+          ↻ Aggiorna stato
+        </button>
       </div>
     </section>
 
-    <section class="panel" id="study-path-status" style="display:none">
-      <h3>Percorso di studi</h3>
-      <p id="study-path-message"></p>
+    <!-- JOBS MONITOR -->
+    <section class="panel" id="jobs-panel">
+      <div class="panel-header">
+        <h3>Stato generazione</h3>
+        <span id="jobs-loading" style="font-size:0.8rem;color:#888">Caricamento…</span>
+      </div>
+      <div id="jobs-table-wrap">
+        <table class="data-table" id="jobs-table" style="display:none">
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Stato</th>
+              <th>Avviato</th>
+              <th>Completato</th>
+              <th>Errore</th>
+            </tr>
+          </thead>
+          <tbody id="jobs-tbody"></tbody>
+        </table>
+        <p id="jobs-empty" style="display:none;color:#888">Nessun job trovato. Clicca "Genera Percorso di Studi" per iniziare.</p>
+      </div>
     </section>
 
-    <script>
-      async function generateStudyPath(btn) {
-        const notebookId = btn.dataset.notebookId;
-        const notebookKey = btn.dataset.notebookKey;
-        btn.disabled = true;
-        btn.textContent = 'Generazione in corso…';
+    <!-- ARTIFACTS VIEWER -->
+    <section class="panel" id="artifacts-panel">
+      <div class="panel-header">
+        <h3>Artifact generati</h3>
+      </div>
+      <div id="artifacts-wrap">
+        <p id="artifacts-empty" style="color:#888">Nessun artifact disponibile.</p>
 
-        const statusSection = document.getElementById('study-path-status');
-        const msg = document.getElementById('study-path-message');
-        statusSection.style.display = '';
-        msg.textContent = 'Avviata generazione di guida, flashcard e mappa mentale. Controlla generation_jobs su Supabase per lo stato.';
+        <div id="artifact-study_guide" class="artifact-block" style="display:none">
+          <h4>📖 Guida di studio</h4>
+          <details>
+            <summary>Mostra contenuto</summary>
+            <pre id="artifact-study_guide-content" class="artifact-pre"></pre>
+          </details>
+        </div>
 
-        try {
-          const res = await fetch(`/api/study-path/${notebookId}/generate`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ notebook_key: notebookKey }),
-          });
-          if (!res.ok) {
-            const err = await res.json();
-            msg.textContent = 'Errore: ' + (err.detail || res.statusText);
-            btn.disabled = false;
-            btn.textContent = 'Genera Percorso di Studi';
-          } else {
-            msg.textContent = '✓ Generazione avviata in background. Ricarica tra 3-5 minuti per vedere gli artifact su Supabase.';
-          }
-        } catch (e) {
-          msg.textContent = 'Errore di rete: ' + e.message;
-          btn.disabled = false;
-          btn.textContent = 'Genera Percorso di Studi';
-        }
-      }
-    </script>
+        <div id="artifact-flashcards" class="artifact-block" style="display:none">
+          <h4>🃏 Flashcard</h4>
+          <div id="artifact-flashcards-content"></div>
+        </div>
+
+        <div id="artifact-mind_map" class="artifact-block" style="display:none">
+          <h4>🗺️ Mappa mentale</h4>
+          <details>
+            <summary>Mostra JSON</summary>
+            <pre id="artifact-mind_map-content" class="artifact-pre"></pre>
+          </details>
+        </div>
+      </div>
+    </section>
 
     <section class="detail-grid">
       <article class="panel">
         <h3>Dettagli</h3>
         <dl class="detail-list">
-          <div>
-            <dt>ID</dt>
-            <dd>{{ notebook.id }}</dd>
-          </div>
-          <div>
-            <dt>Key</dt>
-            <dd>{{ notebook.key or "n/d" }}</dd>
-          </div>
-          <div>
-            <dt>Area</dt>
-            <dd>{{ notebook.area.name if notebook.area else "n/d" }}</dd>
-          </div>
-          <div>
-            <dt>Attivo</dt>
-            <dd>{{ notebook.active|yesno }}</dd>
-          </div>
-          <div>
-            <dt>Creato il</dt>
-            <dd>{{ notebook.created_at or "n/d" }}</dd>
-          </div>
+          <div><dt>ID</dt><dd>{{ notebook.id }}</dd></div>
+          <div><dt>Key</dt><dd>{{ notebook.key or "n/d" }}</dd></div>
+          <div><dt>Area</dt><dd>{{ notebook.area.name if notebook.area else "n/d" }}</dd></div>
+          <div><dt>Attivo</dt><dd>{{ notebook.active|yesno }}</dd></div>
+          <div><dt>Creato il</dt><dd>{{ notebook.created_at or "n/d" }}</dd></div>
         </dl>
-      </article>
-
-      <article class="panel">
-        <h3>Prossimi step</h3>
-        <ul class="plain-list">
-          <li>aggiungere tabelle `generation_jobs` e `artifacts` su Supabase</li>
-          <li>attivare endpoint `generate/summary`, `generate/quiz`, `generate/iconography`</li>
-          <li>visualizzare lo storico output dentro questa pagina</li>
-        </ul>
       </article>
     </section>
 
@@ -127,5 +125,139 @@
         {% endfor %}
       </div>
     </section>
+
+    <style>
+      .data-table { width:100%; border-collapse:collapse; font-size:0.85rem; }
+      .data-table th { text-align:left; padding:8px 12px; border-bottom:2px solid #e5e7eb; color:#6b7280; text-transform:uppercase; font-size:0.75rem; }
+      .data-table td { padding:8px 12px; border-bottom:1px solid #f3f4f6; vertical-align:top; }
+      .status-pill { display:inline-block; padding:2px 8px; border-radius:9999px; font-size:0.75rem; font-weight:600; }
+      .status-pending  { background:#fef3c7; color:#92400e; }
+      .status-running  { background:#dbeafe; color:#1e40af; }
+      .status-done     { background:#d1fae5; color:#065f46; }
+      .status-error    { background:#fee2e2; color:#991b1b; }
+      .artifact-block  { margin-top:1rem; padding:1rem; border:1px solid #e5e7eb; border-radius:8px; }
+      .artifact-block h4 { margin:0 0 0.5rem; }
+      .artifact-pre    { white-space:pre-wrap; font-size:0.8rem; max-height:300px; overflow:auto; background:#f9fafb; padding:0.75rem; border-radius:6px; }
+      .flashcard-item  { padding:0.5rem 0.75rem; border:1px solid #e5e7eb; border-radius:6px; margin-bottom:0.5rem; font-size:0.85rem; }
+      .flashcard-q     { font-weight:600; color:#1f2937; }
+      .flashcard-a     { color:#6b7280; margin-top:2px; }
+    </style>
+
+    <script>
+      const NOTEBOOK_ID = "{{ notebook.id }}";
+
+      const STATUS_LABELS = { pending:'In attesa', running:'In esecuzione', done:'Completato', error:'Errore' };
+
+      function fmtDate(s) {
+        if (!s) return '—';
+        return new Date(s).toLocaleString('it-IT', { day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit' });
+      }
+
+      async function loadDashboard() {
+        await Promise.all([loadJobs(), loadArtifacts()]);
+      }
+
+      async function loadJobs() {
+        const loading = document.getElementById('jobs-loading');
+        loading.textContent = 'Caricamento…';
+        try {
+          const res = await fetch(`/api/study-path/${NOTEBOOK_ID}/jobs`);
+          const jobs = await res.json();
+          loading.textContent = '';
+          const tbody = document.getElementById('jobs-tbody');
+          const table = document.getElementById('jobs-table');
+          const empty = document.getElementById('jobs-empty');
+
+          if (!jobs.length) { table.style.display='none'; empty.style.display=''; return; }
+          table.style.display=''; empty.style.display='none';
+          tbody.innerHTML = jobs.map(j => `
+            <tr>
+              <td>${j.type}</td>
+              <td><span class="status-pill status-${j.status}">${STATUS_LABELS[j.status] || j.status}</span></td>
+              <td>${fmtDate(j.started_at)}</td>
+              <td>${fmtDate(j.finished_at)}</td>
+              <td style="color:#dc2626;font-size:0.8rem">${j.error_text || '—'}</td>
+            </tr>
+          `).join('');
+        } catch(e) {
+          loading.textContent = 'Errore caricamento jobs';
+        }
+      }
+
+      async function loadArtifacts() {
+        try {
+          const res = await fetch(`/api/study-path/${NOTEBOOK_ID}`);
+          const artifacts = await res.json();
+          const empty = document.getElementById('artifacts-empty');
+
+          if (!artifacts.length) { empty.style.display=''; return; }
+          empty.style.display = 'none';
+
+          for (const a of artifacts) {
+            const block = document.getElementById(`artifact-${a.type}`);
+            if (!block) continue;
+            block.style.display = '';
+
+            if (a.type === 'study_guide') {
+              document.getElementById('artifact-study_guide-content').textContent = a.content.text || '';
+            }
+            if (a.type === 'flashcards') {
+              const cards = a.content.cards || a.content.flashcards || [];
+              document.getElementById('artifact-flashcards-content').innerHTML = cards.map(c => `
+                <div class="flashcard-item">
+                  <div class="flashcard-q">D: ${c.question || c.q || ''}</div>
+                  <div class="flashcard-a">R: ${c.answer || c.a || ''}</div>
+                </div>
+              `).join('');
+            }
+            if (a.type === 'mind_map') {
+              document.getElementById('artifact-mind_map-content').textContent = JSON.stringify(a.content, null, 2);
+            }
+          }
+        } catch(e) {
+          console.error('artifact load error', e);
+        }
+      }
+
+      async function generateStudyPath(btn) {
+        const notebookKey = btn.dataset.notebookKey;
+        btn.disabled = true;
+        btn.textContent = 'Generazione avviata…';
+        try {
+          const res = await fetch(`/api/study-path/${NOTEBOOK_ID}/generate`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ notebook_key: notebookKey }),
+          });
+          if (!res.ok) {
+            const err = await res.json();
+            alert('Errore: ' + (err.detail || res.statusText));
+            btn.disabled = false;
+            btn.textContent = 'Genera Percorso di Studi';
+          } else {
+            await loadJobs();
+            // poll ogni 10s finché tutti done/error
+            const interval = setInterval(async () => {
+              await loadDashboard();
+              const res2 = await fetch(`/api/study-path/${NOTEBOOK_ID}/jobs`);
+              const jobs = await res2.json();
+              const allDone = jobs.length > 0 && jobs.every(j => j.status === 'done' || j.status === 'error');
+              if (allDone) {
+                clearInterval(interval);
+                btn.disabled = false;
+                btn.textContent = 'Genera Percorso di Studi';
+              }
+            }, 10000);
+          }
+        } catch(e) {
+          alert('Errore di rete: ' + e.message);
+          btn.disabled = false;
+          btn.textContent = 'Genera Percorso di Studi';
+        }
+      }
+
+      // Carica al boot
+      loadDashboard();
+    </script>
   {% endif %}
 {% endblock %}
