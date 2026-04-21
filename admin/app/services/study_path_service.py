@@ -33,7 +33,7 @@ class StudyPathService:
             select="id,type,title,format,content,created_at",
             filters={
                 "notebook_id": f"eq.{notebook_id}",
-                "type": "in.(study_guide,flashcards,mind_map)",
+                "type": "in.(study_guide,flashcards,quiz)",
             },
             order="created_at.desc",
         )
@@ -45,7 +45,7 @@ class StudyPathService:
             select="id,type,status,error_text,created_at,started_at,finished_at",
             filters={
                 "notebook_id": f"eq.{notebook_id}",
-                "type": "in.(study_guide,flashcards,mind_map)",
+                "type": "in.(study_guide,flashcards,quiz)",
             },
             order="created_at.desc",
         )
@@ -114,10 +114,15 @@ class StudyPathService:
             self.db.update("generation_jobs", {"id": f"eq.{job_id}"},
                            {"status": "error", "error_text": str(exc), "finished_at": datetime.now(timezone.utc).isoformat()})
 
-    async def _generate_mind_map(self, client: Any, nlm_id: str, notebook_id: str, job_id: str) -> None:
+    async def _generate_quiz(self, client: Any, nlm_id: str, notebook_id: str, job_id: str) -> None:
         try:
-            mind_map_data = await client.artifacts.generate_mind_map(nlm_id)
-            artifact_id = self._save_artifact(notebook_id, job_id, "mind_map", "Mappa mentale", "json", mind_map_data)
+            status = await client.artifacts.generate_quiz(nlm_id)
+            await client.artifacts.wait_for_completion(nlm_id, status.task_id)
+            with tempfile.TemporaryDirectory() as tmpdir:
+                out = Path(tmpdir) / "quiz.json"
+                await client.artifacts.download_quiz(nlm_id, str(out), output_format="json")
+                raw = json.loads(out.read_text(encoding="utf-8"))
+            artifact_id = self._save_artifact(notebook_id, job_id, "quiz", "Quiz", "json", raw)
             self.db.update("generation_jobs", {"id": f"eq.{job_id}"},
                            {"status": "done", "artifact_id": artifact_id, "finished_at": datetime.now(timezone.utc).isoformat()})
         except Exception as exc:
@@ -142,7 +147,7 @@ class StudyPathService:
         _generators = {
             "study_guide": self._generate_study_guide,
             "flashcards": self._generate_flashcards,
-            "mind_map": self._generate_mind_map,
+            "quiz": self._generate_quiz,
         }
 
         async with await NotebookLMClient.from_storage() as client:

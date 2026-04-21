@@ -32,6 +32,10 @@
           onclick="generateOne('mind_map')" id="btn-mind_map">
           🗺️ Genera Mappa
         </button>
+        <button class="secondary-button" type="button" style="color:var(--text,#1f2937)"
+          onclick="generateOne('quiz')" id="btn-quiz">
+          ❓ Genera Quiz
+        </button>
         <button class="secondary-button" type="button" style="color:var(--text,#1f2937)" onclick="loadDashboard()">
           ↻ Aggiorna
         </button>
@@ -85,12 +89,9 @@
           <div id="artifact-flashcards-content"></div>
         </div>
 
-        <div id="artifact-mind_map" class="artifact-block" style="display:none">
-          <h4>🗺️ Mappa mentale</h4>
-          <details>
-            <summary>Mostra JSON</summary>
-            <pre id="artifact-mind_map-content" class="artifact-pre"></pre>
-          </details>
+        <div id="artifact-quiz" class="artifact-block" style="display:none">
+          <h4>❓ Quiz</h4>
+          <div id="artifact-quiz-content"></div>
         </div>
       </div>
     </section>
@@ -211,8 +212,15 @@
                 </div>
               `).join('');
             }
-            if (a.type === 'mind_map') {
-              document.getElementById('artifact-mind_map-content').textContent = JSON.stringify(a.content, null, 2);
+            if (a.type === 'quiz') {
+              const questions = a.content.questions || a.content.quiz || [];
+              document.getElementById('artifact-quiz-content').innerHTML = questions.map((q, i) => `
+                <div class="flashcard-item">
+                  <div class="flashcard-q">${i+1}. ${q.question || q.text || ''}</div>
+                  ${(q.options || q.choices || []).map(o => `<div style="font-size:0.8rem;padding:2px 0;color:#374151">• ${o}</div>`).join('')}
+                  <div class="flashcard-a">✓ ${q.answer || q.correct_answer || q.correct || ''}</div>
+                </div>
+              `).join('');
             }
           }
         } catch(e) {

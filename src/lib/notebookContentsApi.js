@@ -140,7 +140,7 @@ export async function fetchStudyPath(notebookId) {
     .from('artifacts')
     .select('id, type, title, format, content, created_at')
     .eq('notebook_id', notebookId)
-    .in('type', ['study_guide', 'flashcards', 'mind_map'])
+    .in('type', ['study_guide', 'flashcards', 'quiz'])
     .order('created_at', { ascending: false })
   if (error) throw error
   const seen = new Set()

@@ -23,28 +23,6 @@ function FlipCard({ card }) {
   )
 }
 
-function MindMapNode({ node, depth = 0 }) {
-  const [open, setOpen] = useState(depth < 2)
-  const children = node.children || node.nodes || []
-  return (
-    <div style={{ paddingLeft: depth * 16 }}>
-      <button
-        onClick={() => children.length ? setOpen(o => !o) : undefined}
-        className={`flex items-center gap-1 py-0.5 text-sm ${children.length ? 'font-medium text-on-surface cursor-pointer' : 'text-on-surface-variant cursor-default'}`}
-      >
-        {children.length > 0 && (
-          <span className="material-symbols-outlined text-[14px] text-primary">
-            {open ? 'expand_more' : 'chevron_right'}
-          </span>
-        )}
-        {node.label || node.title || node.text || node.name}
-      </button>
-      {open && children.map((child, i) => (
-        <MindMapNode key={i} node={child} depth={depth + 1} />
-      ))}
-    </div>
-  )
-}
 
 function StudyPathSection({ artifacts, notebookKey }) {
   const { t } = useTranslation()
@@ -53,8 +31,7 @@ function StudyPathSection({ artifacts, notebookKey }) {
   const CARDS = [
     { type: 'study_guide', icon: 'menu_book', label: t('study.studyGuide', 'Guida di studio') },
     { type: 'flashcards', icon: 'style', label: t('study.flashcards', 'Flashcard') },
-    { type: 'mind_map', icon: 'account_tree', label: t('study.mindMap', 'Mappa mentale') },
-    { type: 'quiz', icon: 'quiz', label: t('study.quiz', 'Quiz'), link: `/quiz?notebook=${notebookKey}` },
+    { type: 'quiz', icon: 'quiz', label: t('study.quiz', 'Quiz') },
   ]
 
   const artifactByType = Object.fromEntries(artifacts.map(a => [a.type, a]))
@@ -123,10 +100,16 @@ function StudyPathSection({ artifacts, notebookKey }) {
                 </div>
               )}
 
-              {isOpen && artifact && card.type === 'mind_map' && (
-                <div className="mt-2 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant text-sm">
-                  {(artifact.content.nodes || artifact.content.children || []).map((node, i) => (
-                    <MindMapNode key={i} node={node} />
+              {isOpen && artifact && card.type === 'quiz' && (
+                <div className="mt-2 space-y-3">
+                  {(artifact.content.questions || artifact.content.quiz || []).map((q, i) => (
+                    <div key={i} className="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant text-sm">
+                      <div className="font-semibold text-on-surface mb-2">{i + 1}. {q.question || q.text}</div>
+                      {(q.options || q.choices || []).map((o, j) => (
+                        <div key={j} className="text-on-surface-variant py-0.5">• {o}</div>
+                      ))}
+                      <div className="mt-2 text-primary text-xs font-semibold">✓ {q.answer || q.correct_answer || q.correct}</div>
+                    </div>
                   ))}
                 </div>
               )}

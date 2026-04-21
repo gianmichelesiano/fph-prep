@@ -11,7 +11,7 @@ from app.services.study_path_service import StudyPathService
 router = APIRouter(prefix="/api/study-path", tags=["study-path"])
 
 
-VALID_TYPES = {"study_guide", "flashcards", "mind_map"}
+VALID_TYPES = {"study_guide", "flashcards", "quiz"}
 
 
 class GenerateRequest(BaseModel):
