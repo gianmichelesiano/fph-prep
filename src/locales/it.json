@@ -107,7 +107,13 @@
     "areaNotFound": "Area non trovata.", "noTopics": "Nessun topic disponibile.",
     "notReady": "In preparazione",
     "topicNotFound": "Topic non trovato o contenuto non ancora disponibile.",
-    "reviewTopic": "Ripassa questo argomento"
+    "reviewTopic": "Ripassa questo argomento",
+    "studyPath": "Percorso di studi",
+    "studyGuide": "Guida di studio",
+    "flashcards": "Flashcard",
+    "mindMap": "Mappa mentale",
+    "quiz": "Quiz",
+    "comingSoon": "In arrivo"
   },
   "stats": {
     "title": "Statistiche", "subtitle": "Riepilogo progressi", "globalScore": "Media generale",

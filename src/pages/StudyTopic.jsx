@@ -4,7 +4,139 @@ import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import UserLayout from '../components/UserLayout'
 import MarkdownView from '../components/MarkdownView'
-import { fetchContentByKey } from '../lib/notebookContentsApi'
+import { fetchContentByKey, fetchStudyPath } from '../lib/notebookContentsApi'
+
+function FlipCard({ card }) {
+  const [flipped, setFlipped] = useState(false)
+  return (
+    <button
+      onClick={() => setFlipped(f => !f)}
+      className="w-full text-left p-4 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low transition-colors min-h-[80px]"
+    >
+      <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">
+        {flipped ? 'Risposta' : 'Domanda'}
+      </div>
+      <div className="text-on-surface text-sm">
+        {flipped ? (card.answer || card.a) : (card.question || card.q)}
+      </div>
+    </button>
+  )
+}
+
+function MindMapNode({ node, depth = 0 }) {
+  const [open, setOpen] = useState(depth < 2)
+  const children = node.children || node.nodes || []
+  return (
+    <div style={{ paddingLeft: depth * 16 }}>
+      <button
+        onClick={() => children.length ? setOpen(o => !o) : undefined}
+        className={`flex items-center gap-1 py-0.5 text-sm ${children.length ? 'font-medium text-on-surface cursor-pointer' : 'text-on-surface-variant cursor-default'}`}
+      >
+        {children.length > 0 && (
+          <span className="material-symbols-outlined text-[14px] text-primary">
+            {open ? 'expand_more' : 'chevron_right'}
+          </span>
+        )}
+        {node.label || node.title || node.text || node.name}
+      </button>
+      {open && children.map((child, i) => (
+        <MindMapNode key={i} node={child} depth={depth + 1} />
+      ))}
+    </div>
+  )
+}
+
+function StudyPathSection({ artifacts, notebookKey }) {
+  const { t } = useTranslation()
+  const [openType, setOpenType] = useState(null)
+
+  const CARDS = [
+    { type: 'study_guide', icon: 'menu_book', label: t('study.studyGuide', 'Guida di studio') },
+    { type: 'flashcards', icon: 'style', label: t('study.flashcards', 'Flashcard') },
+    { type: 'mind_map', icon: 'account_tree', label: t('study.mindMap', 'Mappa mentale') },
+    { type: 'quiz', icon: 'quiz', label: t('study.quiz', 'Quiz'), link: `/quiz?notebook=${notebookKey}` },
+  ]
+
+  const artifactByType = Object.fromEntries(artifacts.map(a => [a.type, a]))
+
+  return (
+    <section className="mt-10">
+      <h2 className="font-headline font-bold text-xl text-on-surface mb-4">
+        {t('study.studyPath', 'Percorso di studi')}
+      </h2>
+      <div className="grid grid-cols-2 gap-3">
+        {CARDS.map(card => {
+          const artifact = artifactByType[card.type]
+          const available = !!artifact || card.type === 'quiz'
+          const isOpen = openType === card.type
+
+          if (card.link) {
+            return (
+              <Link
+                key={card.type}
+                to={card.link}
+                className="flex items-center gap-3 p-4 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors"
+              >
+                <span className="material-symbols-outlined text-primary">{card.icon}</span>
+                <span className="text-sm font-medium text-on-surface">{card.label}</span>
+                <span className="material-symbols-outlined text-[16px] text-on-surface-variant ml-auto">chevron_right</span>
+              </Link>
+            )
+          }
+
+          return (
+            <div key={card.type} className="col-span-2 sm:col-span-1">
+              <button
+                disabled={!available}
+                onClick={() => available && setOpenType(isOpen ? null : card.type)}
+                className={`w-full flex items-center gap-3 p-4 rounded-xl transition-colors text-left ${
+                  available
+                    ? 'bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer'
+                    : 'bg-surface-container opacity-40 cursor-default'
+                }`}
+              >
+                <span className={`material-symbols-outlined ${available ? 'text-primary' : 'text-on-surface-variant'}`}>
+                  {card.icon}
+                </span>
+                <span className="text-sm font-medium text-on-surface flex-1">{card.label}</span>
+                {available && (
+                  <span className="material-symbols-outlined text-[16px] text-on-surface-variant">
+                    {isOpen ? 'expand_less' : 'expand_more'}
+                  </span>
+                )}
+                {!available && (
+                  <span className="text-[10px] text-on-surface-variant">{t('study.comingSoon', 'In arrivo')}</span>
+                )}
+              </button>
+
+              {isOpen && artifact && card.type === 'study_guide' && (
+                <div className="mt-2 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant">
+                  <MarkdownView content={artifact.content.text} />
+                </div>
+              )}
+
+              {isOpen && artifact && card.type === 'flashcards' && (
+                <div className="mt-2 space-y-2">
+                  {(artifact.content.cards || artifact.content.flashcards || []).map((c, i) => (
+                    <FlipCard key={i} card={c} />
+                  ))}
+                </div>
+              )}
+
+              {isOpen && artifact && card.type === 'mind_map' && (
+                <div className="mt-2 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant text-sm">
+                  {(artifact.content.nodes || artifact.content.children || []).map((node, i) => (
+                    <MindMapNode key={i} node={node} />
+                  ))}
+                </div>
+              )}
+            </div>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
 
 export default function StudyTopic() {
   const { key } = useParams()
@@ -14,6 +146,7 @@ export default function StudyTopic() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
+  const [studyPath, setStudyPath] = useState([])
 
   const isPremium = profile?.is_premium || profile?.is_admin
 
@@ -30,6 +163,13 @@ export default function StudyTopic() {
       })
       .catch(err => { console.error(err); setNotFound(true); setLoading(false) })
   }, [key, isPremium, navigate])
+
+  useEffect(() => {
+    if (!data?.id) return
+    fetchStudyPath(data.id)
+      .then(setStudyPath)
+      .catch(err => console.error('study path fetch error', err))
+  }, [data?.id])
 
   if (loading) {
     return (
@@ -80,6 +220,8 @@ export default function StudyTopic() {
         <article>
           <MarkdownView content={data.content.content_md} />
         </article>
+
+        <StudyPathSection artifacts={studyPath} notebookKey={key} />
       </div>
     </UserLayout>
   )
