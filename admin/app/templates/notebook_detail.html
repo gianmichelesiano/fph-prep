@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if supabase_configured == false %}
+    <section class="notice warning">
+      <strong>Supabase non configurato.</strong>
+      <span>Imposta le variabili nel file `.env` prima di aprire il dettaglio notebook.</span>
+    </section>
+  {% endif %}
+
+  {% if not notebook %}
+    <section class="panel">
+      <p>Notebook non trovato.</p>
+    </section>
+  {% else %}
+    <section class="hero-card">
+      <div>
+        <p class="eyebrow">Notebook</p>
+        <h2>{{ notebook.title }}</h2>
+        <p class="hero-copy">{{ notebook.argomento or "Nessun argomento disponibile." }}</p>
+      </div>
+      <div class="hero-actions">
+        <button
+          id="btn-generate-study-path"
+          class="primary-button"
+          type="button"
+          data-notebook-id="{{ notebook.id }}"
+          data-notebook-key="{{ notebook.key }}"
+          onclick="generateStudyPath(this)"
+        >
+          Genera Percorso di Studi
+        </button>
+      </div>
+    </section>
+
+    <section class="panel" id="study-path-status" style="display:none">
+      <h3>Percorso di studi</h3>
+      <p id="study-path-message"></p>
+    </section>
+
+    <script>
+      async function generateStudyPath(btn) {
+        const notebookId = btn.dataset.notebookId;
+        const notebookKey = btn.dataset.notebookKey;
+        btn.disabled = true;
+        btn.textContent = 'Generazione in corso…';
+
+        const statusSection = document.getElementById('study-path-status');
+        const msg = document.getElementById('study-path-message');
+        statusSection.style.display = '';
+        msg.textContent = 'Avviata generazione di guida, flashcard e mappa mentale. Controlla generation_jobs su Supabase per lo stato.';
+
+        try {
+          const res = await fetch(`/api/study-path/${notebookId}/generate`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ notebook_key: notebookKey }),
+          });
+          if (!res.ok) {
+            const err = await res.json();
+            msg.textContent = 'Errore: ' + (err.detail || res.statusText);
+            btn.disabled = false;
+            btn.textContent = 'Genera Percorso di Studi';
+          } else {
+            msg.textContent = '✓ Generazione avviata in background. Ricarica tra 3-5 minuti per vedere gli artifact su Supabase.';
+          }
+        } catch (e) {
+          msg.textContent = 'Errore di rete: ' + e.message;
+          btn.disabled = false;
+          btn.textContent = 'Genera Percorso di Studi';
+        }
+      }
+    </script>
+
+    <section class="detail-grid">
+      <article class="panel">
+        <h3>Dettagli</h3>
+        <dl class="detail-list">
+          <div>
+            <dt>ID</dt>
+            <dd>{{ notebook.id }}</dd>
+          </div>
+          <div>
+            <dt>Key</dt>
+            <dd>{{ notebook.key or "n/d" }}</dd>
+          </div>
+          <div>
+            <dt>Area</dt>
+            <dd>{{ notebook.area.name if notebook.area else "n/d" }}</dd>
+          </div>
+          <div>
+            <dt>Attivo</dt>
+            <dd>{{ notebook.active|yesno }}</dd>
+          </div>
+          <div>
+            <dt>Creato il</dt>
+            <dd>{{ notebook.created_at or "n/d" }}</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="panel">
+        <h3>Prossimi step</h3>
+        <ul class="plain-list">
+          <li>aggiungere tabelle `generation_jobs` e `artifacts` su Supabase</li>
+          <li>attivare endpoint `generate/summary`, `generate/quiz`, `generate/iconography`</li>
+          <li>visualizzare lo storico output dentro questa pagina</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h3>Notebooks correlati</h3>
+      </div>
+      <div class="list">
+        {% for item in related %}
+          <a class="list-item" href="/notebooks/{{ item.id }}">
+            <div>
+              <strong>{{ item.title }}</strong>
+              <p>{{ item.argomento or "Nessun argomento" }}</p>
+            </div>
+            <span class="pill">{{ item.key or "n/d" }}</span>
+          </a>
+        {% else %}
+          <div class="empty-state">Nessun notebook correlato disponibile.</div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}
