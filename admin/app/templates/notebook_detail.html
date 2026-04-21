@@ -20,22 +20,20 @@
         <p class="hero-copy">{{ notebook.argomento or "Nessun argomento disponibile." }}</p>
       </div>
       <div class="hero-actions">
-        <button
-          id="btn-generate-study-path"
-          class="primary-button"
-          type="button"
-          data-notebook-id="{{ notebook.id }}"
-          data-notebook-key="{{ notebook.key }}"
-          onclick="generateStudyPath(this)"
-        >
-          Genera Percorso di Studi
+        <button class="primary-button" type="button"
+          onclick="generateOne('study_guide')" id="btn-study_guide">
+          📖 Genera Guida
         </button>
-        <button
-          class="secondary-button"
-          type="button"
-          onclick="loadDashboard()"
-        >
-          ↻ Aggiorna stato
+        <button class="secondary-button" type="button" style="color:var(--text,#1f2937)"
+          onclick="generateOne('flashcards')" id="btn-flashcards">
+          🃏 Genera Flashcard
+        </button>
+        <button class="secondary-button" type="button" style="color:var(--text,#1f2937)"
+          onclick="generateOne('mind_map')" id="btn-mind_map">
+          🗺️ Genera Mappa
+        </button>
+        <button class="secondary-button" type="button" style="color:var(--text,#1f2937)" onclick="loadDashboard()">
+          ↻ Aggiorna
         </button>
       </div>
     </section>
@@ -219,40 +217,51 @@
         }
       }
 
-      async function generateStudyPath(btn) {
-        const notebookKey = btn.dataset.notebookKey;
+      const NOTEBOOK_KEY = "{{ notebook.key }}";
+      const TYPE_LABELS = { study_guide:'📖 Genera Guida', flashcards:'🃏 Genera Flashcard', mind_map:'🗺️ Genera Mappa' };
+
+      async function generateOne(type) {
+        const btn = document.getElementById('btn-' + type);
+        const origText = btn.textContent;
         btn.disabled = true;
-        btn.textContent = 'Generazione avviata…';
+        btn.textContent = '⏳ In avvio…';
+
         try {
           const res = await fetch(`/api/study-path/${NOTEBOOK_ID}/generate`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ notebook_key: notebookKey }),
+            body: JSON.stringify({ notebook_key: NOTEBOOK_KEY, type }),
           });
           if (!res.ok) {
             const err = await res.json();
-            alert('Errore: ' + (err.detail || res.statusText));
+            alert('Errore avvio: ' + (err.detail || res.statusText));
             btn.disabled = false;
-            btn.textContent = 'Genera Percorso di Studi';
-          } else {
-            await loadJobs();
-            // poll ogni 10s finché tutti done/error
-            const interval = setInterval(async () => {
-              await loadDashboard();
-              const res2 = await fetch(`/api/study-path/${NOTEBOOK_ID}/jobs`);
-              const jobs = await res2.json();
-              const allDone = jobs.length > 0 && jobs.every(j => j.status === 'done' || j.status === 'error');
-              if (allDone) {
-                clearInterval(interval);
-                btn.disabled = false;
-                btn.textContent = 'Genera Percorso di Studi';
-              }
-            }, 10000);
+            btn.textContent = origText;
+            return;
           }
+
+          await loadJobs();
+
+          // Poll ogni 8s finché job di questo tipo è done/error
+          const interval = setInterval(async () => {
+            const r = await fetch(`/api/study-path/${NOTEBOOK_ID}/jobs`);
+            const jobs = await r.json();
+            const job = jobs.find(j => j.type === type);
+            await loadDashboard();
+            if (job && (job.status === 'done' || job.status === 'error')) {
+              clearInterval(interval);
+              btn.disabled = false;
+              btn.textContent = origText;
+              if (job.status === 'error') {
+                alert(`❌ Errore ${type}:\n${job.error_text}`);
+              }
+            }
+          }, 8000);
+
         } catch(e) {
           alert('Errore di rete: ' + e.message);
           btn.disabled = false;
-          btn.textContent = 'Genera Percorso di Studi';
+          btn.textContent = origText;
         }
       }
 
