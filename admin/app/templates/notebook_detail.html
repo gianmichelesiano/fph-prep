@@ -38,6 +38,9 @@
       </div>
     </section>
 
+    <!-- LIVE LOG -->
+    <div id="live-log" style="display:none;margin:0 0 1rem;padding:0.75rem 1rem;background:#0f172a;color:#86efac;font-family:monospace;font-size:0.8rem;border-radius:10px;max-height:160px;overflow-y:auto;"></div>
+
     <!-- JOBS MONITOR -->
     <section class="panel" id="jobs-panel">
       <div class="panel-header">
@@ -218,13 +221,23 @@
       }
 
       const NOTEBOOK_KEY = "{{ notebook.key }}";
-      const TYPE_LABELS = { study_guide:'📖 Genera Guida', flashcards:'🃏 Genera Flashcard', mind_map:'🗺️ Genera Mappa' };
+
+      function log(msg, color) {
+        const el = document.getElementById('live-log');
+        el.style.display = '';
+        const line = document.createElement('div');
+        line.style.color = color || '#86efac';
+        line.textContent = new Date().toLocaleTimeString('it-IT') + '  ' + msg;
+        el.appendChild(line);
+        el.scrollTop = el.scrollHeight;
+      }
 
       async function generateOne(type) {
         const btn = document.getElementById('btn-' + type);
-        const origText = btn.textContent;
+        const origText = btn.textContent.trim();
         btn.disabled = true;
         btn.textContent = '⏳ In avvio…';
+        log(`Avvio generazione: ${type}…`);
 
         try {
           const res = await fetch(`/api/study-path/${NOTEBOOK_ID}/generate`, {
@@ -234,32 +247,42 @@
           });
           if (!res.ok) {
             const err = await res.json();
-            alert('Errore avvio: ' + (err.detail || res.statusText));
+            log('❌ Errore avvio: ' + (err.detail || res.statusText), '#fca5a5');
             btn.disabled = false;
             btn.textContent = origText;
             return;
           }
 
+          log('✓ Job creato — generazione in corso (può richiedere 2-4 min)…', '#fde68a');
           await loadJobs();
 
-          // Poll ogni 8s finché job di questo tipo è done/error
+          let polls = 0;
           const interval = setInterval(async () => {
+            polls++;
+            log(`Controllo stato… (${polls * 8}s)`);
             const r = await fetch(`/api/study-path/${NOTEBOOK_ID}/jobs`);
             const jobs = await r.json();
             const job = jobs.find(j => j.type === type);
             await loadDashboard();
-            if (job && (job.status === 'done' || job.status === 'error')) {
-              clearInterval(interval);
-              btn.disabled = false;
-              btn.textContent = origText;
-              if (job.status === 'error') {
-                alert(`❌ Errore ${type}:\n${job.error_text}`);
+            if (job) {
+              if (job.status === 'done') {
+                clearInterval(interval);
+                btn.disabled = false;
+                btn.textContent = origText;
+                log(`✅ ${type} completato!`, '#86efac');
+              } else if (job.status === 'error') {
+                clearInterval(interval);
+                btn.disabled = false;
+                btn.textContent = origText;
+                log(`❌ Errore ${type}: ${job.error_text}`, '#fca5a5');
+              } else {
+                log(`  stato: ${job.status}`, '#94a3b8');
               }
             }
           }, 8000);
 
         } catch(e) {
-          alert('Errore di rete: ' + e.message);
+          log('❌ Errore di rete: ' + e.message, '#fca5a5');
           btn.disabled = false;
           btn.textContent = origText;
         }
