@@ -19,6 +19,18 @@ export async function fetchContentByKey(key, lang = 'it') {
   return { ...data, notebook_contents: undefined, content }
 }
 
+// Fetch notebook metadata by key (no content join — always returns if notebook exists).
+export async function fetchNotebookByKey(key) {
+  const { data, error } = await supabase
+    .from('notebooks')
+    .select('id, key, title, area_id, argomento')
+    .eq('key', key)
+    .eq('active', true)
+    .maybeSingle()
+  if (error) throw error
+  return data
+}
+
 // Lista notebooks (topic) per area, con flag hasContent + isFree.
 export async function fetchNotebooksByArea(areaId, lang = 'it') {
   const { data, error } = await supabase

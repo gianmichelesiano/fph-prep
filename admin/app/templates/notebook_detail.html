@@ -206,8 +206,8 @@
               const cards = a.content.cards || a.content.flashcards || [];
               document.getElementById('artifact-flashcards-content').innerHTML = cards.map(c => `
                 <div class="flashcard-item">
-                  <div class="flashcard-q">D: ${c.question || c.q || ''}</div>
-                  <div class="flashcard-a">R: ${c.answer || c.a || ''}</div>
+                  <div class="flashcard-q">D: ${c.question || c.q || c.front || ''}</div>
+                  <div class="flashcard-a">R: ${c.answer || c.a || c.back || ''}</div>
                 </div>
               `).join('');
             }

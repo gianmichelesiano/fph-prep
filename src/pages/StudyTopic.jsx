@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import UserLayout from '../components/UserLayout'
 import MarkdownView from '../components/MarkdownView'
-import { fetchContentByKey, fetchStudyPath } from '../lib/notebookContentsApi'
+import { fetchContentByKey, fetchNotebookByKey, fetchStudyPath } from '../lib/notebookContentsApi'
 
 function FlipCard({ card }) {
   const [flipped, setFlipped] = useState(false)
@@ -17,7 +17,7 @@ function FlipCard({ card }) {
         {flipped ? 'Risposta' : 'Domanda'}
       </div>
       <div className="text-on-surface text-sm">
-        {flipped ? (card.answer || card.a) : (card.question || card.q)}
+        {flipped ? (card.answer || card.a || card.back) : (card.question || card.q || card.front)}
       </div>
     </button>
   )
@@ -152,13 +152,16 @@ export default function StudyTopic() {
 
   useEffect(() => {
     fetchContentByKey(key, 'it')
-      .then(res => {
-        if (!res || !res.content) { setNotFound(true); setLoading(false); return }
-        if (!res.content.is_free && !isPremium) {
+      .then(async res => {
+        if (res?.content && !res.content.is_free && !isPremium) {
           navigate('/upgrade', { replace: true })
           return
         }
-        setData(res)
+        if (res) { setData(res); setLoading(false); return }
+        // No content yet — load bare notebook metadata
+        const nb = await fetchNotebookByKey(key)
+        if (!nb) { setNotFound(true); setLoading(false); return }
+        setData({ ...nb, content: null })
         setLoading(false)
       })
       .catch(err => { console.error(err); setNotFound(true); setLoading(false) })
@@ -217,9 +220,11 @@ export default function StudyTopic() {
           )}
         </header>
 
-        <article>
-          <MarkdownView content={data.content.content_md} />
-        </article>
+        {data.content && (
+          <article>
+            <MarkdownView content={data.content.content_md} />
+          </article>
+        )}
 
         <StudyPathSection artifacts={studyPath} notebookKey={key} />
       </div>

@@ -62,17 +62,14 @@ export default function StudyArea() {
           <div className="divide-y divide-outline-variant/20">
             {notebooks.map(n => {
               const locked = !n.isFree && !isPremium
-              const disabled = !n.hasContent
               return (
                 <button
                   key={n.id}
                   onClick={() => {
-                    if (disabled) return
                     if (locked) navigate('/upgrade')
                     else navigate(`/study/topic/${n.key}`)
                   }}
-                  disabled={disabled}
-                  className={`w-full text-left py-4 flex items-center justify-between gap-3 ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-surface-container-lowest'} rounded-md px-3 transition-colors`}
+                  className="w-full text-left py-4 flex items-center justify-between gap-3 hover:bg-surface-container-lowest rounded-md px-3 transition-colors"
                 >
                   <div className="min-w-0">
                     <div className="font-semibold text-on-surface">{n.title}</div>
