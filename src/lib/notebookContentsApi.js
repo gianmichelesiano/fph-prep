@@ -121,6 +121,24 @@ export async function upsertContent({ notebook_id, lang = 'it', content_md, is_f
   return data
 }
 
+// Fetch study path artifacts (study_guide, flashcards, mind_map) for a notebook.
+// Returns array of { id, type, title, format, content, created_at }, one per type (latest).
+export async function fetchStudyPath(notebookId) {
+  const { data, error } = await supabase
+    .from('artifacts')
+    .select('id, type, title, format, content, created_at')
+    .eq('notebook_id', notebookId)
+    .in('type', ['study_guide', 'flashcards', 'mind_map'])
+    .order('created_at', { ascending: false })
+  if (error) throw error
+  const seen = new Set()
+  return (data || []).filter(a => {
+    if (seen.has(a.type)) return false
+    seen.add(a.type)
+    return true
+  })
+}
+
 // Admin: upload immagine a summaries/<key>/<timestamp>-<filename>, ritorna URL pubblico.
 export async function uploadSummaryImage(notebookKey, file) {
   const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_')
