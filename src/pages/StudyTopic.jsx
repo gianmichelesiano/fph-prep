@@ -24,6 +24,48 @@ function FlipCard({ card }) {
 }
 
 
+function QuizQuestion({ q, index }) {
+  const [selected, setSelected] = useState(null)
+  const answered = selected !== null
+  const options = q.answerOptions || q.options || q.choices || []
+
+  return (
+    <div className="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant">
+      <div className="font-semibold text-on-surface mb-3 text-sm">{index + 1}. {q.question || q.text}</div>
+      <div className="space-y-2">
+        {options.map((o, j) => {
+          const text = typeof o === 'string' ? o : o.text
+          const correct = typeof o === 'object' && o.isCorrect
+          const isSelected = selected === j
+
+          let style = 'border border-outline-variant text-on-surface'
+          if (answered) {
+            if (correct) style = 'border border-primary bg-primary/10 text-primary font-semibold'
+            else if (isSelected) style = 'border border-error bg-error/10 text-error'
+            else style = 'border border-outline-variant text-on-surface-variant opacity-60'
+          }
+
+          return (
+            <button
+              key={j}
+              disabled={answered}
+              onClick={() => setSelected(j)}
+              className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${style} ${!answered ? 'hover:bg-surface-container-low cursor-pointer' : 'cursor-default'}`}
+            >
+              {answered && correct && '✓ '}
+              {answered && isSelected && !correct && '✗ '}
+              {text}
+            </button>
+          )
+        })}
+      </div>
+      {answered && q.hint && (
+        <p className="mt-3 text-xs text-on-surface-variant italic">{q.hint}</p>
+      )}
+    </div>
+  )
+}
+
 function StudyPathSection({ artifacts }) {
   const { t } = useTranslation()
   const [active, setActive] = useState(null)
@@ -95,20 +137,7 @@ function StudyPathSection({ artifacts }) {
           {active === 'quiz' && artifact && (
             <div className="space-y-4 max-w-2xl">
               {(artifact.content.questions || artifact.content.quiz || []).map((q, i) => (
-                <div key={i} className="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant">
-                  <div className="font-semibold text-on-surface mb-3 text-sm">{i + 1}. {q.question || q.text}</div>
-                  <div className="space-y-1">
-                    {(q.answerOptions || q.options || q.choices || []).map((o, j) => {
-                      const text = typeof o === 'string' ? o : o.text
-                      const correct = typeof o === 'object' && o.isCorrect
-                      return (
-                        <div key={j} className={`px-3 py-1.5 rounded-lg text-sm ${correct ? 'bg-primary/10 text-primary font-semibold' : 'text-on-surface-variant'}`}>
-                          {correct ? '✓ ' : '• '}{text}
-                        </div>
-                      )
-                    })}
-                  </div>
-                </div>
+                <QuizQuestion key={i} q={q} index={i} />
               ))}
             </div>
           )}
