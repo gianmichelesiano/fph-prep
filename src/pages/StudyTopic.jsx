@@ -24,103 +24,95 @@ function FlipCard({ card }) {
 }
 
 
-function StudyPathSection({ artifacts, notebookKey }) {
+function StudyPathSection({ artifacts }) {
   const { t } = useTranslation()
-  const [openType, setOpenType] = useState(null)
+  const [active, setActive] = useState(null)
 
-  const CARDS = [
+  const TABS = [
     { type: 'study_guide', icon: 'menu_book', label: t('study.studyGuide', 'Guida di studio') },
     { type: 'flashcards', icon: 'style', label: t('study.flashcards', 'Flashcard') },
     { type: 'quiz', icon: 'quiz', label: t('study.quiz', 'Quiz') },
   ]
 
   const artifactByType = Object.fromEntries(artifacts.map(a => [a.type, a]))
+  const artifact = active ? artifactByType[active] : null
+
+  // Auto-select first available on mount
+  useState(() => {
+    const first = TABS.find(t => artifactByType[t.type])
+    if (first) setActive(first.type)
+  })
+
+  if (!artifacts.length) return null
 
   return (
-    <section className="mt-10">
-      <h2 className="font-headline font-bold text-xl text-on-surface mb-4">
-        {t('study.studyPath', 'Percorso di studi')}
-      </h2>
-      <div className="grid grid-cols-2 gap-3">
-        {CARDS.map(card => {
-          const artifact = artifactByType[card.type]
-          const available = !!artifact || card.type === 'quiz'
-          const isOpen = openType === card.type
-
-          if (card.link) {
+    <section className="mt-10 -mx-4 md:-mx-8">
+      <div className="px-4 md:px-8 mb-4">
+        <h2 className="font-headline font-bold text-xl text-on-surface">
+          {t('study.studyPath', 'Percorso di studi')}
+        </h2>
+      </div>
+      <div className="flex gap-0 border-t border-outline-variant/30 min-h-[60vh]">
+        {/* Sidebar */}
+        <aside className="w-48 shrink-0 border-r border-outline-variant/30 py-4 px-2 flex flex-col gap-1">
+          {TABS.map(tab => {
+            const available = !!artifactByType[tab.type]
+            const isActive = active === tab.type
             return (
-              <Link
-                key={card.type}
-                to={card.link}
-                className="flex items-center gap-3 p-4 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors"
-              >
-                <span className="material-symbols-outlined text-primary">{card.icon}</span>
-                <span className="text-sm font-medium text-on-surface">{card.label}</span>
-                <span className="material-symbols-outlined text-[16px] text-on-surface-variant ml-auto">chevron_right</span>
-              </Link>
-            )
-          }
-
-          return (
-            <div key={card.type} className="col-span-2 sm:col-span-1">
               <button
+                key={tab.type}
                 disabled={!available}
-                onClick={() => available && setOpenType(isOpen ? null : card.type)}
-                className={`w-full flex items-center gap-3 p-4 rounded-xl transition-colors text-left ${
-                  available
-                    ? 'bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer'
-                    : 'bg-surface-container opacity-40 cursor-default'
-                }`}
+                onClick={() => available && setActive(tab.type)}
+                className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-left transition-colors w-full
+                  ${isActive ? 'bg-primary/10 text-primary' : available ? 'text-on-surface hover:bg-surface-container-low' : 'text-outline opacity-40 cursor-default'}`}
               >
-                <span className={`material-symbols-outlined ${available ? 'text-primary' : 'text-on-surface-variant'}`}>
-                  {card.icon}
-                </span>
-                <span className="text-sm font-medium text-on-surface flex-1">{card.label}</span>
-                {available && (
-                  <span className="material-symbols-outlined text-[16px] text-on-surface-variant">
-                    {isOpen ? 'expand_less' : 'expand_more'}
-                  </span>
-                )}
-                {!available && (
-                  <span className="text-[10px] text-on-surface-variant">{t('study.comingSoon', 'In arrivo')}</span>
-                )}
+                <span className="material-symbols-outlined text-[18px]">{tab.icon}</span>
+                {tab.label}
+                {!available && <span className="ml-auto text-[9px] uppercase tracking-wide">{t('study.comingSoon', 'In arrivo')}</span>}
               </button>
+            )
+          })}
+        </aside>
 
-              {isOpen && artifact && card.type === 'study_guide' && (
-                <div className="mt-2 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant">
-                  <MarkdownView content={artifact.content.text} />
-                </div>
-              )}
+        {/* Content area */}
+        <div className="flex-1 py-6 px-6 overflow-y-auto">
+          {!active && (
+            <p className="text-on-surface-variant text-sm">{t('study.comingSoon', 'Seleziona una sezione.')}</p>
+          )}
 
-              {isOpen && artifact && card.type === 'flashcards' && (
-                <div className="mt-2 space-y-2">
-                  {(artifact.content.cards || artifact.content.flashcards || []).map((c, i) => (
-                    <FlipCard key={i} card={c} />
-                  ))}
-                </div>
-              )}
+          {active === 'study_guide' && artifact && (
+            <MarkdownView content={artifact.content.text} />
+          )}
 
-              {isOpen && artifact && card.type === 'quiz' && (
-                <div className="mt-2 space-y-3">
-                  {(artifact.content.questions || artifact.content.quiz || []).map((q, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant text-sm">
-                      <div className="font-semibold text-on-surface mb-2">{i + 1}. {q.question || q.text}</div>
-                      {(q.answerOptions || q.options || q.choices || []).map((o, j) => {
-                        const text = typeof o === 'string' ? o : o.text
-                        const correct = typeof o === 'object' && o.isCorrect
-                        return (
-                          <div key={j} className={`py-0.5 text-sm ${correct ? 'text-primary font-semibold' : 'text-on-surface-variant'}`}>
-                            {correct ? '✓ ' : '• '}{text}
-                          </div>
-                        )
-                      })}
-                    </div>
-                  ))}
-                </div>
-              )}
+          {active === 'flashcards' && artifact && (
+            <div className="space-y-3 max-w-2xl">
+              {(artifact.content.cards || artifact.content.flashcards || []).map((c, i) => (
+                <FlipCard key={i} card={c} />
+              ))}
             </div>
-          )
-        })}
+          )}
+
+          {active === 'quiz' && artifact && (
+            <div className="space-y-4 max-w-2xl">
+              {(artifact.content.questions || artifact.content.quiz || []).map((q, i) => (
+                <div key={i} className="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant">
+                  <div className="font-semibold text-on-surface mb-3 text-sm">{i + 1}. {q.question || q.text}</div>
+                  <div className="space-y-1">
+                    {(q.answerOptions || q.options || q.choices || []).map((o, j) => {
+                      const text = typeof o === 'string' ? o : o.text
+                      const correct = typeof o === 'object' && o.isCorrect
+                      return (
+                        <div key={j} className={`px-3 py-1.5 rounded-lg text-sm ${correct ? 'bg-primary/10 text-primary font-semibold' : 'text-on-surface-variant'}`}>
+                          {correct ? '✓ ' : '• '}{text}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )
@@ -190,7 +182,7 @@ export default function StudyTopic() {
 
   return (
     <UserLayout>
-      <div className="max-w-3xl mx-auto px-4 md:px-8 py-6">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 py-6">
         <Link
           to={`/study/area/${data.area_id}`}
           className="text-sm text-primary flex items-center gap-1 mb-4"
@@ -214,7 +206,7 @@ export default function StudyTopic() {
           </article>
         )}
 
-        <StudyPathSection artifacts={studyPath} notebookKey={key} />
+        <StudyPathSection artifacts={studyPath} />
       </div>
     </UserLayout>
   )
