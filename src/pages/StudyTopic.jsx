@@ -105,10 +105,15 @@ function StudyPathSection({ artifacts, notebookKey }) {
                   {(artifact.content.questions || artifact.content.quiz || []).map((q, i) => (
                     <div key={i} className="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant text-sm">
                       <div className="font-semibold text-on-surface mb-2">{i + 1}. {q.question || q.text}</div>
-                      {(q.options || q.choices || []).map((o, j) => (
-                        <div key={j} className="text-on-surface-variant py-0.5">• {o}</div>
-                      ))}
-                      <div className="mt-2 text-primary text-xs font-semibold">✓ {q.answer || q.correct_answer || q.correct}</div>
+                      {(q.answerOptions || q.options || q.choices || []).map((o, j) => {
+                        const text = typeof o === 'string' ? o : o.text
+                        const correct = typeof o === 'object' && o.isCorrect
+                        return (
+                          <div key={j} className={`py-0.5 text-sm ${correct ? 'text-primary font-semibold' : 'text-on-surface-variant'}`}>
+                            {correct ? '✓ ' : '• '}{text}
+                          </div>
+                        )
+                      })}
                     </div>
                   ))}
                 </div>

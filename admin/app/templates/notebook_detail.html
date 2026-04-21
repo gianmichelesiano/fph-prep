@@ -217,8 +217,11 @@
               document.getElementById('artifact-quiz-content').innerHTML = questions.map((q, i) => `
                 <div class="flashcard-item">
                   <div class="flashcard-q">${i+1}. ${q.question || q.text || ''}</div>
-                  ${(q.options || q.choices || []).map(o => `<div style="font-size:0.8rem;padding:2px 0;color:#374151">• ${o}</div>`).join('')}
-                  <div class="flashcard-a">✓ ${q.answer || q.correct_answer || q.correct || ''}</div>
+                  ${(q.answerOptions || q.options || q.choices || []).map(o => {
+                    const text = typeof o === 'string' ? o : o.text
+                    const correct = typeof o === 'object' && o.isCorrect
+                    return `<div style="font-size:0.8rem;padding:2px 0;color:${correct ? '#059669' : '#374151'};font-weight:${correct ? '600' : 'normal'}">${correct ? '✓ ' : '• '}${text}</div>`
+                  }).join('')}
                 </div>
               `).join('');
             }
