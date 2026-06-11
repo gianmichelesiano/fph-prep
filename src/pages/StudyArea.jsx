@@ -119,6 +119,7 @@ export default function StudyArea() {
 
   const filteredQuestions = questions.filter(q => {
     if (filterTopic && q.topic_id !== filterTopic) return false
+    if (filterDifficulty && q.difficulty !== filterDifficulty) return false
     return true
   })
 

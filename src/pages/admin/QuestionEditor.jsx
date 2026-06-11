@@ -4,8 +4,8 @@ import AdminLayout from '../../components/admin/AdminLayout'
 import { getAllQuestions, createQuestion, updateQuestion, deleteQuestion } from '../../lib/adminApi'
 import { AREAS } from '../../data/areas'
 
-const EMPTY_MULTIPLE = { type: 'multiple', text: '', options: { A: '', B: '', C: '', D: '' }, correct: 'A', motivation: '', area: 4, topic: '', lang: 'it', status: 'draft' }
-const EMPTY_TRUEFALSE = { type: 'truefalse', text: '', items: [{ text: '', correct: true }, { text: '', correct: true }, { text: '', correct: false }, { text: '', correct: false }], motivation: '', area: 4, topic: '', lang: 'it', status: 'draft' }
+const EMPTY_MULTIPLE = { type: 'multiple', text: '', options: { A: '', B: '', C: '', D: '' }, correct: 'A', motivation: '', area: 4, topic: '', lang: 'it', status: 'draft', difficulty: '' }
+const EMPTY_TRUEFALSE = { type: 'truefalse', text: '', items: [{ text: '', correct: true }, { text: '', correct: true }, { text: '', correct: false }, { text: '', correct: false }], motivation: '', area: 4, topic: '', lang: 'it', status: 'draft', difficulty: '' }
 
 // DB (Supabase) → editor interno
 function dbToForm(q) {
@@ -20,6 +20,7 @@ function dbToForm(q) {
       topic: q.topic || '',
       lang: q.lang || 'it',
       status: q.status || 'draft',
+      difficulty: q.difficulty || '',
       expert_approved: q.expert_approved || false,
     }
   } else {
@@ -38,6 +39,7 @@ function dbToForm(q) {
       topic: q.topic || '',
       lang: q.lang || 'it',
       status: q.status || 'draft',
+      difficulty: q.difficulty || '',
       expert_approved: q.expert_approved || false,
     }
   }
@@ -56,6 +58,7 @@ function formToDb(form) {
       topic: form.topic || null,
       lang: form.lang,
       status: form.status,
+      difficulty: form.difficulty || null,
       expert_approved: form.expert_approved || false,
     }
   } else {
@@ -71,6 +74,7 @@ function formToDb(form) {
       topic: form.topic || null,
       lang: form.lang,
       status: form.status,
+      difficulty: form.difficulty || null,
       expert_approved: form.expert_approved || false,
     }
   }
@@ -285,6 +289,15 @@ export default function AdminQuestionEditor() {
                 <option value="draft">Bozza</option>
                 <option value="active">Attiva</option>
                 <option value="archived">Archiviata</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-on-surface-variant mb-1">Difficoltà</label>
+              <select value={form.difficulty || ''} onChange={e => setField('difficulty', e.target.value)} className="input w-full">
+                <option value="">Non impostata</option>
+                <option value="easy">Facile</option>
+                <option value="medium">Media</option>
+                <option value="hard">Difficile</option>
               </select>
             </div>
           </div>

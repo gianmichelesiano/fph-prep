@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AdminLayout from '../../components/admin/AdminLayout'
-import { getAllQuestions, deleteQuestion } from '../../lib/adminApi'
+import { getAllQuestions, deleteQuestion, updateQuestion } from '../../lib/adminApi'
 import { AREAS } from '../../data/areas'
 
-const TYPE_LABELS = { multiple: 'Multipla', truefalse: 'K-PRIM' }
+const TYPE_LABELS = { multiple_choice: 'Multipla', kprim: 'K-PRIM' }
 const STATUS_COLORS = {
   active: 'bg-secondary-container text-on-secondary-container',
   draft: 'bg-tertiary-fixed/50 text-on-tertiary-fixed',
@@ -33,6 +33,18 @@ export default function AdminQuestions() {
     setQuestions(prev => prev.filter(q => q.id !== id))
   }
 
+  async function handlePublish(id, e) {
+    e.stopPropagation()
+    try {
+      await updateQuestion(id, { status: 'active' })
+      setQuestions(prev => prev.map(q => (q.id === id ? { ...q, status: 'active' } : q)))
+    } catch {
+      // lascia lo stato invariato: l'errore è visibile dal mancato cambio
+    }
+  }
+
+  const draftCount = questions.filter(q => q.status === 'draft').length
+
   const filtered = questions.filter(q => {
     if (filterArea && q.area != filterArea) return false
     if (filterType && q.type !== filterType) return false
@@ -49,9 +61,23 @@ export default function AdminQuestions() {
             <h2 className="font-headline font-bold text-2xl text-on-surface">Domande</h2>
             <p className="text-sm text-secondary">{questions.length} domande nel database</p>
           </div>
-          <button className="btn-primary" onClick={() => navigate('/admin/questions/new')}>
-            + Nuova domanda
-          </button>
+          <div className="flex items-center gap-3">
+            {draftCount > 0 && (
+              <button
+                onClick={() => setFilterStatus(filterStatus === 'draft' ? '' : 'draft')}
+                className={`text-sm px-3 py-1.5 rounded-full font-semibold transition-colors ${
+                  filterStatus === 'draft'
+                    ? 'bg-tertiary text-on-tertiary'
+                    : 'bg-tertiary-fixed/50 text-on-tertiary-fixed hover:bg-tertiary-fixed'
+                }`}
+              >
+                Da revisionare: {draftCount}
+              </button>
+            )}
+            <button className="btn-primary" onClick={() => navigate('/admin/questions/new')}>
+              + Nuova domanda
+            </button>
+          </div>
         </div>
 
         {/* Filters */}
@@ -71,8 +97,8 @@ export default function AdminQuestions() {
           </select>
           <select value={filterType} onChange={e => setFilterType(e.target.value)} className="input">
             <option value="">Tutti i tipi</option>
-            <option value="multiple">Multipla scelta</option>
-            <option value="truefalse">K-PRIM</option>
+            <option value="multiple_choice">Multipla scelta</option>
+            <option value="kprim">K-PRIM</option>
           </select>
           <select value={filterStatus} onChange={e => setFilterStatus(e.target.value)} className="input">
             <option value="">Tutti gli stati</option>
@@ -131,12 +157,22 @@ export default function AdminQuestions() {
                       </span>
                     </td>
                     <td className="px-4 py-3">
-                      <button
-                        onClick={e => handleDelete(q.id, e)}
-                        className="text-error hover:text-error/80 text-xs font-medium"
-                      >
-                        Elimina
-                      </button>
+                      <div className="flex items-center gap-3">
+                        {q.status === 'draft' && (
+                          <button
+                            onClick={e => handlePublish(q.id, e)}
+                            className="text-primary hover:text-primary/80 text-xs font-medium"
+                          >
+                            Pubblica
+                          </button>
+                        )}
+                        <button
+                          onClick={e => handleDelete(q.id, e)}
+                          className="text-error hover:text-error/80 text-xs font-medium"
+                        >
+                          Elimina
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}

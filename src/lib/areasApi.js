@@ -57,6 +57,7 @@ export async function fetchAreaQuestions(areaId, { topicId, difficulty, status }
     .order('created_at', { ascending: false })
 
   if (topicId) query = query.eq('topic_id', topicId)
+  if (difficulty) query = query.eq('difficulty', difficulty)
   const { data, error } = await query
   if (error) throw error
   return data || []

@@ -91,6 +91,26 @@ export async function getAllQuestions({ area, type, lang, status, search, page =
   return { data: data || [], count }
 }
 
+// ===== AUDIT LOG =====
+
+// Fire-and-forget: il log non deve mai bloccare l'azione admin.
+export async function logAdminAction(action, entity, entityId = null, payload = null) {
+  try {
+    const { data: session } = await supabase.auth.getSession()
+    const actorId = session?.session?.user?.id
+    if (!actorId) return
+    await supabase.from('admin_audit_log').insert({
+      actor_id: actorId,
+      action,
+      entity,
+      entity_id: entityId ? String(entityId) : null,
+      payload,
+    })
+  } catch {
+    // tabella assente o RLS: ignora, mai bloccare
+  }
+}
+
 export async function createQuestion(data) {
   const { data: q, error } = await supabase
     .from('questions')
@@ -98,6 +118,7 @@ export async function createQuestion(data) {
     .select()
     .single()
   if (error) throw error
+  logAdminAction('question.create', 'questions', q.id, { status: q.status, area: q.area })
   return q
 }
 
@@ -109,12 +130,14 @@ export async function updateQuestion(id, data) {
     .select()
     .single()
   if (error) throw error
+  logAdminAction('question.update', 'questions', id, data)
   return q
 }
 
 export async function deleteQuestion(id) {
   const { error } = await supabase.from('questions').delete().eq('id', id)
   if (error) throw error
+  logAdminAction('question.delete', 'questions', id)
 }
 
 // ===== SIMULAZIONI =====
@@ -194,6 +217,7 @@ export async function setUserPremium(userId, isPremium) {
     })
     .eq('id', userId)
   if (error) throw error
+  logAdminAction('user.set_premium', 'profiles', userId, { is_premium: isPremium })
 }
 
 export async function setUserAdmin(userId, isAdmin) {
@@ -202,6 +226,7 @@ export async function setUserAdmin(userId, isAdmin) {
     .update({ is_admin: isAdmin })
     .eq('id', userId)
   if (error) throw error
+  logAdminAction('user.set_admin', 'profiles', userId, { is_admin: isAdmin })
 }
 
 export async function setUserBlocked(userId, isBlocked) {
@@ -210,6 +235,7 @@ export async function setUserBlocked(userId, isBlocked) {
     .update({ is_blocked: isBlocked })
     .eq('id', userId)
   if (error) throw error
+  logAdminAction('user.set_blocked', 'profiles', userId, { is_blocked: isBlocked })
 }
 
 // ===== AREE =====
