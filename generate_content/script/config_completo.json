@@ -1,0 +1,22 @@
+{
+  "nome": "FPH Farmacista Specialista - Farmacia Officinale",
+  "versione": "1.0",
+  "output_dir": "esame-completo",
+  "soglia_superamento": 67,
+  "lingua": "italiano",
+  "temi": [
+    { "notebook": "interazioni",         "n_domande": 7  },
+    { "notebook": "fitoterapia",         "n_domande": 3  },
+    { "notebook": "omeopatia",           "n_domande": 3  },
+    { "notebook": "respiratorie",        "n_domande": 10 },
+    { "notebook": "dolore",              "n_domande": 10 },
+    { "notebook": "cardio",              "n_domande": 10 },
+    { "notebook": "pelle",               "n_domande": 10 },
+    { "notebook": "intestino",           "n_domande": 10 },
+    { "notebook": "anamnesi",            "n_domande": 10 },
+    { "notebook": "galenica",            "n_domande": 7  },
+    { "notebook": "analisi_laboratorio", "n_domande": 7  },
+    { "notebook": "vaccini",             "n_domande": 7  },
+    { "notebook": "lista_b",             "n_domande": 30 }
+  ]
+}

@@ -223,6 +223,16 @@ export async function fetchAreas() {
   return data || []
 }
 
+export async function fetchAreaDetail(id) {
+  const [{ data: area, error: areaErr }, { data: topics, error: topicsErr }] = await Promise.all([
+    supabase.from('areas').select('*').eq('id', id).single(),
+    supabase.from('topics').select('*').eq('area_id', id).order('name'),
+  ])
+  if (areaErr) throw areaErr
+  if (topicsErr) throw topicsErr
+  return { ...area, topics: topics || [] }
+}
+
 export async function updateArea(id, fields) {
   const { data, error } = await supabase
     .from('areas')
@@ -232,6 +242,34 @@ export async function updateArea(id, fields) {
     .single()
   if (error) throw error
   return data
+}
+
+// ===== TOPICS =====
+
+export async function createTopic(areaId, fields) {
+  const { data, error } = await supabase
+    .from('topics')
+    .insert({ area_id: areaId, ...fields })
+    .select()
+    .single()
+  if (error) throw error
+  return data
+}
+
+export async function updateTopic(id, fields) {
+  const { data, error } = await supabase
+    .from('topics')
+    .update(fields)
+    .eq('id', id)
+    .select()
+    .single()
+  if (error) throw error
+  return data
+}
+
+export async function deleteTopic(id) {
+  const { error } = await supabase.from('topics').delete().eq('id', id)
+  if (error) throw error
 }
 
 // ===== NOTEBOOK =====

@@ -7,6 +7,7 @@ const NAV = [
   { to: '/admin/questions',   label: 'Question Bank',    icon: 'database' },
   { to: '/admin/simulations', label: 'Simulations',      icon: 'assignment' },
   { to: '/admin/contents',    label: 'Contents',         icon: 'menu_book' },
+  { to: '/admin/areas',       label: 'Study Areas',      icon: 'layers' },
   { to: '/admin/catalog',     label: 'Catalog',          icon: 'category' },
   { to: '/admin/generate',    label: 'AI Generate',      icon: 'auto_awesome' },
 ]

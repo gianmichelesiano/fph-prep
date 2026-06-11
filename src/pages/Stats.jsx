@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import { fetchUserSessions } from '../lib/api'
-import { AREAS } from '../data/areas'
+import { fetchAreasWithProgress, fetchAllAreaProgress } from '../lib/areasApi'
 import UserLayout from '../components/UserLayout'
 
 export default function Stats() {
@@ -11,12 +11,23 @@ export default function Stats() {
   const { t } = useTranslation()
   const { user } = useAuth()
   const [sessions, setSessions] = useState([])
+  const [areas, setAreas] = useState([])
+  const [areaProgress, setAreaProgress] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (!user) return
-    fetchUserSessions(user.id)
-      .then(data => { setSessions(data); setLoading(false) })
+    Promise.all([
+      fetchUserSessions(user.id),
+      fetchAreasWithProgress().catch(() => []),
+      fetchAllAreaProgress().catch(() => []),
+    ])
+      .then(([s, a, p]) => {
+        setSessions(s)
+        setAreas(a)
+        setAreaProgress(p)
+        setLoading(false)
+      })
       .catch(() => setLoading(false))
   }, [user])
 
@@ -26,11 +37,14 @@ export default function Stats() {
   const totalCorrect = completed.reduce((sum, s) => sum + (s.score || 0), 0)
   const globalPct = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
 
+  const progressMap = {}
+  areaProgress.forEach(p => { progressMap[p.area_id] = p })
+
   return (
     <UserLayout>
-      <div className="max-w-3xl mx-auto px-6 py-10">
-        <h1 className="font-headline font-black text-3xl text-on-surface mb-8">
-          {t('stats.title', 'Le tue statistiche')}
+      <div className="max-w-3xl mx-auto px-4 md:px-8 py-6">
+        <h1 className="font-headline font-bold text-3xl text-on-surface mb-8">
+          {t('stats.title', 'Statistiche')}
         </h1>
 
         {loading ? (
@@ -39,6 +53,7 @@ export default function Stats() {
           </div>
         ) : (
           <>
+            {/* Overview */}
             <div className="grid grid-cols-3 gap-4 mb-10">
               <div className="bg-surface-container-low rounded-xl p-5 text-center">
                 <p className="font-headline font-black text-3xl text-primary">{totalDone}</p>
@@ -54,6 +69,60 @@ export default function Stats() {
               </div>
             </div>
 
+            {/* Per Ruolo */}
+            {areas.length > 0 && (
+              <div className="mb-10">
+                <h2 className="font-headline font-bold text-lg mb-4">{t('stats.perRole', 'Per Ruolo')}</h2>
+                <div className="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
+                  {areas.map(area => {
+                    const p = progressMap[area.id]
+                    const pct = (p?.questions_completed || 0) > 0
+                      ? Math.round(((p?.questions_correct || 0) / p.questions_completed) * 100)
+                      : null
+                    const isHighlighted = area.role_number === 4
+                    return (
+                      <button
+                        key={area.id}
+                        onClick={() => navigate(`/study/area/${area.id}`)}
+                        className={`w-full text-left px-4 py-3 flex items-center gap-3 border-b border-outline-variant/10 last:border-b-0 hover:bg-surface-container transition-colors ${
+                          isHighlighted ? 'bg-primary/5' : ''
+                        }`}
+                      >
+                        <div className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shrink-0 ${area.color_class || 'bg-surface-container-high text-on-surface-variant'}`}>
+                          R{area.role_number || area.id}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-medium text-on-surface truncate">{area.name}</div>
+                          <div className="text-xs text-on-surface-variant">
+                            {t('stats.weightX', { x: area.weight_percent, defaultValue: `Peso: ${area.weight_percent}%` })}
+                          </div>
+                        </div>
+                        {/* Score bar */}
+                        <div className="w-24 shrink-0">
+                          {pct !== null ? (
+                            <div className="flex items-center gap-2">
+                              <div className="flex-1 bg-surface-container-high rounded-full h-2">
+                                <div
+                                  className={`h-2 rounded-full ${pct >= 67 ? 'bg-green-500' : 'bg-amber-500'}`}
+                                  style={{ width: `${pct}%` }}
+                                />
+                              </div>
+                              <span className={`text-xs font-bold ${pct >= 67 ? 'text-green-600' : 'text-amber-600'} w-8 text-right`}>
+                                {pct}%
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="text-xs text-outline">—</span>
+                          )}
+                        </div>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Storico sessioni */}
             {completed.length === 0 ? (
               <div className="text-center py-16 text-outline">
                 <span className="material-symbols-outlined text-[48px] block mb-3">bar_chart</span>
@@ -67,9 +136,9 @@ export default function Stats() {
                     const pct = s.total > 0 ? Math.round((s.score / s.total) * 100) : 0
                     const passed = pct >= 67
                     return (
-                      <div
+                      <button
                         key={s.id}
-                        className="bg-surface-container-low rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-surface-container transition-colors"
+                        className="w-full text-left bg-surface-container-low rounded-xl p-4 flex items-center gap-4 hover:bg-surface-container transition-colors"
                         onClick={() => navigate(`/results/${s.id}`)}
                       >
                         <span
@@ -89,7 +158,7 @@ export default function Stats() {
                         <span className={`font-headline font-bold text-lg ${passed ? 'text-green-600' : 'text-error'}`}>
                           {pct}%
                         </span>
-                      </div>
+                      </button>
                     )
                   })}
                 </div>

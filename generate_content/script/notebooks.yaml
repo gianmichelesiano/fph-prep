@@ -1,0 +1,247 @@
+# Mappatura nome → notebook NotebookLM
+# Modifica questo file per aggiungere/rimuovere notebook
+
+allergie:
+  id: 42b58b26-4e6d-4445-a5d7-d90c9beab97b
+  nome: Allergie stagionali
+  argomento: allergie stagionali, rinite allergica, antiistaminici, polline, congiuntivite allergica, desensibilizzazione
+
+analisi_laboratorio:
+  id: cb6ad501-eb5c-4eac-9be5-2889c4316e71
+  nome: Analisi di laboratorio
+  argomento: esami ematici, eGFR, funzione epatica, emocromo, HbA1c, INR, CRP, elettroliti, interpretazione valori di riferimento
+
+anamnesi:
+  id: e76a358e-66da-443b-90a7-47421386992c
+  nome: Anamnesi e cure primarie
+  argomento: anamnesi in farmacia, triage, red flags, cure primarie, counselling farmaceutico, aderenza terapeutica
+
+antibiotici:
+  id: 4294841b-fa72-46a0-a75b-c018bff9f037
+  nome: Antibiotici
+  argomento: antibiotici, penicilline, cefalosporine, macrolidi, fluorochinoloni, resistenze batteriche, stewardship antibiotica
+
+acne_rosacea:
+  id: 2904e777-4394-40ce-9afc-6d03a5eb7b19
+  nome: Acne e Rosacea
+  argomento: acne vulgaris, rosacea, retinoidi topici, benzoile perossido, antibiotici topici, isotretinoina, cura pelle
+
+cancro_seno:
+  id: 40322deb-c3f3-48df-ab3c-afc57296566f
+  nome: Cancro al seno
+  argomento: cancro al seno, ormonoterapia, tamoxifene, inibitori aromatasi, screening mammografico, effetti collaterali
+
+cardio:
+  id: 9f80ddf6-d5bc-4940-a146-4f497f045148
+  nome: Sistema cardiocircolatorio
+  argomento: ipertensione, scompenso cardiaco, DOAC, anticoagulanti, statine, antiaggreganti, aritmia, SGLT2
+
+contraccezione:
+  id: 5020b133-2157-4d37-9580-0cfeec726e26
+  nome: Contraccezione d'emergenza
+  argomento: contraccezione d'emergenza, pillola del giorno dopo, ulipristal, levonorgestrel, finestra temporale, counselling
+
+deprescrizione:
+  id: c81f90ff-c112-4591-a663-15d4ef62f2c9
+  nome: Deprescrizione farmaci
+  argomento: deprescrizione, polifarmacia nell'anziano, criteri STOPP/START, revisione terapia, sospensione sicura
+
+diabete:
+  id: 12ad9068-c413-4a9b-a976-d5ddfb7db13d
+  nome: Diabete e malattie metaboliche
+  argomento: diabete tipo 1 e 2, insuline, metformina, SGLT2, GLP-1, monitoraggio glicemia, HbA1c, ipoglicemia, obesità
+
+disturbi_sonno:
+  id: bbf80ff0-9f2d-415f-84e1-71d45ed4d556
+  nome: Disturbi del sonno
+  argomento: insonnia, disturbi del sonno, ipnotici, melatonina, igiene del sonno, dipendenza da benzodiazepine
+
+dolore:
+  id: b4a70a09-cd67-48db-a015-8310294d1d59
+  nome: Dolore
+  argomento: dolore acuto e cronico, oppioidi, FANS, paracetamolo, scala analgesica OMS, dolore neuropatico, antidepressivi
+
+emicrania:
+  id: 9d7454a0-2893-4bc9-8615-70c135291e29
+  nome: Emicrania
+  argomento: emicrania, cefalea tensiva, triptani, profilassi emicrania, FANS, ergotamina, approccio al banco
+
+endometriosi:
+  id: 6fcaeff1-2d8d-48db-addb-77d4efaaedbc
+  nome: Endometriosi
+  argomento: endometriosi, terapia ormonale, dolore pelvico cronico, diagnosi, trattamento farmacologico e chirurgico
+
+erettile:
+  id: d643210c-46af-426b-8db2-c600b1d8146d
+  nome: Disfunzione erettile
+  argomento: disfunzione erettile, PDE5 inibitori, sildenafil, tadalafil, controindicazioni con nitrati, counselling discreto
+
+ferite:
+  id: 120abcf9-b4f4-42ab-bd2c-33cde6d7789b
+  nome: Cura delle ferite
+  argomento: cura delle ferite, medicazioni, antisettici, cicatrizzanti, ferite croniche, gestione lesioni cutanee
+
+fegato:
+  id: c8983089-7363-49f7-aa8b-1be893b7e0c2
+  nome: Malattie del fegato
+  argomento: epatite, cirrosi epatica, steatosi epatica, danno epatico da farmaci, valori laboratorio epatici, farmaci epatotossici
+
+fitoterapia:
+  id: 488318a6-e0c7-47d7-852e-79f4bde754e9
+  nome: Fitoterapia
+  argomento: piante medicinali, estratti vegetali, interazioni piante-farmaci, efficacia fitoterapici, legislazione svizzera
+
+fitoterapia_b:
+  id: 4023d36b-387e-4433-aea2-ed22e50b62c4
+  nome: Fitoterapia (approfondimento)
+  argomento: fitoterapici in farmacia, adattogeni, rimedi erboristici, controindicazioni, consiglio al banco
+
+fumo:
+  id: e6a3cffd-7910-4247-b2f2-fa290fcafc03
+  nome: Smettere di fumare
+  argomento: cessazione fumo, NRT nicotina, vareniclina, bupropione, motivazione al banco, dipendenza nicotinica
+
+galenica:
+  id: a9d2f4fb-e95d-4016-83e5-ca2f3af55619
+  nome: Preparazione medicinali e galenica
+  argomento: preparazione galenica, GMP svizzere, categorie dispensazione, Lista A/B/C, calcoli farmaceutici, preparazioni sterili
+
+gravidanza:
+  id: 2ce6046c-51bd-46a4-98f4-da76152d4da1
+  nome: Gravidanza e allattamento
+  argomento: farmaci in gravidanza, categorie FDA, lattazione, acido folico, ferro, vitamina D, farmaci controindicati
+
+insetti:
+  id: 782184ae-14c7-4700-9e17-f19db4984b0f
+  nome: Insetti e parassiti
+  argomento: pediculosi, scabbia, punture di insetti, repellenti, permectrina, ivermectina, trattamento familiare antiparassitario
+
+interazioni:
+  id: 282ed964-3d87-4bae-93de-85564284987b
+  nome: Interazioni farmacologiche
+  argomento: interazioni farmacologiche rilevanti, polifarmacia, validazione ricette, controindicazioni, dosaggio
+
+intestino:
+  id: ea036cfb-781f-4b4a-af67-a150e73ceb6b
+  nome: Malattie intestinali
+  argomento: Crohn, colite ulcerosa, IBS, lassativi, diarrea, stipsi, malattie infiammatorie intestinali, microbiota
+
+menopausa:
+  id: f395f0e5-da6e-4234-b367-7b56249229bf
+  nome: Mestruazioni e menopausa
+  argomento: menopausa, terapia ormonale sostitutiva, fitoestrogeni, sintomi menopausali, osteoporosi postmenopausale
+
+micosi:
+  id: 7a6340f7-11cc-4229-87d7-7c7232838a9a
+  nome: Micosi
+  argomento: micosi cutanee, tinea pedis, tinea unguium, candidiasi, antifungini topici e sistemici, resistenze fungine
+
+mst:
+  id: ffc310b7-d033-485c-9c38-902d462637aa
+  nome: Malattie sessualmente trasmissibili
+  argomento: gonorrea, sifilide, chlamydia, herpes genitale, HIV, profilassi PrEP, counselling MST in farmacia
+
+nausea:
+  id: 660b6082-a59f-47ef-a593-f997fccbbb46
+  nome: Nausea e vomito
+  argomento: nausea e vomito, antiemetici, cinetosi, nausea in gravidanza, metoclopramide, ondansetron, reidratazione orale
+
+neurologia:
+  id: 3adb2f97-b846-4b84-b64e-126272cc35cc
+  nome: Patologie neuronali
+  argomento: Parkinson, epilessia, sclerosi multipla, antiepilettici, demenza, Alzheimer, farmaci neurologici
+
+oculari:
+  id: c6060555-f3ec-400e-8a1d-1be57f720253
+  nome: Infezioni oculari
+  argomento: congiuntivite batterica e virale, collirio antibiotico, secchezza oculare, glaucoma, red flags oculari, lenti a contatto
+
+omeopatia:
+  id: 278c368e-b885-4858-a34d-a2df31683080
+  nome: Omeopatia e medicina complementare
+  argomento: omeopatia, potenze omeopatiche, metodo omeopatico, antroposofia, medicina complementare in farmacia
+
+osteoporosi:
+  id: b960f401-24bf-49a7-83aa-8a0c01027dda
+  nome: Osteoporosi
+  argomento: osteoporosi, bifosfonati, calcio e vitamina D, RANK-L inibitori, rischio frattura, FRAX, menopausa e osso
+
+otoscopia:
+  id: d6f72416-57a7-4cc9-bdcf-d8eea6e900c8
+  nome: Otoscopia e orecchio
+  argomento: otite esterna, otite media, cerume, otoscopia in farmacia, gocce auricolari, red flags otologici
+
+pelle:
+  id: 9ecb9092-02d7-40a8-b54d-333ab09cedef
+  nome: Malattie della pelle
+  argomento: dermatite atopica, eczema, dermatomicosi, dermocorticoidi, prurito, xerosi cutanea, trattamento topico
+
+pelle_bambini:
+  id: 07bb26c1-dddf-41f3-9c2c-2e57e8f17e1e
+  nome: Malattie esantematiche e pelle bambini
+  argomento: malattie esantematiche infantili, varicella, morbillo, scarlattina, dermatite da pannolino, eczema pediatrico
+
+psichiatria:
+  id: b087dabe-edaa-4cfa-809a-a726b25ec588
+  nome: Ansia, stress e disturbi psichiatrici
+  argomento: depressione, ansia, disturbi psichiatrici, SSRI, SNRI, benzodiazepine, antipsicotici, counselling
+
+psoriasi:
+  id: 798b647a-d956-4efb-b707-ec39ce932fb0
+  nome: Psoriasi
+  argomento: psoriasi a placche, psoriasi ungueale, analoghi vitamina D topici, corticosteroidi, biologici
+
+reflusso:
+  id: 81d0837b-5fbf-45db-b78d-ffe0d251da50
+  nome: Reflusso gastroesofageo
+  argomento: reflusso GERD, dispepsia, PPI, antiacidi, H. pylori, FANS e gastroprotezione, regime dietetico
+
+respiratorie:
+  id: 692dbd5d-7dad-4d78-9d0f-03a765c23612
+  nome: Malattie respiratorie
+  argomento: asma, BPCO, rinite allergica, farmaci inalatori, SABA, LABA, ICS, ARIA, GOLD
+
+respiratorie_bambini:
+  id: 67fbff31-1749-4c9f-8b47-09986e1dd102
+  nome: Malattie respiratorie pediatriche
+  argomento: asma nei bambini, bronchiolite, croup, laringite, dosaggi pediatrici, immunologia respiratoria
+
+reumatologia:
+  id: aa30d50e-44be-44ee-9318-5c3391cbed62
+  nome: Reumatologia
+  argomento: artrite reumatoide, gotta, FANS, DMARDs, artrite psoriasica, dolore articolare, trattamento topico
+
+urogenitale:
+  id: 51c7ad60-c282-4df6-bc31-f2bc1c6f7af4
+  nome: Urogenitale
+  argomento: ipertrofia prostatica benigna, alfabloccanti, inibitori 5-alfa reduttasi, incontinenza urinaria
+
+vaccini:
+  id: 3111ff5d-0c02-47ca-b7c4-75d993ae7f34
+  nome: Vaccini e BLS
+  argomento: vaccinazioni in farmacia, piano vaccinale svizzero, BLS, anafilassi, vaccini anti-influenzali, COVID, HPV
+
+vaginali:
+  id: 9bb474bb-c4e0-45e4-9af1-2bc80a75655a
+  nome: Disturbi vaginali
+  argomento: vaginosi batterica, candida vaginale, tricomoniasi, secchezza vaginale, probiotici ginecologici
+
+vescica:
+  id: ffaa51d1-81c5-4768-85e8-028f665e3556
+  nome: Infezioni vescica e reni
+  argomento: cistite, infezioni vie urinarie, pielonefrite, uroantisettici, terapia antibiotica UTI, prevenzione recidive
+
+viaggi:
+  id: ab37319d-1f5c-4a66-9adc-d35732963519
+  nome: Viaggi e Malaria
+  argomento: viaggi tropicali, profilassi malaria, vaccini per viaggiatori, diarrea del viaggiatore, repellenti
+
+zecche:
+  id: 44ce4ea9-583b-4b17-a248-469b6f16a754
+  nome: Malattie trasmesse dalle zecche
+  argomento: zecche, malattia di Lyme, TBE, profilassi antibiotica post-morso, rimozione zecca, vaccino TBE
+
+lista_b:
+  id: 620f2e4d-2169-4803-9611-f9413098d586
+  nome: Lista B
+  argomento: farmaci Lista B, dispensazione su prescrizione medica, categorie di dispensazione svizzere, obbligo di ricetta, farmaci soggetti a prescrizione, dispensazione ripetuta, farmaci Lista B+

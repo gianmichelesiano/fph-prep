@@ -25,3 +25,4 @@ z_notes.txt
 client_secret_*.json
 admin/
 .worktrees/
+fph-wiki/

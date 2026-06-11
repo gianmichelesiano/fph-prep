@@ -16,6 +16,8 @@ import Study from './pages/Study'
 import StudyArea from './pages/StudyArea'
 import StudyTopic from './pages/StudyTopic'
 
+import AdminAreas from './pages/admin/Areas'
+import AdminAreaDetail from './pages/admin/AreaDetail'
 import AdminDashboard from './pages/admin/Dashboard'
 import AdminQuestions from './pages/admin/Questions'
 import AdminQuestionEditor from './pages/admin/QuestionEditor'
@@ -53,6 +55,8 @@ export default function App() {
           {/* Admin (richiede is_admin) */}
           <Route element={<AdminRoute />}>
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/areas" element={<AdminAreas />} />
+            <Route path="/admin/areas/:area_id" element={<AdminAreaDetail />} />
             <Route path="/admin/questions" element={<AdminQuestions />} />
             <Route path="/admin/questions/new" element={<AdminQuestionEditor />} />
             <Route path="/admin/questions/:id" element={<AdminQuestionEditor />} />
