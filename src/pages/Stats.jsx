@@ -40,6 +40,31 @@ export default function Stats() {
   const progressMap = {}
   areaProgress.forEach(p => { progressMap[p.area_id] = p })
 
+  // Previsione esame: media accuratezza pesata sui pesi d'esame delle aree
+  // con dati. La soglia FPH è 67/100.
+  const PASS_THRESHOLD = 67
+  const weighted = areas.reduce(
+    (acc, area) => {
+      const p = progressMap[area.id]
+      const weight = area.weight_percent || 0
+      if ((p?.questions_completed || 0) > 0 && weight > 0) {
+        const pct = (p.questions_correct / p.questions_completed) * 100
+        acc.score += weight * pct
+        acc.coveredWeight += weight
+        if (pct < PASS_THRESHOLD) {
+          acc.gaps.push({ area, pct: Math.round(pct), lostPoints: (weight * (PASS_THRESHOLD - pct)) / 100 })
+        }
+      }
+      return acc
+    },
+    { score: 0, coveredWeight: 0, gaps: [] }
+  )
+  const predictedScore = weighted.coveredWeight > 0
+    ? Math.round(weighted.score / weighted.coveredWeight)
+    : null
+  const coverage = weighted.coveredWeight
+  const topGaps = weighted.gaps.sort((a, b) => b.lostPoints - a.lostPoints).slice(0, 3)
+
   return (
     <UserLayout>
       <div className="max-w-3xl mx-auto px-4 md:px-8 py-6">
@@ -68,6 +93,56 @@ export default function Stats() {
                 <p className="text-xs text-outline mt-1">{t('stats.accuracy', 'Precisione')}</p>
               </div>
             </div>
+
+            {/* Previsione esame */}
+            {predictedScore !== null && (
+              <div className="mb-10 bg-surface-container-low rounded-xl border border-outline-variant/20 p-5">
+                <div className="flex items-center justify-between mb-1">
+                  <h2 className="font-headline font-bold text-lg">
+                    {t('stats.prediction', 'Previsione esame')}
+                  </h2>
+                  <span className="text-xs text-outline">
+                    {t('stats.predictionCoverage', { x: coverage, defaultValue: `basata sul ${coverage}% del peso esame` })}
+                  </span>
+                </div>
+                <div className="flex items-center gap-4 mb-3">
+                  <p className={`font-headline font-black text-4xl ${predictedScore >= PASS_THRESHOLD ? 'text-green-600' : 'text-error'}`}>
+                    {predictedScore}<span className="text-lg text-outline">/100</span>
+                  </p>
+                  <p className="text-sm text-on-surface-variant">
+                    {predictedScore >= PASS_THRESHOLD
+                      ? t('stats.predictionPass', 'Al ritmo attuale supereresti la soglia del 67.')
+                      : t('stats.predictionFail', { x: PASS_THRESHOLD - predictedScore, defaultValue: `Ti mancano ${PASS_THRESHOLD - predictedScore} punti per la soglia del 67.` })}
+                  </p>
+                </div>
+                {coverage < 30 && (
+                  <p className="text-xs text-amber-600 mb-2">
+                    {t('stats.predictionLowData', 'Pochi dati: completa più quiz per una stima affidabile.')}
+                  </p>
+                )}
+                {topGaps.length > 0 && (
+                  <div className="space-y-1.5">
+                    <p className="text-xs font-semibold text-on-surface-variant uppercase tracking-wide">
+                      {t('stats.predictionGaps', 'Recupera più punti qui')}
+                    </p>
+                    {topGaps.map(({ area, pct, lostPoints }) => (
+                      <button
+                        key={area.id}
+                        onClick={() => navigate(`/study/area/${area.id}`)}
+                        className="w-full text-left flex items-center justify-between text-sm py-1.5 px-2 rounded-lg hover:bg-surface-container transition-colors"
+                      >
+                        <span className="text-on-surface truncate">
+                          R{area.role_number || area.id} · {area.name}
+                        </span>
+                        <span className="text-xs text-error font-semibold shrink-0 ml-2">
+                          {pct}% · −{lostPoints.toFixed(1)} {t('stats.points', 'punti')}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Per Ruolo */}
             {areas.length > 0 && (
