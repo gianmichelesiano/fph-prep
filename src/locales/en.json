@@ -181,7 +181,12 @@
     "answeredOf": "answered",
     "timeExpired": "Time expired! Saving...",
     "notFound": "Test not found",
-    "goHome": "Back to home"
+    "goHome": "Back to home",
+    "questionNavigator": "Question navigator",
+    "currentLabel": "Current",
+    "answeredLabel": "Answered",
+    "unansweredLabel": "Unanswered",
+    "responsesCount": "{{answered}} / {{total}} answered"
   },
   "results": {
     "title": "Results",

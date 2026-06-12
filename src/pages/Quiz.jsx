@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import { useSession } from '../hooks/useSession'
 import { fetchSession } from '../lib/api'
@@ -38,6 +39,7 @@ const AREA_TAG_COLORS = {
 }
 
 export default function Quiz() {
+  const { t } = useTranslation()
   const { id: sessionId } = useParams()
   const navigate = useNavigate()
   const { user } = useAuth()
@@ -228,7 +230,7 @@ export default function Quiz() {
         <aside className="hidden lg:block w-48 shrink-0">
           <p className="text-xs text-outline font-semibold uppercase tracking-wider mb-3">Navigazione</p>
           <QuestionGrid questions={questions} answers={answers} currentIndex={currentIndex} goToIndex={goToIndex} />
-          <p className="text-xs text-outline mt-3">{answered} / {totalQ} risposte</p>
+          <p className="text-xs text-outline mt-3">{t('quiz.responsesCount', { answered, total: totalQ })}</p>
         </aside>
       </main>
 
@@ -251,7 +253,7 @@ export default function Quiz() {
 
         {/* Header */}
         <div className="px-6 py-2 flex justify-between items-center border-b border-outline-variant/10 shrink-0">
-          <h3 className="font-headline font-bold text-sm text-on-surface">Navigatore domande</h3>
+          <h3 className="font-headline font-bold text-sm text-on-surface">{t('quiz.questionNavigator')}</h3>
           <button
             onClick={() => setShowSheet(false)}
             className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-all"
@@ -270,18 +272,18 @@ export default function Quiz() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-2">
             <span className="flex items-center gap-1.5 text-xs text-on-surface-variant">
               <span className="w-3 h-3 rounded-md bg-primary shrink-0" />
-              Corrente
+              {t('quiz.currentLabel')}
             </span>
             <span className="flex items-center gap-1.5 text-xs text-on-surface-variant">
               <span className="w-3 h-3 rounded-md bg-secondary-container shrink-0" />
-              Risposta data
+              {t('quiz.answeredLabel')}
             </span>
             <span className="flex items-center gap-1.5 text-xs text-on-surface-variant">
               <span className="w-3 h-3 rounded-md bg-surface-container-high shrink-0" />
-              Da rispondere
+              {t('quiz.unansweredLabel')}
             </span>
           </div>
-          <p className="text-xs text-outline">{answered} / {totalQ} risposte</p>
+          <p className="text-xs text-outline">{t('quiz.responsesCount', { answered, total: totalQ })}</p>
         </div>
       </div>
     </div>

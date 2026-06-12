@@ -181,7 +181,12 @@
     "answeredOf": "réponses",
     "timeExpired": "Temps écoulé ! Enregistrement...",
     "notFound": "Test non trouvé",
-    "goHome": "Retour à l'accueil"
+    "goHome": "Retour à l'accueil",
+    "questionNavigator": "Navigateur de questions",
+    "currentLabel": "Actuelle",
+    "answeredLabel": "Répondu",
+    "unansweredLabel": "À répondre",
+    "responsesCount": "{{answered}} / {{total}} réponses"
   },
   "results": {
     "title": "Résultats",
