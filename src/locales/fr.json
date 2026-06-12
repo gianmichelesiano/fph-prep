@@ -213,7 +213,9 @@
     "reviewTitle": "Révision des questions",
     "motivation": "Justification",
     "notFound": "Résultats non trouvés",
-    "question": "Question"
+    "question": "Question",
+    "unanswered": "Sans réponse",
+    "yourAnswer": "Ta réponse"
   },
   "study": {
     "title": "Étudier",

@@ -213,7 +213,9 @@
     "reviewTitle": "Revisione domande",
     "motivation": "Motivazione",
     "notFound": "Risultati non trovati",
-    "question": "Domanda"
+    "question": "Domanda",
+    "unanswered": "Non risposta",
+    "yourAnswer": "Tua risposta"
   },
   "study": {
     "title": "Studia",

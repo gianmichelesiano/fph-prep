@@ -213,7 +213,9 @@
     "reviewTitle": "Fragendurchsicht",
     "motivation": "Begründung",
     "notFound": "Ergebnisse nicht gefunden",
-    "question": "Frage"
+    "question": "Frage",
+    "unanswered": "Nicht beantwortet",
+    "yourAnswer": "Deine Antwort"
   },
   "study": {
     "title": "Lernen",

@@ -5,6 +5,8 @@ import { fetchSession } from '../lib/api'
 import { AREAS } from '../data/areas'
 import { useAuth } from '../contexts/AuthContext'
 import MarkdownView from '../components/MarkdownView'
+import QuestionMultiple from '../components/QuestionMultiple'
+import QuestionTrueFalse from '../components/QuestionTrueFalse'
 import { supabase } from '../lib/supabase'
 
 export default function Results() {
@@ -163,46 +165,96 @@ export default function Results() {
         {(questions || []).length > 0 && (
           <div>
             <h3 className="font-headline font-bold text-lg mb-4">{t('results.reviewTitle', 'Revisione domande')}</h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {questions.map((q, i) => {
                 const userAnswer = answers?.[q.id]
+                const isUnanswered = userAnswer === undefined || userAnswer === null
                 let isCorrect = false
-                if (q.type === 'multiple') isCorrect = userAnswer === q.correct
-                else isCorrect = (q.items || []).every((item, j) => (userAnswer || {})[j] === item.correct)
+                if (!isUnanswered) {
+                  if (q.type === 'multiple') isCorrect = userAnswer === q.correct
+                  else isCorrect = (q.items || []).every((item, j) => (userAnswer || {})[j] === item.correct)
+                }
 
                 return (
-                  <div key={q.id} className={`rounded-xl p-5 border-2 ${isCorrect ? 'border-green-200 bg-green-50/30' : 'border-error/20 bg-error-container/10'}`}>
-                    <div className="flex items-start gap-3 mb-3">
-                      <span className={`material-symbols-outlined text-lg mt-0.5 ${isCorrect ? 'text-green-600' : 'text-error'}`}
+                  <details
+                    key={q.id}
+                    open={!isCorrect || isUnanswered}
+                    className={`rounded-xl border-2 group ${
+                      isUnanswered ? 'border-outline-variant/40 bg-surface-container-lowest' :
+                      isCorrect ? 'border-green-200 bg-green-50/20' : 'border-error/20 bg-error-container/10'
+                    }`}
+                  >
+                    <summary className="p-4 cursor-pointer flex items-start gap-3 hover:bg-surface-container-low/50 transition-colors rounded-xl">
+                      <span className={`material-symbols-outlined text-lg mt-0.5 shrink-0 ${
+                        isUnanswered ? 'text-outline' : isCorrect ? 'text-green-600' : 'text-error'
+                      }`}
                         style={{ fontVariationSettings: "'FILL' 1" }}>
-                        {isCorrect ? 'check_circle' : 'cancel'}
+                        {isUnanswered ? 'help' : isCorrect ? 'check_circle' : 'cancel'}
                       </span>
-                      <div className="flex-1">
-                        <p className="text-xs text-outline mb-1">{t('results.question', 'Domanda')} {i + 1} — {AREAS[q.area]?.name || 'Area ' + q.area}</p>
-                        <p className="font-medium text-on-surface leading-snug">{q.text}</p>
-                      </div>
-                    </div>
-                    {q.motivation && (
-                      <div className="ml-8 p-4 bg-surface-container rounded-lg max-h-64 overflow-y-auto">
-                        <p className="text-xs text-outline font-semibold mb-1">Spiegazione</p>
-                        <MarkdownView content={q.motivation} className="prose-sm" />
-                      </div>
-                    )}
-                    {q.notebook && contentFlags[q.notebook_id] && (() => {
-                      const locked = !contentFlags[q.notebook_id].isFree && !isPremium
-                      return (
-                        <button
-                          onClick={() => locked ? navigate('/upgrade') : navigate(`/study/topic/${q.notebook.key}`)}
-                          className="ml-8 mt-3 inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline"
-                        >
-                          <span className="material-symbols-outlined text-[16px]">
-                            {locked ? 'lock' : 'menu_book'}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <span className="text-xs text-outline">{t('results.question', 'Domanda')} {i + 1}</span>
+                          <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                            q.type === 'multiple' ? 'bg-primary/10 text-primary' : 'bg-tertiary/10 text-tertiary'
+                          }`}>
+                            {q.type === 'multiple' ? 'MC-A' : 'K-Prim'}
                           </span>
-                          {t('study.reviewTopic', 'Ripassa questo argomento')} — {q.notebook.title}{locked ? ' (Premium)' : ''}
-                        </button>
-                      )
-                    })()}
-                  </div>
+                          <span className="text-xs text-outline">— {AREAS[q.area]?.name || 'Area ' + q.area}</span>
+                          {isUnanswered && (
+                            <span className="text-[10px] px-1.5 py-0.5 rounded-full border border-outline-variant text-outline font-medium">
+                              {t('results.unanswered', 'Non risposta')}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-sm text-on-surface leading-snug">{q.text}</p>
+                      </div>
+                      <span className="material-symbols-outlined text-outline text-sm shrink-0 mt-0.5 transition-transform group-open:rotate-180">
+                        expand_more
+                      </span>
+                    </summary>
+
+                    <div className="px-4 pb-4 pt-0">
+                      {/* User answer display */}
+                      {!isUnanswered && (
+                        <div className="mb-4 p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+                          <p className="text-[10px] text-outline font-semibold uppercase tracking-wider mb-2">
+                            {t('results.yourAnswer', 'Tua risposta')}
+                          </p>
+                          <div className="scale-[0.95] origin-top-left">
+                            {q.type === 'multiple' ? (
+                              <QuestionMultiple question={q} answer={userAnswer} showResult={true} />
+                            ) : (
+                              <QuestionTrueFalse question={q} answer={userAnswer} showResult={true} />
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Explanation */}
+                      {q.motivation && (
+                        <div className="p-4 bg-surface-container rounded-lg max-h-64 overflow-y-auto mb-3">
+                          <p className="text-xs text-outline font-semibold mb-1">{t('results.motivation', 'Spiegazione')}</p>
+                          <MarkdownView content={q.motivation} className="prose-sm" />
+                        </div>
+                      )}
+
+                      {/* Notebook link */}
+                      {q.notebook && contentFlags[q.notebook_id] && (() => {
+                        const locked = !contentFlags[q.notebook_id].isFree && !isPremium
+                        return (
+                          <button
+                            onClick={() => locked ? navigate('/upgrade') : navigate(`/study/topic/${q.notebook.key}`)}
+                            className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline"
+                          >
+                            <span className="material-symbols-outlined text-[16px]">
+                              {locked ? 'lock' : 'menu_book'}
+                            </span>
+                            {t('study.reviewTopic', 'Ripassa questo argomento')} — {q.notebook.title}{locked ? ' (Premium)' : ''}
+                          </button>
+                        )
+                      })()}
+                    </div>
+                  </details>
                 )
               })}
             </div>

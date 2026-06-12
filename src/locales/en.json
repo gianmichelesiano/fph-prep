@@ -213,7 +213,9 @@
     "reviewTitle": "Question review",
     "motivation": "Explanation",
     "notFound": "Results not found",
-    "question": "Question"
+    "question": "Question",
+    "unanswered": "Unanswered",
+    "yourAnswer": "Your answer"
   },
   "study": {
     "title": "Study",
