@@ -7,6 +7,7 @@ import {
   upsertContent,
   uploadSummaryImage,
 } from '../../lib/notebookContentsApi'
+import { translateText } from '../../lib/adminBackendApi'
 
 const LANGS = [
   { code: 'it', label: 'IT', native: 'Italiano' },
@@ -14,8 +15,6 @@ const LANGS = [
   { code: 'fr', label: 'FR', native: 'Français' },
   { code: 'en', label: 'EN', native: 'English' },
 ]
-
-const API_BASE = import.meta.env.VITE_ADMIN_API_URL || 'http://localhost:8005'
 
 export default function ContentEditor() {
   const { notebook_id } = useParams()
@@ -77,21 +76,8 @@ export default function ContentEditor() {
         return
       }
 
-      // Call translation endpoint on admin backend
-      const res = await fetch(`${API_BASE}/api/translate`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: itContent.content_md,
-          source_lang: 'it',
-          target_lang: lang,
-        }),
-      })
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({ detail: res.statusText }))
-        throw new Error(err.detail || 'Translation failed')
-      }
-      const data = await res.json()
+      // Call translation endpoint via admin backend client
+      const data = await translateText(itContent.content_md, 'it', lang)
       setMd(data.translated_text)
       setMsg({ type: 'success', text: `Tradotto da IT a ${lang.toUpperCase()}. Rivedi e salva.` })
     } catch (err) {
