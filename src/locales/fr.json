@@ -186,7 +186,22 @@
     "currentLabel": "Actuelle",
     "answeredLabel": "Répondu",
     "unansweredLabel": "À répondre",
-    "responsesCount": "{{answered}} / {{total}} réponses"
+    "responsesCount": "{{answered}} / {{total}} réponses",
+    "prev": "Précédent",
+    "submitting": "Envoi...",
+    "submitExam": "Soumettre l'examen",
+    "submitHeader": "Soumettre ({{answered}}/{{total}})",
+    "saving": "Enregistrement...",
+    "examModeBadge": "Exam Mode",
+    "practiceModeBadge": "Pratique",
+    "practiceNext": "Suivant",
+    "practiceExplanation": "Explication",
+    "selectMode": "Choisir le mode",
+    "startMode": "Démarrer",
+    "examMode": "Mode Examen",
+    "practiceMode": "Mode Pratique",
+    "modeExamDesc": "Feedback à la fin seulement, minuteur actif",
+    "modePracticeDesc": "Feedback immédiat, pas de minuteur"
   },
   "results": {
     "title": "Résultats",

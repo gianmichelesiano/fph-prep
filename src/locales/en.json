@@ -186,7 +186,22 @@
     "currentLabel": "Current",
     "answeredLabel": "Answered",
     "unansweredLabel": "Unanswered",
-    "responsesCount": "{{answered}} / {{total}} answered"
+    "responsesCount": "{{answered}} / {{total}} answered",
+    "prev": "Previous",
+    "submitting": "Submitting...",
+    "submitExam": "Submit exam",
+    "submitHeader": "Submit ({{answered}}/{{total}})",
+    "saving": "Saving...",
+    "examModeBadge": "Exam Mode",
+    "practiceModeBadge": "Practice",
+    "practiceNext": "Next",
+    "practiceExplanation": "Explanation",
+    "selectMode": "Select mode",
+    "startMode": "Start",
+    "examMode": "Exam Mode",
+    "practiceMode": "Practice Mode",
+    "modeExamDesc": "Feedback at the end only, timer active",
+    "modePracticeDesc": "Immediate feedback, no timer"
   },
   "results": {
     "title": "Results",

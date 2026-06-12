@@ -186,7 +186,22 @@
     "currentLabel": "Aktuell",
     "answeredLabel": "Beantwortet",
     "unansweredLabel": "Offen",
-    "responsesCount": "{{answered}} / {{total}} beantwortet"
+    "responsesCount": "{{answered}} / {{total}} beantwortet",
+    "prev": "Zurück",
+    "submitting": "Wird gesendet...",
+    "submitExam": "Prüfung abgeben",
+    "submitHeader": "Abgeben ({{answered}}/{{total}})",
+    "saving": "Speichern...",
+    "examModeBadge": "Exam Mode",
+    "practiceModeBadge": "Üben",
+    "practiceNext": "Weiter",
+    "practiceExplanation": "Erklärung",
+    "selectMode": "Modus wählen",
+    "startMode": "Starten",
+    "examMode": "Prüfungsmodus",
+    "practiceMode": "Übungsmodus",
+    "modeExamDesc": "Feedback erst am Ende, Timer aktiv",
+    "modePracticeDesc": "Sofortiges Feedback, kein Timer"
   },
   "results": {
     "title": "Ergebnisse",

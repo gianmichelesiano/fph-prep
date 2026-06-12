@@ -186,7 +186,22 @@
     "currentLabel": "Corrente",
     "answeredLabel": "Risposta data",
     "unansweredLabel": "Da rispondere",
-    "responsesCount": "{{answered}} / {{total}} risposte"
+    "responsesCount": "{{answered}} / {{total}} risposte",
+    "prev": "Precedente",
+    "submitting": "Consegna...",
+    "submitExam": "Consegna esame",
+    "submitHeader": "Consegna ({{answered}}/{{total}})",
+    "saving": "Salvataggio...",
+    "examModeBadge": "Exam Mode",
+    "practiceModeBadge": "Pratica",
+    "practiceNext": "Avanti",
+    "practiceExplanation": "Spiegazione",
+    "selectMode": "Scegli modalità",
+    "startMode": "Inizia",
+    "examMode": "Modalità Esame",
+    "practiceMode": "Modalità Pratica",
+    "modeExamDesc": "Feedback solo alla fine, timer attivo",
+    "modePracticeDesc": "Feedback immediato, nessun timer"
   },
   "results": {
     "title": "Risultati",

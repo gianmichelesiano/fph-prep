@@ -402,6 +402,10 @@ export default function Home() {
   const [reviewLoading, setReviewLoading] = useState(false)
   const [areaProgressList, setAreaProgressList] = useState([])
   const [areasData, setAreasData] = useState([])
+  const [showModeDialog, setShowModeDialog] = useState(null) // sim object or null
+  const [selectedMode, setSelectedMode] = useState(() => {
+    try { return localStorage.getItem('fph_quiz_mode') || 'exam' } catch { return 'exam' }
+  })
 
   useEffect(() => {
     if (!user) return
@@ -463,8 +467,18 @@ export default function Home() {
   const ringCircumference = 364.4
   const ringOffset = ringCircumference * (1 - readiness / 100)
 
-  async function handleStart(sim) {
+  function handleStart(sim) {
     if (!canAccessSimulation(sim, isPremium)) { navigate('/upgrade'); return }
+    // Mostra dialog scelta modalità
+    setShowModeDialog(sim)
+  }
+
+  async function handleConfirmStart(mode) {
+    const sim = showModeDialog
+    if (!sim) return
+    setShowModeDialog(null)
+    localStorage.setItem('fph_quiz_mode', mode)
+    setSelectedMode(mode)
     setStarting(sim.id)
     try {
       const session = await startSession(sim.id, user.id)
@@ -748,6 +762,73 @@ export default function Home() {
             <a className="hover:text-primary transition-colors" href="#">{t('dashboard.helpCenter')}</a>
           </div>
         </footer>
+
+        {/* Mode Selection Dialog */}
+        {showModeDialog && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+            <div className="absolute inset-0 bg-black/40" onClick={() => setShowModeDialog(null)} />
+            <div className="relative bg-surface rounded-2xl shadow-2xl max-w-sm w-full p-6 z-10 animate-in">
+              <h3 className="font-headline font-bold text-xl text-on-surface mb-2">
+                {t('quiz.selectMode', 'Scegli modalità')}
+              </h3>
+              <p className="text-sm text-on-surface-variant mb-6">
+                {showModeDialog.title}
+              </p>
+
+              <div className="space-y-3 mb-6">
+                <button
+                  onClick={() => handleConfirmStart('exam')}
+                  className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
+                    selectedMode === 'exam'
+                      ? 'border-primary bg-primary/5'
+                      : 'border-outline-variant/30 hover:border-primary/40'
+                  }`}
+                >
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="material-symbols-outlined text-primary text-xl">assignment</span>
+                    <span className="font-headline font-bold text-on-surface">{t('quiz.examMode', 'Modalità Esame')}</span>
+                  </div>
+                  <p className="text-xs text-on-surface-variant ml-9">
+                    {t('quiz.modeExamDesc', 'Feedback solo alla fine, timer attivo')}
+                  </p>
+                </button>
+
+                <button
+                  onClick={() => handleConfirmStart('practice')}
+                  className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
+                    selectedMode === 'practice'
+                      ? 'border-tertiary bg-tertiary/5'
+                      : 'border-outline-variant/30 hover:border-tertiary/40'
+                  }`}
+                >
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="material-symbols-outlined text-tertiary text-xl">lightbulb</span>
+                    <span className="font-headline font-bold text-on-surface">{t('quiz.practiceMode', 'Modalità Pratica')}</span>
+                  </div>
+                  <p className="text-xs text-on-surface-variant ml-9">
+                    {t('quiz.modePracticeDesc', 'Feedback immediato, nessun timer')}
+                  </p>
+                </button>
+              </div>
+
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowModeDialog(null)}
+                  className="flex-1 py-2.5 rounded-xl border border-outline-variant/30 text-on-surface-variant font-bold text-sm hover:bg-surface-container-low transition-colors"
+                >
+                  {t('common.cancel', 'Annulla')}
+                </button>
+                <button
+                  onClick={() => handleConfirmStart(selectedMode)}
+                  disabled={!!starting}
+                  className="flex-1 py-2.5 rounded-xl bg-primary text-on-primary font-bold text-sm hover:opacity-90 transition-all disabled:opacity-50"
+                >
+                  {starting ? t('common.loading', '...') : t('quiz.startMode', 'Inizia')}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </UserLayout>
   )
