@@ -232,7 +232,7 @@ export default function StudyTopic() {
   const { key } = useParams()
   const navigate = useNavigate()
   const { t } = useTranslation()
-  const { profile } = useAuth()
+  const { profile, user } = useAuth()
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
@@ -277,6 +277,15 @@ export default function StudyTopic() {
       .then(setNotebooks)
       .catch(() => {})
   }, [data?.area_id])
+
+  // Track content read via localStorage (client-side, will migrate to DB)
+  useEffect(() => {
+    if (data?.id && user?.id) {
+      try {
+        localStorage.setItem(`fph_content_read_${user.id}_${data.id}`, new Date().toISOString())
+      } catch {}
+    }
+  }, [data?.id, user?.id])
 
   useEffect(() => {
     if (!data?.id) return

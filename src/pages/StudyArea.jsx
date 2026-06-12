@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useAuth } from '../contexts/AuthContext'
 import UserLayout from '../components/UserLayout'
 import { fetchAreaDetail, fetchAreaQuestions, startAreaQuiz, submitAreaQuiz, fetchAreaProgress } from '../lib/areasApi'
 import { fetchNotebooksByArea } from '../lib/notebookContentsApi'
@@ -11,6 +12,7 @@ export default function StudyArea() {
   const { area_id } = useParams()
   const navigate = useNavigate()
   const { t } = useTranslation()
+  const { user } = useAuth()
   const areaId = Number(area_id)
 
   const [area, setArea] = useState(null)
@@ -149,6 +151,20 @@ export default function StudyArea() {
   }, [questions, filterTopic, filterDifficulty, searchQuery])
 
   const isHighlighted = area.role_number === 4
+
+  // Content read tracking (client-side localStorage, will migrate to DB)
+  const contentReadStats = useMemo(() => {
+    const nbWithContent = notebooks.filter(n => n.hasContent)
+    if (!user?.id || nbWithContent.length === 0) {
+      return { readCount: 0, total: nbWithContent.length, notebooks: nbWithContent.map(n => ({ ...n, isRead: false })) }
+    }
+    const enriched = nbWithContent.map(n => {
+      const isRead = !!localStorage.getItem(`fph_content_read_${user.id}_${n.id}`)
+      return { ...n, isRead }
+    })
+    const readCount = enriched.filter(n => n.isRead).length
+    return { readCount, total: enriched.length, notebooks: enriched }
+  }, [notebooks, user?.id])
 
   return (
     <UserLayout>
@@ -479,47 +495,110 @@ export default function StudyArea() {
         {/* Tab: Progress */}
         {tab === 'progress' && (
           <div>
+            {/* Questions progress */}
             <div className="card mb-6">
-              <h3 className="font-bold text-on-surface mb-4">{t('study.yourProgress', 'Tuo Progresso')}</h3>
+              <h3 className="font-bold text-on-surface mb-4">{t('study.questionsProgress', 'Domande')}</h3>
               {progress ? (
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-primary">{progress.questions_completed || 0}</div>
-                    <div className="text-xs text-on-surface-variant mt-1">{t('study.completedQs', 'Domande fatte')}</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">{progress.questions_correct || 0}</div>
-                    <div className="text-xs text-on-surface-variant mt-1">{t('study.correctQs', 'Risposte corrette')}</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">
-                      {progress.questions_completed > 0
-                        ? Math.round((progress.questions_correct / progress.questions_completed) * 100)
-                        : 0}%
+                <>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6">
+                    <div>
+                      <div className="text-2xl font-bold text-primary">{progress.questions_completed || 0}</div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.questionsFaced', 'Domande affrontate')}</div>
                     </div>
-                    <div className="text-xs text-on-surface-variant mt-1">{t('study.accuracy', 'Accuratezza')}</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">
-                      {progress.avg_time_seconds ? `${Math.round(progress.avg_time_seconds)}s` : '–'}
+                    <div>
+                      <div className="text-2xl font-bold text-primary">{progress.questions_correct || 0}</div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.correctQs', 'Risposte corrette')}</div>
                     </div>
-                    <div className="text-xs text-on-surface-variant mt-1">{t('study.avgTime', 'Tempo medio')}</div>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">
+                        {progress.questions_completed > 0
+                          ? Math.round((progress.questions_correct / progress.questions_completed) * 100)
+                          : 0}%
+                      </div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.accuracy', 'Accuratezza')}</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">
+                        {progress.avg_time_seconds ? `${Math.round(progress.avg_time_seconds)}s` : '–'}
+                      </div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.avgTimePerQuestion', 'Tempo medio/domanda')}</div>
+                    </div>
                   </div>
-                </div>
+
+                  {/* Questions progress bar */}
+                  <div className="mb-1">
+                    <div className="flex justify-between text-xs text-on-surface-variant mb-1">
+                      <span>{t('study.questionsFaced', 'Domande affrontate')}</span>
+                      <span>{progress.questions_completed || 0} / {questions.length}</span>
+                    </div>
+                    <div className="w-full bg-surface-container-high rounded-full h-2">
+                      <div
+                        className="bg-primary h-2 rounded-full transition-all"
+                        style={{ width: `${questions.length > 0 ? Math.round((progress.questions_completed / questions.length) * 100) : 0}%` }}
+                      />
+                    </div>
+                  </div>
+                </>
               ) : (
                 <p className="text-sm text-on-surface-variant">{t('study.noProgress', 'Nessun progresso ancora. Inizia un quiz!')}</p>
               )}
             </div>
 
+            {/* Content progress */}
+            {contentReadStats.total > 0 && (
+              <div className="card mb-6">
+                <h3 className="font-bold text-on-surface mb-4">{t('study.contentProgress', 'Contenuti')}</h3>
+
+                {/* Content progress bar */}
+                <div className="mb-4">
+                  <div className="flex justify-between text-xs text-on-surface-variant mb-1">
+                    <span>{t('study.contentRead', 'Contenuti letti')}</span>
+                    <span>{contentReadStats.readCount} / {contentReadStats.total}</span>
+                  </div>
+                  <div className="w-full bg-surface-container-high rounded-full h-2">
+                    <div
+                      className="bg-tertiary h-2 rounded-full transition-all"
+                      style={{ width: `${contentReadStats.total > 0 ? Math.round((contentReadStats.readCount / contentReadStats.total) * 100) : 0}%` }}
+                    />
+                  </div>
+                </div>
+
+                {/* Notebook list */}
+                <div className="space-y-1">
+                  {contentReadStats.notebooks.map(n => (
+                    <button
+                      key={n.id}
+                      onClick={() => navigate(`/study/topic/${n.key || n.id}`)}
+                      className="w-full text-left flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-surface-container-low transition-colors"
+                    >
+                      <span className={`material-symbols-outlined text-[18px] shrink-0 ${n.isRead ? 'text-primary' : 'text-outline'}`}>
+                        {n.isRead ? 'menu_book' : 'menu_book'}
+                      </span>
+                      <span className="text-sm text-on-surface truncate flex-1">{n.title}</span>
+                      <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full shrink-0 ${n.isRead ? 'bg-primary/10 text-primary' : 'bg-surface-container-high text-on-surface-variant'}`}>
+                        {n.isRead ? t('study.readLabel', 'Letto') : t('study.unreadLabel', 'Da leggere')}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                {!user && (
+                  <p className="text-[11px] text-on-surface-variant/60 mt-3 italic">
+                    {t('study.loginToTrack', 'Accedi per salvare i progressi di lettura.')}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Smart recommendation (unchanged) */}
             {progress && area.weight_percent && (
               <div className="card">
                 <h3 className="font-bold text-on-surface mb-3">{t('study.recommendations', 'Suggerimenti')}</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  {progress.questions_completed > 0 && progress.questions_completed > 0
+                  {progress.questions_completed > 0
                     ? (progress.questions_correct / progress.questions_completed) < 0.67
-                      ? t('study.recoLow', `Il tuo punteggio in ${area.name} è sotto il 67%. Dedica più tempo allo studio di quest'area — pesa il ${area.weight_percent}% dell'esame.`)
-                      : t('study.recoGood', `Buon lavoro in ${area.name}! Continua a esercitarti per mantenere il livello.`)
-                    : t('study.recoStart', `Inizia a fare quiz in ${area.name}. Quest'area pesa il ${area.weight_percent}% dell'esame — è importante padroneggiarla.`)
+                      ? t('study.recoLow', { name: area.name, weight: area.weight_percent, defaultValue: `Il tuo punteggio in ${area.name} è sotto il 67%. Dedica più tempo allo studio di quest'area — pesa il ${area.weight_percent}% dell'esame.` })
+                      : t('study.recoGood', { name: area.name, defaultValue: `Buon lavoro in ${area.name}! Continua a esercitarti per mantenere il livello.` })
+                    : t('study.recoStart', { name: area.name, weight: area.weight_percent, defaultValue: `Inizia a fare quiz in ${area.name}. Quest'area pesa il ${area.weight_percent}% dell'esame — è importante padroneggiarla.` })
                   }
                 </p>
               </div>
