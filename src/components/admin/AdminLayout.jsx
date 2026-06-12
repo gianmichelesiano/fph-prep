@@ -10,6 +10,7 @@ const NAV = [
   { to: '/admin/areas',       label: 'Study Areas',      icon: 'layers' },
   { to: '/admin/catalog',     label: 'Catalog',          icon: 'category' },
   { to: '/admin/generate',    label: 'AI Generate',      icon: 'auto_awesome' },
+  { to: '/admin/jobs',        label: 'Jobs',              icon: 'manufacturing' },
 ]
 
 export default function AdminLayout({ children }) {

@@ -29,6 +29,7 @@ import AdminCatalog from './pages/admin/Catalog'
 import AdminContents from './pages/admin/Contents'
 import AdminContentEditor from './pages/admin/ContentEditor'
 import AdminTopicDetail from './pages/admin/TopicDetail'
+import AdminJobs from './pages/admin/Jobs'
 
 export default function App() {
   return (
@@ -69,6 +70,7 @@ export default function App() {
             <Route path="/admin/contents" element={<AdminContents />} />
             <Route path="/admin/contents/:notebook_id" element={<AdminContentEditor />} />
             <Route path="/admin/areas/:area_id/topics/:topic_id" element={<AdminTopicDetail />} />
+            <Route path="/admin/jobs" element={<AdminJobs />} />
           </Route>
         </Routes>
       </BrowserRouter>
