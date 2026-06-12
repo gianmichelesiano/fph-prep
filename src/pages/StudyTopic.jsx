@@ -30,8 +30,8 @@ function extractHeadings(markdown) {
 }
 
 function TableOfContents({ headings }) {
-  if (!headings || headings.length < 3) return null
   const { t } = useTranslation()
+  if (!headings || headings.length < 3) return null
 
   return (
     <nav className="sticky top-24" aria-label={t('study.a4_toc', 'Sommario')}>
@@ -57,8 +57,8 @@ function TableOfContents({ headings }) {
 }
 
 function MobileTOC({ headings }) {
-  if (!headings || headings.length < 3) return null
   const { t } = useTranslation()
+  if (!headings || headings.length < 3) return null
 
   return (
     <details className="lg:hidden mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden">

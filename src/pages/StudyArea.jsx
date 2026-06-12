@@ -99,6 +99,34 @@ export default function StudyArea() {
     loadData() // refresh progress
   }
 
+  // Hooks: sempre prima degli early return (ordine hook stabile tra i render)
+  const filteredQuestions = useMemo(() => {
+    return questions.filter(q => {
+      if (filterTopic && q.topic_id !== filterTopic) return false
+      if (filterDifficulty && q.difficulty !== filterDifficulty) return false
+      if (searchQuery.trim()) {
+        const normText = normalize(q.text)
+        const normQuery = normalize(searchQuery)
+        if (!normText.includes(normQuery)) return false
+      }
+      return true
+    })
+  }, [questions, filterTopic, filterDifficulty, searchQuery])
+
+  // Content read tracking (client-side localStorage, will migrate to DB)
+  const contentReadStats = useMemo(() => {
+    const nbWithContent = notebooks.filter(n => n.hasContent)
+    if (!user?.id || nbWithContent.length === 0) {
+      return { readCount: 0, total: nbWithContent.length, notebooks: nbWithContent.map(n => ({ ...n, isRead: false })) }
+    }
+    const enriched = nbWithContent.map(n => {
+      const isRead = !!localStorage.getItem(`fph_content_read_${user.id}_${n.id}`)
+      return { ...n, isRead }
+    })
+    const readCount = enriched.filter(n => n.isRead).length
+    return { readCount, total: enriched.length, notebooks: enriched }
+  }, [notebooks, user?.id])
+
   if (loading) {
     return (
       <UserLayout>
@@ -137,34 +165,7 @@ export default function StudyArea() {
     )
   }
 
-  const filteredQuestions = useMemo(() => {
-    return questions.filter(q => {
-      if (filterTopic && q.topic_id !== filterTopic) return false
-      if (filterDifficulty && q.difficulty !== filterDifficulty) return false
-      if (searchQuery.trim()) {
-        const normText = normalize(q.text)
-        const normQuery = normalize(searchQuery)
-        if (!normText.includes(normQuery)) return false
-      }
-      return true
-    })
-  }, [questions, filterTopic, filterDifficulty, searchQuery])
-
   const isHighlighted = area.role_number === 4
-
-  // Content read tracking (client-side localStorage, will migrate to DB)
-  const contentReadStats = useMemo(() => {
-    const nbWithContent = notebooks.filter(n => n.hasContent)
-    if (!user?.id || nbWithContent.length === 0) {
-      return { readCount: 0, total: nbWithContent.length, notebooks: nbWithContent.map(n => ({ ...n, isRead: false })) }
-    }
-    const enriched = nbWithContent.map(n => {
-      const isRead = !!localStorage.getItem(`fph_content_read_${user.id}_${n.id}`)
-      return { ...n, isRead }
-    })
-    const readCount = enriched.filter(n => n.isRead).length
-    return { readCount, total: enriched.length, notebooks: enriched }
-  }, [notebooks, user?.id])
 
   return (
     <UserLayout>
