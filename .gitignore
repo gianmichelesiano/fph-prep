@@ -23,6 +23,6 @@ local/
 z_notes.txt
 .vercel
 client_secret_*.json
-admin/
+/admin/
 .worktrees/
 fph-wiki/

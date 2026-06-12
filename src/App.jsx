@@ -28,6 +28,7 @@ import AdminGenerate from './pages/admin/Generate'
 import AdminCatalog from './pages/admin/Catalog'
 import AdminContents from './pages/admin/Contents'
 import AdminContentEditor from './pages/admin/ContentEditor'
+import AdminTopicDetail from './pages/admin/TopicDetail'
 
 export default function App() {
   return (
@@ -67,6 +68,7 @@ export default function App() {
             <Route path="/admin/generate" element={<AdminGenerate />} />
             <Route path="/admin/contents" element={<AdminContents />} />
             <Route path="/admin/contents/:notebook_id" element={<AdminContentEditor />} />
+            <Route path="/admin/areas/:area_id/topics/:topic_id" element={<AdminTopicDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>
