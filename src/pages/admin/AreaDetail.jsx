@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import AdminLayout from '../../components/admin/AdminLayout'
 import {
@@ -8,6 +8,16 @@ import {
   updateTopic,
   deleteTopic,
 } from '../../lib/adminApi'
+import {
+  fetchAreaNotebooks,
+  fetchNotebooks,
+  linkNotebookArea,
+  unlinkNotebookArea,
+  fetchTopicResources,
+  addTopicResource,
+  removeTopicResource,
+  fetchResources,
+} from '../../lib/adminBackendApi'
 
 export default function AdminAreaDetail() {
   const { area_id } = useParams()
@@ -25,6 +35,19 @@ export default function AdminAreaDetail() {
   const [editingTopicId, setEditingTopicId] = useState(null)
   const [editingTopicName, setEditingTopicName] = useState('')
 
+  // Notebook linking
+  const [linkedNotebooks, setLinkedNotebooks] = useState([])
+  const [allNotebooks, setAllNotebooks] = useState([])
+  const [linkingNotebook, setLinkingNotebook] = useState(false)
+  const [notebookSearch, setNotebookSearch] = useState('')
+  const [showAddNotebook, setShowAddNotebook] = useState(false)
+
+  // Topic resources (expanded topic)
+  const [expandedTopicResources, setExpandedTopicResources] = useState(null) // topicId or null
+  const [topicResources, setTopicResources] = useState({})
+  const [allResources, setAllResources] = useState([])
+  const [addingResourceTo, setAddingResourceTo] = useState(null)
+
   const areaId = Number(area_id)
 
   function load() {
@@ -39,6 +62,91 @@ export default function AdminAreaDetail() {
   }
 
   useEffect(() => { load() }, [areaId])
+
+  // Load linked notebooks
+  useEffect(() => {
+    fetchAreaNotebooks(areaId).then(data => setLinkedNotebooks(data || [])).catch(() => {})
+  }, [areaId])
+
+  // Load all notebooks for linking
+  useEffect(() => {
+    fetchNotebooks({ limit: 500 }).then(data => setAllNotebooks(data || [])).catch(() => {})
+  }, [])
+
+  // Load all resources once for topic resource linking
+  useEffect(() => {
+    fetchResources({ limit: 500 }).then(data => setAllResources(data || [])).catch(() => {})
+  }, [])
+
+  async function handleLinkNotebook(notebookId) {
+    setLinkingNotebook(true)
+    try {
+      await linkNotebookArea(notebookId, areaId)
+      const updated = await fetchAreaNotebooks(areaId)
+      setLinkedNotebooks(updated || [])
+      setShowAddNotebook(false)
+    } catch (e) {
+      alert(e.message)
+    } finally {
+      setLinkingNotebook(false)
+    }
+  }
+
+  async function handleUnlinkNotebook(notebookId) {
+    if (!confirm('Scollegare questo notebook?')) return
+    try {
+      await unlinkNotebookArea(notebookId, areaId)
+      setLinkedNotebooks(prev => prev.filter(n => n.id !== notebookId))
+    } catch (e) {
+      alert(e.message)
+    }
+  }
+
+  async function handleLoadTopicResources(topicId) {
+    if (expandedTopicResources === topicId) {
+      setExpandedTopicResources(null)
+      return
+    }
+    setExpandedTopicResources(topicId)
+    try {
+      const data = await fetchTopicResources(topicId)
+      setTopicResources(prev => ({ ...prev, [topicId]: data || [] }))
+    } catch { /* */ }
+  }
+
+  async function handleAddTopicResource(topicId, resourceId) {
+    try {
+      await addTopicResource(topicId, resourceId)
+      const updated = await fetchTopicResources(topicId)
+      setTopicResources(prev => ({ ...prev, [topicId]: updated || [] }))
+      setAddingResourceTo(null)
+    } catch (e) {
+      alert(e.message)
+    }
+  }
+
+  async function handleRemoveTopicResource(topicId, resourceId) {
+    try {
+      await removeTopicResource(topicId, resourceId)
+      setTopicResources(prev => ({
+        ...prev,
+        [topicId]: (prev[topicId] || []).filter(r => r.id !== resourceId),
+      }))
+    } catch (e) {
+      alert(e.message)
+    }
+  }
+
+  // Notebooks available to link (not already linked)
+  const availableNotebooks = useMemo(() => {
+    const linkedIds = new Set(linkedNotebooks.map(n => n.id))
+    let avail = allNotebooks.filter(n => !linkedIds.has(n.id))
+    if (notebookSearch.trim()) {
+      const q = notebookSearch.toLowerCase()
+      avail = avail.filter(n => (n.title || n.key || '').toLowerCase().includes(q))
+    }
+    return avail.slice(0, 50)
+  }, [allNotebooks, linkedNotebooks, notebookSearch])
 
   async function handleSaveArea(field, value) {
     setSavingArea(true)
@@ -149,6 +257,68 @@ export default function AdminAreaDetail() {
           </div>
         </section>
 
+        {/* Linked Notebooks */}
+        <section className="card mb-6">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-bold text-on-surface">Notebook collegati ({linkedNotebooks.length})</h3>
+            <button
+              onClick={() => setShowAddNotebook(!showAddNotebook)}
+              className="btn-secondary text-sm"
+            >
+              {showAddNotebook ? 'Chiudi' : '+ Collega'}
+            </button>
+          </div>
+
+          {showAddNotebook && (
+            <div className="mb-4 p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+              <input
+                className="input text-sm w-full mb-2"
+                placeholder="Cerca notebook..."
+                value={notebookSearch}
+                onChange={e => setNotebookSearch(e.target.value)}
+              />
+              <div className="max-h-40 overflow-y-auto space-y-1">
+                {availableNotebooks.map(n => (
+                  <button
+                    key={n.id}
+                    onClick={() => handleLinkNotebook(n.id)}
+                    disabled={linkingNotebook}
+                    className="w-full text-left px-2 py-1.5 rounded text-sm hover:bg-surface-container-low transition-colors flex justify-between items-center"
+                  >
+                    <span>{n.title || n.key}</span>
+                    <span className="text-[10px] text-outline">#{n.id}</span>
+                  </button>
+                ))}
+                {availableNotebooks.length === 0 && (
+                  <p className="text-xs text-outline p-2">
+                    {notebookSearch ? 'Nessun notebook trovato.' : 'Tutti i notebook già collegati.'}
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
+
+          {linkedNotebooks.length === 0 ? (
+            <p className="text-sm text-outline">Nessun notebook collegato.</p>
+          ) : (
+            <div className="divide-y divide-outline-variant/10">
+              {linkedNotebooks.map(n => (
+                <div key={n.id} className="py-2 flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <span className="text-sm text-on-surface">{n.title || n.key || `#${n.id}`}</span>
+                  </div>
+                  <button
+                    onClick={() => handleUnlinkNotebook(n.id)}
+                    className="material-symbols-outlined text-[18px] text-outline hover:text-error"
+                  >
+                    link_off
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+
         {/* Topics */}
         <section className="card mb-6">
           <div className="flex items-center justify-between mb-4">
@@ -177,8 +347,12 @@ export default function AdminAreaDetail() {
             <p className="text-sm text-outline">Nessun topic ancora.</p>
           ) : (
             <div className="divide-y divide-outline-variant/10">
-              {topics.map(t => (
-                <div key={t.id} className="py-3 flex items-center justify-between gap-3">
+              {topics.map(t => {
+                const tResources = topicResources[t.id] || []
+                const isExpanded = expandedTopicResources === t.id
+                return (
+                <div key={t.id}>
+                <div className="py-3 flex items-center justify-between gap-3">
                   <div className="flex-1 min-w-0">
                     {editingTopicId === t.id ? (
                       <input
@@ -217,7 +391,77 @@ export default function AdminAreaDetail() {
                     )}
                   </div>
                 </div>
-              ))}
+
+                {/* Topic resources */}
+                <div className="ml-4 mb-3">
+                  <button
+                    onClick={() => handleLoadTopicResources(t.id)}
+                    className="text-xs text-primary hover:underline flex items-center gap-1"
+                  >
+                    <span className="material-symbols-outlined text-[14px]">
+                      {isExpanded ? 'expand_less' : 'expand_more'}
+                    </span>
+                    Risorse ({tResources.length})
+                  </button>
+
+                  {isExpanded && (
+                    <div className="mt-2 ml-5 space-y-1">
+                      {tResources.map(r => (
+                        <div key={r.id} className="flex items-center justify-between gap-2 text-xs py-1 px-2 rounded hover:bg-surface-container-low">
+                          <span className="text-on-surface">{r.title || r.name || `Risorsa #${r.id}`}</span>
+                          <span className="text-[10px] text-outline">{r.type}</span>
+                          <button
+                            onClick={() => handleRemoveTopicResource(t.id, r.id)}
+                            className="material-symbols-outlined text-[14px] text-outline hover:text-error"
+                          >
+                            close
+                          </button>
+                        </div>
+                      ))}
+
+                      {/* Add resource */}
+                      {addingResourceTo === t.id ? (
+                        <div className="pt-1">
+                          <select
+                            className="input text-xs w-full mb-1"
+                            onChange={e => {
+                              if (e.target.value) handleAddTopicResource(t.id, Number(e.target.value))
+                            }}
+                            value=""
+                          >
+                            <option value="">Seleziona risorsa...</option>
+                            {allResources
+                              .filter(r => !tResources.some(tr => tr.id === r.id))
+                              .map(r => (
+                                <option key={r.id} value={r.id}>
+                                  {r.title || r.name || `#${r.id}`} ({r.type})
+                                </option>
+                              ))}
+                          </select>
+                          <button
+                            onClick={() => setAddingResourceTo(null)}
+                            className="text-xs text-outline hover:underline"
+                          >
+                            Annulla
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => setAddingResourceTo(t.id)}
+                          className="text-xs text-primary hover:underline"
+                        >
+                          + Aggiungi risorsa
+                        </button>
+                      )}
+                      <p className="text-[10px] text-outline/60 mt-1">
+                        Le risorse sono gli input per la generazione artifact.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+              )
+              })}
             </div>
           )}
         </section>
