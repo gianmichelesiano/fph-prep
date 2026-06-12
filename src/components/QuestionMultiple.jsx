@@ -34,10 +34,10 @@ export default function QuestionMultiple({ question, answer, onChange, showResul
             onClick={() => onChange(i)}
             className={`w-full text-left p-4 rounded-2xl border-2 transition-all duration-150 ${containerStyle} flex items-start gap-3`}
           >
-            <span className={`mt-0.5 w-7 h-7 rounded-full border-2 flex-shrink-0 flex items-center justify-center text-xs font-headline font-bold transition-all ${labelStyle}`}>
+            <span className={`w-7 h-7 rounded-full border-2 flex-shrink-0 flex items-center justify-center text-xs font-headline font-bold transition-all self-start ${labelStyle}`}>
               {String.fromCharCode(65 + i)}
             </span>
-            <span className="text-sm leading-relaxed text-on-surface pt-0.5">
+            <span className="text-sm leading-relaxed text-on-surface flex-1 min-w-0 break-words">
               {opt.replace(/^[A-E]\.\s*/, '')}
             </span>
           </button>

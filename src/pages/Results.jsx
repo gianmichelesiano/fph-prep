@@ -183,7 +183,7 @@ export default function Results() {
                       </div>
                     </div>
                     {q.motivation && (
-                      <div className="ml-8 p-3 bg-surface-container rounded-lg">
+                      <div className="ml-8 p-4 bg-surface-container rounded-lg max-h-64 overflow-y-auto">
                         <p className="text-xs text-outline font-semibold mb-1">Spiegazione</p>
                         <MarkdownView content={q.motivation} className="prose-sm" />
                       </div>
