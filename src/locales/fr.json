@@ -205,7 +205,17 @@
     "noTopics": "Aucun thème disponible.",
     "notReady": "En préparation",
     "topicNotFound": "Thème introuvable ou contenu non encore disponible.",
-    "reviewTopic": "Réviser ce sujet"
+    "reviewTopic": "Réviser ce sujet",
+    "searchQuestions": "Rechercher dans les questions...",
+    "searchAreas": "Rechercher des domaines...",
+    "noQuestionsFound": "Aucune question trouvée pour '{{query}}'",
+    "noAreasFound": "Aucun domaine trouvé pour '{{query}}'",
+    "clearFilters": "Effacer les filtres",
+    "a4_toc": "Sommaire",
+    "a4_sections": "sections",
+    "a4_topicNav": "Navigation des sujets",
+    "a4_prevTopic": "Précédent",
+    "a4_nextTopic": "Suivant"
   },
   "stats": {
     "title": "Statistiques",

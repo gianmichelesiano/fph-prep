@@ -205,7 +205,17 @@
     "noTopics": "No topics available.",
     "notReady": "Coming soon",
     "topicNotFound": "Topic not found or content not yet available.",
-    "reviewTopic": "Review this topic"
+    "reviewTopic": "Review this topic",
+    "searchQuestions": "Search questions...",
+    "searchAreas": "Search areas...",
+    "noQuestionsFound": "No questions found for '{{query}}'",
+    "noAreasFound": "No areas found for '{{query}}'",
+    "clearFilters": "Clear filters",
+    "a4_toc": "Table of Contents",
+    "a4_sections": "sections",
+    "a4_topicNav": "Topic Navigation",
+    "a4_prevTopic": "Previous",
+    "a4_nextTopic": "Next"
   },
   "stats": {
     "title": "Statistics",

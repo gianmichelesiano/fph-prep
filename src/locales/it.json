@@ -181,7 +181,12 @@
     "answeredOf": "risposte",
     "timeExpired": "Tempo scaduto! Salvataggio in corso...",
     "notFound": "Test non trovato",
-    "goHome": "Torna alla home"
+    "goHome": "Torna alla home",
+    "questionNavigator": "Navigatore domande",
+    "currentLabel": "Corrente",
+    "answeredLabel": "Risposta data",
+    "unansweredLabel": "Da rispondere",
+    "responsesCount": "{{answered}} / {{total}} risposte"
   },
   "results": {
     "title": "Risultati",
@@ -211,7 +216,17 @@
     "flashcards": "Flashcard",
     "mindMap": "Mappa mentale",
     "quiz": "Quiz",
-    "comingSoon": "In arrivo"
+    "comingSoon": "In arrivo",
+    "searchQuestions": "Cerca nelle domande...",
+    "searchAreas": "Cerca aree...",
+    "noQuestionsFound": "Nessuna domanda trovata per '{{query}}'",
+    "noAreasFound": "Nessuna area trovata per '{{query}}'",
+    "clearFilters": "Pulisci filtri",
+    "a4_toc": "Sommario",
+    "a4_sections": "sezioni",
+    "a4_topicNav": "Navigazione argomenti",
+    "a4_prevTopic": "Precedente",
+    "a4_nextTopic": "Successivo"
   },
   "stats": {
     "title": "Statistiche",

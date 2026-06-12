@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import UserLayout from '../components/UserLayout'
@@ -12,6 +12,7 @@ export default function Study() {
   const [progress, setProgress] = useState([])
   const [questionCounts, setQuestionCounts] = useState({})
   const [loading, setLoading] = useState(true)
+  const [searchArea, setSearchArea] = useState('')
 
   useEffect(() => {
     Promise.all([
@@ -30,6 +31,20 @@ export default function Study() {
 
   const progressMap = {}
   progress.forEach(p => { progressMap[p.area_id] = p })
+
+  function normalize(s) {
+    return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+  }
+
+  const filteredAreas = useMemo(() => {
+    if (!searchArea.trim()) return areas
+    const normQuery = normalize(searchArea)
+    return areas.filter(a => {
+      const normName = normalize(a.name)
+      const roleText = normalize(`ruolo ${a.role_number || a.id}`)
+      return normName.includes(normQuery) || roleText.includes(normQuery)
+    })
+  }, [areas, searchArea])
 
   const totalQuestions = areas.reduce((sum, a) => sum + (questionCounts[a.id] || 0), 0)
   const completedQuestions = progress.reduce((sum, p) => sum + (p.questions_completed || 0), 0)
@@ -76,11 +91,39 @@ export default function Study() {
           </div>
         )}
 
+        {/* Area search */}
+        {!loading && areas.length > 0 && (
+          <div className="relative mb-6 max-w-md">
+            <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-on-surface-variant pointer-events-none">search</span>
+            <input
+              type="text"
+              className="input text-sm w-full pl-10"
+              placeholder={t('study.searchAreas', 'Cerca aree...')}
+              value={searchArea}
+              onChange={e => setSearchArea(e.target.value)}
+            />
+          </div>
+        )}
+
         {loading ? (
           <div className="text-on-surface-variant">{t('common.loading', 'Caricamento...')}</div>
+        ) : filteredAreas.length === 0 ? (
+          <div className="text-center py-12">
+            <span className="material-symbols-outlined text-[48px] block mb-3 text-outline">search_off</span>
+            <p className="text-sm text-on-surface-variant mb-4">
+              {t('study.noAreasFound', { query: searchArea, defaultValue: `Nessuna area trovata per '${searchArea}'` })}
+            </p>
+            <button
+              onClick={() => setSearchArea('')}
+              className="btn-secondary text-sm"
+            >
+              <span className="material-symbols-outlined text-[16px]">filter_alt_off</span>
+              {t('study.clearFilters', 'Pulisci filtri')}
+            </button>
+          </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {areas.map(area => {
+            {filteredAreas.map(area => {
               const p = progressMap[area.id]
               const qCount = questionCounts[area.id] || 0
               const pct = qCount > 0 ? Math.round(((p?.questions_completed || 0) / qCount) * 100) : 0

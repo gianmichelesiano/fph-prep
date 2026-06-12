@@ -1,6 +1,48 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
+// Extract plain text from React children and slugify for heading anchors
+function slugifyHeading(children) {
+  const text = getTextContent(children)
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '') // remove accents
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+}
+
+function getTextContent(node) {
+  if (typeof node === 'string') return node
+  if (typeof node === 'number') return String(node)
+  if (!node) return ''
+  if (Array.isArray(node)) return node.map(getTextContent).join('')
+  if (node.props?.children) return getTextContent(node.props.children)
+  return ''
+}
+
+function headingRenderer(Tag) {
+  return function HeadingComponent({ node, children, ...props }) {
+    const slug = slugifyHeading(children)
+    return (
+      <Tag id={slug} className="group scroll-mt-20" {...props}>
+        {children}
+        {slug && (
+          <a
+            href={`#${slug}`}
+            className="ml-2 no-underline opacity-0 group-hover:opacity-50 transition-opacity text-[0.7em] align-middle"
+            aria-hidden="true"
+          >
+            #
+          </a>
+        )}
+      </Tag>
+    )
+  }
+}
+
 export default function MarkdownView({ content, className = '' }) {
   if (!content) return null
   return (
@@ -8,6 +50,8 @@ export default function MarkdownView({ content, className = '' }) {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
+          h2: headingRenderer('h2'),
+          h3: headingRenderer('h3'),
           img: ({ node, ...props }) => (
             <img
               loading="lazy"

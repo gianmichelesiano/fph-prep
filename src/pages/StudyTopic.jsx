@@ -1,10 +1,92 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import UserLayout from '../components/UserLayout'
 import MarkdownView from '../components/MarkdownView'
-import { fetchContentByKey, fetchNotebookByKey, fetchStudyPath } from '../lib/notebookContentsApi'
+import { fetchContentByKey, fetchNotebookByKey, fetchNotebooksByArea, fetchStudyPath } from '../lib/notebookContentsApi'
+import { fetchAreaDetail } from '../lib/areasApi'
+import { supabase } from '../lib/supabase'
+
+// Extract headings (h2/h3) from markdown for TOC generation
+function extractHeadings(markdown) {
+  if (!markdown) return []
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm
+  const headings = []
+  let match
+  while ((match = headingRegex.exec(markdown)) !== null) {
+    const level = match[1].length // 2 or 3
+    const text = match[2].trim()
+    const slug = text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+    headings.push({ level, text, slug })
+  }
+  return headings
+}
+
+function TableOfContents({ headings }) {
+  if (!headings || headings.length < 3) return null
+  const { t } = useTranslation()
+
+  return (
+    <nav className="sticky top-24" aria-label={t('study.a4_toc', 'Sommario')}>
+      <h4 className="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-3 hidden lg:block">
+        {t('study.a4_toc', 'Sommario')}
+      </h4>
+      <ul className="space-y-1.5 border-l-2 border-outline-variant/40 pl-3">
+        {headings.map((h, i) => (
+          <li key={i}>
+            <a
+              href={`#${h.slug}`}
+              className={`block text-sm py-0.5 transition-colors hover:text-primary ${
+                h.level === 3 ? 'pl-3 text-on-surface-variant' : 'text-on-surface font-medium'
+              }`}
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+function MobileTOC({ headings }) {
+  if (!headings || headings.length < 3) return null
+  const { t } = useTranslation()
+
+  return (
+    <details className="lg:hidden mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden">
+      <summary className="px-4 py-3 cursor-pointer text-sm font-medium text-on-surface flex items-center gap-2 hover:bg-surface-container-low transition-colors">
+        <span className="material-symbols-outlined text-[18px] text-on-surface-variant">toc</span>
+        {t('study.a4_toc', 'Sommario')}
+        <span className="ml-auto text-xs text-on-surface-variant">
+          {headings.length} {t('study.a4_sections', 'sezioni')}
+        </span>
+      </summary>
+      <ul className="px-4 pb-3 space-y-1">
+        {headings.map((h, i) => (
+          <li key={i}>
+            <a
+              href={`#${h.slug}`}
+              className={`block text-sm py-1 hover:text-primary ${
+                h.level === 3 ? 'pl-4 text-on-surface-variant' : 'text-on-surface'
+              }`}
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </details>
+  )
+}
 
 function FlipCard({ card }) {
   const [flipped, setFlipped] = useState(false)
@@ -156,6 +238,8 @@ export default function StudyTopic() {
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
   const [studyPath, setStudyPath] = useState([])
+  const [areaName, setAreaName] = useState(null)
+  const [notebooks, setNotebooks] = useState([])
 
   const isPremium = profile?.is_premium || profile?.is_admin
 
@@ -176,6 +260,25 @@ export default function StudyTopic() {
       .catch(err => { console.error(err); setNotFound(true); setLoading(false) })
   }, [key, isPremium, navigate])
 
+  // Fetch area name + sibling notebooks for breadcrumb and next/prev
+  useEffect(() => {
+    if (!data?.area_id) return
+    // Fetch area name
+    supabase
+      .from('areas')
+      .select('name')
+      .eq('id', data.area_id)
+      .single()
+      .then(({ data: area }) => {
+        if (area) setAreaName(area.name)
+      })
+      .catch(() => {})
+    // Fetch notebooks for this area (ordered by title)
+    fetchNotebooksByArea(data.area_id, 'it')
+      .then(setNotebooks)
+      .catch(() => {})
+  }, [data?.area_id])
+
   useEffect(() => {
     if (!data?.id) return
     fetchStudyPath(data.id)
@@ -183,10 +286,27 @@ export default function StudyTopic() {
       .catch(err => console.error('study path fetch error', err))
   }, [data?.id])
 
+  // Compute prev/next from notebooks list
+  const { prevNotebook, nextNotebook } = useMemo(() => {
+    if (!notebooks.length || !data?.id) return { prevNotebook: null, nextNotebook: null }
+    const idx = notebooks.findIndex(n => n.id === data.id)
+    if (idx === -1) return { prevNotebook: null, nextNotebook: null }
+    return {
+      prevNotebook: idx > 0 ? notebooks[idx - 1] : null,
+      nextNotebook: idx < notebooks.length - 1 ? notebooks[idx + 1] : null,
+    }
+  }, [notebooks, data?.id])
+
+  // Extract TOC headings from markdown
+  const tocHeadings = useMemo(
+    () => extractHeadings(data?.content?.content_md || ''),
+    [data?.content?.content_md]
+  )
+
   if (loading) {
     return (
       <UserLayout>
-        <div className="max-w-3xl mx-auto px-4 py-8">
+        <div className="max-w-5xl mx-auto px-4 py-8">
           <div className="animate-pulse h-6 w-40 bg-surface-container-high rounded mb-4" />
           <div className="animate-pulse h-64 bg-surface-container-high rounded" />
         </div>
@@ -197,7 +317,7 @@ export default function StudyTopic() {
   if (notFound || !data) {
     return (
       <UserLayout>
-        <div className="max-w-3xl mx-auto px-4 py-8">
+        <div className="max-w-5xl mx-auto px-4 py-8">
           <p className="text-on-surface-variant mb-4">
             {t('study.topicNotFound', 'Topic non trovato o contenuto non ancora disponibile.')}
           </p>
@@ -209,16 +329,25 @@ export default function StudyTopic() {
     )
   }
 
+  const hasToc = tocHeadings.length >= 3
+
   return (
     <UserLayout>
       <div className="max-w-5xl mx-auto px-4 md:px-8 py-6">
-        <Link
-          to={`/study/area/${data.area_id}`}
-          className="text-sm text-primary flex items-center gap-1 mb-4"
-        >
-          <span className="material-symbols-outlined text-[16px]">arrow_back</span>
-          {t('study.backToArea', 'Area {{id}}', { id: data.area_id })}
-        </Link>
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-1.5 text-sm text-on-surface-variant mb-4 flex-wrap" aria-label="Breadcrumb">
+          <Link to="/study" className="hover:text-primary transition-colors">
+            {t('study.title', 'Study')}
+          </Link>
+          <span className="material-symbols-outlined text-[12px] text-outline">chevron_right</span>
+          <Link to={`/study/area/${data.area_id}`} className="hover:text-primary transition-colors">
+            {areaName || `Area ${data.area_id}`}
+          </Link>
+          <span className="material-symbols-outlined text-[12px] text-outline">chevron_right</span>
+          <span className="text-on-surface truncate max-w-[200px]" aria-current="page">
+            {data.title}
+          </span>
+        </nav>
 
         <header className="mb-6">
           <h1 className="font-headline font-bold text-3xl text-on-surface">
@@ -229,13 +358,89 @@ export default function StudyTopic() {
           )}
         </header>
 
-        {data.content && (
-          <article>
-            <MarkdownView content={data.content.content_md} />
-          </article>
-        )}
+        {/* Main content area: content + optional TOC sidebar */}
+        <div className={`${hasToc ? 'lg:flex lg:gap-10' : ''}`}>
+          {/* Content */}
+          <div className={`${hasToc ? 'lg:flex-1 lg:min-w-0' : ''}`}>
+            {/* Mobile TOC (before content) */}
+            <MobileTOC headings={tocHeadings} />
 
-        <StudyPathSection artifacts={studyPath} />
+            {data.content && (
+              <article>
+                <MarkdownView content={data.content.content_md} />
+              </article>
+            )}
+
+            <StudyPathSection artifacts={studyPath} />
+          </div>
+
+          {/* Desktop TOC (sticky sidebar, hidden on mobile) */}
+          {hasToc && (
+            <aside className="hidden lg:block w-56 shrink-0">
+              <TableOfContents headings={tocHeadings} />
+            </aside>
+          )}
+        </div>
+
+        {/* Next/Prev navigation footer */}
+        {(prevNotebook || nextNotebook) && (
+          <nav className="mt-12 pt-6 border-t border-outline-variant/30 flex flex-col sm:flex-row gap-3" aria-label={t('study.a4_topicNav', 'Navigazione argomenti')}>
+            <div className="flex-1">
+              {prevNotebook ? (
+                <Link
+                  to={`/study/topic/${prevNotebook.key}`}
+                  className="flex items-center gap-2 p-3 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low transition-colors group"
+                >
+                  <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_back</span>
+                  <div className="min-w-0">
+                    <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">
+                      {t('study.a4_prevTopic', 'Precedente')}
+                    </div>
+                    <div className="text-sm text-on-surface truncate">{prevNotebook.title}</div>
+                  </div>
+                </Link>
+              ) : (
+                <div /> /* spacer for flex alignment */
+              )}
+            </div>
+            <div className="flex-1">
+              {nextNotebook ? (
+                nextNotebook.hasContent && !nextNotebook.isFree && !isPremium ? (
+                  <Link
+                    to="/upgrade"
+                    className="flex items-center justify-end gap-2 p-3 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low transition-colors group"
+                  >
+                    <div className="min-w-0 text-right">
+                      <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">
+                        {t('study.a4_nextTopic', 'Successivo')}
+                      </div>
+                      <div className="text-sm text-on-surface truncate flex items-center justify-end gap-1.5">
+                        {nextNotebook.title}
+                        <span className="material-symbols-outlined text-[16px] text-amber-600 shrink-0">lock</span>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span>
+                  </Link>
+                ) : (
+                  <Link
+                    to={`/study/topic/${nextNotebook.key}`}
+                    className="flex items-center justify-end gap-2 p-3 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low transition-colors group"
+                  >
+                    <div className="min-w-0 text-right">
+                      <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">
+                        {t('study.a4_nextTopic', 'Successivo')}
+                      </div>
+                      <div className="text-sm text-on-surface truncate">{nextNotebook.title}</div>
+                    </div>
+                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span>
+                  </Link>
+                )
+              ) : (
+                <div /> /* spacer for flex alignment */
+              )}
+            </div>
+          </nav>
+        )}
       </div>
     </UserLayout>
   )

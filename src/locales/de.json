@@ -181,7 +181,12 @@
     "answeredOf": "beantwortet",
     "timeExpired": "Zeit abgelaufen! Speichern...",
     "notFound": "Test nicht gefunden",
-    "goHome": "Zur Startseite"
+    "goHome": "Zur Startseite",
+    "questionNavigator": "Fragen-Navigator",
+    "currentLabel": "Aktuell",
+    "answeredLabel": "Beantwortet",
+    "unansweredLabel": "Offen",
+    "responsesCount": "{{answered}} / {{total}} beantwortet"
   },
   "results": {
     "title": "Ergebnisse",
@@ -205,7 +210,17 @@
     "noTopics": "Keine Themen verfügbar.",
     "notReady": "In Vorbereitung",
     "topicNotFound": "Thema nicht gefunden oder Inhalt noch nicht verfügbar.",
-    "reviewTopic": "Dieses Thema wiederholen"
+    "reviewTopic": "Dieses Thema wiederholen",
+    "searchQuestions": "Fragen durchsuchen...",
+    "searchAreas": "Bereiche durchsuchen...",
+    "noQuestionsFound": "Keine Fragen gefunden für '{{query}}'",
+    "noAreasFound": "Keine Bereiche gefunden für '{{query}}'",
+    "clearFilters": "Filter zurücksetzen",
+    "a4_toc": "Inhaltsverzeichnis",
+    "a4_sections": "Abschnitte",
+    "a4_topicNav": "Themen-Navigation",
+    "a4_prevTopic": "Zurück",
+    "a4_nextTopic": "Weiter"
   },
   "stats": {
     "title": "Statistiken",

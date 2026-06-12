@@ -8,6 +8,28 @@ import QuestionMultiple from '../components/QuestionMultiple'
 import QuestionTrueFalse from '../components/QuestionTrueFalse'
 import Timer from '../components/Timer'
 
+function QuestionGrid({ questions, answers, currentIndex, goToIndex }) {
+  return (
+    <div className="grid grid-cols-5 gap-1">
+      {questions.map((question, i) => (
+        <button
+          key={question.id}
+          onClick={() => goToIndex(i)}
+          className={`h-8 w-8 rounded-lg text-xs font-bold transition-all ${
+            i === currentIndex
+              ? 'bg-primary text-on-primary'
+              : answers[question.id] !== undefined
+              ? 'bg-secondary-container text-on-secondary-container'
+              : 'bg-surface-container-high text-outline hover:bg-surface-container-highest'
+          }`}
+        >
+          {i + 1}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 const AREA_TAG_COLORS = {
   1:'bg-amber-100 text-amber-800', 2:'bg-green-100 text-green-800', 3:'bg-teal-100 text-teal-800',
   4:'bg-blue-100 text-blue-800', 5:'bg-indigo-100 text-indigo-800', 6:'bg-orange-100 text-orange-800',
@@ -26,6 +48,7 @@ export default function Quiz() {
   const [submitting, setSubmitting] = useState(false)
   const [timerExpired, setTimerExpired] = useState(false)
   const [restored, setRestored] = useState(false)
+  const [showSheet, setShowSheet] = useState(false)
 
   useEffect(() => {
     fetchSession(sessionId)
@@ -112,6 +135,13 @@ export default function Quiz() {
               <div className="h-full bg-primary rounded-full transition-all" style={{ width: `${progressPct}%` }} />
             </div>
           </div>
+          <button
+            onClick={() => setShowSheet(true)}
+            className="lg:hidden flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all"
+          >
+            <span className="material-symbols-outlined text-primary text-lg">grid_view</span>
+            <span className="font-headline font-bold text-primary text-sm">{currentIndex + 1}/{totalQ}</span>
+          </button>
         </div>
         <div className="flex items-center gap-4">
           <button
@@ -197,26 +227,63 @@ export default function Quiz() {
 
         <aside className="hidden lg:block w-48 shrink-0">
           <p className="text-xs text-outline font-semibold uppercase tracking-wider mb-3">Navigazione</p>
-          <div className="grid grid-cols-5 gap-1">
-            {questions.map((question, i) => (
-              <button
-                key={question.id}
-                onClick={() => goToIndex(i)}
-                className={`h-8 w-8 rounded-lg text-xs font-bold transition-all ${
-                  i === currentIndex
-                    ? 'bg-primary text-on-primary'
-                    : answers[question.id] !== undefined
-                    ? 'bg-secondary-container text-on-secondary-container'
-                    : 'bg-surface-container-high text-outline hover:bg-surface-container-highest'
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
-          </div>
+          <QuestionGrid questions={questions} answers={answers} currentIndex={currentIndex} goToIndex={goToIndex} />
           <p className="text-xs text-outline mt-3">{answered} / {totalQ} risposte</p>
         </aside>
       </main>
+
+      {/* Bottom sheet overlay */}
+      <div
+        className={`fixed inset-0 z-[60] lg:hidden transition-opacity duration-300 ${showSheet ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        onClick={() => setShowSheet(false)}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+      {/* Bottom sheet panel */}
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-[70] lg:hidden bg-surface rounded-t-3xl max-h-[70vh] flex flex-col shadow-2xl transition-transform duration-300 ease-out ${showSheet ? 'translate-y-0' : 'translate-y-full'}`}
+      >
+        {/* Handle */}
+        <div className="flex justify-center pt-3 pb-1 shrink-0">
+          <div className="w-10 h-1 rounded-full bg-outline-variant/40" />
+        </div>
+
+        {/* Header */}
+        <div className="px-6 py-2 flex justify-between items-center border-b border-outline-variant/10 shrink-0">
+          <h3 className="font-headline font-bold text-sm text-on-surface">Navigatore domande</h3>
+          <button
+            onClick={() => setShowSheet(false)}
+            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-all"
+          >
+            <span className="material-symbols-outlined text-on-surface-variant">close</span>
+          </button>
+        </div>
+
+        {/* Grid */}
+        <div className="overflow-y-auto px-6 py-4">
+          <QuestionGrid questions={questions} answers={answers} currentIndex={currentIndex} goToIndex={(i) => { goToIndex(i); setShowSheet(false) }} />
+        </div>
+
+        {/* Footer with legend */}
+        <div className="px-6 py-3 border-t border-outline-variant/10 shrink-0">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-2">
+            <span className="flex items-center gap-1.5 text-xs text-on-surface-variant">
+              <span className="w-3 h-3 rounded-md bg-primary shrink-0" />
+              Corrente
+            </span>
+            <span className="flex items-center gap-1.5 text-xs text-on-surface-variant">
+              <span className="w-3 h-3 rounded-md bg-secondary-container shrink-0" />
+              Risposta data
+            </span>
+            <span className="flex items-center gap-1.5 text-xs text-on-surface-variant">
+              <span className="w-3 h-3 rounded-md bg-surface-container-high shrink-0" />
+              Da rispondere
+            </span>
+          </div>
+          <p className="text-xs text-outline">{answered} / {totalQ} risposte</p>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import UserLayout from '../components/UserLayout'
@@ -25,6 +25,7 @@ export default function StudyArea() {
   // Question bank filters
   const [filterTopic, setFilterTopic] = useState('')
   const [filterDifficulty, setFilterDifficulty] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
 
   // Mini-quiz state
   const [quizConfig, setQuizConfig] = useState({ question_count: 10, format: 'mixed', timed: false, time_minutes: null, only_errors: false })
@@ -117,11 +118,35 @@ export default function StudyArea() {
     )
   }
 
-  const filteredQuestions = questions.filter(q => {
-    if (filterTopic && q.topic_id !== filterTopic) return false
-    if (filterDifficulty && q.difficulty !== filterDifficulty) return false
-    return true
-  })
+  // Accent-insensitive normalize helper
+  function normalize(s) {
+    return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+  }
+
+  // Highlight matching text in question
+  function highlightText(text, query) {
+    if (!query || !query.trim()) return text
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const parts = text.split(new RegExp(`(${escaped})`, 'gi'))
+    return parts.map((part, i) =>
+      part.toLowerCase() === query.toLowerCase()
+        ? <mark key={i} className="bg-yellow-100 text-inherit rounded-sm px-0.5">{part}</mark>
+        : part
+    )
+  }
+
+  const filteredQuestions = useMemo(() => {
+    return questions.filter(q => {
+      if (filterTopic && q.topic_id !== filterTopic) return false
+      if (filterDifficulty && q.difficulty !== filterDifficulty) return false
+      if (searchQuery.trim()) {
+        const normText = normalize(q.text)
+        const normQuery = normalize(searchQuery)
+        if (!normText.includes(normQuery)) return false
+      }
+      return true
+    })
+  }, [questions, filterTopic, filterDifficulty, searchQuery])
 
   const isHighlighted = area.role_number === 4
 
@@ -268,35 +293,64 @@ export default function StudyArea() {
         {/* Tab: Question Bank */}
         {tab === 'questions' && (
           <div>
-            {/* Filters */}
-            <div className="flex gap-3 mb-4">
-              <select
-                className="input text-sm"
-                value={filterTopic}
-                onChange={e => setFilterTopic(e.target.value)}
-              >
-                <option value="">{t('study.allTopics', 'Tutti i topic')}</option>
-                {topics.map(t => (
-                  <option key={t.id} value={t.id}>{t.name}</option>
-                ))}
-              </select>
-              <select
-                className="input text-sm"
-                value={filterDifficulty}
-                onChange={e => setFilterDifficulty(e.target.value)}
-              >
-                <option value="">{t('study.allDifficulties', 'Tutte le difficoltà')}</option>
-                <option value="easy">{t('study.easy', 'Facile')}</option>
-                <option value="medium">{t('study.medium', 'Media')}</option>
-                <option value="hard">{t('study.hard', 'Difficile')}</option>
-              </select>
-              <span className="text-sm text-on-surface-variant self-center ml-auto">
+            {/* Search + Filters */}
+            <div className="flex flex-col md:flex-row gap-3 mb-4">
+              <div className="relative flex-1">
+                <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-on-surface-variant pointer-events-none">search</span>
+                <input
+                  type="text"
+                  className="input text-sm w-full pl-10"
+                  placeholder={t('study.searchQuestions', 'Cerca nelle domande...')}
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                />
+              </div>
+              <div className="flex gap-3">
+                <select
+                  className="input text-sm"
+                  value={filterTopic}
+                  onChange={e => setFilterTopic(e.target.value)}
+                >
+                  <option value="">{t('study.allTopics', 'Tutti i topic')}</option>
+                  {topics.map(t => (
+                    <option key={t.id} value={t.id}>{t.name}</option>
+                  ))}
+                </select>
+                <select
+                  className="input text-sm"
+                  value={filterDifficulty}
+                  onChange={e => setFilterDifficulty(e.target.value)}
+                >
+                  <option value="">{t('study.allDifficulties', 'Tutte le difficoltà')}</option>
+                  <option value="easy">{t('study.easy', 'Facile')}</option>
+                  <option value="medium">{t('study.medium', 'Media')}</option>
+                  <option value="hard">{t('study.hard', 'Difficile')}</option>
+                </select>
+              </div>
+              <span className="text-sm text-on-surface-variant self-center whitespace-nowrap">
                 {filteredQuestions.length} {t('study.questionsFound', 'domande')}
               </span>
             </div>
 
             {filteredQuestions.length === 0 ? (
-              <p className="text-sm text-on-surface-variant">{t('study.noQuestions', 'Nessuna domanda trovata.')}</p>
+              <div className="text-center py-8">
+                <span className="material-symbols-outlined text-[40px] block mb-3 text-outline">search_off</span>
+                <p className="text-sm text-on-surface-variant mb-4">
+                  {(searchQuery || filterTopic || filterDifficulty)
+                    ? t('study.noQuestionsFound', { query: searchQuery, defaultValue: `Nessuna domanda trovata per '${searchQuery}'` })
+                    : t('study.noQuestions', 'Nessuna domanda trovata.')
+                  }
+                </p>
+                {(searchQuery || filterTopic || filterDifficulty) && (
+                  <button
+                    onClick={() => { setSearchQuery(''); setFilterTopic(''); setFilterDifficulty('') }}
+                    className="btn-secondary text-sm"
+                  >
+                    <span className="material-symbols-outlined text-[16px]">filter_alt_off</span>
+                    {t('study.clearFilters', 'Pulisci filtri')}
+                  </button>
+                )}
+              </div>
             ) : (
               <div className="space-y-2">
                 {filteredQuestions.map(q => {
@@ -305,7 +359,7 @@ export default function StudyArea() {
                     <div key={q.id} className="card p-4 hover:bg-surface-container-low transition-colors cursor-pointer">
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm text-on-surface leading-snug">{q.text}</p>
+                          <p className="text-sm text-on-surface leading-snug">{highlightText(q.text, searchQuery)}</p>
                           <div className="flex items-center gap-2 mt-2">
                             <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${q.type === 'multiple_choice' ? 'bg-primary/10 text-primary' : 'bg-tertiary/10 text-tertiary'}`}>
                               {q.type === 'multiple_choice' ? 'MC-A' : 'K-Prim'}
