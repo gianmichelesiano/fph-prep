@@ -5,7 +5,6 @@ import { useAuth } from '../contexts/AuthContext'
 import UserLayout from '../components/UserLayout'
 import MarkdownView from '../components/MarkdownView'
 import { fetchContentByKey, fetchNotebookByKey, fetchNotebooksByArea, fetchStudyPath } from '../lib/notebookContentsApi'
-import { fetchAreaDetail } from '../lib/areasApi'
 import { supabase } from '../lib/supabase'
 
 // Extract headings (h2/h3) from markdown for TOC generation
