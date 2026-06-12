@@ -19,6 +19,8 @@ export default function AdminQuestions() {
   const [filterArea, setFilterArea] = useState('')
   const [filterType, setFilterType] = useState('')
   const [filterStatus, setFilterStatus] = useState('')
+  const [selected, setSelected] = useState(new Set())
+  const [bulkUpdating, setBulkUpdating] = useState(false)
 
   useEffect(() => {
     getAllQuestions({ pageSize: 2000 })
@@ -38,13 +40,10 @@ export default function AdminQuestions() {
     try {
       await updateQuestion(id, { status: 'active' })
       setQuestions(prev => prev.map(q => (q.id === id ? { ...q, status: 'active' } : q)))
-    } catch {
-      // lascia lo stato invariato: l'errore è visibile dal mancato cambio
-    }
+    } catch { /* ignore */ }
   }
 
-  const draftCount = questions.filter(q => q.status === 'draft').length
-
+  // Bulk selection
   const filtered = questions.filter(q => {
     if (filterArea && q.area != filterArea) return false
     if (filterType && q.type !== filterType) return false
@@ -52,6 +51,59 @@ export default function AdminQuestions() {
     if (search && !q.text.toLowerCase().includes(search.toLowerCase())) return false
     return true
   })
+
+  const filteredIds = new Set(filtered.map(q => q.id))
+  const allSelected = filtered.length > 0 && filtered.every(q => selected.has(q.id))
+  const someSelected = filtered.some(q => selected.has(q.id))
+  const selectedInFilter = [...selected].filter(id => filteredIds.has(id))
+
+  function toggleSelectAll() {
+    if (allSelected) {
+      setSelected(prev => { const n = new Set(prev); filtered.forEach(q => n.delete(q.id)); return n })
+    } else {
+      setSelected(prev => { const n = new Set(prev); filtered.forEach(q => n.add(q.id)); return n })
+    }
+  }
+
+  function toggleOne(id) {
+    setSelected(prev => {
+      const n = new Set(prev)
+      if (n.has(id)) { n.delete(id) } else { n.add(id) }
+      return n
+    })
+  }
+
+  async function handleBulkStatus(newStatus) {
+    if (!selectedInFilter.length) return
+    const label = newStatus === 'archived' ? 'archiviare' : newStatus === 'draft' ? 'spostare in bozze' : 'pubblicare'
+    if (!confirm(`Confermi di ${label} ${selectedInFilter.length} domande?`)) return
+    setBulkUpdating(true)
+    let done = 0
+    for (const id of selectedInFilter) {
+      try {
+        await updateQuestion(id, { status: newStatus })
+        done++
+      } catch { /* skip errors */ }
+    }
+    setQuestions(prev => prev.map(q => selected.has(q.id) ? { ...q, status: newStatus } : q))
+    setSelected(new Set())
+    setBulkUpdating(false)
+  }
+
+  async function handleBulkDelete() {
+    if (!selectedInFilter.length) return
+    if (!confirm(`⚠️ Eliminare ${selectedInFilter.length} domande? Operazione irreversibile.`)) return
+    setBulkUpdating(true)
+    let done = 0
+    for (const id of selectedInFilter) {
+      try { await deleteQuestion(id); done++ } catch { /* skip */ }
+    }
+    setQuestions(prev => prev.filter(q => !selected.has(q.id)))
+    setSelected(new Set())
+    setBulkUpdating(false)
+  }
+
+  const draftCount = questions.filter(q => q.status === 'draft').length
 
   return (
     <AdminLayout>
@@ -108,6 +160,52 @@ export default function AdminQuestions() {
           </select>
         </div>
 
+        {/* Bulk actions bar */}
+        {selectedInFilter.length > 0 && (
+          <div className="mb-4 px-4 py-3 bg-primary/5 border border-primary/20 rounded-xl flex items-center gap-4 flex-wrap">
+            <span className="text-sm font-semibold text-primary">
+              {selectedInFilter.length} selezionate
+            </span>
+            <div className="flex items-center gap-2 flex-wrap">
+              <button
+                onClick={() => handleBulkStatus('active')}
+                disabled={bulkUpdating}
+                className="px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold hover:bg-secondary/20 disabled:opacity-50"
+              >
+                Pubblica
+              </button>
+              <button
+                onClick={() => handleBulkStatus('draft')}
+                disabled={bulkUpdating}
+                className="px-3 py-1.5 bg-tertiary-fixed/50 text-on-tertiary-fixed rounded-full text-xs font-bold hover:bg-tertiary-fixed disabled:opacity-50"
+              >
+                Sposta in bozze
+              </button>
+              <button
+                onClick={() => handleBulkStatus('archived')}
+                disabled={bulkUpdating}
+                className="px-3 py-1.5 bg-surface-container-high text-outline rounded-full text-xs font-bold hover:bg-surface-container-highest disabled:opacity-50"
+              >
+                Archivia
+              </button>
+              <span className="text-outline-variant">|</span>
+              <button
+                onClick={handleBulkDelete}
+                disabled={bulkUpdating}
+                className="px-3 py-1.5 bg-error/10 text-error rounded-full text-xs font-bold hover:bg-error/20 disabled:opacity-50"
+              >
+                Elimina
+              </button>
+              <button
+                onClick={() => setSelected(new Set())}
+                className="text-xs text-outline hover:text-on-surface ml-2"
+              >
+                Deseleziona
+              </button>
+            </div>
+          </div>
+        )}
+
         {loading ? (
           <div className="space-y-2">
             {[...Array(8)].map((_, i) => (
@@ -121,6 +219,15 @@ export default function AdminQuestions() {
             <table className="w-full text-sm">
               <thead className="bg-surface-container-low text-xs text-outline uppercase">
                 <tr>
+                  <th className="px-4 py-3 w-10">
+                    <input
+                      type="checkbox"
+                      checked={allSelected}
+                      ref={el => el && (el.indeterminate = someSelected && !allSelected)}
+                      onChange={toggleSelectAll}
+                      className="cursor-pointer"
+                    />
+                  </th>
                   <th className="px-4 py-3 text-left">Testo</th>
                   <th className="px-4 py-3 text-left">Tipo</th>
                   <th className="px-4 py-3 text-left">Area</th>
@@ -133,10 +240,21 @@ export default function AdminQuestions() {
                 {filtered.map(q => (
                   <tr
                     key={q.id}
-                    className="hover:bg-surface-container-low cursor-pointer transition-colors"
-                    onClick={() => navigate(`/admin/questions/${q.id}`)}
+                    className={`hover:bg-surface-container-low transition-colors ${selected.has(q.id) ? 'bg-primary/5' : ''}`}
                   >
-                    <td className="px-4 py-3 max-w-xs">
+                    <td className="px-4 py-3">
+                      <input
+                        type="checkbox"
+                        checked={selected.has(q.id)}
+                        onChange={() => toggleOne(q.id)}
+                        onClick={e => e.stopPropagation()}
+                        className="cursor-pointer"
+                      />
+                    </td>
+                    <td
+                      className="px-4 py-3 max-w-xs cursor-pointer"
+                      onClick={() => navigate(`/admin/questions/${q.id}`)}
+                    >
                       <p className="truncate text-on-surface">{q.text}</p>
                       {q.topic && <p className="text-xs text-outline">{q.topic}</p>}
                     </td>

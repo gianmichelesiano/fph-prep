@@ -50,6 +50,34 @@ export async function getAreaQuestionCounts() {
   return counts
 }
 
+export async function getDifficultyDistribution() {
+  const { data, error } = await supabase
+    .from('questions')
+    .select('area, difficulty')
+    .not('difficulty', 'is', null)
+  if (error) return {}
+  const dist = {} // { area: { easy: N, medium: N, hard: N } }
+  ;(data || []).forEach(q => {
+    const area = q.area
+    if (!dist[area]) dist[area] = { easy: 0, medium: 0, hard: 0 }
+    if (q.difficulty) dist[area][q.difficulty] = (dist[area][q.difficulty] || 0) + 1
+  })
+  return dist
+}
+
+export async function getLanguageDistribution() {
+  const { data, error } = await supabase
+    .from('questions')
+    .select('lang')
+  if (error) return {}
+  const counts = {}
+  ;(data || []).forEach(q => {
+    const lang = q.lang || 'it'
+    counts[lang] = (counts[lang] || 0) + 1
+  })
+  return counts
+}
+
 export async function getRegistrationTrend(days = 30) {
   const since = new Date()
   since.setDate(since.getDate() - days)

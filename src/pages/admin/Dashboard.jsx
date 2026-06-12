@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AdminLayout from '../../components/admin/AdminLayout'
-import { getStats, getRegistrationTrend, getRecentActivity, getAreaQuestionCounts } from '../../lib/adminApi'
+import { getStats, getRegistrationTrend, getRecentActivity, getAreaQuestionCounts, getDifficultyDistribution, getLanguageDistribution } from '../../lib/adminApi'
 import { AREAS } from '../../data/areas'
 
 function timeAgo(dateStr) {
@@ -38,15 +38,26 @@ export default function AdminDashboard() {
   const [trend, setTrend] = useState([])
   const [activity, setActivity] = useState([])
   const [areaCounts, setAreaCounts] = useState({})
+  const [difficultyDist, setDifficultyDist] = useState({})
+  const [langDist, setLangDist] = useState({})
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    Promise.all([getStats(), getRegistrationTrend(30), getRecentActivity(5), getAreaQuestionCounts()])
-      .then(([s, t, a, counts]) => {
+    Promise.all([
+      getStats(),
+      getRegistrationTrend(30),
+      getRecentActivity(5),
+      getAreaQuestionCounts(),
+      getDifficultyDistribution(),
+      getLanguageDistribution(),
+    ])
+      .then(([s, t, a, counts, diff, langs]) => {
         setStats(s)
         setTrend(t)
         setActivity(a)
         setAreaCounts(counts)
+        setDifficultyDist(diff)
+        setLangDist(langs)
         setLoading(false)
       })
       .catch(() => setLoading(false))
@@ -387,6 +398,95 @@ export default function AdminDashboard() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Quality Insights */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+          {/* Difficulty Distribution */}
+          <div className="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 shadow-card">
+            <h4 className="font-headline font-bold text-lg text-on-surface mb-4">Difficulty Distribution</h4>
+            <p className="text-sm text-secondary mb-6">Domande per area e difficoltà</p>
+            {loading ? (
+              <div className="space-y-3">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="h-8 bg-surface-container rounded-lg animate-pulse" />
+                ))}
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-outline text-xs border-b border-outline-variant/20">
+                      <th className="pb-3 pr-4 text-left font-medium">Area</th>
+                      <th className="pb-3 px-2 text-center font-medium w-16">Easy</th>
+                      <th className="pb-3 px-2 text-center font-medium w-16">Medium</th>
+                      <th className="pb-3 px-2 text-center font-medium w-16">Hard</th>
+                      <th className="pb-3 pl-4 text-right font-medium w-16">Tot</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-outline-variant/10">
+                    {Object.entries(AREAS).map(([id, area]) => {
+                      const d = difficultyDist[Number(id)] || { easy: 0, medium: 0, hard: 0 }
+                      const total = d.easy + d.medium + d.hard
+                      return total > 0 ? (
+                        <tr key={id}>
+                          <td className="py-3 pr-4">
+                            <span className="flex items-center gap-2">
+                              <span className="w-2 h-2 rounded-full bg-primary" />
+                              <span className="text-xs font-medium text-on-surface">{area.name}</span>
+                            </span>
+                          </td>
+                          <td className="py-3 px-2 text-center text-xs font-medium text-green-700">{d.easy}</td>
+                          <td className="py-3 px-2 text-center text-xs font-medium text-amber-700">{d.medium}</td>
+                          <td className="py-3 px-2 text-center text-xs font-medium text-red-700">{d.hard}</td>
+                          <td className="py-3 pl-4 text-right text-xs font-bold text-on-surface">{total}</td>
+                        </tr>
+                      ) : null
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+
+          {/* Language Distribution + Topic Coverage */}
+          <div className="space-y-8">
+            <div className="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 shadow-card">
+              <h4 className="font-headline font-bold text-lg text-on-surface mb-4">Language Distribution</h4>
+              <p className="text-sm text-secondary mb-6">Domande per lingua</p>
+              {loading ? (
+                <div className="space-y-3">
+                  {[...Array(4)].map((_, i) => (
+                    <div key={i} className="h-8 bg-surface-container rounded-lg animate-pulse" />
+                  ))}
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {[
+                    { code: 'it', label: 'Italiano', color: 'bg-primary' },
+                    { code: 'de', label: 'Deutsch', color: 'bg-secondary' },
+                    { code: 'fr', label: 'Français', color: 'bg-tertiary' },
+                    { code: 'en', label: 'English', color: 'bg-error' },
+                  ].map(({ code, label, color }) => {
+                    const count = langDist[code] || 0
+                    const maxCount = Math.max(...Object.values(langDist), 1)
+                    const pct = Math.round((count / maxCount) * 100)
+                    return (
+                      <div key={code}>
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-sm font-medium text-on-surface">{label}</span>
+                          <span className="text-xs font-bold text-on-surface-variant">{count} Qs</span>
+                        </div>
+                        <div className="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                          <div className={`h-full ${color} rounded-full transition-all`} style={{ width: `${pct}%` }} />
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </div>

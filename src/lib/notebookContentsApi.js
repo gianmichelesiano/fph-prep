@@ -73,7 +73,7 @@ export async function fetchAreaCounts(lang = 'it') {
   return counts
 }
 
-// Admin: lista tutti i notebook con stato contenuto.
+// Admin: lista tutti i notebook con stato contenuto (per lingua) + copertura lingue.
 export async function fetchAllNotebooksAdmin(lang = 'it') {
   const { data, error } = await supabase
     .from('notebooks')
@@ -83,6 +83,8 @@ export async function fetchAllNotebooksAdmin(lang = 'it') {
   if (error) throw error
   return (data || []).map(n => {
     const content = (n.notebook_contents || []).find(c => c.lang === lang)
+    // Available languages from notebook_contents
+    const availableLangs = [...new Set((n.notebook_contents || []).map(c => c.lang).filter(Boolean))]
     return {
       id: n.id,
       key: n.key,
@@ -93,8 +95,27 @@ export async function fetchAllNotebooksAdmin(lang = 'it') {
       hasContent: !!content,
       isFree: content?.is_free ?? false,
       updatedAt: content?.updated_at ?? null,
+      availableLangs,
     }
   })
+}
+
+// Admin: copertura lingue per tutti i notebook.
+export async function fetchCoverageMatrix() {
+  const { data, error } = await supabase
+    .from('notebooks')
+    .select('id, key, title, area_id, notebook_contents(lang)')
+    .eq('active', true)
+    .order('area_id')
+    .order('title')
+  if (error) throw error
+  return (data || []).map(n => ({
+    id: n.id,
+    key: n.key,
+    title: n.title,
+    area_id: n.area_id,
+    langs: [...new Set((n.notebook_contents || []).map(c => c.lang).filter(Boolean))],
+  }))
 }
 
 // Admin: ottiene contenuto per editing.

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import { fetchSimulations, startSession, fetchUserSessions } from '../lib/api'
+import { countDueQuestions, startReviewSession } from '../lib/srs'
+import { fetchAllAreaProgress, fetchAreasWithProgress } from '../lib/areasApi'
 import { canAccessSimulation } from '../utils/access'
 import UserLayout from '../components/UserLayout'
 import { AREAS } from '../data/areas'
@@ -396,6 +398,10 @@ export default function Home() {
   const [starting, setStarting] = useState(null)
   const [error, setError] = useState(null)
   const [filter, setFilter] = useState('all') // 'all' | 'pending' | 'completed'
+  const [dueCount, setDueCount] = useState(0)
+  const [reviewLoading, setReviewLoading] = useState(false)
+  const [areaProgressList, setAreaProgressList] = useState([])
+  const [areasData, setAreasData] = useState([])
 
   useEffect(() => {
     if (!user) return
@@ -403,6 +409,9 @@ export default function Home() {
       .then(data => { setSimulations(data); setLoadingSims(false) })
       .catch(err => { setError(err.message); setLoadingSims(false) })
     fetchUserSessions(user.id).then(setSessions).catch(() => {})
+    countDueQuestions(user.id).then(setDueCount).catch(() => {})
+    fetchAllAreaProgress().then(setAreaProgressList).catch(() => {})
+    fetchAreasWithProgress().then(setAreasData).catch(() => {})
   }, [user])
 
   // Build progress map: sim.id → last session data
@@ -435,6 +444,12 @@ export default function Home() {
     return t('dashboard.greetingEvening')
   }
 
+  // Countdown esame
+  const examDate = profile?.exam_date
+  const daysUntilExam = examDate
+    ? Math.ceil((new Date(examDate) - new Date()) / (1000 * 60 * 60 * 24))
+    : null
+
   // Stats
   const completed = simulations.filter(s => progress[s.id]?.status === 'completed').length
   const total = simulations.length
@@ -460,6 +475,17 @@ export default function Home() {
     }
   }
 
+  async function handleStartReview() {
+    setReviewLoading(true)
+    try {
+      const { sessionId } = await startReviewSession(user.id)
+      navigate(`/quiz/${sessionId}`)
+    } catch (err) {
+      console.error(err)
+      setReviewLoading(false)
+    }
+  }
+
   // Sort + filter
   const sorted = [...simulations].sort((a, b) => a.title.localeCompare(b.title))
   const filtered = sorted.filter(s => {
@@ -481,6 +507,26 @@ export default function Home() {
             <p className="text-on-surface-variant font-medium text-sm md:text-base">
               {t('dashboard.subtitle')}
             </p>
+            {daysUntilExam !== null && (
+              <div className={`inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-full text-sm font-bold ${
+                daysUntilExam < 0
+                  ? 'bg-error/10 text-error'
+                  : daysUntilExam <= 7
+                    ? 'bg-error/10 text-error'
+                    : daysUntilExam <= 30
+                      ? 'bg-warning/10 text-warning'
+                      : 'bg-primary/10 text-primary'
+              }`}>
+                <span className="material-symbols-outlined text-[18px]">
+                  {daysUntilExam < 0 ? 'event_busy' : 'event'}
+                </span>
+                {daysUntilExam < 0
+                  ? t('dashboard.examPassed', 'Esame passato!')
+                  : daysUntilExam === 0
+                    ? t('dashboard.examToday', 'Esame oggi!')
+                    : t('dashboard.daysUntilExam', { days: daysUntilExam, defaultValue: '{{days}} giorni all\'esame' })}
+              </div>
+            )}
           </div>
           <div className="flex items-center gap-3">
             {isAdmin && (
@@ -500,6 +546,87 @@ export default function Home() {
             </button>
           </div>
         </header>
+
+        {/* Ripasso di oggi */}
+        {dueCount > 0 && (
+          <section className="mb-8">
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="material-symbols-outlined text-primary text-2xl">replay</span>
+                </div>
+                <div>
+                  <h3 className="font-headline font-bold text-lg text-on-surface">
+                    {t('dashboard.reviewToday', 'Ripasso di oggi')}
+                  </h3>
+                  <p className="text-sm text-on-surface-variant">
+                    {dueCount === 1
+                      ? t('dashboard.reviewOneDue', '1 domanda da ripassare')
+                      : t('dashboard.reviewCountDue', { count: dueCount, defaultValue: '{{count}} domande da ripassare' })}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={handleStartReview}
+                disabled={reviewLoading}
+                className="px-6 py-3 bg-primary text-on-primary rounded-full font-bold text-sm hover:bg-primary/90 transition-colors disabled:opacity-50 flex items-center gap-2 flex-shrink-0"
+              >
+                {reviewLoading ? (
+                  <span className="animate-spin w-4 h-4 border-2 border-on-primary border-t-transparent rounded-full" />
+                ) : (
+                  <span className="material-symbols-outlined text-lg">play_arrow</span>
+                )}
+                {t('dashboard.startReview', 'Ripassa ora')}
+              </button>
+            </div>
+          </section>
+        )}
+
+        {/* Piano studio */}
+        {daysUntilExam !== null && daysUntilExam > 0 && areasData.length > 0 && (
+          <section className="mb-8">
+            <div className="bg-surface-container-lowest rounded-xl shadow-[0px_12px_32px_rgba(25,28,29,0.05)] p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-headline font-bold text-lg text-on-surface flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary">strategy</span>
+                  {t('dashboard.studyPlan', 'Piano Studio')}
+                </h3>
+                <span className="text-xs text-on-surface-variant font-medium">
+                  {t('dashboard.studyDaysRemaining', { days: daysUntilExam, defaultValue: '{{days}} giorni rimanenti' })}
+                </span>
+              </div>
+
+              {/* Per-area progress bars */}
+              <div className="space-y-3">
+                {areasData.map(area => {
+                  const progress = areaProgressList.find(p => p.area_id === area.id)
+                  const studyDays = area.study_days || 12
+                  // Ideal progress = min(1, days_elapsed / total_days)
+                  // Simplified: show actual questions completed vs area question count
+                  const done = progress?.questions_completed || 0
+                  const pct = area.questions > 0 ? Math.min(100, Math.round((done / area.questions) * 100)) : 0
+
+                  return (
+                    <div key={area.id} className="flex items-center gap-3">
+                      <span className="text-xs font-medium text-on-surface-variant w-28 truncate flex-shrink-0">
+                        {area.name}
+                      </span>
+                      <div className="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                        <div
+                          className={`h-full rounded-full transition-all duration-500 ${pct >= 80 ? 'bg-green-500' : pct >= 40 ? 'bg-primary' : 'bg-warning'}`}
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                      <span className="text-xs font-bold text-on-surface-variant w-10 text-right flex-shrink-0">
+                        {pct}%
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Stats Grid */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">

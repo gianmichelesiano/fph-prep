@@ -27,6 +27,26 @@ export default function AdminUsers() {
     setUsers(prev => prev.map(u => u.id === updatedProfile.id ? updatedProfile : u))
   }
 
+  function handleExportCSV() {
+    const headers = ['full_name', 'email', 'is_premium', 'is_admin', 'is_blocked', 'created_at', 'preferred_lang', 'exam_date']
+    const rows = filtered.map(u =>
+      headers.map(h => {
+        const v = u[h]
+        if (typeof v === 'boolean') return v ? '1' : '0'
+        if (v === null || v === undefined) return ''
+        return String(v)
+      })
+    )
+    const csv = [headers.join(','), ...rows.map(r => r.map(c => `"${c.replace(/"/g, '""')}"`).join(','))].join('\n')
+    const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `utenti_fph_prep_${new Date().toISOString().split('T')[0]}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
 return (
     <AdminLayout>
       <div className="p-6">
@@ -35,6 +55,13 @@ return (
             <h2 className="font-headline font-bold text-2xl text-on-surface">Utenti</h2>
             <p className="text-sm text-secondary">{users.length} utenti registrati</p>
           </div>
+          <button
+            onClick={handleExportCSV}
+            className="px-4 py-2 bg-surface-container rounded-lg text-sm font-medium hover:bg-surface-container-high transition-colors flex items-center gap-2"
+          >
+            <span className="material-symbols-outlined text-[18px]">download</span>
+            Esporta CSV
+          </button>
         </div>
 
         {/* Filters */}

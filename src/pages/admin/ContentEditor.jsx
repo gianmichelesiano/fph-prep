@@ -8,6 +8,15 @@ import {
   uploadSummaryImage,
 } from '../../lib/notebookContentsApi'
 
+const LANGS = [
+  { code: 'it', label: 'IT', native: 'Italiano' },
+  { code: 'de', label: 'DE', native: 'Deutsch' },
+  { code: 'fr', label: 'FR', native: 'Français' },
+  { code: 'en', label: 'EN', native: 'English' },
+]
+
+const API_BASE = import.meta.env.VITE_ADMIN_API_URL || 'http://localhost:8005'
+
 export default function ContentEditor() {
   const { notebook_id } = useParams()
   const fileInputRef = useRef(null)
@@ -18,10 +27,13 @@ export default function ContentEditor() {
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [uploading, setUploading] = useState(false)
+  const [translating, setTranslating] = useState(false)
   const [msg, setMsg] = useState(null)
+  const [lang, setLang] = useState('it')
 
   useEffect(() => {
-    fetchContentForEdit(notebook_id, 'it')
+    setLoading(true)
+    fetchContentForEdit(notebook_id, lang)
       .then(({ notebook, content }) => {
         setNotebook(notebook)
         setMd(content.content_md || '')
@@ -33,7 +45,7 @@ export default function ContentEditor() {
         setMsg({ type: 'error', text: err.message })
         setLoading(false)
       })
-  }, [notebook_id])
+  }, [notebook_id, lang])
 
   async function handleSave() {
     setSaving(true)
@@ -41,7 +53,7 @@ export default function ContentEditor() {
     try {
       await upsertContent({
         notebook_id,
-        lang: 'it',
+        lang,
         content_md: md,
         is_free: isFree,
       })
@@ -50,6 +62,42 @@ export default function ContentEditor() {
       setMsg({ type: 'error', text: err.message })
     } finally {
       setSaving(false)
+    }
+  }
+
+  async function handleTranslateFromIT() {
+    setTranslating(true)
+    setMsg(null)
+    try {
+      // Fetch IT content
+      const { content: itContent } = await fetchContentForEdit(notebook_id, 'it')
+      if (!itContent?.content_md) {
+        setMsg({ type: 'error', text: 'Nessun contenuto italiano da tradurre.' })
+        setTranslating(false)
+        return
+      }
+
+      // Call translation endpoint on admin backend
+      const res = await fetch(`${API_BASE}/api/translate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text: itContent.content_md,
+          source_lang: 'it',
+          target_lang: lang,
+        }),
+      })
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: res.statusText }))
+        throw new Error(err.detail || 'Translation failed')
+      }
+      const data = await res.json()
+      setMd(data.translated_text)
+      setMsg({ type: 'success', text: `Tradotto da IT a ${lang.toUpperCase()}. Rivedi e salva.` })
+    } catch (err) {
+      setMsg({ type: 'error', text: err.message })
+    } finally {
+      setTranslating(false)
     }
   }
 
@@ -105,41 +153,73 @@ export default function ContentEditor() {
           Contents
         </Link>
 
-        <header className="mb-6 flex items-center justify-between flex-wrap gap-3">
-          <div>
-            <h1 className="font-headline font-bold text-2xl text-on-surface">{notebook.title}</h1>
-            <p className="text-xs text-on-surface-variant font-mono mt-1">{notebook.key} · Area {notebook.area_id}</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <label className="flex items-center gap-2 text-sm">
+        <header className="mb-6">
+          <div className="flex items-center justify-between flex-wrap gap-3 mb-3">
+            <div>
+              <h1 className="font-headline font-bold text-2xl text-on-surface">{notebook.title}</h1>
+              <p className="text-xs text-on-surface-variant font-mono mt-1">{notebook.key} · Area {notebook.area_id}</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <label className="flex items-center gap-2 text-sm">
+                <input
+                  type="checkbox"
+                  checked={isFree}
+                  onChange={e => setIsFree(e.target.checked)}
+                />
+                is_free
+              </label>
               <input
-                type="checkbox"
-                checked={isFree}
-                onChange={e => setIsFree(e.target.checked)}
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                className="hidden"
               />
-              is_free
-            </label>
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              onChange={handleImageUpload}
-              className="hidden"
-            />
-            <button
-              onClick={() => fileInputRef.current?.click()}
-              disabled={uploading}
-              className="px-3 py-2 rounded-lg bg-surface-container text-sm hover:bg-surface-container-high disabled:opacity-50"
-            >
-              {uploading ? 'Upload...' : '📎 Immagine'}
-            </button>
-            <button
-              onClick={handleSave}
-              disabled={saving}
-              className="px-4 py-2 rounded-lg bg-primary text-on-primary text-sm font-semibold disabled:opacity-50"
-            >
-              {saving ? 'Salvataggio...' : 'Salva'}
-            </button>
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                disabled={uploading}
+                className="px-3 py-2 rounded-lg bg-surface-container text-sm hover:bg-surface-container-high disabled:opacity-50"
+              >
+                {uploading ? 'Upload...' : '📎 Immagine'}
+              </button>
+              <button
+                onClick={handleSave}
+                disabled={saving}
+                className="px-4 py-2 rounded-lg bg-primary text-on-primary text-sm font-semibold disabled:opacity-50"
+              >
+                {saving ? 'Salvataggio...' : 'Salva'}
+              </button>
+            </div>
+          </div>
+
+          {/* Language selector + Translate */}
+          <div className="flex items-center gap-3 flex-wrap">
+            <div className="flex bg-surface-container rounded-lg p-0.5">
+              {LANGS.map(l => (
+                <button
+                  key={l.code}
+                  onClick={() => setLang(l.code)}
+                  className={`px-3 py-1.5 rounded-md text-xs font-bold transition-colors ${
+                    lang === l.code
+                      ? 'bg-primary text-on-primary'
+                      : 'text-on-surface-variant hover:text-on-surface'
+                  }`}
+                  title={l.native}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
+            {lang !== 'it' && (
+              <button
+                onClick={handleTranslateFromIT}
+                disabled={translating}
+                className="px-3 py-1.5 rounded-lg bg-tertiary/10 text-tertiary text-xs font-semibold hover:bg-tertiary/20 disabled:opacity-50 flex items-center gap-1"
+              >
+                <span className="material-symbols-outlined text-[14px]">translate</span>
+                {translating ? 'Traduzione...' : 'Traduci da IT'}
+              </button>
+            )}
           </div>
         </header>
 

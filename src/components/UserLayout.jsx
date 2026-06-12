@@ -1,11 +1,20 @@
+import { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
+import { countDueQuestions } from '../lib/srs'
 
 export default function UserLayout({ children }) {
   const navigate = useNavigate()
-  const { profile, signOut } = useAuth()
+  const { profile, signOut, user } = useAuth()
   const { t } = useTranslation()
+  const [reviewCount, setReviewCount] = useState(0)
+
+  useEffect(() => {
+    if (user) {
+      countDueQuestions(user.id).then(setReviewCount).catch(() => {})
+    }
+  }, [user])
 
   const initials = profile?.full_name
     ? profile.full_name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
@@ -13,10 +22,17 @@ export default function UserLayout({ children }) {
 
   const NAV = [
     { to: '/',         label: t('nav.dashboard'),  icon: 'dashboard',            end: true },
-    { to: '/study',    label: t('nav.study'),       icon: 'menu_book' },
+    { to: '/study',    label: t('nav.study'),       icon: 'menu_book',            badge: reviewCount },
     { to: '/stats',    label: t('nav.stats'),       icon: 'analytics' },
     { to: '/upgrade',  label: t('nav.upgrade'),     icon: 'workspace_premium' },
     { to: '/settings', label: t('nav.settings'),    icon: 'settings' },
+  ]
+
+  const BOTTOM_NAV = [
+    { to: '/',       icon: 'dashboard',       label: t('nav.dashboard') },
+    { to: '/study',  icon: 'menu_book',       label: t('nav.study'),     badge: reviewCount },
+    { to: '/stats',  icon: 'analytics',       label: t('nav.stats') },
+    { to: '/settings', icon: 'person',        label: t('nav.settings') },
   ]
 
   return (
@@ -50,7 +66,7 @@ export default function UserLayout({ children }) {
 
         {/* Navigation */}
         <nav className="flex-1 space-y-1">
-          {NAV.map(({ to, label, icon, end }) => (
+          {NAV.map(({ to, label, icon, end, badge }) => (
             <NavLink
               key={to}
               to={to}
@@ -64,7 +80,12 @@ export default function UserLayout({ children }) {
               }
             >
               <span className="material-symbols-outlined text-[20px]">{icon}</span>
-              {label}
+              <span className="flex-1">{label}</span>
+              {badge > 0 && (
+                <span className="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full min-w-[20px] text-center leading-tight">
+                  {badge}
+                </span>
+              )}
             </NavLink>
           ))}
         </nav>
@@ -98,8 +119,40 @@ export default function UserLayout({ children }) {
         </div>
       </aside>
 
+      {/* Bottom nav (mobile only) */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest border-t border-outline-variant/20 z-30 safe-area-bottom">
+        <div className="flex items-center justify-around h-16 px-2">
+          {BOTTOM_NAV.map(({ to, icon, label, badge }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              className={({ isActive }) =>
+                `flex flex-col items-center justify-center gap-0.5 min-w-0 flex-1 h-full transition-colors ${
+                  isActive
+                    ? 'text-primary'
+                    : 'text-outline hover:text-on-surface-variant'
+                }`
+              }
+            >
+              <span className="material-symbols-outlined text-[22px] relative">
+                {icon}
+                {badge > 0 && (
+                  <span className="absolute -top-1 -right-2 bg-primary text-on-primary text-[9px] font-bold px-1.5 py-0.5 rounded-full min-w-[16px] text-center leading-none">
+                    {badge}
+                  </span>
+                )}
+              </span>
+              <span className="text-[10px] font-medium leading-tight truncate max-w-[64px]">
+                {label}
+              </span>
+            </NavLink>
+          ))}
+        </div>
+      </nav>
+
       {/* Main content */}
-      <main className="flex-1 md:ml-64 min-h-screen">
+      <main className="flex-1 md:ml-64 min-h-screen pb-16 md:pb-0">
         {children}
       </main>
     </div>

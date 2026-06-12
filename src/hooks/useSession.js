@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { supabase } from '../lib/supabase'
 import { saveSessionProgress, completeSession, markQuestionsSeen } from '../lib/api'
+import { saveSRSResults } from '../lib/srs'
 
 const SAVE_DELAY = 5000 // salva ogni 5 secondi di inattività
 
@@ -72,7 +73,23 @@ export function useSession(sessionId) {
 
     const { data: { user } } = await supabase.auth.getUser()
     if (user) {
-      await markQuestionsSeen(user.id, questions.map(q => q.id))
+      const questionIds = questions.map(q => q.id)
+      await markQuestionsSeen(user.id, questionIds)
+      // Spaced repetition: save results for SM-2
+      const srsResults = questions
+        .filter(q => currentAnswers[q.id] !== undefined)
+        .map(q => {
+          const userAnswer = currentAnswers[q.id]
+          let isCorrect = false
+          if (q.type === 'multiple') {
+            isCorrect = userAnswer === q.correct
+          } else {
+            const ua = userAnswer || {}
+            isCorrect = q.items.every((item, i) => ua[i] === item.correct)
+          }
+          return { questionId: q.id, isCorrect }
+        })
+      await saveSRSResults(user.id, srsResults)
     }
 
     return { score, total }

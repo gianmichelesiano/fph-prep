@@ -1,4 +1,5 @@
 import { supabase } from './supabase'
+import { saveSRSResults } from './srs'
 
 // ===== AREE (con progresso utente) =====
 
@@ -201,6 +202,13 @@ export async function submitAreaQuiz(quizId, answers) {
         )
       }
     }
+
+    // Spaced repetition
+    const srsResults = results.map(r => ({
+      questionId: r.question_id,
+      isCorrect: r.is_correct,
+    }))
+    await saveSRSResults(userId, srsResults)
   }
 
   return { score, total: results.length, results }

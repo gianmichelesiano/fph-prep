@@ -4,17 +4,28 @@ import AdminLayout from '../../components/admin/AdminLayout'
 import { AREAS } from '../../data/areas'
 import { fetchAllNotebooksAdmin } from '../../lib/notebookContentsApi'
 
+const LANGS = [
+  { code: 'it', label: 'IT', native: 'Italiano' },
+  { code: 'de', label: 'DE', native: 'Deutsch' },
+  { code: 'fr', label: 'FR', native: 'Français' },
+  { code: 'en', label: 'EN', native: 'English' },
+]
+
+const LANG_FLAGS = { it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷', en: '🇬🇧' }
+
 export default function AdminContents() {
   const navigate = useNavigate()
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [filterArea, setFilterArea] = useState('all')
+  const [lang, setLang] = useState('it')
 
   useEffect(() => {
-    fetchAllNotebooksAdmin('it')
+    setLoading(true)
+    fetchAllNotebooksAdmin(lang)
       .then(data => { setItems(data); setLoading(false) })
       .catch(err => { console.error(err); setLoading(false) })
-  }, [])
+  }, [lang])
 
   const filtered = useMemo(() => {
     if (filterArea === 'all') return items
@@ -27,6 +38,16 @@ export default function AdminContents() {
     return { total, withContent }
   }, [items])
 
+  // Coverage stats per lingua
+  const coverageStats = useMemo(() => {
+    const s = {}
+    for (const l of LANGS) {
+      const withL = items.filter(i => i.availableLangs?.includes(l.code)).length
+      s[l.code] = { total: items.length, withContent: withL }
+    }
+    return s
+  }, [items])
+
   return (
     <AdminLayout>
       <div className="p-6 md:p-8 max-w-6xl mx-auto">
@@ -34,20 +55,56 @@ export default function AdminContents() {
           <div>
             <h1 className="font-headline font-bold text-2xl text-on-surface">Contents</h1>
             <p className="text-sm text-on-surface-variant mt-1">
-              {stats.withContent}/{stats.total} notebook con contenuto (IT)
+              {stats.withContent}/{stats.total} notebook con contenuto ({lang.toUpperCase()})
             </p>
           </div>
-          <select
-            value={filterArea}
-            onChange={e => setFilterArea(e.target.value)}
-            className="px-3 py-2 bg-surface-container rounded-lg text-sm"
-          >
-            <option value="all">Tutte le aree</option>
-            {Object.entries(AREAS).map(([id, a]) => (
-              <option key={id} value={id}>Area {id} — {a.name}</option>
-            ))}
-          </select>
+          <div className="flex items-center gap-3">
+            {/* Language selector */}
+            <div className="flex bg-surface-container rounded-lg p-0.5">
+              {LANGS.map(l => (
+                <button
+                  key={l.code}
+                  onClick={() => setLang(l.code)}
+                  className={`px-3 py-1.5 rounded-md text-xs font-bold transition-colors ${
+                    lang === l.code
+                      ? 'bg-primary text-on-primary'
+                      : 'text-on-surface-variant hover:text-on-surface'
+                  }`}
+                  title={l.native}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
+            <select
+              value={filterArea}
+              onChange={e => setFilterArea(e.target.value)}
+              className="px-3 py-2 bg-surface-container rounded-lg text-sm"
+            >
+              <option value="all">Tutte le aree</option>
+              {Object.entries(AREAS).map(([id, a]) => (
+                <option key={id} value={id}>Area {id} — {a.name}</option>
+              ))}
+            </select>
+          </div>
         </header>
+
+        {/* Coverage matrix */}
+        <div className="mb-6 grid grid-cols-4 gap-3">
+          {LANGS.map(l => {
+            const cs = coverageStats[l.code] || { total: 0, withContent: 0 }
+            const pct = cs.total > 0 ? Math.round((cs.withContent / cs.total) * 100) : 0
+            return (
+              <div key={l.code} className={`bg-surface-container-lowest rounded-xl p-4 text-center ${lang === l.code ? 'ring-2 ring-primary' : ''}`}>
+                <div className="text-lg mb-1">{LANG_FLAGS[l.code]}</div>
+                <div className="font-headline font-bold text-xl text-on-surface">{pct}%</div>
+                <div className="text-[10px] text-on-surface-variant uppercase tracking-wider mt-0.5">
+                  {l.native} ({cs.withContent}/{cs.total})
+                </div>
+              </div>
+            )
+          })}
+        </div>
 
         {loading ? (
           <div className="text-on-surface-variant">Caricamento...</div>
@@ -60,6 +117,7 @@ export default function AdminContents() {
                   <th className="px-4 py-3 font-semibold">Titolo</th>
                   <th className="px-4 py-3 font-semibold">Area</th>
                   <th className="px-4 py-3 font-semibold">Stato</th>
+                  <th className="px-4 py-3 font-semibold">Lingue</th>
                   <th className="px-4 py-3 font-semibold">Free</th>
                   <th className="px-4 py-3 font-semibold">Aggiornato</th>
                 </tr>
@@ -80,6 +138,26 @@ export default function AdminContents() {
                       ) : (
                         <span className="text-xs text-outline">✗ Vuoto</span>
                       )}
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-1">
+                        {LANGS.map(l => {
+                          const has = n.availableLangs?.includes(l.code)
+                          return (
+                            <span
+                              key={l.code}
+                              className={`text-xs px-1.5 py-0.5 rounded font-medium ${
+                                has
+                                  ? 'bg-green-100 text-green-800'
+                                  : 'bg-surface-container-highest text-outline'
+                              }`}
+                              title={has ? `${l.native}: presente` : `${l.native}: assente`}
+                            >
+                              {l.label}
+                            </span>
+                          )
+                        })}
+                      </div>
                     </td>
                     <td className="px-4 py-3">
                       {n.hasContent && n.isFree ? (
