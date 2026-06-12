@@ -125,7 +125,7 @@ export default function Quiz() {
       <div className="min-h-screen flex items-center justify-center bg-surface">
         <div className="text-center">
           <p className="text-on-surface-variant mb-4">{t('quiz.notFound', 'Sessione non trovata')}</p>
-          <button className="btn-primary" onClick={() => navigate('/')}>Home</button>
+          <button className="btn-primary" onClick={() => navigate('/')}>{t('quiz.home', 'Home')}</button>
         </div>
       </div>
     )
@@ -254,7 +254,7 @@ export default function Quiz() {
         </div>
 
         <aside className="hidden lg:block w-48 shrink-0">
-          <p className="text-xs text-outline font-semibold uppercase tracking-wider mb-3">Navigazione</p>
+          <p className="text-xs text-outline font-semibold uppercase tracking-wider mb-3">{t('quiz.navigation', 'Navigazione')}</p>
           <QuestionGrid questions={questions} answers={answers} currentIndex={currentIndex} goToIndex={goToIndex} />
           <p className="text-xs text-outline mt-3">{t('quiz.responsesCount', { answered, total: totalQ })}</p>
         </aside>

@@ -201,7 +201,9 @@
     "examMode": "Exam Mode",
     "practiceMode": "Practice Mode",
     "modeExamDesc": "Feedback at the end only, timer active",
-    "modePracticeDesc": "Immediate feedback, no timer"
+    "modePracticeDesc": "Immediate feedback, no timer",
+    "home": "Home",
+    "navigation": "Navigation"
   },
   "results": {
     "title": "Results",

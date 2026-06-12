@@ -201,7 +201,9 @@
     "examMode": "Mode Examen",
     "practiceMode": "Mode Pratique",
     "modeExamDesc": "Feedback à la fin seulement, minuteur actif",
-    "modePracticeDesc": "Feedback immédiat, pas de minuteur"
+    "modePracticeDesc": "Feedback immédiat, pas de minuteur",
+    "home": "Accueil",
+    "navigation": "Navigation"
   },
   "results": {
     "title": "Résultats",

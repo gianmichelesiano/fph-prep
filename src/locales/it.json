@@ -201,7 +201,9 @@
     "examMode": "Modalità Esame",
     "practiceMode": "Modalità Pratica",
     "modeExamDesc": "Feedback solo alla fine, timer attivo",
-    "modePracticeDesc": "Feedback immediato, nessun timer"
+    "modePracticeDesc": "Feedback immediato, nessun timer",
+    "home": "Home",
+    "navigation": "Navigazione"
   },
   "results": {
     "title": "Risultati",
