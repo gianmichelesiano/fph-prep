@@ -215,7 +215,9 @@
     "notFound": "Ergebnisse nicht gefunden",
     "question": "Frage",
     "unanswered": "Nicht beantwortet",
-    "yourAnswer": "Deine Antwort"
+    "yourAnswer": "Deine Antwort",
+    "retryErrors": "Fehler wiederholen ({{count}})",
+    "allCorrect": "Alle richtig! Großartig!"
   },
   "study": {
     "title": "Lernen",

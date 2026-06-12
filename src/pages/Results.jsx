@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { fetchSession } from '../lib/api'
+import { fetchSession, startRetrySession } from '../lib/api'
 import { AREAS } from '../data/areas'
 import { useAuth } from '../contexts/AuthContext'
 import MarkdownView from '../components/MarkdownView'
@@ -15,9 +15,10 @@ export default function Results() {
   const [session, setSession] = useState(null)
   const [loading, setLoading] = useState(true)
   const { t } = useTranslation()
-  const { profile } = useAuth()
+  const { profile, user } = useAuth()
   const isPremium = profile?.is_premium || profile?.is_admin
   const [contentFlags, setContentFlags] = useState({})
+  const [retrying, setRetrying] = useState(false)
 
   useEffect(() => {
     fetchSession(sessionId)
@@ -88,6 +89,30 @@ export default function Results() {
     }
     if (isCorrect) areaStats[a].correct++
   })
+
+  // Wrong question IDs for retry
+  const wrongQuestionIds = (questions || []).filter(q => {
+    const userAnswer = answers?.[q.id]
+    if (userAnswer === undefined || userAnswer === null) return true // unanswered counts as wrong
+    if (q.type === 'multiple') return userAnswer !== q.correct
+    return !(q.items || []).every((item, j) => (userAnswer || {})[j] === item.correct)
+  }).map(q => q.id)
+
+  const wrongCount = wrongQuestionIds.length
+  const allCorrect = wrongCount === 0 && (questions || []).length > 0
+
+  async function handleRetryErrors() {
+    if (!user?.id || retrying) return
+    setRetrying(true)
+    try {
+      localStorage.setItem('fph_quiz_mode', 'practice')
+      const session = await startRetrySession(user.id, wrongQuestionIds)
+      navigate(`/quiz/${session.id}`)
+    } catch (err) {
+      console.error(err)
+      setRetrying(false)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-surface text-on-surface">
@@ -261,10 +286,31 @@ export default function Results() {
           </div>
         )}
 
-        <div className="flex gap-3 mt-10 justify-center">
-          <button onClick={() => navigate('/')} className="btn-primary">
-            Torna alla home
+        <div className="flex gap-3 mt-10 justify-center flex-wrap">
+          <button onClick={() => navigate('/')} className="btn-secondary">
+            {t('results.home', 'Torna alla home')}
           </button>
+          {allCorrect ? (
+            <div className="w-full text-center mt-2">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-semibold">
+                <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>emoji_events</span>
+                {t('results.allCorrect', 'Tutte le risposte corrette! Ottimo lavoro!')}
+              </div>
+            </div>
+          ) : wrongCount > 0 ? (
+            <button
+              onClick={handleRetryErrors}
+              disabled={retrying}
+              className="btn-primary flex items-center gap-2"
+            >
+              {retrying ? (
+                <span className="animate-spin w-4 h-4 border-2 border-on-primary border-t-transparent rounded-full" />
+              ) : (
+                <span className="material-symbols-outlined text-sm">replay</span>
+              )}
+              {t('results.retryErrors', { count: wrongCount, defaultValue: `Riprova gli errori (${wrongCount})` })}
+            </button>
+          ) : null}
         </div>
       </main>
     </div>

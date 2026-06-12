@@ -66,6 +66,24 @@ export async function startSession(simulationId, userId) {
   return session
 }
 
+// Crea una sessione con domande specifiche (es. retry errori)
+export async function startRetrySession(userId, questionIds) {
+  if (!questionIds?.length) throw new Error('Nessuna domanda da ripetere')
+  const { data: session, error } = await supabase
+    .from('quiz_sessions')
+    .insert({
+      user_id: userId,
+      question_ids: questionIds,
+      answers: {},
+      current_index: 0,
+      status: 'in_progress',
+    })
+    .select()
+    .single()
+  if (error) throw error
+  return session
+}
+
 // Pesca domande per area_config e ritorna gli UUID ordinati (usato dall'admin al salvataggio)
 export async function pickQuestionsForSimulation(areaConfig) {
   const areas = Object.keys(areaConfig).map(Number).filter(a => Number(areaConfig[a]) > 0)

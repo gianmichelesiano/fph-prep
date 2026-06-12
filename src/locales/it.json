@@ -215,7 +215,9 @@
     "notFound": "Risultati non trovati",
     "question": "Domanda",
     "unanswered": "Non risposta",
-    "yourAnswer": "Tua risposta"
+    "yourAnswer": "Tua risposta",
+    "retryErrors": "Riprova gli errori ({{count}})",
+    "allCorrect": "Tutte le risposte corrette! Ottimo lavoro!"
   },
   "study": {
     "title": "Studia",
