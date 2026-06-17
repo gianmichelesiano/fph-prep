@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { supabase } from '../lib/supabase'
 
 const STORAGE_KEY = 'fph_exam_progress'
@@ -12,26 +12,7 @@ export function useProgress() {
   const [syncStatus, setSyncStatus] = useState('idle') // 'idle' | 'saving' | 'saved' | 'error'
   const saveTimer = useRef(null)
 
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      const u = session?.user ?? null
-      setUser(u)
-      if (u) loadFromSupabase(u.id)
-    })
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      const u = session?.user ?? null
-      setUser(u)
-      if (u) migrateAndLoad(u.id)
-    })
-    return () => subscription.unsubscribe()
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
-  }, [progress])
-
-  async function loadFromSupabase(userId) {
+  const loadFromSupabase = useCallback(async (userId) => {
     const { data, error } = await supabase
       .from('quiz_progress')
       .select('*')
@@ -51,9 +32,9 @@ export function useProgress() {
       }
     })
     setProgress(loaded)
-  }
+  }, [])
 
-  async function migrateAndLoad(userId) {
+  const migrateAndLoad = useCallback(async (userId) => {
     const local = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')
     const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
@@ -74,8 +55,27 @@ export function useProgress() {
         }
       }
     }
-    loadFromSupabase(userId)
-  }
+    await loadFromSupabase(userId)
+  }, [loadFromSupabase])
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      const u = session?.user ?? null
+      setUser(u)
+      if (u) loadFromSupabase(u.id)
+    })
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const u = session?.user ?? null
+      setUser(u)
+      if (u) migrateAndLoad(u.id)
+    })
+    return () => subscription.unsubscribe()
+  }, [loadFromSupabase, migrateAndLoad])
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
+  }, [progress])
 
   async function saveToSupabase(testId, data) {
     if (!user) return

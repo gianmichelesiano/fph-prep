@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
@@ -6,7 +6,18 @@ import UserLayout from '../components/UserLayout'
 import { fetchAreaDetail, fetchAreaQuestions, startAreaQuiz, submitAreaQuiz, fetchAreaProgress } from '../lib/areasApi'
 import { fetchNotebooksByArea } from '../lib/notebookContentsApi'
 
-const TABS = ['overview', 'questions', 'quiz', 'progress']
+const TABS = [
+  { key: 'theory',      icon: 'menu_book',       label: 'Teoria' },
+  { key: 'active_recall', icon: 'psychology',     label: 'Ripasso attivo' },
+  { key: 'exam_questions', icon: 'quiz',          label: "Domande d'esame" },
+  { key: 'errors',      icon: 'error',            label: 'Errori' },
+  { key: 'progress',    icon: 'trending_up',      label: 'Progresso' },
+]
+
+// Accent-insensitive normalize helper
+function normalize(s) {
+  return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+}
 
 export default function StudyArea() {
   const { area_id } = useParams()
@@ -14,15 +25,18 @@ export default function StudyArea() {
   const { t } = useTranslation()
   const { user } = useAuth()
   const areaId = Number(area_id)
+  const userId = user?.id
 
   const [area, setArea] = useState(null)
   const [topics, setTopics] = useState([])
   const [notebooks, setNotebooks] = useState([])
   const [questions, setQuestions] = useState([])
   const [progress, setProgress] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [tab, setTab] = useState('overview')
+  const [loadedAreaId, setLoadedAreaId] = useState(null)
+  const [tab, setTab] = useState('theory')
   const [error, setError] = useState(null)
+  const [notice, setNotice] = useState(null)
+  const loading = loadedAreaId !== areaId
 
   // Question bank filters
   const [filterTopic, setFilterTopic] = useState('')
@@ -34,13 +48,7 @@ export default function StudyArea() {
   const [quiz, setQuiz] = useState(null) // { quiz_id, questions, currentIndex, answers, startTime }
   const [quizResult, setQuizResult] = useState(null)
 
-  useEffect(() => {
-    loadData()
-  }, [areaId])
-
-  function loadData() {
-    setLoading(true)
-    setError(null)
+  const loadData = useCallback(() => {
     Promise.all([
       fetchAreaDetail(areaId),
       fetchAreaQuestions(areaId).catch(() => []),
@@ -53,22 +61,37 @@ export default function StudyArea() {
         setQuestions(qs)
         setProgress(prog)
         setNotebooks(nbs)
-        setLoading(false)
+        setError(null)
+        setNotice(null)
+        setLoadedAreaId(areaId)
       })
-      .catch(e => { setError(e.message); setLoading(false) })
-  }
+      .catch(e => { setError(e.message); setLoadedAreaId(areaId) })
+  }, [areaId])
 
-  function handleStartQuiz() {
-    startAreaQuiz(areaId, quizConfig)
+  useEffect(() => {
+    loadData()
+  }, [loadData])
+
+  function handleStartQuiz(configOverride = quizConfig, extraQuizState = {}) {
+    const { emptyMessage, ...quizMeta } = extraQuizState
+    setNotice(null)
+    startAreaQuiz(areaId, configOverride)
       .then(data => {
+        if (!data.questions.length) {
+          setQuiz(null)
+          setQuizResult(null)
+          setNotice(emptyMessage || t('study.noQuestionsForMode', 'Nessuna domanda disponibile per questa modalità.'))
+          return
+        }
         setQuiz({
           quiz_id: data.quiz_id,
           questions: data.questions,
           currentIndex: 0,
           answers: {},
           startTime: Date.now(),
+          ...quizMeta,
         })
-        setTab('quiz')
+        setTab('active_recall')
       })
       .catch(e => setError(e.message))
   }
@@ -116,16 +139,16 @@ export default function StudyArea() {
   // Content read tracking (client-side localStorage, will migrate to DB)
   const contentReadStats = useMemo(() => {
     const nbWithContent = notebooks.filter(n => n.hasContent)
-    if (!user?.id || nbWithContent.length === 0) {
+    if (!userId || nbWithContent.length === 0) {
       return { readCount: 0, total: nbWithContent.length, notebooks: nbWithContent.map(n => ({ ...n, isRead: false })) }
     }
     const enriched = nbWithContent.map(n => {
-      const isRead = !!localStorage.getItem(`fph_content_read_${user.id}_${n.id}`)
+      const isRead = !!localStorage.getItem(`fph_content_read_${userId}_${n.id}`)
       return { ...n, isRead }
     })
     const readCount = enriched.filter(n => n.isRead).length
     return { readCount, total: enriched.length, notebooks: enriched }
-  }, [notebooks, user?.id])
+  }, [notebooks, userId])
 
   if (loading) {
     return (
@@ -142,15 +165,10 @@ export default function StudyArea() {
       <UserLayout>
         <div className="max-w-5xl mx-auto px-4 md:px-8 py-6">
           <p className="text-on-surface-variant">{error || t('study.areaNotFound', 'Area non trovata.')}</p>
-          <Link to="/study" className="text-primary underline">← {t('study.backToAreas', 'Torna alle aree')}</Link>
+          <Link to="/study" className="text-primary underline">← {t('study.backToAreas', 'Torna ai ruoli')}</Link>
         </div>
       </UserLayout>
     )
-  }
-
-  // Accent-insensitive normalize helper
-  function normalize(s) {
-    return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
   }
 
   // Highlight matching text in question
@@ -195,27 +213,42 @@ export default function StudyArea() {
         </header>
 
         {/* Tabs */}
-        <div className="flex gap-1 border-b border-outline-variant/20 mb-6">
-          {TABS.map(tabKey => (
+        <div className="flex gap-1 border-b border-outline-variant/20 mb-6 overflow-x-auto">
+          {TABS.map(tabDef => (
             <button
-              key={tabKey}
-              onClick={() => { setTab(tabKey); setQuiz(null); setQuizResult(null) }}
-              className={`px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px capitalize ${
-                tab === tabKey
+              key={tabDef.key}
+              onClick={() => { setTab(tabDef.key); setQuiz(null); setQuizResult(null); setNotice(null) }}
+              className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px whitespace-nowrap ${
+                tab === tabDef.key
                   ? 'border-primary text-primary'
                   : 'border-transparent text-on-surface-variant hover:text-on-surface'
               }`}
             >
-              {tabKey === 'overview' && (t('study.overview', 'Panoramica'))}
-              {tabKey === 'questions' && (t('study.questionBank', 'Domande'))}
-              {tabKey === 'quiz' && (t('study.miniQuiz', 'Mini-Quiz'))}
-              {tabKey === 'progress' && (t('study.progress', 'Progresso'))}
+              <span className="material-symbols-outlined text-[18px]">{tabDef.icon}</span>
+              {tabDef.label}
             </button>
           ))}
         </div>
 
-        {/* Tab: Overview */}
-        {tab === 'overview' && (
+        {notice && (
+          <div className="mb-6 flex items-start justify-between gap-3 rounded-lg border border-primary/20 bg-primary/10 px-4 py-3 text-sm text-on-surface">
+            <div className="flex items-start gap-2">
+              <span className="material-symbols-outlined text-primary text-[18px] mt-0.5">info</span>
+              <span>{notice}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setNotice(null)}
+              className="text-on-surface-variant hover:text-on-surface"
+              aria-label={t('common.close', 'Chiudi')}
+            >
+              <span className="material-symbols-outlined text-[18px]">close</span>
+            </button>
+          </div>
+        )}
+
+        {/* Tab: Teoria */}
+        {tab === 'theory' && (
           <div>
             {area.description && (
               <div className="card mb-6">
@@ -224,13 +257,110 @@ export default function StudyArea() {
               </div>
             )}
 
+            {/* Notebooks / Contenuti come percorso di studio */}
+            {notebooks.length > 0 && (
+              <div className="card mb-6">
+                <h3 className="font-bold text-on-surface mb-4 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+                  {t('study.availableContent', 'Contenuti di teoria')} ({notebooks.length})
+                </h3>
+                <div className="divide-y divide-outline-variant/10">
+                  {notebooks.map((n, idx) => {
+                    const isRead = contentReadStats.notebooks.find(en => en.id === n.id)?.isRead
+                    let statusBadge = null
+                    if (!n.hasContent) {
+                      statusBadge = (
+                        <span className="text-[10px] text-outline uppercase tracking-wider px-2 py-0.5 rounded-full bg-surface-container-high">
+                          {t('study.notReady', 'In preparazione')}
+                        </span>
+                      )
+                    } else if (isRead) {
+                      statusBadge = (
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/10">
+                          {t('study.readLabel', 'Letto')}
+                        </span>
+                      )
+                    } else {
+                      statusBadge = (
+                        <span className="text-[10px] font-bold text-amber-600 uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-50">
+                          {t('study.unreadLabel', 'Da leggere')}
+                        </span>
+                      )
+                    }
+                    const accessBadge = n.hasContent && (
+                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${n.isFree ? 'bg-green-50 text-green-600' : 'bg-tertiary/10 text-tertiary'}`}>
+                        {n.isFree ? t('common.free', 'Free') : t('common.premium', 'Premium')}
+                      </span>
+                    )
+                    let ctaLabel = t('study.continueStudy', 'Studia')
+                    if (isRead) ctaLabel = t('study.reviewTopic', 'Ripassa')
+                    if (!n.hasContent) ctaLabel = '—'
+
+                    return (
+                      <button
+                        key={n.id}
+                        onClick={() => n.hasContent && navigate(`/study/topic/${n.key || n.id}`)}
+                        disabled={!n.hasContent}
+                        className="w-full text-left py-3 flex items-center justify-between gap-3 hover:bg-surface-container-low rounded-md px-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <span className={`text-[10px] font-bold text-outline shrink-0 w-5 text-right`}>{idx + 1}</span>
+                          <div className="min-w-0">
+                            <div className="font-semibold text-on-surface text-sm">{n.title}</div>
+                            {n.argomento && (
+                              <div className="text-xs text-on-surface-variant truncate mt-0.5">{n.argomento}</div>
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0">
+                          {accessBadge}
+                          {statusBadge}
+                          <span className="text-[11px] font-bold text-primary hidden sm:inline">{ctaLabel}</span>
+                          <span className="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+                        </div>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Obiettivi di apprendimento */}
             {area.learning_objectives && area.learning_objectives.length > 0 && (
               <div className="card mb-6">
                 <h3 className="font-bold text-on-surface mb-4">{t('study.learningObjectives', 'Obiettivi di apprendimento')}</h3>
-                <div className="space-y-2">
+                <div className="space-y-4">
                   {(Array.isArray(area.learning_objectives) ? area.learning_objectives : []).map((obj, idx) => {
-                    const text = typeof obj === 'string' ? obj : obj?.objective || ''
-                    const cat = typeof obj === 'object' ? obj?.category : null
+                    if (typeof obj === 'object' && obj !== null && obj.title && Array.isArray(obj.items)) {
+                      return (
+                        <div key={obj.id || idx}>
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="material-symbols-outlined text-[18px] text-primary shrink-0">check_circle_outline</span>
+                            <h4 className="font-semibold text-sm text-on-surface">{obj.title}</h4>
+                            {obj.weight && <span className="text-[10px] text-outline bg-surface-container-high px-1.5 py-0.5 rounded-full">{obj.weight}%</span>}
+                            {obj.verified_by && <span className="text-[10px] text-outline uppercase">{obj.verified_by}</span>}
+                          </div>
+                          <ul className="ml-7 space-y-1">
+                            {obj.items.map((item, i) => (
+                              <li key={i} className="text-sm text-on-surface-variant flex items-start gap-2">
+                                <span className="text-outline mt-1.5 shrink-0">–</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )
+                    }
+                    if (typeof obj === 'string') {
+                      return (
+                        <div key={idx} className="flex items-start gap-3 text-sm">
+                          <span className="material-symbols-outlined text-[18px] text-primary mt-0.5 shrink-0">check_circle_outline</span>
+                          <span className="text-on-surface">{obj}</span>
+                        </div>
+                      )
+                    }
+                    const text = obj?.objective || ''
+                    const cat = obj?.category
                     return (
                       <div key={idx} className="flex items-start gap-3 text-sm">
                         <span className="material-symbols-outlined text-[18px] text-primary mt-0.5 shrink-0">check_circle_outline</span>
@@ -245,14 +375,15 @@ export default function StudyArea() {
               </div>
             )}
 
+            {/* Topics come riferimento rapido */}
             {topics.length > 0 && (
-              <div className="card mb-6">
-                <h3 className="font-bold text-on-surface mb-4">{t('study.topicsCovered', 'Topics')} ({topics.length})</h3>
+              <div className="card">
+                <h3 className="font-bold text-on-surface mb-4">{t('study.topicsCovered', 'Argomenti del ruolo')} ({topics.length})</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {topics.map(topic => (
                     <div key={topic.id} className="p-3 rounded-lg bg-surface-container-low">
                       <button
-                        onClick={() => { setFilterTopic(topic.id); setTab('questions') }}
+                        onClick={() => { setFilterTopic(topic.id); setTab('exam_questions') }}
                         className="text-sm font-semibold text-primary hover:underline text-left"
                       >
                         {topic.name}
@@ -266,50 +397,121 @@ export default function StudyArea() {
               </div>
             )}
 
-            {notebooks.length > 0 && (
-              <div className="card">
-                <h3 className="font-bold text-on-surface mb-4">{t('study.availableContent', 'Contenuti disponibili')} ({notebooks.length})</h3>
-                <div className="divide-y divide-outline-variant/10">
-                  {notebooks.map(n => (
-                    <button
-                      key={n.id}
-                      onClick={() => navigate(`/study/topic/${n.key || n.id}`)}
-                      className="w-full text-left py-3 flex items-center justify-between gap-3 hover:bg-surface-container-low rounded-md px-2 transition-colors"
-                    >
-                      <div className="min-w-0">
-                        <div className="font-semibold text-on-surface text-sm">{n.title}</div>
-                        {n.argomento && (
-                          <div className="text-xs text-on-surface-variant truncate mt-0.5">{n.argomento}</div>
-                        )}
-                      </div>
-                      <div className="flex items-center gap-2 shrink-0">
-                        {n.hasContent ? (
-                          <span className="text-[10px] font-bold text-tertiary uppercase tracking-wider px-2 py-0.5 rounded-full bg-tertiary/10">
-                            {n.isFree ? 'Free' : 'Premium'}
-                          </span>
-                        ) : (
-                          <span className="text-[10px] text-outline uppercase tracking-wider">In preparazione</span>
-                        )}
-                        <span className="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {topics.length === 0 && notebooks.length === 0 && (
               <div className="card text-center py-8 text-on-surface-variant text-sm">
                 <span className="material-symbols-outlined text-[32px] block mb-2 text-outline">auto_awesome</span>
-                {t('study.noContentYet', 'Contenuti in arrivo. Il team sta preparando materiale per quest\'area.')}
+                {t('study.noContentYet', "Contenuti in arrivo. Il team sta preparando materiale per quest'area.")}
               </div>
             )}
           </div>
         )}
 
-        {/* Tab: Question Bank */}
-        {tab === 'questions' && (
+        {/* Tab: Domande d'esame */}
+        {tab === 'exam_questions' && (
           <div>
+            {/* Modalità di esercizio — preparazione guidata */}
+            <div className="card mb-6">
+              <h3 className="font-bold text-on-surface mb-4 flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-[20px]">bolt</span>
+                {t('study.exerciseModes', 'Modalità di esercizio')}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Domande mai viste */}
+                <button
+                  onClick={() => {
+                    handleStartQuiz(
+                      { question_count: 10, format: 'mixed', only_unseen: true },
+                      { emptyMessage: t('study.allQuestionsSeen', 'Hai già visto tutte le domande di questo ruolo!') }
+                    )
+                  }}
+                  className="p-4 rounded-xl border border-outline-variant/20 bg-surface-container-lowest hover:bg-surface-container-low transition-colors text-left group"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="material-symbols-outlined text-primary text-[20px]">new_releases</span>
+                    <span className="font-semibold text-on-surface text-sm">
+                      {t('study.unseenQuestions', 'Domande mai viste')}
+                    </span>
+                  </div>
+                  <p className="text-xs text-on-surface-variant ml-7">
+                    {t('study.unseenQuestionsDesc', '10 domande casuali che non hai ancora affrontato')}
+                  </p>
+                </button>
+
+                {/* Solo errori */}
+                <button
+                  onClick={() => {
+                    handleStartQuiz(
+                      { question_count: 10, format: 'mixed', only_errors: true },
+                      { emptyMessage: t('study.noErrorsForRole', 'Nessun errore trovato in questo ruolo! Ottimo lavoro.') }
+                    )
+                  }}
+                  className="p-4 rounded-xl border border-outline-variant/20 bg-surface-container-lowest hover:bg-surface-container-low transition-colors text-left group"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="material-symbols-outlined text-error text-[20px]">replay</span>
+                    <span className="font-semibold text-on-surface text-sm">
+                      {t('study.onlyErrorsMode', 'Solo errori')}
+                    </span>
+                  </div>
+                  <p className="text-xs text-on-surface-variant ml-7">
+                    {t('study.onlyErrorsDesc', 'Ripeti le domande a cui hai risposto male in precedenza')}
+                  </p>
+                </button>
+
+                {/* Mix del ruolo */}
+                <button
+                  onClick={() => {
+                    handleStartQuiz({ question_count: 20, format: 'mixed', only_errors: false })
+                  }}
+                  className="p-4 rounded-xl border border-outline-variant/20 bg-surface-container-lowest hover:bg-surface-container-low transition-colors text-left group"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="material-symbols-outlined text-primary text-[20px]">shuffle</span>
+                    <span className="font-semibold text-on-surface text-sm">
+                      {t('study.roleMix', 'Mix del ruolo')}
+                    </span>
+                  </div>
+                  <p className="text-xs text-on-surface-variant ml-7">
+                    {t('study.roleMixDesc', '20 domande casuali miste dal ruolo')}
+                  </p>
+                </button>
+
+                {/* Mini-esame ruolo (rimanda al task 8) */}
+                <button
+                  onClick={() => {
+                    // Mini-esame: 20 domande, nessun feedback immediato (feedback-only-at-end)
+                    handleStartQuiz(
+                      { question_count: 20, format: 'mixed', only_errors: false },
+                      { isMiniExam: true }
+                    )
+                  }}
+                  className="p-4 rounded-xl border-2 border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors text-left group"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="material-symbols-outlined text-primary text-[20px]">assignment</span>
+                    <span className="font-semibold text-on-surface text-sm">
+                      {t('study.roleMiniExam', 'Mini-esame del ruolo')}
+                    </span>
+                    <span className="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded-full">
+                      {t('study.recommended', 'Consigliato')}
+                    </span>
+                  </div>
+                  <p className="text-xs text-on-surface-variant ml-7">
+                    {t('study.roleMiniExamDesc', '20 domande, risultato solo alla fine. Simula un vero esame.')}
+                  </p>
+                </button>
+              </div>
+            </div>
+
+            {/* Separatore visivo */}
+            <div className="flex items-center gap-3 mb-4">
+              <hr className="flex-1 border-outline-variant/20" />
+              <span className="text-xs text-outline uppercase tracking-wider font-medium">
+                {t('study.questionBank', 'Banca domande')}
+              </span>
+              <hr className="flex-1 border-outline-variant/20" />
+            </div>
+
             {/* Search + Filters */}
             <div className="flex flex-col md:flex-row gap-3 mb-4">
               <div className="relative flex-1">
@@ -396,8 +598,8 @@ export default function StudyArea() {
           </div>
         )}
 
-        {/* Tab: Mini-Quiz */}
-        {tab === 'quiz' && !quiz && !quizResult && (
+        {/* Tab: Ripasso attivo */}
+        {tab === 'active_recall' && !quiz && !quizResult && (
           <div className="card max-w-lg">
             <h3 className="font-bold text-on-surface mb-4">{t('study.miniQuizConfig', 'Configura Mini-Quiz')}</h3>
 
@@ -467,8 +669,8 @@ export default function StudyArea() {
           </div>
         )}
 
-        {/* Quiz in progress */}
-        {tab === 'quiz' && quiz && (
+        {/* Quiz in progress (shared across active_recall and exam_questions) */}
+        {tab === 'active_recall' && quiz && (
           <QuizPlayer
             quiz={quiz}
             onAnswer={handleAnswer}
@@ -479,21 +681,138 @@ export default function StudyArea() {
           />
         )}
 
-        {/* Quiz results */}
-        {tab === 'quiz' && quizResult && (
+        {/* Quiz results (shared) */}
+        {tab === 'active_recall' && quizResult && (
           <QuizResults
             result={quizResult}
-            onBackToStudy={() => { setQuizResult(null); setTab('overview') }}
+            onBackToStudy={() => { setQuizResult(null); setTab('theory') }}
             onRetryErrors={() => {
-              setQuizConfig(prev => ({ ...prev, only_errors: true }))
+              const errorsConfig = { ...quizConfig, only_errors: true }
+              setQuizConfig(errorsConfig)
               setQuizResult(null)
-              handleStartQuiz()
+              handleStartQuiz(errorsConfig, {
+                emptyMessage: t('study.noErrorsForRole', 'Nessun errore trovato in questo ruolo! Ottimo lavoro.'),
+              })
             }}
             t={t}
           />
         )}
 
-        {/* Tab: Progress */}
+        {/* Tab: Errori e lacune */}
+        {tab === 'errors' && (
+          <div>
+            <div className="card mb-6">
+              <h3 className="font-bold text-on-surface mb-4 flex items-center gap-2">
+                <span className="material-symbols-outlined text-error text-[20px]">error</span>
+                {t('study.errorsAndGaps', 'Errori e lacune')}
+              </h3>
+
+              {progress && progress.questions_completed > 0 ? (
+                <div>
+                  {/* Stats */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6">
+                    <div className="bg-surface-container-low rounded-xl p-4">
+                      <div className="text-2xl font-bold text-on-surface">{progress.questions_completed || 0}</div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.questionsFaced', 'Affrontate')}</div>
+                    </div>
+                    <div className="bg-surface-container-low rounded-xl p-4">
+                      <div className="text-2xl font-bold text-primary">{progress.questions_correct || 0}</div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.correctQs', 'Corrette')}</div>
+                    </div>
+                    <div className="bg-surface-container-low rounded-xl p-4">
+                      <div className="text-2xl font-bold text-error">{Math.max(0, (progress.questions_completed || 0) - (progress.questions_correct || 0))}</div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.errorsCount', 'Errori')}</div>
+                    </div>
+                    <div className="bg-surface-container-low rounded-xl p-4">
+                      <div className="text-2xl font-bold text-on-surface">
+                        {progress.questions_completed > 0
+                          ? Math.round((progress.questions_correct / progress.questions_completed) * 100)
+                          : 0}%
+                      </div>
+                      <div className="text-xs text-on-surface-variant mt-1">{t('study.accuracy', 'Accuratezza')}</div>
+                    </div>
+                  </div>
+
+                  {/* CTA: Ripeti errori */}
+                  {progress.questions_completed > progress.questions_correct && (
+                    <button
+                      onClick={() => {
+                        const errorsConfig = { ...quizConfig, only_errors: true }
+                        setQuizConfig(errorsConfig)
+                        handleStartQuiz(errorsConfig, {
+                          emptyMessage: t('study.noErrorsForRole', 'Nessun errore trovato in questo ruolo! Ottimo lavoro.'),
+                        })
+                      }}
+                      className="btn-primary w-full sm:w-auto flex items-center gap-2"
+                    >
+                      <span className="material-symbols-outlined text-[18px]">replay</span>
+                      {t('study.retryErrors', 'Ripeti errori')}
+                    </button>
+                  )}
+
+                  {/* Stato vuoto positivo */}
+                  {progress.questions_completed <= progress.questions_correct && (
+                    <div className="text-center py-8">
+                      <span className="material-symbols-outlined text-[48px] block mb-3 text-green-500">celebration</span>
+                      <p className="text-sm font-semibold text-on-surface mb-1">
+                        {t('study.noErrors', 'Nessun errore!')}
+                      </p>
+                      <p className="text-xs text-on-surface-variant">
+                        {t('study.noErrorsDesc', 'Hai risposto correttamente a tutte le domande di questo ruolo. Continua così!')}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="text-center py-8">
+                  <span className="material-symbols-outlined text-[48px] block mb-3 text-outline">quiz</span>
+                  <p className="text-sm text-on-surface-variant mb-4">
+                    {t('study.noErrorsYet', 'Non hai ancora affrontato domande in questo ruolo. Inizia un quiz per tracciare i tuoi errori.')}
+                  </p>
+                  <button
+                    onClick={() => setTab('active_recall')}
+                    className="btn-primary text-sm"
+                  >
+                    {t('study.startQuiz', 'Inizia Quiz')}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Collegamento argomenti deboli */}
+            {topics.length > 0 && (
+              <div className="card">
+                <h3 className="font-bold text-on-surface mb-4">{t('study.topicsCovered', 'Argomenti da ripassare')}</h3>
+                <p className="text-xs text-on-surface-variant mb-4">
+                  {t('study.topicsHint', 'Clicca su un argomento per vedere le domande e studiare la teoria collegata.')}
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {topics.map(topic => (
+                    <div key={topic.id} className="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+                      <div>
+                        <button
+                          onClick={() => { setFilterTopic(topic.id); setTab('exam_questions') }}
+                          className="text-sm font-semibold text-primary hover:underline text-left"
+                        >
+                          {topic.name}
+                        </button>
+                      </div>
+                      <button
+                        onClick={() => { setFilterTopic(topic.id); setTab('exam_questions') }}
+                        className="text-xs text-primary font-bold flex items-center gap-1 shrink-0"
+                      >
+                        {t('study.viewQuestions', 'Domande')}
+                        <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Tab: Progresso */}
         {tab === 'progress' && (
           <div>
             {/* Questions progress */}
@@ -535,7 +854,7 @@ export default function StudyArea() {
                     <div className="w-full bg-surface-container-high rounded-full h-2">
                       <div
                         className="bg-primary h-2 rounded-full transition-all"
-                        style={{ width: `${questions.length > 0 ? Math.round((progress.questions_completed / questions.length) * 100) : 0}%` }}
+                        style={{ width: `${questions.length > 0 ? Math.min(100, Math.round((progress.questions_completed / questions.length) * 100)) : 0}%` }}
                       />
                     </div>
                   </div>
@@ -611,6 +930,19 @@ export default function StudyArea() {
   )
 }
 
+function isQuestionAnswered(question, answer) {
+  if (!question) return false
+  if (question.type === 'kprim') {
+    const keys = Object.keys(question.options || {})
+    return keys.length > 0 &&
+      answer !== null &&
+      typeof answer === 'object' &&
+      !Array.isArray(answer) &&
+      keys.every(key => typeof answer[key] === 'boolean')
+  }
+  return answer !== undefined && answer !== null && answer !== ''
+}
+
 function QuizPlayer({ quiz, onAnswer, onNext, onPrev, onSubmit, t }) {
   const q = quiz.questions[quiz.currentIndex]
   const answer = quiz.answers[q?.id]
@@ -618,8 +950,9 @@ function QuizPlayer({ quiz, onAnswer, onNext, onPrev, onSubmit, t }) {
   if (!q) return null
 
   const isLast = quiz.currentIndex === quiz.questions.length - 1
-  const answeredCount = Object.keys(quiz.answers).length
+  const answeredCount = quiz.questions.filter(question => isQuestionAnswered(question, quiz.answers[question.id])).length
   const allAnswered = answeredCount === quiz.questions.length
+  const answeredPct = quiz.questions.length > 0 ? Math.round((answeredCount / quiz.questions.length) * 100) : 0
 
   return (
     <div className="max-w-2xl">
@@ -635,7 +968,7 @@ function QuizPlayer({ quiz, onAnswer, onNext, onPrev, onSubmit, t }) {
       <div className="w-full bg-surface-container-high rounded-full h-1.5 mb-6">
         <div
           className="bg-primary h-1.5 rounded-full transition-all"
-          style={{ width: `${Math.round((answeredCount / quiz.questions.length) * 100)}%` }}
+          style={{ width: `${answeredPct}%` }}
         />
       </div>
 

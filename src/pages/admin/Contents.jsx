@@ -13,32 +13,57 @@ const LANGS = [
 ]
 
 const LANG_FLAGS = { it: '🇮🇹', de: '🇩🇪', fr: '🇫🇷', en: '🇬🇧' }
+const EMPTY_ITEMS = []
 
 export default function AdminContents() {
   const navigate = useNavigate()
-  const [items, setItems] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [itemsByLang, setItemsByLang] = useState({})
   const [filterArea, setFilterArea] = useState('all')
   const [lang, setLang] = useState('it')
   const [tab, setTab] = useState('notebooks')
   const [resources, setResources] = useState([])
-  const [resourcesLoading, setResourcesLoading] = useState(false)
+  const [resourcesLoaded, setResourcesLoaded] = useState(false)
   const [resourceSearch, setResourceSearch] = useState('')
+  const hasLoadedLang = Object.prototype.hasOwnProperty.call(itemsByLang, lang)
+  const items = itemsByLang[lang] || EMPTY_ITEMS
+  const loading = !hasLoadedLang
+  const resourcesLoading = tab === 'resources' && !resourcesLoaded
 
   useEffect(() => {
-    setLoading(true)
+    if (hasLoadedLang) return
+    let cancelled = false
     fetchAllNotebooksAdmin(lang)
-      .then(data => { setItems(data); setLoading(false) })
-      .catch(err => { console.error(err); setLoading(false) })
-  }, [lang])
+      .then(data => {
+        if (!cancelled) {
+          setItemsByLang(prev => ({ ...prev, [lang]: data }))
+        }
+      })
+      .catch(err => {
+        console.error(err)
+        if (!cancelled) {
+          setItemsByLang(prev => ({ ...prev, [lang]: [] }))
+        }
+      })
+    return () => { cancelled = true }
+  }, [lang, hasLoadedLang])
 
   useEffect(() => {
-    if (tab !== 'resources') return
-    setResourcesLoading(true)
+    if (tab !== 'resources' || resourcesLoaded) return
+    let cancelled = false
     fetchResources({ limit: 500 })
-      .then(data => { setResources(data || []); setResourcesLoading(false) })
-      .catch(() => setResourcesLoading(false))
-  }, [tab])
+      .then(data => {
+        if (!cancelled) {
+          setResources(data || [])
+          setResourcesLoaded(true)
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setResourcesLoaded(true)
+        }
+      })
+    return () => { cancelled = true }
+  }, [tab, resourcesLoaded])
 
   const filteredResources = useMemo(() => {
     if (!resourceSearch.trim()) return resources
@@ -103,9 +128,9 @@ export default function AdminContents() {
               onChange={e => setFilterArea(e.target.value)}
               className="px-3 py-2 bg-surface-container rounded-lg text-sm"
             >
-              <option value="all">Tutte le aree</option>
+              <option value="all">Tutti i ruoli</option>
               {Object.entries(AREAS).map(([id, a]) => (
-                <option key={id} value={id}>Area {id} — {a.name}</option>
+                <option key={id} value={id}>Ruolo {id} — {a.name}</option>
               ))}
             </select>
           </div>
@@ -160,7 +185,7 @@ export default function AdminContents() {
                 <tr className="text-left text-on-surface-variant">
                   <th className="px-4 py-3 font-semibold">Key</th>
                   <th className="px-4 py-3 font-semibold">Titolo</th>
-                  <th className="px-4 py-3 font-semibold">Area</th>
+                  <th className="px-4 py-3 font-semibold">Ruolo</th>
                   <th className="px-4 py-3 font-semibold">Stato</th>
                   <th className="px-4 py-3 font-semibold">Lingue</th>
                   <th className="px-4 py-3 font-semibold">Free</th>

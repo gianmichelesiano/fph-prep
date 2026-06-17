@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import { supabase } from '../lib/supabase'
@@ -15,12 +15,9 @@ export default function Settings() {
   const { t, i18n } = useTranslation()
   const { user, profile, refreshProfile } = useAuth()
   const [saved, setSaved] = useState(false)
-  const [examDate, setExamDate] = useState(profile?.exam_date || '')
+  const [examDateDraft, setExamDateDraft] = useState(null)
   const [examSaved, setExamSaved] = useState(false)
-
-  useEffect(() => {
-    if (profile?.exam_date) setExamDate(profile.exam_date)
-  }, [profile?.exam_date])
+  const examDate = examDateDraft ?? profile?.exam_date ?? ''
 
   async function handleSelect(code) {
     await i18n.changeLanguage(code)
@@ -77,7 +74,7 @@ export default function Settings() {
                 <input
                   type="date"
                   value={examDate}
-                  onChange={e => setExamDate(e.target.value)}
+                  onChange={e => setExamDateDraft(e.target.value)}
                   className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl text-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                 />
               </div>

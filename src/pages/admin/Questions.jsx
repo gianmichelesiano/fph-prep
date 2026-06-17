@@ -230,7 +230,7 @@ export default function AdminQuestions() {
                   </th>
                   <th className="px-4 py-3 text-left">Testo</th>
                   <th className="px-4 py-3 text-left">Tipo</th>
-                  <th className="px-4 py-3 text-left">Area</th>
+                  <th className="px-4 py-3 text-left">Ruolo</th>
                   <th className="px-4 py-3 text-left">Stato</th>
                   <th className="px-4 py-3 text-left">Expert</th>
                   <th className="px-4 py-3 text-left">Azioni</th>

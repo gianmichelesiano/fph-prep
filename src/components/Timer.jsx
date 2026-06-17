@@ -3,7 +3,10 @@ import { useState, useEffect, useRef } from 'react'
 export default function Timer({ minutes, onExpire }) {
   const [seconds, setSeconds] = useState(minutes * 60)
   const ref = useRef(onExpire)
-  ref.current = onExpire
+
+  useEffect(() => {
+    ref.current = onExpire
+  }, [onExpire])
 
   useEffect(() => {
     const id = setInterval(() => {

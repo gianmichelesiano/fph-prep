@@ -138,7 +138,7 @@ export default function AdminDashboard() {
               className="px-4 py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-xl text-sm font-medium shadow-card hover:opacity-90 transition-opacity"
               onClick={() => navigate('/admin/simulations')}
             >
-              Manage Areas
+              Gestisci Ruoli
             </button>
           </div>
         </div>
@@ -356,7 +356,7 @@ export default function AdminDashboard() {
             <div className="flex items-center justify-between mb-8">
               <div>
                 <h4 className="font-headline font-bold text-lg text-on-surface">Content Health</h4>
-                <p className="text-sm text-secondary">Question distribution by area</p>
+                <p className="text-sm text-secondary">Distribuzione domande per ruolo</p>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -407,7 +407,7 @@ export default function AdminDashboard() {
           {/* Difficulty Distribution */}
           <div className="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 shadow-card">
             <h4 className="font-headline font-bold text-lg text-on-surface mb-4">Difficulty Distribution</h4>
-            <p className="text-sm text-secondary mb-6">Domande per area e difficoltà</p>
+            <p className="text-sm text-secondary mb-6">Domande per ruolo e difficoltà</p>
             {loading ? (
               <div className="space-y-3">
                 {[...Array(5)].map((_, i) => (
@@ -419,7 +419,7 @@ export default function AdminDashboard() {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="text-outline text-xs border-b border-outline-variant/20">
-                      <th className="pb-3 pr-4 text-left font-medium">Area</th>
+                      <th className="pb-3 pr-4 text-left font-medium">Ruolo</th>
                       <th className="pb-3 px-2 text-center font-medium w-16">Easy</th>
                       <th className="pb-3 px-2 text-center font-medium w-16">Medium</th>
                       <th className="pb-3 px-2 text-center font-medium w-16">Hard</th>

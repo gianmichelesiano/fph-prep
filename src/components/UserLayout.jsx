@@ -21,18 +21,19 @@ export default function UserLayout({ children }) {
     : profile?.email?.slice(0, 2).toUpperCase() || '?'
 
   const NAV = [
-    { to: '/',         label: t('nav.dashboard'),  icon: 'dashboard',            end: true },
-    { to: '/study',    label: t('nav.study'),       icon: 'menu_book',            badge: reviewCount },
-    { to: '/stats',    label: t('nav.stats'),       icon: 'analytics' },
-    { to: '/upgrade',  label: t('nav.upgrade'),     icon: 'workspace_premium' },
-    { to: '/settings', label: t('nav.settings'),    icon: 'settings' },
+    { to: '/',              label: t('nav.home'),            icon: 'home',                  end: true },
+    { to: '/study',         label: t('nav.study'),           icon: 'menu_book',             badge: reviewCount },
+    { to: '/simulations',   label: t('nav.examSimulation'),  icon: 'assignment' },
+    { to: '/stats',         label: t('nav.stats'),           icon: 'analytics' },
+    { to: '/upgrade',       label: t('nav.upgrade'),         icon: 'workspace_premium' },
+    { to: '/settings',      label: t('nav.settings'),        icon: 'settings' },
   ]
 
   const BOTTOM_NAV = [
-    { to: '/',       icon: 'dashboard',       label: t('nav.dashboard') },
-    { to: '/study',  icon: 'menu_book',       label: t('nav.study'),     badge: reviewCount },
-    { to: '/stats',  icon: 'analytics',       label: t('nav.stats') },
-    { to: '/settings', icon: 'person',        label: t('nav.settings') },
+    { to: '/',             icon: 'home',             label: t('nav.home') },
+    { to: '/study',        icon: 'menu_book',        label: t('nav.study'),     badge: reviewCount },
+    { to: '/simulations',  icon: 'assignment',       label: t('nav.examSimulation') },
+    { to: '/stats',        icon: 'analytics',        label: t('nav.stats') },
   ]
 
   return (

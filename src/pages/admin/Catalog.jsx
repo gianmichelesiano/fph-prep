@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import AdminLayout from '../../components/admin/AdminLayout'
 import { fetchAreas, updateArea, fetchNotebooks, createNotebook, updateNotebook, deleteNotebook } from '../../lib/adminApi'
 
-const TABS = ['Areas', 'Notebooks']
+const TABS = ['Ruoli', 'Notebooks']
 
 export default function AdminCatalog() {
-  const [tab, setTab] = useState('Areas')
+  const [tab, setTab] = useState('Ruoli')
   const [areas, setAreas] = useState([])
   const [notebooks, setNotebooks] = useState([])
   const [loading, setLoading] = useState(true)
@@ -23,7 +23,7 @@ export default function AdminCatalog() {
       <div className="p-6">
         <div className="mb-6">
           <h2 className="font-headline font-bold text-2xl text-on-surface">Catalog</h2>
-          <p className="text-sm text-secondary">Gestisci aree e notebook NotebookLM</p>
+          <p className="text-sm text-secondary">Gestisci ruoli e notebook NotebookLM</p>
         </div>
 
         {/* Tab switcher */}
@@ -51,7 +51,7 @@ export default function AdminCatalog() {
           <div className="text-sm text-outline">Caricamento...</div>
         ) : (
           <>
-            {tab === 'Areas' && (
+            {tab === 'Ruoli' && (
               <AreasTab areas={areas} onUpdate={updated => setAreas(prev => prev.map(a => a.id === updated.id ? updated : a))} />
             )}
             {tab === 'Notebooks' && (
@@ -262,7 +262,7 @@ function NotebooksTab({ notebooks, areas, onAdd, onUpdate, onDelete }) {
             <input className="input w-full" placeholder="Titolo notebook" value={newNb.title} onChange={e => setNewNb(p => ({ ...p, title: e.target.value }))} />
           </div>
           <div>
-            <label className="text-xs text-outline mb-1 block">Area</label>
+            <label className="text-xs text-outline mb-1 block">Ruolo</label>
             <select className="input w-full" value={newNb.area_id} onChange={e => setNewNb(p => ({ ...p, area_id: e.target.value }))}>
               <option value="">— nessuna —</option>
               {areas.map(a => <option key={a.id} value={a.id}>{a.id} – {a.name}</option>)}
@@ -286,7 +286,7 @@ function NotebooksTab({ notebooks, areas, onAdd, onUpdate, onDelete }) {
             <tr className="border-b border-outline-variant/20 text-outline text-xs uppercase tracking-wide">
               <th className="text-left px-4 py-3 w-32">Key</th>
               <th className="text-left px-4 py-3">Titolo</th>
-              <th className="text-left px-4 py-3 w-48">Area</th>
+              <th className="text-left px-4 py-3 w-48">Ruolo</th>
               <th className="text-left px-4 py-3">Argomento</th>
               <th className="w-20" />
             </tr>

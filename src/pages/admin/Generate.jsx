@@ -125,7 +125,7 @@ export default function AdminGenerate() {
         <div className="card mb-6">
           <div className="grid grid-cols-3 gap-4 mb-4">
             <div>
-              <label className="block text-sm font-semibold text-on-surface-variant mb-1">Area</label>
+              <label className="block text-sm font-semibold text-on-surface-variant mb-1">Ruolo</label>
               <select value={form.area} onChange={e => setField('area', Number(e.target.value))} className="input w-full">
                 {Object.entries(AREAS).map(([k, v]) => (
                   <option key={k} value={k}>R{k} – {v.name}</option>

@@ -147,6 +147,45 @@ function QuizQuestion({ q, index }) {
   )
 }
 
+function ReadStatusBadge({ contentId, userId, t }) {
+  const [isRead, setIsRead] = useState(() => {
+    if (!userId || !contentId) return false
+    try {
+      return !!localStorage.getItem(`fph_content_read_${userId}_${contentId}`)
+    } catch { return false }
+  })
+
+  function toggleRead() {
+    if (!userId || !contentId) return
+    const key = `fph_content_read_${userId}_${contentId}`
+    try {
+      if (isRead) {
+        localStorage.removeItem(key)
+        setIsRead(false)
+      } else {
+        localStorage.setItem(key, new Date().toISOString())
+        setIsRead(true)
+      }
+    } catch {}
+  }
+
+  return (
+    <button
+      onClick={toggleRead}
+      className={`flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full transition-colors ${
+        isRead
+          ? 'bg-primary/10 text-primary'
+          : 'bg-amber-50 text-amber-600'
+      }`}
+    >
+      <span className="material-symbols-outlined text-[14px]" style={isRead ? { fontVariationSettings: "'FILL' 1" } : {}}>
+        {isRead ? 'check_circle' : 'auto_stories'}
+      </span>
+      {isRead ? t('study.readLabel', 'Letto') : t('study.unreadLabel', 'Da leggere')}
+    </button>
+  )
+}
+
 function StudyPathSection({ artifacts }) {
   const { t } = useTranslation()
   const [active, setActive] = useState(null)
@@ -278,15 +317,6 @@ export default function StudyTopic() {
       .catch(() => {})
   }, [data?.area_id])
 
-  // Track content read via localStorage (client-side, will migrate to DB)
-  useEffect(() => {
-    if (data?.id && user?.id) {
-      try {
-        localStorage.setItem(`fph_content_read_${user.id}_${data.id}`, new Date().toISOString())
-      } catch {}
-    }
-  }, [data?.id, user?.id])
-
   useEffect(() => {
     if (!data?.id) return
     fetchStudyPath(data.id)
@@ -330,7 +360,7 @@ export default function StudyTopic() {
             {t('study.topicNotFound', 'Topic non trovato o contenuto non ancora disponibile.')}
           </p>
           <Link to="/study" className="text-primary underline">
-            ← {t('study.backToAreas', 'Torna alle aree')}
+            ← {t('study.backToAreas', 'Torna ai ruoli')}
           </Link>
         </div>
       </UserLayout>
@@ -358,6 +388,20 @@ export default function StudyTopic() {
         </nav>
 
         <header className="mb-6">
+          <div className="flex items-center gap-2 mb-3">
+            {data.content && (
+              <ReadStatusBadge contentId={data.id} userId={user?.id} t={t} />
+            )}
+            {data.content?.is_free ? (
+              <span className="text-[10px] font-bold text-green-600 uppercase tracking-wider px-2 py-0.5 rounded-full bg-green-50">
+                {t('common.free', 'Free')}
+              </span>
+            ) : data.content ? (
+              <span className="text-[10px] font-bold text-tertiary uppercase tracking-wider px-2 py-0.5 rounded-full bg-tertiary/10">
+                {t('common.premium', 'Premium')}
+              </span>
+            ) : null}
+          </div>
           <h1 className="font-headline font-bold text-3xl text-on-surface">
             {data.title}
           </h1>
@@ -377,6 +421,80 @@ export default function StudyTopic() {
               <article>
                 <MarkdownView content={data.content.content_md} />
               </article>
+            )}
+
+            {/* Post-content CTA actions */}
+            {data.content && (
+              <div className="mt-8 p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/30">
+                <h3 className="font-headline font-bold text-lg text-on-surface mb-4">
+                  {t('study.whatNext', 'Cosa vuoi fare ora?')}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {nextNotebook?.hasContent ? (
+                    <Link
+                      to={`/study/topic/${nextNotebook.key}`}
+                      className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors group"
+                    >
+                      <span className="material-symbols-outlined text-primary text-[24px]">arrow_forward</span>
+                      <div>
+                        <div className="text-sm font-semibold text-on-surface">
+                          {t('study.nextTopic', 'Prossimo argomento')}
+                        </div>
+                        <div className="text-xs text-on-surface-variant truncate max-w-[180px]">
+                          {nextNotebook.title}
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className="flex items-center gap-3 p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 opacity-50">
+                      <span className="material-symbols-outlined text-outline text-[24px]">arrow_forward</span>
+                      <div>
+                        <div className="text-sm font-semibold text-on-surface">
+                          {t('study.nextTopic', 'Prossimo argomento')}
+                        </div>
+                        <div className="text-xs text-on-surface-variant">
+                          {t('study.noNextTopic', 'Nessun altro argomento')}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <a
+                    href={`/study/area/${data.area_id}`}
+                    onClick={e => { e.preventDefault(); navigate(`/study/area/${data.area_id}`) }}
+                    className="flex items-center gap-3 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 hover:bg-surface-container-low transition-colors group"
+                  >
+                    <span className="material-symbols-outlined text-primary text-[24px]">quiz</span>
+                    <div>
+                      <div className="text-sm font-semibold text-on-surface">
+                        {t('study.questionsOnRole', 'Domande sul ruolo')}
+                      </div>
+                      <div className="text-xs text-on-surface-variant">
+                        {t('study.questionsOnRoleDesc', 'Mettiti alla prova')}
+                      </div>
+                    </div>
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      const readKey = `fph_content_read_${user?.id}_${data.id}`
+                      try { localStorage.setItem(readKey, new Date().toISOString()) } catch {}
+                      navigate(`/study/area/${data.area_id}`)
+                    }}
+                    className="flex items-center gap-3 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 hover:bg-surface-container-low transition-colors group"
+                  >
+                    <span className="material-symbols-outlined text-primary text-[24px]">arrow_back</span>
+                    <div>
+                      <div className="text-sm font-semibold text-on-surface">
+                        {t('study.backToRole', 'Torna al ruolo')}
+                      </div>
+                      <div className="text-xs text-on-surface-variant">
+                        {areaName || `Area ${data.area_id}`}
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
             )}
 
             <StudyPathSection artifacts={studyPath} />

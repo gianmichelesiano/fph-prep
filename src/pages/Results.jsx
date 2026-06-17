@@ -158,7 +158,7 @@ export default function Results() {
 
         {Object.keys(areaStats).length > 0 && (
           <div className="mb-10">
-            <h3 className="font-headline font-bold text-lg mb-4">Risultati per area</h3>
+            <h3 className="font-headline font-bold text-lg mb-4">Risultati per ruolo</h3>
             <div className="space-y-3">
               {Object.entries(areaStats).map(([areaId, stat]) => {
                 const area = AREAS[Number(areaId)]

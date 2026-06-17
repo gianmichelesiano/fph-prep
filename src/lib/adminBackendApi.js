@@ -261,6 +261,21 @@ export function fetchPipelineJobs(params) {
   return request(`/pipeline/jobs${qs(params)}`)
 }
 
+// ===== FRONTEND CONTENT STATUS =====
+
+/**
+ * GET /api/frontend/areas/{areaId}/content-status
+ * Ritorna stato contenuti (topic count, completeness, ecc.) per un'area.
+ * Se il backend non risponde (rete, CORS, 5xx), ritorna null senza lanciare.
+ */
+export async function fetchAreaContentStatus(areaId) {
+  try {
+    return await request(`/api/frontend/areas/${areaId}/content-status`)
+  } catch {
+    return null
+  }
+}
+
 // ===== TRANSLATE =====
 
 /** POST /api/translate */

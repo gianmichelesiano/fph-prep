@@ -187,7 +187,7 @@ export default function TopicDetail() {
       <div className="p-6 max-w-5xl">
         <Link to={`/admin/areas/${area_id}`} className="text-sm text-primary flex items-center gap-1 mb-4">
           <span className="material-symbols-outlined text-[16px]">arrow_back</span>
-          Torna all'area
+          Torna al ruolo
         </Link>
 
         <h2 className="font-headline font-bold text-2xl text-on-surface mb-6">Topic #{topic_id} — Artifact</h2>

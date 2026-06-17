@@ -213,7 +213,7 @@ export default function AdminSimulationEditor() {
           <div>
             <div className="flex items-center justify-between mb-3">
               <label className="block text-sm font-semibold text-on-surface-variant">
-                Distribuzione domande per area
+                Distribuzione domande per ruolo
               </label>
               {!isExam && (
                 <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${totalCustomQuestions() > 100 ? 'bg-error-container text-error' : 'bg-secondary-container text-on-secondary-container'}`}>
@@ -226,7 +226,7 @@ export default function AdminSimulationEditor() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-outline-variant/20 text-xs text-outline uppercase">
-                    <th className="text-left px-4 py-2">Area</th>
+                    <th className="text-left px-4 py-2">Ruolo</th>
                     <th className="text-left px-4 py-2 w-28">Domande</th>
                   </tr>
                 </thead>

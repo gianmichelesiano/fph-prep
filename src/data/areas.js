@@ -1,4 +1,4 @@
-// FPH Offizin exam areas with design-system color tokens
+// FPH Offizin — ruoli d'esame con design-system color tokens
 // Source of truth: public.areas table in Supabase
 // This static map is used as fallback until the DB is loaded
 export const AREAS = {

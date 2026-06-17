@@ -88,6 +88,24 @@ export async function startAreaQuiz(areaId, config) {
         .eq('is_correct', false)
       if (wrong?.length) {
         query = query.in('id', [...new Set(wrong.map(w => w.question_id))])
+      } else {
+        // Nessun errore trovato → restituisci array vuoto
+        return { quiz_id: null, questions: [] }
+      }
+    }
+  }
+
+  if (config.only_unseen) {
+    const { data: session } = await supabase.auth.getSession()
+    const userId = session?.session?.user?.id
+    if (userId) {
+      const { data: seen } = await supabase
+        .from('quiz_answers')
+        .select('question_id')
+        .eq('user_id', userId)
+      if (seen?.length) {
+        const seenIds = [...new Set(seen.map(s => s.question_id))]
+        query = query.filter('id', 'not.in', `(${seenIds.join(',')})`)
       }
     }
   }
@@ -133,7 +151,7 @@ export async function submitAreaQuiz(quizId, answers) {
   const questionIds = Object.keys(answers)
   const { data: questions } = await supabase
     .from('questions')
-    .select('id, correct_answer, explanation, topic_id')
+    .select('id, correct_answer, explanation, topic_id, area')
     .in('id', questionIds)
 
   const questionsMap = {}
@@ -147,12 +165,22 @@ export async function submitAreaQuiz(quizId, answers) {
     if (!q) continue
     let isCorrect = false
 
-    if (typeof q.correct_answer === 'string') {
-      isCorrect = userAnswer === q.correct_answer
-    } else if (Array.isArray(q.correct_answer)) {
-      isCorrect = Array.isArray(userAnswer) &&
-        userAnswer.length === q.correct_answer.length &&
-        userAnswer.every((v, i) => v === q.correct_answer[i])
+    // Normalize userAnswer for K-Prim: object {1: true, 2: false} → string "VFVF..."
+    let normalizedUser = userAnswer
+    const normalizedCorrect = q.correct_answer
+
+    if (typeof q.correct_answer === 'string' && typeof userAnswer === 'object' && userAnswer !== null && !Array.isArray(userAnswer)) {
+      // K-Prim: correct_answer is string like "VFVF", userAnswer is object like {1: true, 2: false}
+      const keys = Object.keys(userAnswer).sort((a, b) => Number(a) - Number(b))
+      normalizedUser = keys.map(k => userAnswer[k] ? 'V' : 'F').join('')
+    }
+
+    if (typeof normalizedCorrect === 'string') {
+      isCorrect = normalizedUser === normalizedCorrect
+    } else if (Array.isArray(normalizedCorrect)) {
+      isCorrect = Array.isArray(normalizedUser) &&
+        normalizedUser.length === normalizedCorrect.length &&
+        normalizedUser.every((v, i) => v === normalizedCorrect[i])
     }
 
     if (isCorrect) score++
@@ -190,12 +218,19 @@ export async function submitAreaQuiz(quizId, answers) {
     if (results.length > 0) {
       const areaId = questions?.[0]?.area
       if (areaId) {
+        const { data: existingProgress } = await supabase
+          .from('user_area_progress')
+          .select('questions_completed, questions_correct')
+          .eq('user_id', userId)
+          .eq('area_id', areaId)
+          .maybeSingle()
+
         await supabase.from('user_area_progress').upsert(
           {
             user_id: userId,
             area_id: areaId,
-            questions_completed: results.length,
-            questions_correct: score,
+            questions_completed: (existingProgress?.questions_completed || 0) + results.length,
+            questions_correct: (existingProgress?.questions_correct || 0) + score,
             last_quiz_at: new Date().toISOString(),
           },
           { onConflict: 'user_id,area_id' }

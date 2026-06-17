@@ -12,6 +12,7 @@ import Stats from './pages/Stats'
 import Settings from './pages/Settings'
 import Upgrade from './pages/Upgrade'
 import PaymentSuccess from './pages/PaymentSuccess'
+import Simulations from './pages/Simulations'
 import Study from './pages/Study'
 import StudyArea from './pages/StudyArea'
 import StudyTopic from './pages/StudyTopic'
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="/results/:id" element={<Results />} />
             <Route path="/stats" element={<Stats />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/simulations" element={<Simulations />} />
             <Route path="/study" element={<Study />} />
             <Route path="/study/area/:area_id" element={<StudyArea />} />
             <Route path="/study/topic/:key" element={<StudyTopic />} />
